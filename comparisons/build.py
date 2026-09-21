@@ -74,47 +74,33 @@ def main():
     with (HERE/'closure.csv').open('w',newline='') as f:
         w=csv.writer(f);w.writerow(['n','literature_rank','with_catalogue_rank'])
         w.writerows((n,ranks[n],aug[n]) for n in range(2,16385))
-    draw(points,ranks,aug)
+    draw(points)
     print(json.dumps({'points':len(points),'losing_sizes':[p['n'] for p in points if not p['improves_comparison']],'lita32_rank':lita(32)}))
 
 
-def draw(points,ranks,aug):
+def draw(points):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     from matplotlib.ticker import FuncFormatter
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False})
     fig,axes=plt.subplots(1,2,figsize=(14,6.3),gridspec_kw={'width_ratios':[1.1,1]})
-    blue='#176c99';orange='#c17529';ref=math.log(lita(32))/math.log(32)
-    ns=list(range(400,16385))
-    axes[0].plot(ns,[math.log(ranks[n])/math.log(n) for n in ns],color=orange,lw=.75,alpha=.65,label='Pinned literature + finite closure')
-    axes[0].plot(ns,[math.log(aug[n])/math.log(n) for n in ns],color=blue,lw=.85,alpha=.8,label='Literature + catalogue + same closure')
-    for ax,subset,title in [(axes[0],[p for p in points if p['n']<=16384],'Detail through 16,384'),(axes[1],points,'All saved sizes')]:
-        for p in subset:
-            ax.plot([p['n']]*2,[p['effective_exponent'],p['comparison_exponent']],color='#d6dce2',lw=.8,zorder=1)
-        win=[p for p in subset if p['improves_comparison']];loss=[p for p in subset if not p['improves_comparison']]
-        ax.scatter([p['n'] for p in win],[p['effective_exponent'] for p in win],color=blue,s=25,zorder=4,label='Saved scheme')
-        ax.scatter([p['n'] for p in loss],[p['effective_exponent'] for p in loss],color='#b74349',marker='x',s=32,zorder=5,label='Saved candidate loses comparison')
-        ax.axhline(ref,color='#8561a2',ls='--',lw=1,label=f'LITA32 reference: {ref:.6f}')
+    blue='#176c99'
+    for ax,subset,title in [(axes[0],[p for p in points if p['n']<=16384],'Detail through 16,384'),(axes[1],points,'Wider range: all saved sizes')]:
+        ax.scatter([p['n'] for p in subset],[p['effective_exponent'] for p in subset],color=blue,s=30,zorder=4)
         ax.set_xscale('log',base=2);ax.set_title(title,loc='left',pad=12);ax.grid(axis='y',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Square matrix size n (log scale)',labelpad=10)
-    large=[p for p in points if p['n']>16384];small=[p for p in points if p['n']<=16384]
-    axes[1].scatter([p['n'] for p in small],[p['comparison_exponent'] for p in small],marker='s',s=25,facecolors='white',edgecolors=orange,label='Finite literature closure')
-    axes[1].scatter([p['n'] for p in large],[p['comparison_exponent'] for p in large],marker='D',s=28,color=orange,label='Specific published construction')
     axes[0].set_ylabel(r'Effective exponent $\log_n R(n)$ — lower is better')
     axes[0].set_xlim(390,18000);axes[0].set_ylim(2.726,2.79)
     axes[0].set_xticks([512,1024,2048,4096,8192,16384]);axes[0].xaxis.set_major_formatter(FuncFormatter(lambda x,pos:f'{int(x):,}'))
     powers=[9,14,19,24,29,34];axes[1].set_xticks([2**k for k in powers],[f'$2^{{{k}}}$' for k in powers]);axes[1].set_xlim(330,3e10);axes[1].set_ylim(2.69,2.79)
     axes[1].axhline(2.7,color='#479b7d',ls=':',lw=.9)
+    axes[1].text(450,2.7009,'2.7 threshold',color='#479b7d',fontsize=9)
     axes[1].annotate('2.698590 at n ≈ 13.47 billion',(13468840704,2.6985901148),xytext=(-180,-15),textcoords='offset points',fontsize=9,arrowprops={'arrowstyle':'-','color':'#a4adb5'})
     fig.suptitle('Explicit square matrix multiplication schemes',x=.075,y=.98,ha='left',fontsize=19,weight='bold')
-    fig.text(.075,.916,'Exact bilinear counts over Q • Best available bounds in this catalogue • Pinned literature comparison',color='#526171',fontsize=10.5)
-    h,l=axes[0].get_legend_handles_labels();h2,l2=axes[1].get_legend_handles_labels()
-    for hh,ll in zip(h2,l2):
-        if ll not in l:h.append(hh);l.append(ll)
-    fig.legend(h,l,loc='lower left',bbox_to_anchor=(.07,.045),ncol=3,frameon=False,fontsize=8.5)
-    fig.text(.075,.018,'Dense curves use the same declared composition closure; large diamonds are individual constructions. No claim of globally optimal ranks.',fontsize=8.5,color='#526171')
-    fig.subplots_adjust(left=.075,right=.98,top=.825,bottom=.265,wspace=.22)
+    fig.text(.075,.916,'Our 33 saved schemes • Exact bilinear counts over Q • One best saved scheme per size',color='#526171',fontsize=10.5)
+    fig.text(.075,.035,'Each point is an explicit saved construction; intermediate sizes are not interpolated.',fontsize=9,color='#526171')
+    fig.subplots_adjust(left=.075,right=.98,top=.825,bottom=.19,wspace=.22)
     (ROOT/'figures').mkdir(exist_ok=True)
     for suffix in ('svg','png','pdf'):fig.savefig(ROOT/'figures'/f'exponents.{suffix}',dpi=170,facecolor='white')
 

@@ -4,7 +4,9 @@ A catalogue of **33 explicit rational schemes for square matrix multiplication**
 
 The schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Every coefficient is accessible as an exact rational number. The catalogue includes a size-16,384 scheme with effective exponent **2.731191**, and a size-13,468,840,704 scheme with exponent **2.698590**.
 
-![Effective exponents and pinned literature comparisons](figures/exponents.svg)
+![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
+
+The left panel shows our saved schemes through size 16,384; the right panel shows the same catalogue over the full size range. Both use a logarithmic size axis.
 
 The exponent of a finite scheme is **logₙ R**, where R counts bilinear scalar multiplications. Additions and multiplications by fixed constants are excluded. These are algebraic reference constructions; the counts do not establish a practical speedup over numerical matrix multiplication libraries.
 
@@ -72,15 +74,14 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The figure shows **best available bounds within the stated catalogue and constructions**, not globally optimal ranks or independently established record claims. The size-432 and size-1,024 candidates lose their finite-size comparisons and remain explicitly marked.
+The figure displays only our saved schemes. Literature comparisons remain available in the accompanying data; the size-432 and size-1,024 candidates lose their finite-size comparisons and are marked in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
-- Up to 16,384, both curves use the same product, padding and scalar-peeling closure. One starts with published constructions; the other also includes our saved schemes.
-- At larger sizes, each diamond is one explicit published construction, not an exhaustive literature optimum. Sparse points are not interpolated into unproved bounds.
-- The horizontal LITA32 line is an exponent reference, not a finite-size rank bound at arbitrary n.
+- Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
+- At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.
 
 The comparison pins [LITA](https://github.com/khoruzhii/lita/tree/c1dd9225df98676e385b53ae7517ff2ea0ec5779) at rank **14,197** for size 32 and includes its even and applicable odd families. Other sources are the [Lille catalogue](https://fmm.univ-lille.fr/) and the documented [Schwartz–Zwecher recompression](https://arxiv.org/abs/2508.01748). Existing scheme certificates retain the older primitive versions with which they were constructed.
 
-The saved points have [exact comparison recipes](comparisons/recipes.json); the dense curves are reproduced by the comparison builder. [Source revisions](comparisons/sources.json), [all point counts](comparisons/counts.csv), and the [dense finite closure](comparisons/closure.csv) are included.
+The saved points have [exact comparison recipes](comparisons/recipes.json). [Source revisions](comparisons/sources.json), [all point counts](comparisons/counts.csv), and the [dense finite closure](comparisons/closure.csv) are included.
 
 To rebuild the figure from these pinned inputs:
 
