@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "explicit-matmul-schemes"
+version = "0.1.0"
+description = "Explicit rational square matrix multiplication schemes and exact witnesses"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0", "python-flint>=0.8", "sympy>=1.13", "numba>=0.61"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.8"]
+test = ["pytest>=8", "build"]
+
+[project.scripts]
+cwschemes = "cwschemes.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cwschemes = ["data/*.json", "data/objects/*.gz"]

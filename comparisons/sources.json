@@ -1,0 +1,18 @@
+{
+  "lita": {
+    "repository": "https://github.com/khoruzhii/lita",
+    "commit": "c1dd9225df98676e385b53ae7517ff2ea0ec5779",
+    "commit_date": "2026-09-21T10:39:49Z",
+    "readme_url": "https://github.com/khoruzhii/lita/blob/c1dd9225df98676e385b53ae7517ff2ea0ec5779/README.md",
+    "readme_sha256": "8511833ba26fbdd61f708bc3390f698cb5b82940e16be348532060c4768c5614"
+  },
+  "lille": {
+    "url": "https://fmm.univ-lille.fr/",
+    "snapshot_sha256": "4ba21a8997fae4a2b3d3cd94cba26b7e45f76a3d6a2119c4c03d1e74131d4599",
+    "scope": "Frozen research catalogue primitives; provenance retained per primitive"
+  },
+  "schwartz_zwecher": {
+    "url": "https://arxiv.org/abs/2508.01748",
+    "construction": "Claim 3.7 and Theorem 4.2 recompression, retained in primitive provenance"
+  }
+}

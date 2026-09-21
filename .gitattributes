@@ -1,0 +1,5 @@
+# Preserve generated assets and the pinned upstream snapshot byte-for-byte.
+comparisons/*.csv -text whitespace=cr-at-eol
+comparisons/lita_snapshot.md -text -whitespace
+figures/*.svg -text -whitespace
+src/cwschemes/data/objects/*.gz binary

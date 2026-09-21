@@ -1,0 +1,6 @@
+{
+  "n": 86,
+  "nonzero_coefficient_matches": 45,
+  "reference": "Original imported CSR seed; runtime uses the exact formula generator",
+  "full_tensor_identity_rechecked": false
+}

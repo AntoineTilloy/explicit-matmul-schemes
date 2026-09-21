@@ -1,0 +1,19 @@
+{
+  "n": "432",
+  "rank": "20605251",
+  "mode": "exact reduction replay",
+  "dependencies": 6,
+  "new_support_audits": 1,
+  "reduction_proofs": 3,
+  "coefficient_queries": [
+    "0",
+    "0",
+    "2",
+    "-327/2500",
+    "2",
+    "0"
+  ],
+  "sub_2_7": false,
+  "seconds": 250.23905836977065,
+  "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+}

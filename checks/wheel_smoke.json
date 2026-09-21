@@ -1,0 +1,1 @@
+{"n": "1024", "rank": "203911824", "mode": "integrity, support, count and coefficient checks", "dependencies": 6, "new_support_audits": 1, "reduction_proofs": 3, "coefficient_queries": ["0", "0", "0", "0", "0", "0"], "sub_2_7": false, "seconds": 1.6550932079553604, "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"}

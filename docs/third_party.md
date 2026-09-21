@@ -1,0 +1,12 @@
+# Upstream constructions and attribution
+
+This catalogue builds on published mathematical algorithms. The new CW restrictions, compositions, packaging and verification interfaces do not claim authorship of the imported primitive schemes.
+
+- **LITA:** Kirill Khoruzhii, Luzian Serafin, Patrick Gelß and Sebastian Pokutta, *Local Improvements to Trilinear Aggregation*, 2026, [repository](https://github.com/khoruzhii/lita). The internal `sources/lita_round6.py` is an extracted copy of the original even-size generator used by these certificates, with formula `n^3/3 + 3n^2 + 20n/3 + 7`. The included LITA coefficient objects retain those original ranks. This imported source is excluded from the repository's MIT grant; its upstream snapshot did not carry an explicit license declaration. Consult the upstream project for licensing of that implementation. The newer comparison-only revision and its hash are recorded separately in `comparisons/sources.json`.
+- **Lille catalogue:** [Collection of fast matrix multiplication algorithms](https://fmm.univ-lille.fr/), maintained by Alexandre Sedoglavic. Imported coefficient objects include the size-three rank-23 Laderman scheme, size-four rank-48 DPS scheme, size-five rank-93, size-six rank-153, size-seven rank-250, and rectangular 3×3×4 rank-29 and 3×4×4 rank-38 schemes. Original source labels and hashes are retained in the objects and in `imported_objects.json`. The rank-249 size-seven construction combines these published rectangular and size-four schemes. Imported coefficient data is identified separately from the new construction data; this repository does not impose an additional license on the upstream material.
+- **Strassen:** the seven-product size-two identity is used for composition and in the small executable example.
+- **Schwartz–Zwecher:** the comparison primitives include the recompression described in [arXiv:2508.01748](https://arxiv.org/abs/2508.01748), Claim 3.7 and Theorem 4.2. These are comparison constructions, not new discoveries in this catalogue.
+
+The installed third-party dependencies—NumPy, python-flint/FLINT, SymPy and Numba—are separate packages with their own licenses. They are not copied into this repository.
+
+The mathematical coefficient data and provenance remain inspectable without executing discovery code. `imported_objects.json` lists exact object identifiers, so a downstream user can identify the primitive components of a construction.

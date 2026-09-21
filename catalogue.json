@@ -1,0 +1,398 @@
+[
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "432",
+    "rank": "20605251",
+    "field": "Q",
+    "root_object": "83bbb69831165399bfc52732f39ab25f6eb9526d8a7e5a246f25df6f4ec9b43e",
+    "effective_exponent": 2.775193707049003,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "685",
+    "rank": "70153048",
+    "field": "Q",
+    "root_object": "b3d7333e17bc1b69a9b429e0e37d1cc707413a33a3f031ffa4777ff32f706ae8",
+    "effective_exponent": 2.766890937896641,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "686",
+    "rank": "70153048",
+    "field": "Q",
+    "root_object": "5108ee1e199abe32a92f49a5f193f94b7dca29381e941e3dc7c543167b7decd9",
+    "effective_exponent": 2.7662729028365196,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "1024",
+    "rank": "203911824",
+    "field": "Q",
+    "root_object": "b7ffed08e77cd561ce0c1e6f7fbd7b8b477c8f98f3b452d82325d05622bb921c",
+    "effective_exponent": 2.7603370192774057,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "1370",
+    "rank": "458311287",
+    "field": "Q",
+    "root_object": "4343c091d53449d909a3e86cf0c636f4a9b39660869ff2899e2c0fd3d04a0f3d",
+    "effective_exponent": 2.7612152142572275,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "1372",
+    "rank": "458311287",
+    "field": "Q",
+    "root_object": "f973f5ebcc3efa834263b6c32a783f21d7aab02bce226d229c7422fa7872e7d2",
+    "effective_exponent": 2.760657625964226,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "1458",
+    "rank": "533028562",
+    "field": "Q",
+    "root_object": "5868a43ff067b9a7a2c4ac03ec5d52cec7d576c419bb8c167d023cd93bb8fb67",
+    "effective_exponent": 2.7583499730608056,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "2000",
+    "rank": "1254808827",
+    "field": "Q",
+    "root_object": "3d9dd478b64034cfc40f8cd5ce83b01d174c3534f757a524ac7ec1d319a30773",
+    "effective_exponent": 2.7562844254819434,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "2025",
+    "rank": "1353908097",
+    "field": "Q",
+    "root_object": "1f75ac60c3709ee5a6db3a5fec2c96158802c1a1ad28613cbc365c8800a922d1",
+    "effective_exponent": 2.76177113028175,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "2048",
+    "rank": "1303338368",
+    "field": "Q",
+    "root_object": "1b330382d7e127b0eb4132c7c2b75cbfcfd6cd6b996723b7103871ea2f09ac7e",
+    "effective_exponent": 2.752687684890559,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "2662",
+    "rank": "2751535017",
+    "field": "Q",
+    "root_object": "3f10cca2b7eddc6795d7b7f1539eaa590b57b43cb62ec2c49e15afa718a984ff",
+    "effective_exponent": 2.7559128973284577,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "2916",
+    "rank": "3236239494",
+    "field": "Q",
+    "root_object": "83411ecc1552ff4971e99145a54646b4df123927509ff5bf61f4ab5e44aba911",
+    "effective_exponent": 2.7447687916344705,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "3456",
+    "rank": "5646807411",
+    "field": "Q",
+    "root_object": "7466e74f6aa5ebf2da32403e1db15d8b2757a1bf78cf605c6e7a0a4ee88b21fc",
+    "effective_exponent": 2.755856938306232,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "4000",
+    "rank": "7375060000",
+    "field": "Q",
+    "root_object": "b181c1a3e0cb4544a22963c7b034c4ebe181c3974d89ff73a76d3fecc6108ec9",
+    "effective_exponent": 2.739478404478529,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "4096",
+    "rank": "9099643392",
+    "field": "Q",
+    "root_object": "093cfda1dfd797495b5c716789e4c6de60606ffdf2ddf56315c4b0e4712951b7",
+    "effective_exponent": 2.756930238525038,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "4394",
+    "rank": "11048432726",
+    "field": "Q",
+    "root_object": "eb9da3c91e239989060aef085f2dc1b8285e4d30457f9e3ecf5ea40b8f51f3bb",
+    "effective_exponent": 2.756982297049042,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "5324",
+    "rank": "15663732414",
+    "field": "Q",
+    "root_object": "a52c4545443cfe049093a2b08dc977697d2835b7ba43873c444a5428d200331e",
+    "effective_exponent": 2.735975299310123,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "5488",
+    "rank": "20501989977",
+    "field": "Q",
+    "root_object": "e70066919b12af0b7216b150890f2daf479df0e6688ce1299e6d87a4e6db3797",
+    "effective_exponent": 2.7575967073084873,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "6912",
+    "rank": "31356937728",
+    "field": "Q",
+    "root_object": "046292b51e5f1782141b10643295ad0e3ed4b8c13fd796f4b368bda4c2f65e90",
+    "effective_exponent": 2.7337023253113855,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "8192",
+    "rank": "54340274604",
+    "field": "Q",
+    "root_object": "abdb2787bf0b5a1db3f8b3ec670812e3e240f2d23a345a0c3699a12a8c6e9110",
+    "effective_exponent": 2.7431771388453683,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "10976",
+    "rank": "108775441824",
+    "field": "Q",
+    "root_object": "50851dbbfa0fd5dd95b4cf71898b8f854b51d3160118a6712a72bc064b09c4ce",
+    "effective_exponent": 2.731514305681813,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "13500",
+    "rank": "190858578750",
+    "field": "Q",
+    "root_object": "ca66a8d6173dd26a56dbd19f47109b3b8a06a1d6bb7204e872707769a086cff5",
+    "effective_exponent": 2.731186465250355,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "16384",
+    "rank": "323882771968",
+    "field": "Q",
+    "root_object": "24393d766d07002e1b9ebb93e5db5c516a58e6f8e55cbf24a4aab66bc4f2f80a",
+    "effective_exponent": 2.7311914838453526,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "32768",
+    "rank": "2282088766866",
+    "field": "Q",
+    "root_object": "f83b0d62c502e7921366b4eb0320745e0d4e72250beee05bf230654e26f8e819",
+    "effective_exponent": 2.736899469877713,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "65536",
+    "rank": "14956207594062",
+    "field": "Q",
+    "root_object": "9881228dcce7047ecff101458b49c220b84b804d220b604dfe6e5547e64cf111",
+    "effective_exponent": 2.7353631021733693,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "524288",
+    "rank": "3562053602135175",
+    "field": "Q",
+    "root_object": "26394f17d6b870212cb22859a3547dedbc6d98d6c57022bd83a9780af3558bbc",
+    "effective_exponent": 2.7190331920911097,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "1048576",
+    "rank": "23851717467392934",
+    "field": "Q",
+    "root_object": "b7bb91e14ec36f74e7e7b17ba20776c779d6bc64b459e3c9ef3278993dfcb8f8",
+    "effective_exponent": 2.7202471335452887,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "8388608",
+    "rank": "6706435549142150135",
+    "field": "Q",
+    "root_object": "5bacb95cbb8bc9aec9e0f28e46052c7ad6f6ee3b2e5750d72e759bbf25efeb6b",
+    "effective_exponent": 2.7191413865177667,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "16777216",
+    "rank": "39781327722167699383",
+    "field": "Q",
+    "root_object": "1c2c908c0f738c57301f9402517e3b0afab3ae975d27f8eb2d73939dab0d3c8a",
+    "effective_exponent": 2.7128635512716777,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "536870912",
+    "rank": "390821774252911273874842",
+    "field": "Q",
+    "root_object": "c12b74640fd1e16d64e1655d72558960556c571a8e6a88f0f38eddd6794030b2",
+    "effective_exponent": 2.7024433458723447,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "5873299070",
+    "rank": "237674020365443824643488557",
+    "field": "Q",
+    "root_object": "12c7cb800df45a3302e13db1961ca3aeca06bdad2d89da4a3e6a938b9fa4dc8d",
+    "effective_exponent": 2.6999999999865785,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "5905580032",
+    "rank": "237674020365443824643488557",
+    "field": "Q",
+    "root_object": "18d30f05f4c6687f1a1313523437be60d04c0cfc0ab4ecb1051d10c9ce3fa1eb",
+    "effective_exponent": 2.6993422346550937,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "13468840704",
+    "rank": "2162272334177007487103296378",
+    "field": "Q",
+    "root_object": "4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb",
+    "effective_exponent": 2.6985901147733276,
+    "provenance": {
+      "construction": "CW finite exact restriction and rational composition"
+    },
+    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  }
+]

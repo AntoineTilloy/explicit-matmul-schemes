@@ -1,0 +1,46 @@
+{
+  "date": "2026-09-21",
+  "package_version": "0.1.0",
+  "execution": "Atlas; arithmetic jobs pinned to one core each, at most five concurrently. No research .deps directory.",
+  "catalogue": {
+    "passed": 33,
+    "mode": "integrity, induced support, exact local completion, reconstructed counts and coefficient queries",
+    "record": "catalogue.jsonl",
+    "note": "Completed across two invocations with shared resource cache. Early entries query (0,0,0) and final indices; resumed entries query first and final terms at the final matrix entry. Cached support audits are shared within an invocation."
+  },
+  "exact_replays": [
+    {
+      "n": "432",
+      "record": "exact_432.json",
+      "seconds": 250.23905836977065
+    },
+    {
+      "n": "1370",
+      "record": "exact_1370.json",
+      "seconds": 376.43999769259244
+    },
+    {
+      "n": "5873299070",
+      "record": "exact_sub27.json",
+      "seconds": 280.0625416506082
+    }
+  ],
+  "full_exact_catalogue_run": false,
+  "negative_checks": {
+    "altered_rational_relation": "corruption.json",
+    "corrupt_object_and_invalid_support": "tests.txt"
+  },
+  "lita86_formula_nonzero_comparisons": 45,
+  "lita86_record": "lita86_formula.json",
+  "wheel": {
+    "built_and_installed": true,
+    "source_tree_on_pythonpath": false,
+    "working_directory_outside_repository": true,
+    "test_count": 6,
+    "test_record": "tests.txt",
+    "smoke_record": "wheel_smoke.json",
+    "small_exact_example_passed": true
+  },
+  "comparison": "comparison_build.json",
+  "scope": "Exact reduction replay is relative to the documented CW/group/composition identities and published primitive schemes; no proof-assistant formalization or dense expansion of target tensors."
+}

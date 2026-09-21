@@ -1,0 +1,12 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "1370",
+  "rank": "458311287",
+  "field": "Q",
+  "root_object": "4343c091d53449d909a3e86cf0c636f4a9b39660869ff2899e2c0fd3d04a0f3d",
+  "effective_exponent": 2.7612152142572275,
+  "provenance": {
+    "construction": "CW finite exact restriction and rational composition"
+  },
+  "verification": "Exact witnesses included; see docs/verification.md for check levels."
+}

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this catalogue and the upstream algorithms used by the selected scheme."
+title: "Explicit matrix multiplication schemes"
+type: software
+authors:
+  - family-names: Tilloy
+    given-names: Antoine
+version: 0.1.0
+date-released: 2026-09-21
+repository-code: "https://github.com/AntoineTilloy/explicit-matmul-schemes"
+url: "https://github.com/AntoineTilloy/explicit-matmul-schemes"
+abstract: "Compact explicit rational square matrix multiplication schemes, coefficient access, finite reduction witnesses, and pinned literature comparisons."

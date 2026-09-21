@@ -1,0 +1,526 @@
+{
+  "16384": {
+    "n": 16384,
+    "rank": 446523342075,
+    "kind": "pad",
+    "child": {
+      "n": 16456,
+      "rank": 446523342075,
+      "kind": "product",
+      "left": {
+        "n": 22,
+        "rank": 5155,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 748,
+        "rank": 86619465,
+        "kind": "product",
+        "left": {
+          "n": 22,
+          "rank": 5155,
+          "kind": "LITA"
+        },
+        "right": {
+          "n": 34,
+          "rank": 16803,
+          "kind": "LITA"
+        }
+      }
+    }
+  },
+  "32768": {
+    "n": 32768,
+    "rank": 2872371388375,
+    "kind": "product",
+    "left": {
+      "n": 32,
+      "rank": 14215,
+      "kind": "LITA"
+    },
+    "right": {
+      "n": 1024,
+      "rank": 202066225,
+      "kind": "product",
+      "left": {
+        "n": 32,
+        "rank": 14215,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 32,
+        "rank": 14215,
+        "kind": "LITA"
+      }
+    }
+  },
+  "65536": {
+    "n": 65536,
+    "rank": 19868296578963,
+    "kind": "pad",
+    "child": {
+      "n": 65664,
+      "rank": 19868296578963,
+      "kind": "product",
+      "left": {
+        "n": 38,
+        "rank": 22883,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 1728,
+        "rank": 868255761,
+        "kind": "product",
+        "left": {
+          "n": 36,
+          "rank": 19687,
+          "kind": "LITA"
+        },
+        "right": {
+          "n": 48,
+          "rank": 44103,
+          "kind": "LITA"
+        }
+      }
+    }
+  },
+  "262144": {
+    "n": 262144,
+    "rank": 953678235790224,
+    "kind": "pad",
+    "child": {
+      "n": 262656,
+      "rank": 953678235790224,
+      "kind": "product",
+      "left": {
+        "n": 38,
+        "rank": 22883,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 6912,
+        "rank": 41676276528,
+        "kind": "product",
+        "left": {
+          "n": 36,
+          "rank": 19687,
+          "kind": "LITA"
+        },
+        "right": {
+          "n": 192,
+          "rank": 2116944,
+          "kind": "product",
+          "left": {
+            "n": 4,
+            "rank": 48,
+            "kind": "saved-comparison-primitive"
+          },
+          "right": {
+            "n": 48,
+            "rank": 44103,
+            "kind": "LITA"
+          }
+        }
+      }
+    }
+  },
+  "524288": {
+    "n": 524288,
+    "rank": 6209992966716816,
+    "kind": "pad",
+    "child": {
+      "n": 524290,
+      "rank": 6209992966716816,
+      "kind": "product",
+      "left": {
+        "n": 26,
+        "rank": 8067,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 20165,
+        "rank": 769802028848,
+        "kind": "peel",
+        "child": {
+          "n": 20160,
+          "rank": 763704132723,
+          "kind": "product",
+          "left": {
+            "n": 28,
+            "rank": 9863,
+            "kind": "LITA"
+          },
+          "right": {
+            "n": 720,
+            "rank": 77431221,
+            "kind": "product",
+            "left": {
+              "n": 24,
+              "rank": 6503,
+              "kind": "LITA"
+            },
+            "right": {
+              "n": 30,
+              "rank": 11907,
+              "kind": "LITA"
+            }
+          }
+        }
+      }
+    }
+  },
+  "1048576": {
+    "n": 1048576,
+    "rank": 40830759285750625,
+    "kind": "product",
+    "left": {
+      "n": 32,
+      "rank": 14215,
+      "kind": "LITA"
+    },
+    "right": {
+      "n": 32768,
+      "rank": 2872371388375,
+      "kind": "product",
+      "left": {
+        "n": 32,
+        "rank": 14215,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 1024,
+        "rank": 202066225,
+        "kind": "product",
+        "left": {
+          "n": 32,
+          "rank": 14215,
+          "kind": "LITA"
+        },
+        "right": {
+          "n": 32,
+          "rank": 14215,
+          "kind": "LITA"
+        }
+      }
+    }
+  },
+  "8388608": {
+    "n": 8388608,
+    "rank": 13506104897174624112,
+    "kind": "pad",
+    "child": {
+      "n": 8390400,
+      "rank": 13506104897174624112,
+      "kind": "product",
+      "left": {
+        "n": 40,
+        "rank": 26407,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 209760,
+        "rank": 511459268268816,
+        "kind": "product",
+        "left": {
+          "n": 38,
+          "rank": 22883,
+          "kind": "LITA"
+        },
+        "right": {
+          "n": 5520,
+          "rank": 22351058352,
+          "kind": "product",
+          "left": {
+            "n": 30,
+            "rank": 11907,
+            "kind": "LITA"
+          },
+          "right": {
+            "n": 184,
+            "rank": 1877136,
+            "kind": "product",
+            "left": {
+              "n": 4,
+              "rank": 48,
+              "kind": "saved-comparison-primitive"
+            },
+            "right": {
+              "n": 46,
+              "rank": 39107,
+              "kind": "LITA"
+            }
+          }
+        }
+      }
+    }
+  },
+  "16777216": {
+    "n": 16777216,
+    "rank": 88275050021879539440,
+    "kind": "pad",
+    "child": {
+      "n": 16777280,
+      "rank": 88275050021879539440,
+      "kind": "product",
+      "left": {
+        "n": 32,
+        "rank": 14215,
+        "kind": "LITA"
+      },
+      "right": {
+        "n": 524290,
+        "rank": 6209992966716816,
+        "kind": "product",
+        "left": {
+          "n": 26,
+          "rank": 8067,
+          "kind": "LITA"
+        },
+        "right": {
+          "n": 20165,
+          "rank": 769802028848,
+          "kind": "peel",
+          "child": {
+            "n": 20160,
+            "rank": 763704132723,
+            "kind": "product",
+            "left": {
+              "n": 28,
+              "rank": 9863,
+              "kind": "LITA"
+            },
+            "right": {
+              "n": 720,
+              "rank": 77431221,
+              "kind": "product",
+              "left": {
+                "n": 24,
+                "rank": 6503,
+                "kind": "LITA"
+              },
+              "right": {
+                "n": 30,
+                "rank": 11907,
+                "kind": "LITA"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "536870912": {
+    "kind": "product",
+    "n": 536870912,
+    "left": {
+      "kind": "lita-even",
+      "n": 16
+    },
+    "right": {
+      "kind": "product",
+      "n": 33554432,
+      "left": {
+        "kind": "product",
+        "n": 1048576,
+        "left": {
+          "kind": "product",
+          "n": 32768,
+          "left": {
+            "kind": "product",
+            "n": 1024,
+            "left": {
+              "kind": "lita-even",
+              "n": 32
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 32
+            }
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 32
+          }
+        },
+        "right": {
+          "kind": "lita-even",
+          "n": 32
+        }
+      },
+      "right": {
+        "kind": "lita-even",
+        "n": 32
+      }
+    }
+  },
+  "5905580032": {
+    "kind": "product",
+    "n": 5905580032,
+    "left": {
+      "kind": "lita-even",
+      "n": 22
+    },
+    "right": {
+      "kind": "product",
+      "n": 268435456,
+      "left": {
+        "kind": "product",
+        "n": 33554432,
+        "left": {
+          "kind": "product",
+          "n": 1048576,
+          "left": {
+            "kind": "product",
+            "n": 32768,
+            "left": {
+              "kind": "product",
+              "n": 1024,
+              "left": {
+                "kind": "lita-even",
+                "n": 32
+              },
+              "right": {
+                "kind": "lita-even",
+                "n": 32
+              }
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 32
+            }
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 32
+          }
+        },
+        "right": {
+          "kind": "lita-even",
+          "n": 32
+        }
+      },
+      "right": {
+        "kind": "saved-comparison-primitive",
+        "n": 8,
+        "rank": 336
+      }
+    }
+  },
+  "5873299070": {
+    "kind": "pad",
+    "n": 5873299070,
+    "child": {
+      "kind": "product",
+      "n": 5905580032,
+      "left": {
+        "kind": "lita-even",
+        "n": 22
+      },
+      "right": {
+        "kind": "product",
+        "n": 268435456,
+        "left": {
+          "kind": "product",
+          "n": 33554432,
+          "left": {
+            "kind": "product",
+            "n": 1048576,
+            "left": {
+              "kind": "product",
+              "n": 32768,
+              "left": {
+                "kind": "product",
+                "n": 1024,
+                "left": {
+                  "kind": "lita-even",
+                  "n": 32
+                },
+                "right": {
+                  "kind": "lita-even",
+                  "n": 32
+                }
+              },
+              "right": {
+                "kind": "lita-even",
+                "n": 32
+              }
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 32
+            }
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 32
+          }
+        },
+        "right": {
+          "kind": "saved-comparison-primitive",
+          "n": 8,
+          "rank": 336
+        }
+      }
+    }
+  },
+  "13468840704": {
+    "kind": "product",
+    "n": 13468840704,
+    "left": {
+      "kind": "lita-even",
+      "n": 22
+    },
+    "right": {
+      "kind": "product",
+      "n": 612220032,
+      "left": {
+        "kind": "product",
+        "n": 34012224,
+        "left": {
+          "kind": "product",
+          "n": 1889568,
+          "left": {
+            "kind": "product",
+            "n": 104976,
+            "left": {
+              "kind": "product",
+              "n": 5832,
+              "left": {
+                "kind": "product",
+                "n": 324,
+                "left": {
+                  "kind": "lita-even",
+                  "n": 18
+                },
+                "right": {
+                  "kind": "lita-even",
+                  "n": 18
+                }
+              },
+              "right": {
+                "kind": "lita-even",
+                "n": 18
+              }
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 18
+            }
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 18
+          }
+        },
+        "right": {
+          "kind": "lita-even",
+          "n": 18
+        }
+      },
+      "right": {
+        "kind": "lita-even",
+        "n": 18
+      }
+    }
+  }
+}
