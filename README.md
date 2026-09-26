@@ -79,6 +79,11 @@ These 20 entries (format `cw-z4-quotient-square-v1`, or `z4-quotient-v1` units i
 
 The relation data does not depend on q. It was replayed exactly over Q for every q from 2 to 25 before inclusion; `cwschemes verify <n> --exact` replays it again at the q in use.
 
+> **Not rebuilt: older large entries.** The entries at sizes 524,288 and above, including the sub-2.7 schemes at 5,873,299,070,
+> 5,905,580,032 and 13,468,840,704, were built before the Z4-quotient and explicit schemes were added. Their recursive recipes still
+> embed the previous size-65,536, size-1,048,576 and size-4,096 constructions, so their stated counts are valid but not re-optimised.
+> Rebuilding them with the new sub-schemes would lower them slightly (for example about −4.0e12 at 524,288 and −3.0e13 at 1,048,576).
+
 ## Explicit schemes at sizes 14, 16 and 32
 
 These three entries store every coefficient explicitly (sparse rational factor matrices, format `explicit-qcsr-square-v1`). They are new points of the exact (γ, r₀) parameter family of the [LITA](https://github.com/khoruzhii/lita) row–column aggregation scheme. Two of LITA's three parameter views are unchanged; the third is re-anchored so that one more raw term vanishes (at size 32: 14,314 raw terms − 104 vanishing − 14 merged = 14,196). The same choice gives one product fewer than LITA's published counts 1,594, 2,237 and 14,197.
