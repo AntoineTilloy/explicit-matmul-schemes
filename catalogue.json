@@ -1,6 +1,42 @@
 [
   {
     "format": "cwschemes-catalogue-entry-v1",
+    "n": "14",
+    "rank": "1593",
+    "field": "Q",
+    "root_object": "b312d21a312abc6b0e274eff3403306ae3fd175bbf0d65db8d0fd6ec02fb76f8",
+    "effective_exponent": 2.793942453302064,
+    "provenance": {
+      "construction": "Explicit sparse rational scheme: re-parameterised LITA row-column aggregation (one fewer product than LITA)"
+    },
+    "verification": "Explicit coefficients included; every tensor coefficient checked exactly over Q (CRT bound); see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "16",
+    "rank": "2236",
+    "field": "Q",
+    "root_object": "e7fcfb1c8e76ca6e768b28629378cfc94eaf8ea2d9b0bc62255304676e2fce30",
+    "effective_exponent": 2.7816761182107976,
+    "provenance": {
+      "construction": "Explicit sparse rational scheme: re-parameterised LITA row-column aggregation (one fewer product than LITA)"
+    },
+    "verification": "Explicit coefficients included; every tensor coefficient checked exactly over Q (CRT bound); see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "32",
+    "rank": "14196",
+    "field": "Q",
+    "root_object": "a7fb19d69d8e078fb0d6d614ade10417225a186f4fbf94a8d4292f3935995e05",
+    "effective_exponent": 2.758639371812189,
+    "provenance": {
+      "construction": "Explicit sparse rational scheme: re-parameterised LITA row-column aggregation (one fewer product than LITA)"
+    },
+    "verification": "Explicit coefficients included; every tensor coefficient checked exactly over Q (CRT bound); see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
     "n": "432",
     "rank": "20605251",
     "field": "Q",

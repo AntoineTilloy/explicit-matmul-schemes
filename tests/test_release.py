@@ -9,7 +9,7 @@ from cwschemes import _resources
 
 def test_catalogue_and_exact_threshold():
     entries=cwschemes.catalogue()
-    assert len(entries)==33 and len({r['n'] for r in entries})==33
+    assert len(entries)==36 and len({r['n'] for r in entries})==36
     d=next(r for r in entries if r['n']=='5873299070')
     n,r=int(d['n']),int(d['rank'])
     assert (n-1)**27<=r**10<n**27
@@ -57,3 +57,10 @@ def test_public_index_validation():
 
 def test_literal_data_is_packaged():
     assert all((_resources.DATA/'objects'/f'{h}.gz').is_file() for h in _resources.index()['objects'])
+
+
+def test_explicit_small_scheme_is_exact():
+    s=cwschemes.load(14)
+    assert s.rank==1593
+    assert s._engine.random_check(trials=1)
+    assert s._engine.exact_check()['exact']

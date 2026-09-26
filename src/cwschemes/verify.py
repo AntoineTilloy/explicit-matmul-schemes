@@ -163,11 +163,18 @@ def verify(n,*,exact=False,threads=1):
             proofs+=1
             if exact:exact_proof(p,threads)
     visit(path)
+    explicit=None
+    if read(path).get('format')=='explicit-qcsr-square-v1':
+        explicit=dict(random_evaluation_mod_2_31_minus_1=s._engine.random_check(trials=2))
+        assert explicit['random_evaluation_mod_2_31_minus_1'],'Explicit scheme fails random evaluation'
+        if exact:
+            explicit['all_coefficients']=s._engine.exact_check()
+            assert explicit['all_coefficients']['exact'],'Explicit scheme fails the exact coefficient check'
     queries=[]
     for factor in ('U','V','W'):
         for term,i,j in [(0,s.n-1,s.n-1),(s.rank-1,s.n-1,s.n-1)]:
             queries.append(str(s.coefficient(factor,term,i,j)))
     return dict(n=str(s.n),rank=str(s.rank),mode='exact reduction replay' if exact else 'integrity, support, count and coefficient checks',
                 dependencies=len(visited),new_support_audits=supports,reduction_proofs=proofs,coefficient_queries=queries,
-                sub_2_7=s.rank**10<s.n**27,seconds=time.monotonic()-start,
+                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),seconds=time.monotonic()-start,
                 proof_basis='Documented base identities and published primitive schemes; see docs/verification.md')

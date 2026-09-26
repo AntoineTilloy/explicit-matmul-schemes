@@ -85,20 +85,25 @@ def draw(points):
     from matplotlib.ticker import FuncFormatter
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False})
     fig,axes=plt.subplots(1,2,figsize=(14,6.3),gridspec_kw={'width_ratios':[1.1,1]})
-    blue='#176c99'
+    blue='#176c99';orange='#d9822b'
     for ax,subset,title in [(axes[0],[p for p in points if p['n']<=16384],'Detail through 16,384'),(axes[1],points,'Wider range: all saved sizes')]:
-        ax.scatter([p['n'] for p in subset],[p['effective_exponent'] for p in subset],color=blue,s=30,zorder=4)
+        cw=[p for p in subset if p['n']>32];ex=[p for p in subset if p['n']<=32]
+        ax.scatter([p['n'] for p in cw],[p['effective_exponent'] for p in cw],color=blue,s=30,zorder=4,label='CW-based constructions')
+        ax.scatter([p['n'] for p in ex],[p['effective_exponent'] for p in ex],color=orange,marker='D',s=34,zorder=5,label='Explicit schemes (one below LITA)')
         ax.set_xscale('log',base=2);ax.set_title(title,loc='left',pad=12);ax.grid(axis='y',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Square matrix size n (log scale)',labelpad=10)
     axes[0].set_ylabel(r'Effective exponent $\log_n R(n)$ — lower is better')
-    axes[0].set_xlim(390,18000);axes[0].set_ylim(2.726,2.79)
-    axes[0].set_xticks([512,1024,2048,4096,8192,16384]);axes[0].xaxis.set_major_formatter(FuncFormatter(lambda x,pos:f'{int(x):,}'))
-    powers=[9,14,19,24,29,34];axes[1].set_xticks([2**k for k in powers],[f'$2^{{{k}}}$' for k in powers]);axes[1].set_xlim(330,3e10);axes[1].set_ylim(2.69,2.79)
+    axes[0].set_xlim(11,20000);axes[0].set_ylim(2.72,2.80)
+    axes[0].set_xticks([16,64,256,1024,4096,16384]);axes[0].xaxis.set_major_formatter(FuncFormatter(lambda x,pos:f'{int(x):,}'))
+    powers=[4,9,14,19,24,29,34];axes[1].set_xticks([2**k for k in powers],[f'$2^{{{k}}}$' for k in powers]);axes[1].set_xlim(10,3e10);axes[1].set_ylim(2.69,2.80)
     axes[1].axhline(2.7,color='#479b7d',ls=':',lw=.9)
-    axes[1].text(450,2.7009,'2.7 threshold',color='#479b7d',fontsize=9)
+    axes[1].text(14,2.7009,'2.7 threshold',color='#479b7d',fontsize=9)
+    axes[0].legend(loc='lower left',frameon=False,fontsize=9)
+    for p in points:
+        if p['n']<=32:axes[0].annotate(f"{p['n']}: {p['rank']:,}",(p['n'],p['effective_exponent']),xytext=(7,4),textcoords='offset points',fontsize=8.5,color='#8a4f13')
     axes[1].annotate('2.698590 at n ≈ 13.47 billion',(13468840704,2.6985901148),xytext=(-180,-15),textcoords='offset points',fontsize=9,arrowprops={'arrowstyle':'-','color':'#a4adb5'})
     fig.suptitle('Explicit square matrix multiplication schemes',x=.075,y=.98,ha='left',fontsize=19,weight='bold')
-    fig.text(.075,.916,'Our 33 saved schemes • Exact bilinear counts over Q • One best saved scheme per size',color='#526171',fontsize=10.5)
+    fig.text(.075,.916,f'Our {len(points)} saved schemes • Exact bilinear counts over Q • One best saved scheme per size',color='#526171',fontsize=10.5)
     fig.text(.075,.035,'Each point is an explicit saved construction; intermediate sizes are not interpolated.',fontsize=9,color='#526171')
     fig.subplots_adjust(left=.075,right=.98,top=.825,bottom=.19,wspace=.22)
     (ROOT/'figures').mkdir(exist_ok=True)

@@ -22,10 +22,17 @@ The catalogue explicitly depends on the cited primitive identities, including St
 
 ## Release evidence
 
-The [version 0.1.0 results](../checks/summary.json) cover all 33 catalogue entries. Selected exact-mode checks passed for sizes 432, 1,370 and 5,873,299,070, taking approximately 250, 376 and 280 seconds respectively on one Atlas core each. The first two exercise quotient and refined-orbit compression; the last exercises the uncompressed power-21 construction and its strict sub-2.7 threshold. These timings include loading and coefficient evaluation.
+The [version 0.1.0 results](../checks/summary.json) cover the 33 CW-based catalogue entries; the explicit size-14, 16 and 32 entries were added later (see below). Selected exact-mode checks passed for sizes 432, 1,370 and 5,873,299,070, taking approximately 250, 376 and 280 seconds respectively on one Atlas core each. The first two exercise quotient and refined-orbit compression; the last exercises the uncompressed power-21 construction and its strict sub-2.7 threshold. These timings include loading and coefficient evaluation.
 
 The checker rejected a deliberately altered rational relation. Six regression tests passed against the installed wheel from outside the repository, as did the small exact multiplication example and a fresh-cache size-1,024 smoke check. Forty-five nonzero coefficient comparisons checked the formula-based size-86 LITA reader against the original coefficient data. This last check is a regression comparison, not an exhaustive tensor-identity proof.
 
 Machine-readable results under `checks/` record the checks actually run on the standalone package. The final release summary distinguishes all-scheme integrity/support/coefficient checks, selected complete reduction replays, tests of rejection, and the wheel installation test. A full `--exact --all` run is not implied unless explicitly recorded there. Prior research verification does not replace the release's fresh-install checks.
 
 To reproduce without the original project, install the release, choose an empty `CWSCHEMES_CACHE`, change to another directory and run `cwschemes verify --all`. Exact replays use the same offline object bundle. No search executable, researcher home directory, cluster credential or hidden coefficient cache is needed.
+
+## Explicit sparse schemes (sizes 14, 16, 32)
+
+Entries in format `explicit-qcsr-square-v1` bundle every coefficient. The default check evaluates the algorithm on two random
+input pairs modulo 2³¹−1 (Schwartz–Zippel). `--exact` checks every one of the n⁶ tensor coefficients modulo primes whose product
+exceeds 2Δ(S+1), where Δ is the product of the per-factor denominator lcms and S = Σₜ‖uₜ‖∞‖vₜ‖∞‖wₜ‖∞; this certifies equality over Q.
+Results are recorded in [checks/explicit.jsonl](../checks/explicit.jsonl). A single perturbed coefficient makes both checks fail.

@@ -1,0 +1,12 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "32",
+  "rank": "14196",
+  "field": "Q",
+  "root_object": "a7fb19d69d8e078fb0d6d614ade10417225a186f4fbf94a8d4292f3935995e05",
+  "effective_exponent": 2.758639371812189,
+  "provenance": {
+    "construction": "Explicit sparse rational scheme: re-parameterised LITA row-column aggregation (one fewer product than LITA)"
+  },
+  "verification": "Explicit coefficients included; every tensor coefficient checked exactly over Q (CRT bound); see docs/verification.md."
+}

@@ -19,6 +19,8 @@ def load(n):
     data=json.loads(path.read_text())
     if data['format'] in ('cw-single-square-v1','ordinary-square-product-v1'):
         from ._engine.legacy_square import load_certificate
+    elif data['format']=='explicit-qcsr-square-v1':
+        from ._engine.explicit_square import load_certificate
     else:
         from ._engine.general_square import load_certificate
     engine=load_certificate(data)

@@ -464,6 +464,30 @@
     "4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb": {
       "bytes": 281360,
       "compressed_bytes": 72335
+    },
+    "330cf7835d2e8525c86c52d65e2bc8aeee9247a3f7129f79e86d916cb054306e": {
+      "bytes": 174184,
+      "compressed_bytes": 149535
+    },
+    "b312d21a312abc6b0e274eff3403306ae3fd175bbf0d65db8d0fd6ec02fb76f8": {
+      "bytes": 404,
+      "compressed_bytes": 302
+    },
+    "8d72fd010f3db0539c362304388255577790ee82be0781ad12c85ed2bdcdbe21": {
+      "bytes": 275938,
+      "compressed_bytes": 220608
+    },
+    "e7fcfb1c8e76ca6e768b28629378cfc94eaf8ea2d9b0bc62255304676e2fce30": {
+      "bytes": 404,
+      "compressed_bytes": 302
+    },
+    "2b93998db1c473c33932fc964fecc1fbbb75485bc28d83e3a879170082ae839e": {
+      "bytes": 3394809,
+      "compressed_bytes": 1641128
+    },
+    "a7fb19d69d8e078fb0d6d614ade10417225a186f4fbf94a8d4292f3935995e05": {
+      "bytes": 407,
+      "compressed_bytes": 305
     }
   },
   "paths": {
@@ -582,6 +606,12 @@
     "proofs/c12b74640fd1e16d64e1655d72558960556c571a8e6a88f0f38eddd6794030b2.json": "c12b74640fd1e16d64e1655d72558960556c571a8e6a88f0f38eddd6794030b2",
     "proofs/12c7cb800df45a3302e13db1961ca3aeca06bdad2d89da4a3e6a938b9fa4dc8d.json": "12c7cb800df45a3302e13db1961ca3aeca06bdad2d89da4a3e6a938b9fa4dc8d",
     "proofs/18d30f05f4c6687f1a1313523437be60d04c0cfc0ab4ecb1051d10c9ce3fa1eb.json": "18d30f05f4c6687f1a1313523437be60d04c0cfc0ab4ecb1051d10c9ce3fa1eb",
-    "proofs/4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb.json": "4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb"
+    "proofs/4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb.json": "4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb",
+    "seeds/explicit14_1593.npz": "330cf7835d2e8525c86c52d65e2bc8aeee9247a3f7129f79e86d916cb054306e",
+    "proofs/b312d21a312abc6b0e274eff3403306ae3fd175bbf0d65db8d0fd6ec02fb76f8.json": "b312d21a312abc6b0e274eff3403306ae3fd175bbf0d65db8d0fd6ec02fb76f8",
+    "seeds/explicit16_2236.npz": "8d72fd010f3db0539c362304388255577790ee82be0781ad12c85ed2bdcdbe21",
+    "proofs/e7fcfb1c8e76ca6e768b28629378cfc94eaf8ea2d9b0bc62255304676e2fce30.json": "e7fcfb1c8e76ca6e768b28629378cfc94eaf8ea2d9b0bc62255304676e2fce30",
+    "seeds/explicit32_14196.npz": "2b93998db1c473c33932fc964fecc1fbbb75485bc28d83e3a879170082ae839e",
+    "proofs/a7fb19d69d8e078fb0d6d614ade10417225a186f4fbf94a8d4292f3935995e05.json": "a7fb19d69d8e078fb0d6d614ade10417225a186f4fbf94a8d4292f3935995e05"
   }
 }

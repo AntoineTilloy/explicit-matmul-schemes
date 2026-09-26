@@ -1,8 +1,8 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **33 explicit rational schemes for square matrix multiplication**, with exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+A catalogue of **36 explicit rational schemes for square matrix multiplication**, with exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
 
-The schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Every coefficient is accessible as an exact rational number. The catalogue includes a size-16,384 scheme with effective exponent **2.731191**, and a size-13,468,840,704 scheme with exponent **2.698590**.
+Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the best published counts (LITA): **1,593**, **2,236** and **14,196**. Every coefficient is accessible as an exact rational number. The catalogue includes a size-16,384 scheme with effective exponent **2.731191**, and a size-13,468,840,704 scheme with exponent **2.698590**.
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
@@ -37,6 +37,9 @@ First use of a construction can take minutes to build exact intermediate tables.
 
 | Square size | Multiplications | Effective exponent |
 |---:|---:|---:|
+| [14](schemes/14.json) | 1,593 | 2.793942453 |
+| [16](schemes/16.json) | 2,236 | 2.781676118 |
+| [32](schemes/32.json) | 14,196 | 2.758639372 |
 | [686](schemes/686.json) | 70,153,048 | 2.766272903 |
 | [2,048](schemes/2048.json) | 1,303,338,368 | 2.752687685 |
 | [16,384](schemes/16384.json) | 323,882,771,968 | 2.731191484 |
@@ -53,6 +56,12 @@ The first sub-2.7 size **in this catalogue** is obtained by padding to a natural
 ```
 
 This establishes the strict threshold for that scheme, not the smallest possible matrix size. Its exponent at the natural size is 2.699342235. The new power-21 support computes 5,032 independent products; one packet and 123 recursive remainders supply the 5,155 calls of the original size-22 outer scheme.
+
+## Explicit schemes at sizes 14, 16 and 32
+
+These three entries store every coefficient explicitly (sparse rational factor matrices, format `explicit-qcsr-square-v1`). They are new points of the exact (γ, r₀) parameter family of the [LITA](https://github.com/khoruzhii/lita) row–column aggregation scheme. Two of LITA's three parameter views are unchanged; the third is re-anchored so that one more raw term vanishes (at size 32: 14,314 raw terms − 104 vanishing − 14 merged = 14,196). The same choice gives one product fewer than LITA's published counts 1,594, 2,237 and 14,197.
+
+`cwschemes verify 32` evaluates the algorithm on random matrices modulo 2³¹−1; `cwschemes verify 32 --exact` checks every tensor coefficient modulo enough primes to certify equality over Q (a few minutes of CPU at size 32).
 
 ## Verify
 
@@ -74,12 +83,12 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The figure displays only our saved schemes. Literature comparisons remain available in the accompanying data; the size-432 and size-1,024 candidates lose their finite-size comparisons and are marked in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
+The figure displays only our saved schemes; the three explicit small schemes are drawn as diamonds. Literature comparisons remain available in the accompanying data; the size-432 and size-1,024 candidates lose their finite-size comparisons and are marked in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
 - Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
 - At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.
 
-The comparison pins [LITA](https://github.com/khoruzhii/lita/tree/c1dd9225df98676e385b53ae7517ff2ea0ec5779) at rank **14,197** for size 32 and includes its even and applicable odd families. Other sources are the [Lille catalogue](https://fmm.univ-lille.fr/) and the documented [Schwartz–Zwecher recompression](https://arxiv.org/abs/2508.01748). Existing scheme certificates retain the older primitive versions with which they were constructed.
+The comparison pins [LITA](https://github.com/khoruzhii/lita/tree/c1dd9225df98676e385b53ae7517ff2ea0ec5779) at rank **14,197** for size 32 and includes its even and applicable odd families; the explicit size-14, 16 and 32 entries are one below these pinned counts. Other sources are the [Lille catalogue](https://fmm.univ-lille.fr/) and the documented [Schwartz–Zwecher recompression](https://arxiv.org/abs/2508.01748). Existing scheme certificates retain the older primitive versions with which they were constructed.
 
 The saved points have [exact comparison recipes](comparisons/recipes.json). [Source revisions](comparisons/sources.json), [all point counts](comparisons/counts.csv), and the [dense finite closure](comparisons/closure.csv) are included.
 

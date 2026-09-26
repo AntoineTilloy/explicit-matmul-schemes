@@ -42,5 +42,16 @@
     "small_exact_example_passed": true
   },
   "comparison": "comparison_build.json",
-  "scope": "Exact reduction replay is relative to the documented CW/group/composition identities and published primitive schemes; no proof-assistant formalization or dense expansion of target tensors."
+  "scope": "Exact reduction replay is relative to the documented CW/group/composition identities and published primitive schemes; no proof-assistant formalization or dense expansion of target tensors.",
+  "explicit_schemes": {
+    "sizes": [
+      "14",
+      "16",
+      "32"
+    ],
+    "record": "explicit.jsonl",
+    "mode": "cwschemes verify <n> --exact: random evaluation mod 2^31-1 and all n^6 coefficients modulo CRT primes (exact over Q)",
+    "independent_gpu_check": "all coefficients of 14, 16, 32 also certified by an independent int8 tensor-core checker (8 primes, CRT bound) before inclusion",
+    "negative_control": "one perturbed coefficient makes both checks fail"
+  }
 }

@@ -1,0 +1,2 @@
+{"n": "14", "rank": "1593", "explicit_checks": {"random_evaluation_mod_2_31_minus_1": true, "all_coefficients": {"exact": true, "primes": [2377847, 2377801], "delta_bits": 24.9, "bound_bits": 40.4}}, "seconds": 2.09, "machine": "zotac"}
+{"n": "16", "rank": "2236", "explicit_checks": {"random_evaluation_mod_2_31_minus_1": true, "all_coefficients": {"exact": true, "primes": [2007043, 2007029, 2007013], "delta_bits": 28.5, "bound_bits": 44.5}}, "seconds": 6.8076344699948095, "machine": "zotac"}
