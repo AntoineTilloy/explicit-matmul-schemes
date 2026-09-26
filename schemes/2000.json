@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "2000",
-  "rank": "1254808827",
+  "rank": "1090653050",
   "field": "Q",
-  "root_object": "3d9dd478b64034cfc40f8cd5ce83b01d174c3534f757a524ac7ec1d319a30773",
-  "effective_exponent": 2.7562844254819434,
+  "root_object": "4da5fc5683c98e6ca8ec45002312ec5205cf59a7a852aeca110665bcca091f9d",
+  "effective_exponent": 2.7378383807698206,
   "provenance": {
-    "construction": "CW finite exact restriction and rational composition"
+    "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 10) computing 7 independent <1000> products, fed to Strassen <2;7>"
   },
-  "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
 }

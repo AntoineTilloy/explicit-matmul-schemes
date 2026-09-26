@@ -1,8 +1,10 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **36 explicit rational schemes for square matrix multiplication**, with exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+A catalogue of **41 explicit rational schemes for square matrix multiplication**, with exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
 
-Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the best published counts (LITA): **1,593**, **2,236** and **14,196**. Every coefficient is accessible as an exact rational number. The catalogue includes a size-16,384 scheme with effective exponent **2.731191**, and a size-13,468,840,704 scheme with exponent **2.698590**.
+Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the best published counts (LITA): **1,593**, **2,236** and **14,196**. Every coefficient is accessible as an exact rational number.
+
+Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** needs **198,683,936**, 1.42% fewer than 14,197² = 201,554,809 obtained by squaring LITA's size-32 scheme. The catalogue also includes a size-13,468,840,704 scheme with exponent **2.698590**.
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
@@ -24,7 +26,7 @@ import cwschemes
 
 s = cwschemes.load(16384)
 assert s.n == 16384
-assert s.rank == 323882771968
+assert s.rank == 317774199680
 u = s.coefficient("U", term=0, row=0, col=0)  # fractions.Fraction
 print(u)
 ```
@@ -41,8 +43,12 @@ First use of a construction can take minutes to build exact intermediate tables.
 | [16](schemes/16.json) | 2,236 | 2.781676118 |
 | [32](schemes/32.json) | 14,196 | 2.758639372 |
 | [686](schemes/686.json) | 70,153,048 | 2.766272903 |
+| [1,024](schemes/1024.json) | 198,683,936 | 2.756589999 |
 | [2,048](schemes/2048.json) | 1,303,338,368 | 2.752687685 |
-| [16,384](schemes/16384.json) | 323,882,771,968 | 2.731191484 |
+| [8,192](schemes/8192.json) | 45,396,314,240 | 2.723219701 |
+| [9,826](schemes/9826.json) | 74,352,484,826 | 2.723013418 |
+| [16,384](schemes/16384.json) | 317,774,199,680 | 2.729229360 |
+| [65,536](schemes/65536.json) | 14,507,078,850,188 | 2.732613893 |
 | [536,870,912](schemes/536870912.json) | 390,821,774,252,911,273,874,842 | 2.702443346 |
 | [5,873,299,070](schemes/5873299070.json) | 237,674,020,365,443,824,643,488,557 | < 2.7, exactly checked |
 | [13,468,840,704](schemes/13468840704.json) | 2,162,272,334,177,007,487,103,296,378 | 2.698590115 |
@@ -56,6 +62,22 @@ The first sub-2.7 size **in this catalogue** is obtained by padding to a natural
 ```
 
 This establishes the strict threshold for that scheme, not the smallest possible matrix size. Its exponent at the natural size is 2.699342235. The new power-21 support computes 5,032 independent products; one packet and 123 recursive remainders supply the 5,155 calls of the original size-22 outer scheme.
+
+## Z4-quotient schemes (sizes 1,024 to 65,536)
+
+These 20 entries (format `cw-z4-quotient-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one CW support and one relation certificate.
+
+- **Packet.** A power-9 CW support with 28 rows is invariant under a cyclic group Z4 permuting the 9 coordinates. Its rows form 7 free Z4-orbits. The packet tensor is the local completion G_q^{⊗9} restricted to the support, plus Möbius corrections on the 36 sunflower kernels; it equals 28 independent ⟨q³⟩ products.
+- **Compression.** In the joint triangular representation, patterns whose factor vanishes on the support are removed. A Z4-invariant pair Gram elimination then deletes 300 more patterns, and its relations are absorbed into the output factor. Both steps delete whole Z4-orbits and leave the two input factors equivariant.
+- **Quotient.** On Z4-invariant inputs, all columns of one orbit give the same product. One multiplication per column orbit, whose output factor sums over the orbit, computes the 7 row-orbit products independently. The unit rank is
+
+  ```text
+  R7(q) = (q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 131q^4 + 2q^3 + 2q^2) / 4.
+  ```
+
+- **Sizes.** Strassen's 7 products give ⟨2q³⟩ with R7(q) multiplications for q = 8, …, 20; sizes 4,096, 5,324 and 13,500 are padded from these. Sizes 10,976 and 16,384 place 7 units inside Strassen squared. Size 32,768 places 48 units inside ⟨8;336⟩. Size 65,536 places 319 units inside the explicit ⟨16;2236⟩ scheme (see below); its 3 remaining products use the size-4,096 entry.
+
+The relation data does not depend on q. It was replayed exactly over Q for every q from 2 to 25 before inclusion; `cwschemes verify <n> --exact` replays it again at the q in use.
 
 ## Explicit schemes at sizes 14, 16 and 32
 
@@ -72,6 +94,7 @@ cwschemes verify --all
 
 # Reconstruct and check the rational compression relations as well:
 cwschemes verify 432 --exact --threads 1
+cwschemes verify 9826 --exact
 
 # An uncompressed large construction has no compression relations to replay:
 cwschemes verify 5873299070 --exact
@@ -83,7 +106,7 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The figure displays only our saved schemes; the three explicit small schemes are drawn as diamonds. Literature comparisons remain available in the accompanying data; the size-432 and size-1,024 candidates lose their finite-size comparisons and are marked in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
+The figure displays only our saved schemes; the three explicit small schemes are drawn as diamonds and the Z4-quotient schemes as squares. Literature comparisons remain available in the accompanying data; the size-432 candidate loses its finite-size comparison and is marked in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
 - Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
 - At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.

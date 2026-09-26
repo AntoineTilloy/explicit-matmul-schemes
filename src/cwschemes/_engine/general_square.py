@@ -113,7 +113,10 @@ class MixedSquare:
         assert 0 <= budget <= self.outer.rank
         offset = calls = 0
         for spec in packets:
-            if spec.get('compression') == 'tailored-completion-v1':
+            if spec.get('compression') == 'z4-quotient-v1':
+                from .z4_quotient import unit_from_spec
+                p = unit_from_spec(spec)
+            elif spec.get('compression') == 'tailored-completion-v1':
                 from .tailored_completion import TailoredPacket
                 p = TailoredPacket(spec['q'], spec['rows'], spec['m'])
             elif spec.get('compression') == 'refined-orbit-v1':
@@ -179,6 +182,12 @@ class MixedSquare:
 
 def load_certificate(value):
     data = json.loads(Path(value).read_text()) if isinstance(value, (str, Path)) else value
+    if data['format'] == 'cw-z4-quotient-square-v1':
+        from .z4_quotient import load_certificate as load_z4
+        return load_z4(data)
+    if data['format'] == 'explicit-qcsr-square-v1':
+        from .explicit_square import load_certificate as load_explicit
+        return load_explicit(data)
     if data['format'] == 'cw-compressed-fixed-quotient-square-v1':
         from .compressed_fixed_quotient import load_square_certificate
         return load_square_certificate(data)

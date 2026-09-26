@@ -28,4 +28,31 @@ R(22*16^7) <= P(16) + 123*R(16^7)
            = 237674020365443824643488557.
 ```
 
+## Z4-quotient packets
+
+The entries between sizes 1,024 and 65,536 use a power-9 support whose 28 rows are closed under a coordinate permutation g of order 4, with cycles (0 1 2 3)(4 5 6 7) and 8 fixed. The rows form 7 free orbits. The support is not an induced matching: 36 sunflower kernels K (profile 8, 24, 4 by |K|) receive Möbius-inverted corrections. The packet tensor is
+
+```
+T = G_q^{⊗9}|supp + Σ_K β_K (−D)^{⊗K} ⊗ G_q^{⊗(9−|K|)}|supp = 28 copies of ⟨q^3⟩.
+```
+
+Write it in the joint triangular representation of the mode-permuted rows. Packet modes (0, 1, 2) read the original (B, C, A). Columns are patterns H ∈ {pure, ordinary, special}^9 with labels on the ordinary coordinates. Two relation steps follow, both fixed independently of q.
+
+1. Remove the 1,816 patterns whose factor vanishes on the support. 1,452 patterns remain.
+2. Apply a pair (0, 2) Gram elimination. Its free mode is the output C. Deleted patterns form whole Z4-orbits (300 patterns), so 1,152 patterns remain.
+
+Because the input factors are never modified, they stay Z4-equivariant; the kept set is Z4-stable. On Z4-invariant inputs, the columns of one orbit therefore compute the same product. Sum their output factors and keep one multiplication per column orbit:
+
+```
+T_quot = Σ_O u_O(X) v_O(Y) Σ_{t∈O} w_t |_rep.
+```
+
+This computes the 7 orbit products independently from 7 independent pairs of inputs. It is a "unit" for 7 disjoint ⟨q³⟩ products. By Burnside's lemma, its rank is
+
+```
+R7(q) = (q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 131q^4 + 2q^3 + 2q^2)/4.
+```
+
+Strassen's outer scheme gives R(2q³) ≤ R7(q): 198,683,936 at q = 8 and 74,352,484,826 at q = 17 (n = 9,826, exponent 2.723013). An outer scheme of rank R_k with 7j of its products grouped into units gives R(kq³) ≤ j·R7(q) + (R_k − 7j)·R(q³). The catalogue uses this at 10,976, 16,384 (Strassen², j = 7), 32,768 (⟨8;336⟩, j = 48) and 65,536 (⟨16;2236⟩, j = 319, three products by the size-4,096 entry).
+
 The input and output dimensions and every coefficient are finite and specified. The constructions are not border-rank approximations and do not rely on numerical near-identities.

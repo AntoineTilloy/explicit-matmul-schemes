@@ -22,7 +22,7 @@ The catalogue explicitly depends on the cited primitive identities, including St
 
 ## Release evidence
 
-The [version 0.1.0 results](../checks/summary.json) cover the 33 CW-based catalogue entries; the explicit size-14, 16 and 32 entries were added later (see below). Selected exact-mode checks passed for sizes 432, 1,370 and 5,873,299,070, taking approximately 250, 376 and 280 seconds respectively on one Atlas core each. The first two exercise quotient and refined-orbit compression; the last exercises the uncompressed power-21 construction and its strict sub-2.7 threshold. These timings include loading and coefficient evaluation.
+The [version 0.1.0 results](../checks/summary.json) cover the 33 CW-based entries of that version; the explicit size-14, 16 and 32 entries and the Z4-quotient entries were added later (see below), and the Z4-quotient entries replace 15 of the version-0.1.0 entries. Selected exact-mode checks passed for sizes 432, 1,370 and 5,873,299,070, taking approximately 250, 376 and 280 seconds respectively on one Atlas core each. The first two exercise quotient and refined-orbit compression; the last exercises the uncompressed power-21 construction and its strict sub-2.7 threshold. These timings include loading and coefficient evaluation.
 
 The checker rejected a deliberately altered rational relation. Six regression tests passed against the installed wheel from outside the repository, as did the small exact multiplication example and a fresh-cache size-1,024 smoke check. Forty-five nonzero coefficient comparisons checked the formula-based size-86 LITA reader against the original coefficient data. This last check is a regression comparison, not an exhaustive tensor-identity proof.
 
@@ -36,3 +36,24 @@ Entries in format `explicit-qcsr-square-v1` bundle every coefficient. The defaul
 input pairs modulo 2³¹−1 (Schwartz–Zippel). `--exact` checks every one of the n⁶ tensor coefficients modulo primes whose product
 exceeds 2Δ(S+1), where Δ is the product of the per-factor denominator lcms and S = Σₜ‖uₜ‖∞‖vₜ‖∞‖wₜ‖∞; this certifies equality over Q.
 Results are recorded in [checks/explicit.jsonl](../checks/explicit.jsonl). A single perturbed coefficient makes both checks fail.
+
+## Z4-quotient schemes (sizes 1,024 to 65,536)
+
+`cwschemes verify <n>` walks the entry's composition tree and checks each distinct unit (one per q) in three ways.
+
+- **Audit.** It checks the support structure: 28 CW rows in 7 free Z4-orbits, and the sunflower kernels with their Möbius coefficients. It checks the relation object: the kept, zero and deleted pattern sets partition each step and are Z4-stable, and relation steps modify only the output mode. The rank is computed three independent ways: orbit unranking, Burnside's lemma over the kept patterns, and the closed-form polynomial.
+- **Exact packet identity.** It evaluates the packet tensor Σ_columns u(x) v(y) w(z) exactly over Q, with Fractions, at four sampled entries: a valid triple, a sunflower "garbage" block triple where the corrections must cancel, a label-perturbed diagonal entry and a uniform entry. Each value is compared with the 28 copies of ⟨q³⟩. The label sums factor coordinate-wise; packet modes 1 and 2 use the generator's own coefficient tables.
+- **Orbit lemma.** Every member of a term's column orbit has the same input factor, equal to the published coefficient, checked exactly.
+
+`--exact` additionally instantiates the q-independent relation object at each unit's q. It replays both steps exactly over Q with the same checker as other compact-orbit proofs (`replay_orbit`): zero patterns must be zero, and every relation G[:, B] C = G[:, J] must hold for the reconstructed pair Gram. One replay takes 8 to 9 minutes and about 3.2 GB of memory on one core.
+
+The quotient step itself is covered by the orbit lemma above and the construction argument in construction.md, not by the replay. The same holds for the Strassen or outer wiring.
+
+Release evidence is recorded in [checks/z4_quotient.json](../checks/z4_quotient.json) and [checks/z4_verify.jsonl](../checks/z4_verify.jsonl):
+
+- **Faithful port.** At q = 2 (n = 16, rank 15,866), every one of the 3 × 15,866 × 256 coefficients equals the research generator's value. At q = 3, 8 and 17, 3,000 random coefficients each were compared the same way.
+- **All coefficients at q = 2.** All n⁶ coefficients of the q = 2 instance (same support and relation objects) were checked modulo primes whose product exceeds 2Δ(S+1), which makes the check exact over Q. The vectorised factor matrices used for this check agree modulo 2³¹−1 with all published Fraction coefficients.
+- **Random tensor entries.** Random full-tensor entries T[a,b,c] (uniform, valid, near-valid and garbage-targeted) were checked modulo 2³¹−1 and 2³¹−19 at q = 3, 8 and 17.
+- **Exact packet entries and orbit lemma** were checked at q = 2, 3, 8 and 17.
+- **Negative controls.** A +1 perturbation of the packet value, of the tensor value or of one factor coefficient makes each check fail.
+- **Replay.** `cwschemes verify <n> --exact` passed for all 20 Z4 entries.

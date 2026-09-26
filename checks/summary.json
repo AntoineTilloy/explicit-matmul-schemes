@@ -53,5 +53,38 @@
     "mode": "cwschemes verify <n> --exact: random evaluation mod 2^31-1 and all n^6 coefficients modulo CRT primes (exact over Q)",
     "independent_gpu_check": "all coefficients of 14, 16, 32 also certified by an independent int8 tensor-core checker (8 primes, CRT bound) before inclusion",
     "negative_control": "one perturbed coefficient makes both checks fail"
+  },
+  "z4_quotient_schemes": {
+    "sizes": [
+      "1024",
+      "1458",
+      "2000",
+      "2662",
+      "3456",
+      "4096",
+      "4394",
+      "5324",
+      "5488",
+      "6750",
+      "8192",
+      "9826",
+      "10976",
+      "11664",
+      "13500",
+      "13718",
+      "16000",
+      "16384",
+      "32768",
+      "65536"
+    ],
+    "record": "z4_quotient.json",
+    "verify_record": "z4_verify.jsonl",
+    "verify_exact": "cwschemes verify <n> --exact passed for all 20 entries on atlas (relation replay exactly over Q at every q used; about 500 s per q on one core)",
+    "default_verify_1024_fresh_cache_seconds": 83,
+    "port_faithfulness": "q=2: all 12,185,088 coefficients equal to the research generator; q=3, 8, 17: 3,000 random coefficients each, no mismatch",
+    "all_coefficients_q2": "exact over Q (7 primes near 2^20, CRT bound 2^135.6)",
+    "random_tensor_entries": "q=2 (16), 3, 8, 17 (60 each) modulo 2^31-1 and 2^31-19: pass",
+    "negative_controls": "perturbed packet value, tensor value and factor coefficient: every check fails",
+    "tests": "pytest: 9 passed (includes an exact q=2 Z4 test)"
   }
 }

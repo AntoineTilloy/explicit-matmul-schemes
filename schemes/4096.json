@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "4096",
-  "rank": "9099643392",
+  "rank": "8551535876",
   "field": "Q",
-  "root_object": "093cfda1dfd797495b5c716789e4c6de60606ffdf2ddf56315c4b0e4712951b7",
-  "effective_exponent": 2.756930238525038,
+  "root_object": "37ebcde30a38ec4fc0e3aa7fdfe1c20c0a79e5b0499e04cab66231dbcea46326",
+  "effective_exponent": 2.749461367390499,
   "provenance": {
-    "construction": "CW finite exact restriction and rational composition"
+    "construction": "Padding of the size-4,394 Z4-quotient scheme (q = 13)"
   },
-  "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
 }

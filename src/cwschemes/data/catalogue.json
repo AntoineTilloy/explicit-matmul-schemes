@@ -74,14 +74,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "1024",
-    "rank": "203911824",
+    "rank": "198683936",
     "field": "Q",
-    "root_object": "b7ffed08e77cd561ce0c1e6f7fbd7b8b477c8f98f3b452d82325d05622bb921c",
-    "effective_exponent": 2.7603370192774057,
+    "root_object": "0b9a92cbd55f5c425476b252674daa9450f70fe2ebfe2ac9d56ef2772893de01",
+    "effective_exponent": 2.756589999157575,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 8) computing 7 independent <512> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -110,26 +110,26 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "1458",
-    "rank": "533028562",
+    "rank": "485258526",
     "field": "Q",
-    "root_object": "5868a43ff067b9a7a2c4ac03ec5d52cec7d576c419bb8c167d023cd93bb8fb67",
-    "effective_exponent": 2.7583499730608056,
+    "root_object": "11bd667f9927b3c836cd21f815bdfd1251110d43558d9810e17daa682be9c89c",
+    "effective_exponent": 2.745461088230323,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 9) computing 7 independent <729> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "2000",
-    "rank": "1254808827",
+    "rank": "1090653050",
     "field": "Q",
-    "root_object": "3d9dd478b64034cfc40f8cd5ce83b01d174c3534f757a524ac7ec1d319a30773",
-    "effective_exponent": 2.7562844254819434,
+    "root_object": "4da5fc5683c98e6ca8ec45002312ec5205cf59a7a852aeca110665bcca091f9d",
+    "effective_exponent": 2.7378383807698206,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 10) computing 7 independent <1000> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -158,14 +158,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "2662",
-    "rank": "2751535017",
+    "rank": "2288813615",
     "field": "Q",
-    "root_object": "3f10cca2b7eddc6795d7b7f1539eaa590b57b43cb62ec2c49e15afa718a984ff",
-    "effective_exponent": 2.7559128973284577,
+    "root_object": "c2466c7f6e69fc559d7cbbdbd097c6dc4b74a987f3d3c7b52ad9d71e7ba012a1",
+    "effective_exponent": 2.7325669823451113,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 11) computing 7 independent <1331> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -182,14 +182,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "3456",
-    "rank": "5646807411",
+    "rank": "4534212456",
     "field": "Q",
-    "root_object": "7466e74f6aa5ebf2da32403e1db15d8b2757a1bf78cf605c6e7a0a4ee88b21fc",
-    "effective_exponent": 2.755856938306232,
+    "root_object": "25eb0853554f827598470ef958ee3e6ca75503f17534b3353032cca829c0b4f3",
+    "effective_exponent": 2.7289248697584796,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 12) computing 7 independent <1728> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -206,50 +206,62 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "4096",
-    "rank": "9099643392",
+    "rank": "8551535876",
     "field": "Q",
-    "root_object": "093cfda1dfd797495b5c716789e4c6de60606ffdf2ddf56315c4b0e4712951b7",
-    "effective_exponent": 2.756930238525038,
+    "root_object": "37ebcde30a38ec4fc0e3aa7fdfe1c20c0a79e5b0499e04cab66231dbcea46326",
+    "effective_exponent": 2.749461367390499,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Padding of the size-4,394 Z4-quotient scheme (q = 13)"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "4394",
-    "rank": "11048432726",
+    "rank": "8551535876",
     "field": "Q",
-    "root_object": "eb9da3c91e239989060aef085f2dc1b8285e4d30457f9e3ecf5ea40b8f51f3bb",
-    "effective_exponent": 2.756982297049042,
+    "root_object": "4ee6254cc26ca45cf048ed76b474e537d50ab316aa5aa677a52f18b7f2812751",
+    "effective_exponent": 2.7264413067418505,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 13) computing 7 independent <2197> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "5324",
-    "rank": "15663732414",
+    "rank": "15457917986",
     "field": "Q",
-    "root_object": "a52c4545443cfe049093a2b08dc977697d2835b7ba43873c444a5428d200331e",
-    "effective_exponent": 2.735975299310123,
+    "root_object": "cd8603016abd7d01c529c26a8d49b33d8b5285348d1c9269ecc0cbfd8f5daf6e",
+    "effective_exponent": 2.7344337293493526,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Padding of the size-5,488 Z4-quotient scheme (q = 14)"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "5488",
-    "rank": "20501989977",
+    "rank": "15457917986",
     "field": "Q",
-    "root_object": "e70066919b12af0b7216b150890f2daf479df0e6688ce1299e6d87a4e6db3797",
-    "effective_exponent": 2.7575967073084873,
+    "root_object": "e24252e6ca782c6e79cb9fc336797d752629c5d20e28ce35ddc9a87f435427cc",
+    "effective_exponent": 2.7247987836941037,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 14) computing 7 independent <2744> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "6750",
+    "rank": "26925869925",
+    "field": "Q",
+    "root_object": "358129441d0c733daa1d79b7e20565e3aa7ed0e6443b1968e0ff03957d00ed10",
+    "effective_exponent": 2.7237770524891407,
+    "provenance": {
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 15) computing 7 independent <3375> products, fed to Strassen <2;7>"
+    },
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -266,74 +278,122 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "8192",
-    "rank": "54340274604",
+    "rank": "45396314240",
     "field": "Q",
-    "root_object": "abdb2787bf0b5a1db3f8b3ec670812e3e240f2d23a345a0c3699a12a8c6e9110",
-    "effective_exponent": 2.7431771388453683,
+    "root_object": "05abc4795d7cb73c5a8e16a5aefd9c629ccaa2717da8ad3359cd9b33c0c31a77",
+    "effective_exponent": 2.7232197013598216,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 16) computing 7 independent <4096> products, fed to Strassen <2;7>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "9826",
+    "rank": "74352484826",
+    "field": "Q",
+    "root_object": "4ae6feb1833ec17332eee456bb05feeb9ad10c1c53049fa244bd6b682625ba03",
+    "effective_exponent": 2.723013418095116,
+    "provenance": {
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 17) computing 7 independent <4913> products, fed to Strassen <2;7>"
+    },
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "10976",
-    "rank": "108775441824",
+    "rank": "108205425902",
     "field": "Q",
-    "root_object": "50851dbbfa0fd5dd95b4cf71898b8f854b51d3160118a6712a72bc064b09c4ce",
-    "effective_exponent": 2.731514305681813,
+    "root_object": "2716381042cdb0572052e983f0d5a3016520504211722ce1e167127a77fd3635",
+    "effective_exponent": 2.730949561521638,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "7 Z4-quotient units (q = 14, 7 independent <2744> products each) inside Strassen squared <4;49>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "11664",
+    "rank": "118666894266",
+    "field": "Q",
+    "root_object": "f84220a51821589c88b4633f3826c14e81829cffd46415fd0507d1280554cb0a",
+    "effective_exponent": 2.7230747025390754,
+    "provenance": {
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 18) computing 7 independent <5832> products, fed to Strassen <2;7>"
+    },
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "13500",
-    "rank": "190858578750",
+    "rank": "185035102571",
     "field": "Q",
-    "root_object": "ca66a8d6173dd26a56dbd19f47109b3b8a06a1d6bb7204e872707769a086cff5",
-    "effective_exponent": 2.731186465250355,
+    "root_object": "fa048d65d18a3a74f7968ce65c30ebac097aac911648e3f4996af3c25f2894c6",
+    "effective_exponent": 2.7279282393930693,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Padding of the size-13,718 Z4-quotient scheme (q = 19)"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "13718",
+    "rank": "185035102571",
+    "field": "Q",
+    "root_object": "d0ee2ddbfd066ab20289169048c386d24ce763e3985ed634ad3a5ddac8644363",
+    "effective_exponent": 2.7233411123095688,
+    "provenance": {
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 19) computing 7 independent <6859> products, fed to Strassen <2;7>"
+    },
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "16000",
+    "rank": "282511644200",
+    "field": "Q",
+    "root_object": "3541676b4414676999154e6fc848989883b4ad9e64ef1cd5b715f10356c7adf5",
+    "effective_exponent": 2.7237653539752626,
+    "provenance": {
+      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 20) computing 7 independent <8000> products, fed to Strassen <2;7>"
+    },
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "16384",
-    "rank": "323882771968",
+    "rank": "317774199680",
     "field": "Q",
-    "root_object": "24393d766d07002e1b9ebb93e5db5c516a58e6f8e55cbf24a4aab66bc4f2f80a",
-    "effective_exponent": 2.7311914838453526,
+    "root_object": "ec4b8d24ea67555e49a4ce78f0e691f2ef60ef14a130f1d6f1b3e991f3006c22",
+    "effective_exponent": 2.7292293599810917,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "7 Z4-quotient units (q = 16, 7 independent <4096> products each) inside Strassen squared <4;49>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "32768",
-    "rank": "2282088766866",
+    "rank": "2179023083520",
     "field": "Q",
-    "root_object": "f83b0d62c502e7921366b4eb0320745e0d4e72250beee05bf230654e26f8e819",
-    "effective_exponent": 2.736899469877713,
+    "root_object": "1466e78fe4cbc821367e9e1b5903df58d788b63590a9c561d582ebe86029b085",
+    "effective_exponent": 2.7324545745599225,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "48 Z4-quotient units (q = 16) inside the outer <8;336> = Strassen x <4;48>"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "65536",
-    "rank": "14956207594062",
+    "rank": "14507078850188",
     "field": "Q",
-    "root_object": "9881228dcce7047ecff101458b49c220b84b804d220b604dfe6e5547e64cf111",
-    "effective_exponent": 2.7353631021733693,
+    "root_object": "dfacef7a66712d0278b9babf6c2d48f1ed31fb2840691d8bcf6f3fecbd27f29d",
+    "effective_exponent": 2.7326138925419823,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "319 Z4-quotient units (q = 16) inside the explicit outer <16;2236>, 3 remaining products by the size-4,096 Z4-quotient scheme"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",

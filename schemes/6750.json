@@ -1,0 +1,12 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "6750",
+  "rank": "26925869925",
+  "field": "Q",
+  "root_object": "358129441d0c733daa1d79b7e20565e3aa7ed0e6443b1968e0ff03957d00ed10",
+  "effective_exponent": 2.7237770524891407,
+  "provenance": {
+    "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 15) computing 7 independent <3375> products, fed to Strassen <2;7>"
+  },
+  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+}
