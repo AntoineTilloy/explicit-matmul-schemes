@@ -112,34 +112,43 @@ class MixedSquare:
         budget = self.outer.rank if leftover_products is None else self.outer.rank - leftover_products
         assert 0 <= budget <= self.outer.rank
         offset = calls = 0
+        packet_cache = {}
         for spec in packets:
-            if spec.get('compression') == 'z4-quotient-v1':
-                from .z4_quotient import unit_from_spec
-                p = unit_from_spec(spec)
-            elif spec.get('compression') == 'tailored-completion-v1':
-                from .tailored_completion import TailoredPacket
-                p = TailoredPacket(spec['q'], spec['rows'], spec['m'])
-            elif spec.get('compression') == 'refined-orbit-v1':
-                from .refined_orbit_packet import RefinedOrbitPacket
-                p = RefinedOrbitPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
-            elif spec.get('compression') == 'joint-orbit-v1':
-                from .compact_orbit_packet import CompactOrbitPacket
-                p = CompactOrbitPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
-            elif spec.get('compression') == 'orbit-iterated-v1':
-                from .iterated_orbit_packet import IteratedOrbitPacket
-                p = IteratedOrbitPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
-            elif spec.get('compression') == 'pair-schur-multi-v1':
-                from .second_schur_packet import MultiSchurPacket
-                p = MultiSchurPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
-            elif spec.get('compression') == 'pair-schur-second-v1':
-                from .second_schur_packet import SecondSchurPacket
-                p = SecondSchurPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
-            elif spec.get('compression') == 'pair-schur-v1':
-                from .schur_compression import SchurPacket
-                p = SchurPacket(spec['q'], spec['rows'], spec['m'])
+            # Packets carry local coefficient tables, not batch offsets or cursors.
+            # Repeated specs may share those tables; each occurrence keeps its own
+            # start, end and used-row count below. Keep the cache local to this load.
+            key = json.dumps(spec, sort_keys=True, separators=(',', ':'))
+            if key in packet_cache:
+                p = packet_cache[key]
             else:
-                assert not spec.get('compression'), 'unknown compression format'
-                p = CompactPacket(spec['q'], spec['rows'], spec['m'], patched=spec.get('patched', True))
+                if spec.get('compression') == 'z4-quotient-v1':
+                    from .z4_quotient import unit_from_spec
+                    p = unit_from_spec(spec)
+                elif spec.get('compression') == 'tailored-completion-v1':
+                    from .tailored_completion import TailoredPacket
+                    p = TailoredPacket(spec['q'], spec['rows'], spec['m'])
+                elif spec.get('compression') == 'refined-orbit-v1':
+                    from .refined_orbit_packet import RefinedOrbitPacket
+                    p = RefinedOrbitPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
+                elif spec.get('compression') == 'joint-orbit-v1':
+                    from .compact_orbit_packet import CompactOrbitPacket
+                    p = CompactOrbitPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
+                elif spec.get('compression') == 'orbit-iterated-v1':
+                    from .iterated_orbit_packet import IteratedOrbitPacket
+                    p = IteratedOrbitPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
+                elif spec.get('compression') == 'pair-schur-multi-v1':
+                    from .second_schur_packet import MultiSchurPacket
+                    p = MultiSchurPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
+                elif spec.get('compression') == 'pair-schur-second-v1':
+                    from .second_schur_packet import SecondSchurPacket
+                    p = SecondSchurPacket(spec['q'], spec['rows'], spec['m'], spec['relations'])
+                elif spec.get('compression') == 'pair-schur-v1':
+                    from .schur_compression import SchurPacket
+                    p = SchurPacket(spec['q'], spec['rows'], spec['m'])
+                else:
+                    assert not spec.get('compression'), 'unknown compression format'
+                    p = CompactPacket(spec['q'], spec['rows'], spec['m'], patched=spec.get('patched', True))
+                packet_cache[key] = p
             assert p.q ** p.m == self.inner
             if 'rank' in spec:
                 assert p.rank == spec['rank']

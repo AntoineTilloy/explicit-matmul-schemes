@@ -1,0 +1,123 @@
+{
+  "changes": [
+    {
+      "n": 432,
+      "old_rank": "20605251",
+      "rank": "19788629",
+      "root_object": "2932c762217e1af30fd0379a6aaefe2d7318452caaab5debc7e6e6607f06a534",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/432.json"
+    },
+    {
+      "n": 2025,
+      "old_rank": "1353908097",
+      "rank": "1303338368",
+      "root_object": "cacdc70c8f17645dc865f358f9ffa9984d2a5aa1e3d78017436f98330b91c406",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/2025.json"
+    },
+    {
+      "n": 65536,
+      "old_rank": "14507078850188",
+      "rank": "14360405808994",
+      "root_object": "1c2c12626b0330734b8eb9ca7ddcc7b8417f635a22399ffbf8ddb7e1d19daac1",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/65536.json"
+    },
+    {
+      "n": 524288,
+      "old_rank": "3562053602135175",
+      "rank": "3556691386069563",
+      "root_object": "7590c19b4e5b76fca3a656eb875ecf6ea0392f3a2ce94c2a139f1028e21d5ab7",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/524288.json"
+    },
+    {
+      "n": 1048576,
+      "old_rank": "23851717467392934",
+      "rank": "23653834283894444",
+      "root_object": "37774375a2deb9f3c06d8e2720c88b544ef339568361acbea41dd141f1d68e68",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/1048576.json"
+    },
+    {
+      "n": 8388608,
+      "old_rank": "6706435549142150135",
+      "rank": "6705816639014712292",
+      "root_object": "d38785c9cee87552ad640b5139348e05a11fe20900c1b6ab3a1078f5e14d4fba",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/8388608.json"
+    },
+    {
+      "n": 16777216,
+      "old_rank": "39781327722167699383",
+      "rank": "38520042228975289144",
+      "root_object": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/16777216.json"
+    },
+    {
+      "n": 528108169,
+      "old_rank": null,
+      "rank": "355919505257948041899273",
+      "root_object": "40127df42d2cd59113dc426d825e6f5521f440c757382e37278bfe74fe914946",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/528108169.json"
+    },
+    {
+      "n": 536870912,
+      "old_rank": "390821774252911273874842",
+      "rank": "355919505257948041899273",
+      "root_object": "4699a85bea4bb68b8b2572173b381a311df662e1b14f4b161f22ae027899a02f",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/536870912.json"
+    },
+    {
+      "n": 5125781250,
+      "old_rank": null,
+      "rank": "141973264838711379220429440",
+      "root_object": "1f2885a21e3594c2f2e30958f90f60811b00884362bcd6e5fea724aaf920482b",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/5125781250.json"
+    },
+    {
+      "n": 5873299070,
+      "old_rank": "237674020365443824643488557",
+      "rank": "219405870380472051962264353",
+      "root_object": "156c6f1787fe0fa9b5a2aec5c77ab31da2b4052f3447c44efcf53e213a52361f",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/5873299070.json"
+    },
+    {
+      "n": 5905580032,
+      "old_rank": "237674020365443824643488557",
+      "rank": "219405870380472051962264353",
+      "root_object": "478a8100c63a2896ed4ba53a0981c8a327bc80f1dbec057bc61db7b0fdb0b0bd",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/5905580032.json"
+    },
+    {
+      "n": 8053063680,
+      "old_rank": null,
+      "rank": "469778272032184675771793801",
+      "root_object": "540fa29c2c63f63fa6ae9d0f3f9720d074d6eab32c0099703795b8a944db5463",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/8053063680.json"
+    },
+    {
+      "n": 12310160190,
+      "old_rank": null,
+      "rank": "1463616394485527559895695360",
+      "root_object": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/12310160190.json"
+    },
+    {
+      "n": 13468840704,
+      "old_rank": "2162272334177007487103296378",
+      "rank": "2014523380268092193411235280",
+      "root_object": "4be0f59b2618795977eb5516a3ff32a20d3f5e0ab911195cf51de0ebc029ba89",
+      "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/13468840704.json"
+    }
+  ],
+  "catalogue_size": 45,
+  "compute_host": "Atlas",
+  "vast_spend_usd": 0,
+  "first_strict_sub27": {
+    "n": "528108169",
+    "rank": "355919505257948041899273",
+    "natural_n": "536870912"
+  },
+  "best_exponent": {
+    "n": "12310160190",
+    "rank": "1463616394485527559895695360",
+    "exponent": 2.6922415569545044
+  },
+  "scope": "Exact support/completion and recursive allocation audits, coefficient queries, small exhaustive tensor calibrations; no expansion of billion-size tensors."
+}

@@ -9,8 +9,8 @@ from cwschemes import _resources
 
 def test_catalogue_and_exact_threshold():
     entries=cwschemes.catalogue()
-    assert len(entries)==41 and len({r['n'] for r in entries})==41
-    d=next(r for r in entries if r['n']=='5873299070')
+    assert len(entries)==45 and len({r['n'] for r in entries})==45
+    d=next(r for r in entries if r['n']=='528108169')
     n,r=int(d['n']),int(d['rank'])
     assert (n-1)**27<=r**10<n**27
 
@@ -75,7 +75,7 @@ def test_z4_quotient_catalogue_counts():
     e={r['n']:int(r['rank']) for r in cwschemes.catalogue()}
     assert e['9826']==closed_form_rank(17)==74352484826 and e['1024']==closed_form_rank(8)==198683936
     assert e['16384']==7*closed_form_rank(16) and e['32768']==48*closed_form_rank(16)
-    assert e['65536']==319*closed_form_rank(16)+3*closed_form_rank(13)
+    assert e['65536']==929*closed_form_rank(14)
     s=cwschemes.load(9826)
     assert s.rank==74352484826 and s._engine.packets[0].rank==s.rank
 

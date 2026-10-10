@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "524288",
-  "rank": "3562053602135175",
+  "rank": "3556691386069563",
   "field": "Q",
-  "root_object": "26394f17d6b870212cb22859a3547dedbc6d98d6c57022bd83a9780af3558bbc",
-  "effective_exponent": 2.7190331920911097,
+  "root_object": "7590c19b4e5b76fca3a656eb875ecf6ea0392f3a2ce94c2a139f1028e21d5ab7",
+  "effective_exponent": 2.7189188010824052,
   "provenance": {
-    "construction": "CW finite exact restriction and rational composition"
+    "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
   },
-  "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
 }

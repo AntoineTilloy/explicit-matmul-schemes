@@ -38,14 +38,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "432",
-    "rank": "20605251",
+    "rank": "19788629",
     "field": "Q",
-    "root_object": "83bbb69831165399bfc52732f39ab25f6eb9526d8a7e5a246f25df6f4ec9b43e",
-    "effective_exponent": 2.775193707049003,
+    "root_object": "2932c762217e1af30fd0379a6aaefe2d7318452caaab5debc7e6e6607f06a534",
+    "effective_exponent": 2.768529957805309,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -134,14 +134,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "2025",
-    "rank": "1353908097",
+    "rank": "1303338368",
     "field": "Q",
-    "root_object": "1f75ac60c3709ee5a6db3a5fec2c96158802c1a1ad28613cbc365c8800a922d1",
-    "effective_exponent": 2.76177113028175,
+    "root_object": "cacdc70c8f17645dc865f358f9ffa9984d2a5aa1e3d78017436f98330b91c406",
+    "effective_exponent": 2.7567711665514727,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -386,109 +386,158 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "65536",
-    "rank": "14507078850188",
+    "rank": "14360405808994",
     "field": "Q",
-    "root_object": "dfacef7a66712d0278b9babf6c2d48f1ed31fb2840691d8bcf6f3fecbd27f29d",
-    "effective_exponent": 2.7326138925419823,
+    "root_object": "1c2c12626b0330734b8eb9ca7ddcc7b8417f635a22399ffbf8ddb7e1d19daac1",
+    "effective_exponent": 2.7316976095137324,
     "provenance": {
-      "construction": "319 Z4-quotient units (q = 16) inside the explicit outer <16;2236>, 3 remaining products by the size-4,096 Z4-quotient scheme"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "524288",
-    "rank": "3562053602135175",
+    "rank": "3556691386069563",
     "field": "Q",
-    "root_object": "26394f17d6b870212cb22859a3547dedbc6d98d6c57022bd83a9780af3558bbc",
-    "effective_exponent": 2.7190331920911097,
+    "root_object": "7590c19b4e5b76fca3a656eb875ecf6ea0392f3a2ce94c2a139f1028e21d5ab7",
+    "effective_exponent": 2.7189188010824052,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "1048576",
-    "rank": "23851717467392934",
+    "rank": "23653834283894444",
     "field": "Q",
-    "root_object": "b7bb91e14ec36f74e7e7b17ba20776c779d6bc64b459e3c9ef3278993dfcb8f8",
-    "effective_exponent": 2.7202471335452887,
+    "root_object": "37774375a2deb9f3c06d8e2720c88b544ef339568361acbea41dd141f1d68e68",
+    "effective_exponent": 2.719646179071192,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "8388608",
-    "rank": "6706435549142150135",
+    "rank": "6705816639014712292",
     "field": "Q",
-    "root_object": "5bacb95cbb8bc9aec9e0f28e46052c7ad6f6ee3b2e5750d72e759bbf25efeb6b",
-    "effective_exponent": 2.7191413865177667,
+    "root_object": "d38785c9cee87552ad640b5139348e05a11fe20900c1b6ab3a1078f5e14d4fba",
+    "effective_exponent": 2.719135597530726,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "16777216",
-    "rank": "39781327722167699383",
+    "rank": "38520042228975289144",
     "field": "Q",
-    "root_object": "1c2c908c0f738c57301f9402517e3b0afab3ae975d27f8eb2d73939dab0d3c8a",
-    "effective_exponent": 2.7128635512716777,
+    "root_object": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+    "effective_exponent": 2.710926795318676,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "528108169",
+    "rank": "355919505257948041899273",
+    "field": "Q",
+    "root_object": "40127df42d2cd59113dc426d825e6f5521f440c757382e37278bfe74fe914946",
+    "effective_exponent": 2.6999999998279245,
+    "provenance": {
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves",
+      "strict_sub27_threshold": true
+    },
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "536870912",
-    "rank": "390821774252911273874842",
+    "rank": "355919505257948041899273",
     "field": "Q",
-    "root_object": "c12b74640fd1e16d64e1655d72558960556c571a8e6a88f0f38eddd6794030b2",
-    "effective_exponent": 2.7024433458723447,
+    "root_object": "4699a85bea4bb68b8b2572173b381a311df662e1b14f4b161f22ae027899a02f",
+    "effective_exponent": 2.697789557952912,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "5125781250",
+    "rank": "141973264838711379220429440",
+    "field": "Q",
+    "root_object": "1f2885a21e3594c2f2e30958f90f60811b00884362bcd6e5fea724aaf920482b",
+    "effective_exponent": 2.693393697280391,
+    "provenance": {
+      "construction": "Exact finite CW composition update (October 2026): envelope_full_final; certified Z4-quotient leaves"
+    },
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "5873299070",
-    "rank": "237674020365443824643488557",
+    "rank": "219405870380472051962264353",
     "field": "Q",
-    "root_object": "12c7cb800df45a3302e13db1961ca3aeca06bdad2d89da4a3e6a938b9fa4dc8d",
-    "effective_exponent": 2.6999999999865785,
+    "root_object": "156c6f1787fe0fa9b5a2aec5c77ab31da2b4052f3447c44efcf53e213a52361f",
+    "effective_exponent": 2.6964444786049664,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): envelope_missing_final; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "5905580032",
-    "rank": "237674020365443824643488557",
+    "rank": "219405870380472051962264353",
     "field": "Q",
-    "root_object": "18d30f05f4c6687f1a1313523437be60d04c0cfc0ab4ecb1051d10c9ce3fa1eb",
-    "effective_exponent": 2.6993422346550937,
+    "root_object": "478a8100c63a2896ed4ba53a0981c8a327bc80f1dbec057bc61db7b0fdb0b0bd",
+    "effective_exponent": 2.6957875794581856,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): envelope_missing_final; certified Z4-quotient leaves"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "8053063680",
+    "rank": "469778272032184675771793801",
+    "field": "Q",
+    "root_object": "540fa29c2c63f63fa6ae9d0f3f9720d074d6eab32c0099703795b8a944db5463",
+    "effective_exponent": 2.692509345350409,
+    "provenance": {
+      "construction": "Exact finite CW composition update (October 2026): envelope_full_final; certified Z4-quotient leaves"
+    },
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "12310160190",
+    "rank": "1463616394485527559895695360",
+    "field": "Q",
+    "root_object": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+    "effective_exponent": 2.6922415569545044,
+    "provenance": {
+      "construction": "Exact finite CW composition update (October 2026): envelope_full_final"
+    },
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "13468840704",
-    "rank": "2162272334177007487103296378",
+    "rank": "2014523380268092193411235280",
     "field": "Q",
-    "root_object": "4467012af8e773431d2a3701739e8a5b69ee6eef00c75dbedb8bfaee098d5deb",
-    "effective_exponent": 2.6985901147733276,
+    "root_object": "4be0f59b2618795977eb5516a3ff32a20d3f5e0ab911195cf51de0ebc029ba89",
+    "effective_exponent": 2.695555552874949,
     "provenance": {
-      "construction": "CW finite exact restriction and rational composition"
+      "construction": "Exact finite CW composition update (October 2026): envelope_missing_final"
     },
-    "verification": "Exact witnesses included; see docs/verification.md for check levels."
+    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
   }
 ]

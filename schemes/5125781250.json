@@ -1,0 +1,12 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "5125781250",
+  "rank": "141973264838711379220429440",
+  "field": "Q",
+  "root_object": "1f2885a21e3594c2f2e30958f90f60811b00884362bcd6e5fea724aaf920482b",
+  "effective_exponent": 2.693393697280391,
+  "provenance": {
+    "construction": "Exact finite CW composition update (October 2026): envelope_full_final; certified Z4-quotient leaves"
+  },
+  "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+}

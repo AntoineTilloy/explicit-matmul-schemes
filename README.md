@@ -1,10 +1,10 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **41 explicit rational schemes for square matrix multiplication**, with exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+A catalogue of **45 explicit rational schemes for square matrix multiplication**, with exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the best published counts (LITA): **1,593**, **2,236** and **14,196**. Every coefficient is accessible as an exact rational number.
 
-Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** needs **198,683,936**, 1.42% fewer than 14,197² = 201,554,809 obtained by squaring LITA's size-32 scheme. The catalogue also includes a size-13,468,840,704 scheme with exponent **2.698590**.
+Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** needs **198,683,936**, 1.42% fewer than 14,197² = 201,554,809 obtained by squaring LITA's size-32 scheme. The best catalogue exponent is now **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
@@ -44,28 +44,30 @@ First use of a construction can take minutes to build exact intermediate tables.
 | [32](schemes/32.json) | 14,196 | 2.758639372 |
 | [686](schemes/686.json) | 70,153,048 | 2.766272903 |
 | [1,024](schemes/1024.json) | 198,683,936 | 2.756589999 |
+| [2,025](schemes/2025.json) | 1,303,338,368 | 2.756771167 |
 | [2,048](schemes/2048.json) | 1,303,338,368 | 2.752687685 |
 | [8,192](schemes/8192.json) | 45,396,314,240 | 2.723219701 |
 | [9,826](schemes/9826.json) | 74,352,484,826 | 2.723013418 |
 | [16,384](schemes/16384.json) | 317,774,199,680 | 2.729229360 |
-| [65,536](schemes/65536.json) | 14,507,078,850,188 | 2.732613893 |
-| [536,870,912](schemes/536870912.json) | 390,821,774,252,911,273,874,842 | 2.702443346 |
-| [5,873,299,070](schemes/5873299070.json) | 237,674,020,365,443,824,643,488,557 | < 2.7, exactly checked |
-| [13,468,840,704](schemes/13468840704.json) | 2,162,272,334,177,007,487,103,296,378 | 2.698590115 |
+| [65,536](schemes/65536.json) | 14,360,405,808,994 | 2.731697610 |
+| [528,108,169](schemes/528108169.json) | 355,919,505,257,948,041,899,273 | < 2.7, exactly checked |
+| [536,870,912](schemes/536870912.json) | 355,919,505,257,948,041,899,273 | 2.697789558 |
+| [12,310,160,190](schemes/12310160190.json) | 1,463,616,394,485,527,559,895,695,360 | 2.692241557 |
+| [13,468,840,704](schemes/13468840704.json) | 2,014,523,380,268,092,193,411,235,280 | 2.695555553 |
 
 See [catalogue.json](catalogue.json) for all sizes, or run `cwschemes list`.
 
-The first sub-2.7 size **in this catalogue** is obtained by padding to a natural size-5,905,580,032 construction. Its unchanged rank R satisfies
+The first sub-2.7 size **in this catalogue** is now **528,108,169**, padded from a natural size-536,870,912 construction. Its rank R = 355,919,505,257,948,041,899,273 satisfies
 
 ```text
-5,873,299,069^27 <= R^10 < 5,873,299,070^27.
+528,108,168^27 <= R^10 < 528,108,169^27.
 ```
 
-This establishes the strict threshold for that scheme, not the smallest possible matrix size. Its exponent at the natural size is 2.699342235. The new power-21 support computes 5,032 independent products; one packet and 123 recursive remainders supply the 5,155 calls of the original size-22 outer scheme.
+This is the strict threshold for this particular scheme. It is **91.01% smaller** than the previous catalogue threshold of 5,873,299,070. The natural construction uses an outer size-32 scheme with 14,196 calls, 9 power-18 packets of 1,569 independent products each, and 75 explicitly specified recursive remainders. The best exponent and the threshold are different catalogue points. Size 1,024 retains its current rank; a sub-2.7 construction there remains open.
 
 ## Z4-quotient schemes (sizes 1,024 to 65,536)
 
-These 20 entries (format `cw-z4-quotient-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one CW support and one relation certificate.
+These entries (format `cw-z4-quotient-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one CW support and one relation certificate.
 
 - **Packet.** A power-9 CW support with 28 rows is invariant under a cyclic group Z4 permuting the 9 coordinates. Its rows form 7 free Z4-orbits. The packet tensor is the local completion G_q^{⊗9} restricted to the support, plus Möbius corrections on the 36 sunflower kernels; it equals 28 independent ⟨q³⟩ products.
 - **Compression.** In the joint triangular representation, patterns whose factor vanishes on the support are removed. A Z4-invariant pair Gram elimination then deletes 300 more patterns, and its relations are absorbed into the output factor. Both steps delete whole Z4-orbits and leave the two input factors equivariant.
@@ -75,14 +77,11 @@ These 20 entries (format `cw-z4-quotient-square-v1`, or `z4-quotient-v1` units i
   R7(q) = (q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 131q^4 + 2q^3 + 2q^2) / 4.
   ```
 
-- **Sizes.** Strassen's 7 products give ⟨2q³⟩ with R7(q) multiplications for q = 8, …, 20; sizes 4,096, 5,324 and 13,500 are padded from these. Sizes 10,976 and 16,384 place 7 units inside Strassen squared. Size 32,768 places 48 units inside ⟨8;336⟩. Size 65,536 places 319 units inside the explicit ⟨16;2236⟩ scheme (see below); its 3 remaining products use the size-4,096 entry.
+- **Sizes.** Strassen's 7 products give ⟨2q³⟩ with R7(q) multiplications for q = 8, …, 20; sizes 4,096, 5,324 and 13,500 are padded from these. Sizes 10,976 and 16,384 place 7 units inside Strassen squared. Size 32,768 places 48 units inside ⟨8;336⟩. Size 65,536 is padded from 24·14³ = 65,856 and uses 929 units inside the original rank-6,503 size-24 scheme, with no remainder products.
 
 The relation data does not depend on q. It was replayed exactly over Q for every q from 2 to 25 before inclusion; `cwschemes verify <n> --exact` replays it again at the q in use.
 
-> **Not rebuilt: older large entries.** The entries at sizes 524,288 and above, including the sub-2.7 schemes at 5,873,299,070,
-> 5,905,580,032 and 13,468,840,704, were built before the Z4-quotient and explicit schemes were added. Their recursive recipes still
-> embed the previous size-65,536, size-1,048,576 and size-4,096 constructions, so their stated counts are valid but not re-optimised.
-> Rebuilding them with the new sub-schemes would lower them slightly (for example about −4.0e12 at 524,288 and −3.0e13 at 1,048,576).
+The October 2026 update rebuilds the older large recipes with the current certified leaves and adds two independently audited power-21 supports. Recursive recipes retain the exact primitive versions used by their coefficient generators. The update and its validation scope are recorded in [checks/oct10.json](checks/oct10.json) and [verification.md](docs/verification.md).
 
 ## Explicit schemes at sizes 14, 16 and 32
 
@@ -101,8 +100,8 @@ cwschemes verify --all
 cwschemes verify 432 --exact --threads 1
 cwschemes verify 9826 --exact
 
-# An uncompressed large construction has no compression relations to replay:
-cwschemes verify 5873299070 --exact
+# Verify the new threshold and its compressed recursive leaf:
+cwschemes verify 528108169 --exact
 ```
 
 The default checks are not advertised as a full reduction proof. `--exact` additionally rebuilds the relevant Gram matrices and checks the supplied rational relations, or checks exact zero-factor norms. It can take substantially longer and use more memory, especially for refined orbit proofs. Verification must run without Python's `-O` flag.

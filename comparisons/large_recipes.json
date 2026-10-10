@@ -522,5 +522,241 @@
         "n": 18
       }
     }
+  },
+  "528108169": {
+    "kind": "pad",
+    "n": 528108169,
+    "child": {
+      "kind": "product",
+      "n": 536870912,
+      "left": {
+        "kind": "lita-even",
+        "n": 32
+      },
+      "right": {
+        "kind": "product",
+        "n": 16777216,
+        "left": {
+          "kind": "product",
+          "n": 1048576,
+          "left": {
+            "kind": "product",
+            "n": 65536,
+            "left": {
+              "kind": "product",
+              "n": 4096,
+              "left": {
+                "kind": "product",
+                "n": 256,
+                "left": {
+                  "kind": "lita-even",
+                  "n": 16
+                },
+                "right": {
+                  "kind": "lita-even",
+                  "n": 16
+                }
+              },
+              "right": {
+                "kind": "lita-even",
+                "n": 16
+              }
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 16
+            }
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 16
+          }
+        },
+        "right": {
+          "kind": "lita-even",
+          "n": 16
+        }
+      }
+    }
+  },
+  "5125781250": {
+    "kind": "product",
+    "n": 5125781250,
+    "left": {
+      "kind": "lita-even",
+      "n": 30
+    },
+    "right": {
+      "kind": "product",
+      "n": 170859375,
+      "left": {
+        "kind": "product",
+        "n": 11390625,
+        "left": {
+          "kind": "product",
+          "n": 759375,
+          "left": {
+            "kind": "product",
+            "n": 50625,
+            "left": {
+              "kind": "product",
+              "n": 3375,
+              "left": {
+                "kind": "product",
+                "n": 225,
+                "left": {
+                  "kind": "lita-odd",
+                  "n": 15
+                },
+                "right": {
+                  "kind": "lita-odd",
+                  "n": 15
+                }
+              },
+              "right": {
+                "kind": "lita-odd",
+                "n": 15
+              }
+            },
+            "right": {
+              "kind": "lita-odd",
+              "n": 15
+            }
+          },
+          "right": {
+            "kind": "lita-odd",
+            "n": 15
+          }
+        },
+        "right": {
+          "kind": "lita-odd",
+          "n": 15
+        }
+      },
+      "right": {
+        "kind": "lita-odd",
+        "n": 15
+      }
+    }
+  },
+  "8053063680": {
+    "kind": "product",
+    "n": 8053063680,
+    "left": {
+      "kind": "lita-even",
+      "n": 30
+    },
+    "right": {
+      "kind": "product",
+      "n": 268435456,
+      "left": {
+        "kind": "product",
+        "n": 16777216,
+        "left": {
+          "kind": "product",
+          "n": 1048576,
+          "left": {
+            "kind": "product",
+            "n": 65536,
+            "left": {
+              "kind": "product",
+              "n": 4096,
+              "left": {
+                "kind": "product",
+                "n": 256,
+                "left": {
+                  "kind": "lita-even",
+                  "n": 16
+                },
+                "right": {
+                  "kind": "lita-even",
+                  "n": 16
+                }
+              },
+              "right": {
+                "kind": "lita-even",
+                "n": 16
+              }
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 16
+            }
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 16
+          }
+        },
+        "right": {
+          "kind": "lita-even",
+          "n": 16
+        }
+      },
+      "right": {
+        "kind": "lita-even",
+        "n": 16
+      }
+    }
+  },
+  "12310160190": {
+    "kind": "product",
+    "n": 12310160190,
+    "left": {
+      "kind": "lita-even",
+      "n": 30
+    },
+    "right": {
+      "kind": "product",
+      "n": 410338673,
+      "left": {
+        "kind": "product",
+        "n": 24137569,
+        "left": {
+          "kind": "product",
+          "n": 1419857,
+          "left": {
+            "kind": "product",
+            "n": 83521,
+            "left": {
+              "kind": "product",
+              "n": 4913,
+              "left": {
+                "kind": "product",
+                "n": 289,
+                "left": {
+                  "kind": "lita-odd",
+                  "n": 17
+                },
+                "right": {
+                  "kind": "lita-odd",
+                  "n": 17
+                }
+              },
+              "right": {
+                "kind": "lita-odd",
+                "n": 17
+              }
+            },
+            "right": {
+              "kind": "lita-odd",
+              "n": 17
+            }
+          },
+          "right": {
+            "kind": "lita-odd",
+            "n": 17
+          }
+        },
+        "right": {
+          "kind": "lita-odd",
+          "n": 17
+        }
+      },
+      "right": {
+        "kind": "lita-odd",
+        "n": 17
+      }
+    }
   }
 }

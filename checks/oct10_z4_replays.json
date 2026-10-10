@@ -1,0 +1,77 @@
+[
+  {
+    "n": 524288,
+    "rank": 3558011443440309,
+    "seconds": 355.28371160299866,
+    "coefficient_samples": [
+      {
+        "mode": 0,
+        "term": 0,
+        "row": 0,
+        "col": 0,
+        "value": "-6975757441/536870912"
+      },
+      {
+        "mode": 1,
+        "term": 3558011443440308,
+        "row": 524287,
+        "col": 524287,
+        "value": "0"
+      },
+      {
+        "mode": 2,
+        "term": 1779005721720154,
+        "row": 1,
+        "col": 0,
+        "value": "3/1073741824"
+      }
+    ],
+    "z4": [
+      {
+        "q": 16,
+        "relation": "z4q/relations-304e9d51f14f180e.json",
+        "exact_replayed": true
+      },
+      {
+        "q": 13,
+        "relation": "z4q/relations-304e9d51f14f180e.json",
+        "exact_replayed": true
+      }
+    ]
+  },
+  {
+    "n": 65536,
+    "rank": 14360405808994,
+    "seconds": 326.56434174999595,
+    "coefficient_samples": [
+      {
+        "mode": 0,
+        "term": 0,
+        "row": 0,
+        "col": 0,
+        "value": "-1594323/76832"
+      },
+      {
+        "mode": 1,
+        "term": 14360405808993,
+        "row": 65535,
+        "col": 65535,
+        "value": "-1167/6023628800"
+      },
+      {
+        "mode": 2,
+        "term": 7180202904497,
+        "row": 1,
+        "col": 0,
+        "value": "0"
+      }
+    ],
+    "z4": [
+      {
+        "q": 14,
+        "relation": "z4q/relations-304e9d51f14f180e.json",
+        "exact_replayed": true
+      }
+    ]
+  }
+]

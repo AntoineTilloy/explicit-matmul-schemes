@@ -57,3 +57,11 @@ Release evidence is recorded in [checks/z4_quotient.json](../checks/z4_quotient.
 - **Exact packet entries and orbit lemma** were checked at q = 2, 3, 8 and 17.
 - **Negative controls.** A +1 perturbation of the packet value, of the tensor value or of one factor coefficient makes each check fail.
 - **Replay.** `cwschemes verify <n> --exact` passed for all 20 Z4 entries.
+
+## October 2026 update
+
+The new power-21 witnesses and recursive composition trees were audited independently of the discovery code. The independent pure-subset computation uses a Boolean superset transform; the generator uses downsets. Both mode-completion roles are checked. Exact local rational identities were checked at several q, and exhaustive small square examples cover padding, partially filled packets, leftover ordinary products and fully filled batches.
+
+For every new threshold the integer inequality (n−1)^27 ≤ R^10 < n^27 is checked. Recursive audits verify the certified primitive rank, every inner dimension, each packet's exact rank, contiguous call allocation and the full square rank. Rational coefficient samples exercise the actual published loader. Relevant Z4 relation replays use the existing exact rational checker.
+
+[checks/oct10.json](../checks/oct10.json) records changed objects and headline counts. Companion October check files record independent audits, package tests and fresh wheel loading. Earlier check files describe their historical object versions. No exhaustive expansion of a large target tensor is claimed.

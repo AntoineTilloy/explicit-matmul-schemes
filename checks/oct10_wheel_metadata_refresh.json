@@ -1,0 +1,7 @@
+{
+  "tested_wheel_sha256": "08a1734a311d82b894d4cd0d32e8a2193fe4891a722fceabd95d0dddcdd252cf",
+  "final_wheel_sha256": "42a318782d820b3ba5b036861783b6d315d1651fccb84fc1da09c3e234276b85",
+  "runtime_members_identical": true,
+  "verified_runtime_members": 136,
+  "change": "README verification command corrected; module and data bytes unchanged"
+}

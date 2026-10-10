@@ -1,0 +1,649 @@
+{
+  "all_objects_integrity": true,
+  "objects": 96,
+  "catalogue_entries": 45,
+  "public_checks": [
+    {
+      "n": "432",
+      "rank": "19788629",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "1/4",
+        "0",
+        "3069/19600",
+        "0",
+        "9/560"
+      ],
+      "sub_2_7": false,
+      "seconds": 0.10676908399909735,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "2932c762217e1af30fd0379a6aaefe2d7318452caaab5debc7e6e6607f06a534"
+    },
+    {
+      "n": "2025",
+      "rank": "1303338368",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 3,
+      "new_support_audits": 1,
+      "reduction_proofs": 2,
+      "coefficient_queries": [
+        "179/262144",
+        "36639/524288",
+        "3717071650781420392357836248232907127/302780256996749454948065963038212096",
+        "3933/524288",
+        "-71/6291456",
+        "0"
+      ],
+      "sub_2_7": false,
+      "seconds": 73.61138928799483,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "cacdc70c8f17645dc865f358f9ffa9984d2a5aa1e3d78017436f98330b91c406"
+    },
+    {
+      "n": "65536",
+      "rank": "14360405808994",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "-5/37044",
+        "0",
+        "-1167/6023628800",
+        "0",
+        "117180212939/1163707257323520"
+      ],
+      "sub_2_7": false,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 13.743044798997289
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 100.1280043739971,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "1c2c12626b0330734b8eb9ca7ddcc7b8417f635a22399ffbf8ddb7e1d19daac1"
+    },
+    {
+      "n": "524288",
+      "rank": "3556691386069563",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 1,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-9/4294967296",
+        "0",
+        "1/536870912",
+        "0",
+        "7/17179869184",
+        "0"
+      ],
+      "sub_2_7": false,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.2801175019994844
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 0.3728766810017987,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "7590c19b4e5b76fca3a656eb875ecf6ea0392f3a2ce94c2a139f1028e21d5ab7"
+    },
+    {
+      "n": "1048576",
+      "rank": "23653834283894444",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-83/103079215104",
+        "-47/6174",
+        "-173/154618822656",
+        "-139651/240945152000",
+        "-23/618475290624",
+        "167216163863953/837869225272934400"
+      ],
+      "sub_2_7": false,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.2763227260002168
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 0.37766377099615056,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "37774375a2deb9f3c06d8e2720c88b544ef339568361acbea41dd141f1d68e68"
+    },
+    {
+      "n": "8388608",
+      "rank": "6705816639014712292",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 1,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "0",
+        "3/274877906944",
+        "0",
+        "3/1099511627776",
+        "0"
+      ],
+      "sub_2_7": false,
+      "seconds": 0.06457015699561452,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "d38785c9cee87552ad640b5139348e05a11fe20900c1b6ab3a1078f5e14d4fba"
+    },
+    {
+      "n": "16777216",
+      "rank": "38520042228975289144",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-487/26388279066624",
+        "-2209/5145",
+        "-1117/39582418599936",
+        "-50134709/28913418240000",
+        "-839/158329674399744",
+        "238617465833860931/603265842196512768000"
+      ],
+      "sub_2_7": false,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.2698090079938993
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 0.4105399180043605,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81"
+    },
+    {
+      "n": "528108169",
+      "rank": "355919505257948041899273",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 1,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-1455/13792273858822144",
+        "-2745996714/3185",
+        "-837/4503599627370496",
+        "-292712631321/982285195673600",
+        "-121/3940649673949184",
+        "127835708833634881823/238313390064606904320000"
+      ],
+      "sub_2_7": true,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.26782871699833777
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 1.49506520399882,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "40127df42d2cd59113dc426d825e6f5521f440c757382e37278bfe74fe914946"
+    },
+    {
+      "n": "536870912",
+      "rank": "355919505257948041899273",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-1455/13792273858822144",
+        "-4444508/9555",
+        "-837/4503599627370496",
+        "-123983135357/29468555870208000",
+        "-121/3940649673949184",
+        "1155147152101720766971/2049495154555619377152000"
+      ],
+      "sub_2_7": true,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.2698623999967822
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 1.1849186170002213,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "4699a85bea4bb68b8b2572173b381a311df662e1b14f4b161f22ae027899a02f"
+    },
+    {
+      "n": "5125781250",
+      "rank": "141973264838711379220429440",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 1,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-15289/3946883598632812500",
+        "0",
+        "983/6578139331054687500",
+        "0",
+        "-437/3946883598632812500",
+        "0"
+      ],
+      "sub_2_7": true,
+      "z4_quotient_checks": [
+        {
+          "q": 12,
+          "unit_rank": "4534212456",
+          "audit": {
+            "q": 12,
+            "rank": "4534212456",
+            "unquotiented_rank": "18136535040",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 13.189852941999561
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 106.16421868900215,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "1f2885a21e3594c2f2e30958f90f60811b00884362bcd6e5fea724aaf920482b"
+    },
+    {
+      "n": "5873299070",
+      "rank": "219405870380472051962264353",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 1,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-14897/11673330234144325632",
+        "2684687/34300",
+        "17753/11673330234144325632",
+        "-56386819291/32118677176320000",
+        "-545149/93386641873154605056",
+        "200063335290133282621/1636393670553517424640000"
+      ],
+      "sub_2_7": true,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.27074713799811434
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 11.151398032001453,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "156c6f1787fe0fa9b5a2aec5c77ab31da2b4052f3447c44efcf53e213a52361f"
+    },
+    {
+      "n": "5905580032",
+      "rank": "219405870380472051962264353",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-14897/11673330234144325632",
+        "103823/8575",
+        "17753/11673330234144325632",
+        "305972129027/160593385881600000",
+        "-545149/93386641873154605056",
+        "-6469635351153471422203/70364927833801249259520000"
+      ],
+      "sub_2_7": true,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.27078568800061475
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 11.3142422719975,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "478a8100c63a2896ed4ba53a0981c8a327bc80f1dbec057bc61db7b0fdb0b0bd"
+    },
+    {
+      "n": "8053063680",
+      "rank": "469778272032184675771793801",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-76445/48710933569639284736",
+        "103823/8575",
+        "2949/48710933569639284736",
+        "341968850089/260606276403200000",
+        "-2185/48710933569639284736",
+        "-340507123744919548537/5437436124331235082240000"
+      ],
+      "sub_2_7": true,
+      "z4_quotient_checks": [
+        {
+          "q": 14,
+          "unit_rank": "15457917986",
+          "audit": {
+            "q": 14,
+            "rank": "15457917986",
+            "unquotiented_rank": "61831012992",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1152,
+            "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+            "counts": "orbit unranking = Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 0.27187054399837507
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "seconds": 17.427870407998853,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "540fa29c2c63f63fa6ae9d0f3f9720d074d6eab32c0099703795b8a944db5463"
+    },
+    {
+      "n": "12310160190",
+      "rank": "1463616394485527559895695360",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 1,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-76445/113823410754155028004",
+        "0",
+        "2949/113823410754155028004",
+        "0",
+        "-2185/113823410754155028004",
+        "49433741312/4563"
+      ],
+      "sub_2_7": true,
+      "seconds": 17.941237296996405,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf"
+    },
+    {
+      "n": "13468840704",
+      "rank": "2014523380268092193411235280",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "-14897/60719765548297125888",
+        "0",
+        "17753/60719765548297125888",
+        "0",
+        "-545149/485758124386377007104",
+        "0"
+      ],
+      "sub_2_7": true,
+      "seconds": 12.88952634200541,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md",
+      "root_object": "4be0f59b2618795977eb5516a3ff32a20d3f5e0ab911195cf51de0ebc029ba89"
+    }
+  ],
+  "seconds": 355.07919843100535,
+  "scope": "Default public verifier; independently audited structural proofs accompany the new objects."
+}

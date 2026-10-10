@@ -1,0 +1,2758 @@
+{
+  "support21_result.json": {
+    "sha256": "e4dfcb7d43dfec5741ff57358c3d889ea69615d6d3f234e5a3e1310edba3d71b",
+    "result": {
+      "pass_all": true,
+      "supports": [
+        {
+          "path": "/home/antoine/matmul_oct10/support21/full_augment.json",
+          "rows": 5397,
+          "completed_partition_edges": 5397,
+          "survivor_counts": [
+            1,
+            21,
+            210,
+            1330,
+            5985,
+            16375,
+            3234,
+            14
+          ],
+          "ranks": {
+            "14": 19290532955346716308593750,
+            "15": 68950409334057551160934400,
+            "16": 229107026685531533388068226,
+            "17": 713334434594096019679838208,
+            "18": 2095128892328646186450636110
+          },
+          "elapsed_seconds": 1.1635118979975232
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/support5155.json",
+          "rows": 5155,
+          "completed_partition_edges": 5155,
+          "survivor_counts": [
+            1,
+            21,
+            210,
+            1330,
+            5942,
+            14785,
+            2560,
+            12
+          ],
+          "ranks": {
+            "14": 19275557363803729248046875,
+            "15": 68907610437848347711635456,
+            "16": 228992154449295739851677485,
+            "17": 713042803557181429897494528,
+            "18": 2094424380168557415120206175
+          },
+          "elapsed_seconds": 1.0758187890023692
+        }
+      ],
+      "local_identities": [
+        {
+          "q": 1,
+          "exact_zero_containing_coefficients": 7,
+          "all_positive_example": "7/2",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 2,
+          "exact_zero_containing_coefficients": 19,
+          "all_positive_example": "19/8",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 14,
+          "exact_zero_containing_coefficients": 631,
+          "all_positive_example": "475/392",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 16,
+          "exact_zero_containing_coefficients": 817,
+          "all_positive_example": "607/512",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 18,
+          "exact_zero_containing_coefficients": 1027,
+          "all_positive_example": "755/648",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        }
+      ],
+      "full_generator_calibrations": [
+        {
+          "q": 2,
+          "m": 1,
+          "n": 4,
+          "full_n": 4,
+          "rank": 75,
+          "packet_products_used": [
+            2
+          ],
+          "leftovers": 6,
+          "exact_tensor_coefficients": 4096,
+          "accumulator_bound": 24883200
+        },
+        {
+          "q": 2,
+          "m": 1,
+          "n": 3,
+          "full_n": 4,
+          "rank": 83,
+          "packet_products_used": [
+            1
+          ],
+          "leftovers": 7,
+          "exact_tensor_coefficients": 729,
+          "accumulator_bound": 13768704
+        },
+        {
+          "q": 2,
+          "m": 1,
+          "n": 4,
+          "full_n": 4,
+          "rank": 108,
+          "packet_products_used": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "leftovers": 0,
+          "exact_tensor_coefficients": 4096,
+          "accumulator_bound": 35831808
+        },
+        {
+          "q": 1,
+          "m": 2,
+          "n": 2,
+          "full_n": 2,
+          "rank": 194,
+          "packet_products_used": [
+            6
+          ],
+          "leftovers": 2,
+          "exact_tensor_coefficients": 64,
+          "accumulator_bound": 26038239232
+        }
+      ],
+      "descriptors": [
+        {
+          "n": 13149609206,
+          "full_n": 13468840704,
+          "rank": 2094424380168557415120206175,
+          "strict_sub27": true
+        },
+        {
+          "n": 13468840704,
+          "full_n": 13468840704,
+          "rank": 2094424380168557415120206175,
+          "strict_sub27": true
+        },
+        {
+          "n": 2316420432,
+          "full_n": 2319097088,
+          "rank": 19275557363803729248046875,
+          "strict_sub27": true
+        },
+        {
+          "n": 2319097088,
+          "full_n": 2319097088,
+          "rank": 19275557363803729248046875,
+          "strict_sub27": true
+        },
+        {
+          "n": 3713031117,
+          "full_n": 3758906250,
+          "rank": 68907610437848347711635456,
+          "strict_sub27": true
+        },
+        {
+          "n": 3758906250,
+          "full_n": 3758906250,
+          "rank": 68907610437848347711635456,
+          "strict_sub27": true
+        },
+        {
+          "n": 5792906511,
+          "full_n": 5905580032,
+          "rank": 228992154449295739851677485,
+          "strict_sub27": true
+        },
+        {
+          "n": 5905580032,
+          "full_n": 5905580032,
+          "rank": 228992154449295739851677485,
+          "strict_sub27": true
+        },
+        {
+          "n": 8822636185,
+          "full_n": 9027450806,
+          "rank": 713042803557181429897494528,
+          "strict_sub27": true
+        },
+        {
+          "n": 9027450806,
+          "full_n": 9027450806,
+          "rank": 713042803557181429897494528,
+          "strict_sub27": true
+        }
+      ],
+      "elapsed_seconds": 2.3989496569993207
+    }
+  },
+  "envelope_result.json": {
+    "sha256": "2f7b3696cc4fa9ba8402bc8d8ecf674d57316fde9d05185e5c474abc9617e23b",
+    "result": {
+      "pass_all": true,
+      "files": [
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_stream16/1074954240.json",
+          "bytes": 17610092,
+          "sha256": "c3dc4eaba2ec20f73b51d498695c05fe604cf176ef0e1ff19af8b28884e89929",
+          "n": 1074954240,
+          "rank": 2414455095022402242966870,
+          "exponent": 2.6997858795362832,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_stream16/1073182922.json",
+          "bytes": 17610092,
+          "sha256": "125e098aefe7e04b829eabb179391aad24d0d72fda3613b71dd741019aab4ffe",
+          "n": 1073182922,
+          "rank": 2414455095022402242966870,
+          "exponent": 2.6999999999636666,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": true
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_stream16/12310160190.json",
+          "bytes": 395052,
+          "sha256": "b5675a0cf197e21f66fbc15c5e92a6dc6d7628861a0f58ea75c35daa0cda41a4",
+          "n": 12310160190,
+          "rank": 1476204005225804370344386560,
+          "exponent": 2.692610141354104,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_missing20/13468840704.json",
+          "bytes": 280827,
+          "sha256": "03a7e2e9770d519ce39e26879b0b5c8e5ed492f0553528abfdc6015fb72b8aab",
+          "n": 13468840704,
+          "rank": 2070957174986380154340687118,
+          "exponent": 2.6967401135424707,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        }
+      ],
+      "supports": [
+        {
+          "m": 4,
+          "rows": 109,
+          "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+          "survivor_counts": [
+            1,
+            12,
+            66,
+            131,
+            1
+          ],
+          "completed_partition_edges": 109,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "elapsed_seconds": 0.0008625839982414618
+        },
+        {
+          "m": 5,
+          "rows": 397,
+          "rows_sha256": "d03a4dce98a86cd3fecbe9d4091e069af68c98484d3c53c89ea47c42694bf219",
+          "survivor_counts": [
+            1,
+            15,
+            105,
+            450,
+            472,
+            4
+          ],
+          "completed_partition_edges": 397,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "elapsed_seconds": 0.007186328999523539
+        },
+        {
+          "m": 7,
+          "rows": 5841,
+          "rows_sha256": "35b816cce57808628bcb3fd629b4b5efbefd876e0ccce52e2eb256a9682b06fc",
+          "survivor_counts": [
+            1,
+            21,
+            210,
+            1330,
+            5985,
+            17158,
+            4402,
+            26
+          ],
+          "completed_partition_edges": 5841,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "elapsed_seconds": 1.2855809669999871
+        },
+        {
+          "m": 6,
+          "rows": 1474,
+          "rows_sha256": "be98002ea20cbbeab865016748c166927ca86601d32943a04ddf12764471912a",
+          "survivor_counts": [
+            1,
+            18,
+            153,
+            816,
+            2872,
+            1214,
+            13
+          ],
+          "completed_partition_edges": 1474,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "elapsed_seconds": 0.08792896699742414
+        },
+        {
+          "m": 7,
+          "rows": 5009,
+          "rows_sha256": "354efe0f94c3cd293391c6577281bcfcaaa1a952900380fe7044e2c2167abf34",
+          "survivor_counts": [
+            1,
+            20,
+            190,
+            1140,
+            4845,
+            13061,
+            2659,
+            10
+          ],
+          "completed_partition_edges": 5009,
+          "absent_coordinates": [
+            [],
+            [],
+            [
+              20
+            ]
+          ],
+          "elapsed_seconds": 1.000150539999595
+        }
+      ],
+      "recursive_nodes": [
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/1074954240.json.leaf.certificate.leaf.certificate",
+          "n": 248832,
+          "full_n": 248832,
+          "rank": 552926754615430,
+          "outer_n": 12,
+          "outer_rank": 1071,
+          "leaf_n": 20736,
+          "leaf_rank": 8916100448256,
+          "packet_count": 10,
+          "used_calls": 1071,
+          "leftovers": 0,
+          "zero_filled_calls": 19,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 9
+            },
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 90,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/1074954240.json.leaf.certificate",
+          "n": 35831808,
+          "full_n": 35831808,
+          "rank": 365106193863204991340,
+          "outer_n": 144,
+          "outer_rank": 944976,
+          "leaf_n": 248832,
+          "leaf_rank": 552926754615430,
+          "packet_count": 2380,
+          "used_calls": 944860,
+          "leftovers": 116,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 5,
+              "rows": 397,
+              "rank": 153379014436835967,
+              "used": 397,
+              "rows_sha256": "d03a4dce98a86cd3fecbe9d4091e069af68c98484d3c53c89ea47c42694bf219",
+              "copies": 2380
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/1074954240.json",
+          "n": 1074954240,
+          "full_n": 1074954240,
+          "rank": 2414455095022402242966870,
+          "outer_n": 30,
+          "outer_rank": 11907,
+          "leaf_n": 35831808,
+          "leaf_rank": 365106193863204991340,
+          "packet_count": 2,
+          "used_calls": 11682,
+          "leftovers": 225,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 7,
+              "rows": 5841,
+              "rank": 1166153100701590559957685,
+              "used": 5841,
+              "rows_sha256": "35b816cce57808628bcb3fd629b4b5efbefd876e0ccce52e2eb256a9682b06fc",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/1073182922.json.leaf.certificate.leaf.certificate",
+          "n": 248832,
+          "full_n": 248832,
+          "rank": 552926754615430,
+          "outer_n": 12,
+          "outer_rank": 1071,
+          "leaf_n": 20736,
+          "leaf_rank": 8916100448256,
+          "packet_count": 10,
+          "used_calls": 1071,
+          "leftovers": 0,
+          "zero_filled_calls": 19,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 9
+            },
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 90,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/1073182922.json.leaf.certificate",
+          "n": 35831808,
+          "full_n": 35831808,
+          "rank": 365106193863204991340,
+          "outer_n": 144,
+          "outer_rank": 944976,
+          "leaf_n": 248832,
+          "leaf_rank": 552926754615430,
+          "packet_count": 2380,
+          "used_calls": 944860,
+          "leftovers": 116,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 5,
+              "rows": 397,
+              "rank": 153379014436835967,
+              "used": 397,
+              "rows_sha256": "d03a4dce98a86cd3fecbe9d4091e069af68c98484d3c53c89ea47c42694bf219",
+              "copies": 2380
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/1073182922.json",
+          "n": 1073182922,
+          "full_n": 1074954240,
+          "rank": 2414455095022402242966870,
+          "outer_n": 30,
+          "outer_rank": 11907,
+          "leaf_n": 35831808,
+          "leaf_rank": 365106193863204991340,
+          "packet_count": 2,
+          "used_calls": 11682,
+          "leftovers": 225,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 7,
+              "rows": 5841,
+              "rank": 1166153100701590559957685,
+              "used": 5841,
+              "rows_sha256": "35b816cce57808628bcb3fd629b4b5efbefd876e0ccce52e2eb256a9682b06fc",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/12310160190.json.leaf.certificate.leaf.certificate",
+          "n": 24137569,
+          "full_n": 24137569,
+          "rank": 120849404273377837056,
+          "outer_n": 17,
+          "outer_rank": 3043,
+          "leaf_n": 1419857,
+          "leaf_rank": 2862423051509815793,
+          "packet_count": 8,
+          "used_calls": 3043,
+          "leftovers": 0,
+          "zero_filled_calls": 133,
+          "packet_types": [
+            {
+              "q": 17,
+              "m": 5,
+              "rows": 397,
+              "rank": 15106175534172229632,
+              "used": 397,
+              "rows_sha256": "d03a4dce98a86cd3fecbe9d4091e069af68c98484d3c53c89ea47c42694bf219",
+              "copies": 7
+            },
+            {
+              "q": 17,
+              "m": 5,
+              "rows": 397,
+              "rank": 15106175534172229632,
+              "used": 264,
+              "rows_sha256": "d03a4dce98a86cd3fecbe9d4091e069af68c98484d3c53c89ea47c42694bf219",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/12310160190.json.leaf.certificate",
+          "n": 410338673,
+          "full_n": 410338673,
+          "rank": 219240855928507338104832,
+          "outer_n": 17,
+          "outer_rank": 3043,
+          "leaf_n": 24137569,
+          "leaf_rank": 120849404273377837056,
+          "packet_count": 2,
+          "used_calls": 2948,
+          "leftovers": 95,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 17,
+              "m": 6,
+              "rows": 1474,
+              "rank": 103880081261268221792256,
+              "used": 1474,
+              "rows_sha256": "be98002ea20cbbeab865016748c166927ca86601d32943a04ddf12764471912a",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_stream16/12310160190.json",
+          "n": 12310160190,
+          "full_n": 12310160190,
+          "rank": 1476204005225804370344386560,
+          "outer_n": 30,
+          "outer_rank": 11907,
+          "leaf_n": 410338673,
+          "leaf_rank": 219240855928507338104832,
+          "packet_count": 2,
+          "used_calls": 11682,
+          "leftovers": 225,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 17,
+              "m": 7,
+              "rows": 5841,
+              "rank": 713437406320945109635399680,
+              "used": 5841,
+              "rows_sha256": "35b816cce57808628bcb3fd629b4b5efbefd876e0ccce52e2eb256a9682b06fc",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_missing20/13468840704.json.leaf.certificate.leaf.certificate.leaf.certificate",
+          "n": 1889568,
+          "full_n": 1889568,
+          "rank": 113627849183288860,
+          "outer_n": 18,
+          "outer_rank": 3043,
+          "leaf_n": 104976,
+          "leaf_rank": 1156831381426176,
+          "packet_count": 28,
+          "used_calls": 3043,
+          "leftovers": 0,
+          "zero_filled_calls": 9,
+          "packet_types": [
+            {
+              "q": 18,
+              "m": 4,
+              "rows": 109,
+              "rank": 4058137470831745,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 27
+            },
+            {
+              "q": 18,
+              "m": 4,
+              "rows": 109,
+              "rank": 4058137470831745,
+              "used": 100,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_missing20/13468840704.json.leaf.certificate.leaf.certificate",
+          "n": 34012224,
+          "full_n": 34012224,
+          "rank": 258427283725786959357,
+          "outer_n": 18,
+          "outer_rank": 3043,
+          "leaf_n": 1889568,
+          "leaf_rank": 113627849183288860,
+          "packet_count": 7,
+          "used_calls": 2779,
+          "leftovers": 264,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 18,
+              "m": 5,
+              "rows": 397,
+              "rank": 32632790220199814331,
+              "used": 397,
+              "rows_sha256": "d03a4dce98a86cd3fecbe9d4091e069af68c98484d3c53c89ea47c42694bf219",
+              "copies": 7
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_missing20/13468840704.json.leaf.certificate",
+          "n": 612220032,
+          "full_n": 612220032,
+          "rank": 547829547887644013283217,
+          "outer_n": 18,
+          "outer_rank": 3043,
+          "leaf_n": 34012224,
+          "leaf_rank": 258427283725786959357,
+          "packet_count": 2,
+          "used_calls": 2948,
+          "leftovers": 95,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 18,
+              "m": 6,
+              "rows": 1474,
+              "rank": 261639477966847126072151,
+              "used": 1474,
+              "rows_sha256": "be98002ea20cbbeab865016748c166927ca86601d32943a04ddf12764471912a",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_missing20/13468840704.json",
+          "n": 13468840704,
+          "full_n": 13468840704,
+          "rank": 2070957174986380154340687118,
+          "outer_n": 22,
+          "outer_rank": 5155,
+          "leaf_n": 612220032,
+          "leaf_rank": 547829547887644013283217,
+          "packet_count": 1,
+          "used_calls": 5009,
+          "leftovers": 146,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 18,
+              "m": 7,
+              "rows": 5009,
+              "rank": 1990974060994784128401337436,
+              "used": 5009,
+              "rows_sha256": "354efe0f94c3cd293391c6577281bcfcaaa1a952900380fe7044e2c2167abf34",
+              "copies": 1
+            }
+          ]
+        }
+      ],
+      "primitive_checks": [
+        {
+          "kind": "lille",
+          "n": 2,
+          "rank": 7,
+          "exact_all_coefficients": 64,
+          "accumulator_bound": 7,
+          "elapsed_seconds": 0.00011766199895646423
+        },
+        {
+          "kind": "lille",
+          "n": 4,
+          "rank": 48,
+          "exact_all_coefficients": 4096,
+          "accumulator_bound": 96,
+          "elapsed_seconds": 0.002759725997748319
+        },
+        {
+          "kind": "lille",
+          "n": 6,
+          "rank": 153,
+          "exact_all_coefficients": 46656,
+          "accumulator_bound": 1224,
+          "elapsed_seconds": 0.010504476995265577
+        },
+        {
+          "kind": "lita",
+          "n": 18,
+          "rank": 3043,
+          "source": "sources/lita_round6.py",
+          "exact_complete_trilinear_checks": 3,
+          "trilinear_grid": 2352,
+          "public_entry_vs_complete_source_probes": [
+            [
+              0,
+              2799,
+              1,
+              0,
+              "0"
+            ],
+            [
+              1,
+              2694,
+              17,
+              6,
+              "-1/28"
+            ],
+            [
+              2,
+              145,
+              13,
+              10,
+              "0"
+            ],
+            [
+              0,
+              1915,
+              11,
+              15,
+              "1/28"
+            ],
+            [
+              1,
+              1852,
+              2,
+              16,
+              "1/196"
+            ],
+            [
+              2,
+              193,
+              6,
+              8,
+              "0"
+            ],
+            [
+              0,
+              2027,
+              16,
+              7,
+              "0"
+            ],
+            [
+              1,
+              766,
+              6,
+              3,
+              "0"
+            ],
+            [
+              2,
+              1871,
+              9,
+              3,
+              "0"
+            ],
+            [
+              0,
+              785,
+              8,
+              2,
+              "0"
+            ],
+            [
+              1,
+              1097,
+              8,
+              5,
+              "0"
+            ],
+            [
+              2,
+              2653,
+              13,
+              4,
+              "0"
+            ],
+            [
+              0,
+              345,
+              3,
+              7,
+              "0"
+            ],
+            [
+              1,
+              2867,
+              17,
+              14,
+              "-1/196"
+            ],
+            [
+              2,
+              2145,
+              4,
+              5,
+              "0"
+            ],
+            [
+              0,
+              2303,
+              0,
+              4,
+              "0"
+            ],
+            [
+              1,
+              539,
+              12,
+              16,
+              "0"
+            ],
+            [
+              2,
+              1992,
+              12,
+              16,
+              "1/28"
+            ],
+            [
+              0,
+              1618,
+              4,
+              12,
+              "0"
+            ],
+            [
+              1,
+              1463,
+              1,
+              11,
+              "0"
+            ],
+            [
+              2,
+              211,
+              4,
+              1,
+              "0"
+            ],
+            [
+              0,
+              2248,
+              12,
+              8,
+              "0"
+            ],
+            [
+              1,
+              1855,
+              0,
+              2,
+              "1/196"
+            ],
+            [
+              2,
+              1817,
+              6,
+              5,
+              "0"
+            ]
+          ],
+          "elapsed_seconds": 0.3545514710058342
+        },
+        {
+          "kind": "lita",
+          "n": 22,
+          "rank": 5155,
+          "source": "sources/lita_round6.py",
+          "exact_complete_trilinear_checks": 3,
+          "trilinear_grid": 5184,
+          "public_entry_vs_complete_source_probes": [
+            [
+              0,
+              2953,
+              3,
+              21,
+              "-1/324"
+            ],
+            [
+              1,
+              2311,
+              13,
+              2,
+              "0"
+            ],
+            [
+              2,
+              3316,
+              21,
+              5,
+              "0"
+            ],
+            [
+              0,
+              5003,
+              9,
+              7,
+              "0"
+            ],
+            [
+              1,
+              1316,
+              4,
+              4,
+              "0"
+            ],
+            [
+              2,
+              385,
+              4,
+              10,
+              "0"
+            ],
+            [
+              0,
+              3718,
+              15,
+              11,
+              "0"
+            ],
+            [
+              1,
+              2694,
+              9,
+              3,
+              "0"
+            ],
+            [
+              2,
+              2933,
+              13,
+              17,
+              "1/324"
+            ],
+            [
+              0,
+              2331,
+              7,
+              8,
+              "0"
+            ],
+            [
+              1,
+              4727,
+              20,
+              15,
+              "0"
+            ],
+            [
+              2,
+              982,
+              11,
+              19,
+              "0"
+            ],
+            [
+              0,
+              1692,
+              5,
+              1,
+              "0"
+            ],
+            [
+              1,
+              4060,
+              15,
+              10,
+              "0"
+            ],
+            [
+              2,
+              1182,
+              13,
+              16,
+              "0"
+            ],
+            [
+              0,
+              3172,
+              3,
+              21,
+              "-1/324"
+            ],
+            [
+              1,
+              223,
+              3,
+              20,
+              "0"
+            ],
+            [
+              2,
+              316,
+              4,
+              8,
+              "0"
+            ],
+            [
+              0,
+              4762,
+              21,
+              15,
+              "0"
+            ],
+            [
+              1,
+              1359,
+              1,
+              1,
+              "1/324"
+            ],
+            [
+              2,
+              2854,
+              6,
+              2,
+              "-1/36"
+            ],
+            [
+              0,
+              3743,
+              18,
+              9,
+              "-1/36"
+            ],
+            [
+              1,
+              3508,
+              6,
+              3,
+              "-1/36"
+            ],
+            [
+              2,
+              504,
+              12,
+              5,
+              "0"
+            ]
+          ],
+          "elapsed_seconds": 0.7348124720010674
+        },
+        {
+          "kind": "lita",
+          "n": 30,
+          "rank": 11907,
+          "source": "sources/lita_round6.py",
+          "exact_complete_trilinear_checks": 3,
+          "trilinear_grid": 16224,
+          "public_entry_vs_complete_source_probes": [
+            [
+              0,
+              6966,
+              16,
+              1,
+              "0"
+            ],
+            [
+              1,
+              2504,
+              26,
+              27,
+              "0"
+            ],
+            [
+              2,
+              2076,
+              14,
+              10,
+              "-1/676"
+            ],
+            [
+              0,
+              9766,
+              7,
+              15,
+              "1/52"
+            ],
+            [
+              1,
+              1475,
+              27,
+              13,
+              "0"
+            ],
+            [
+              2,
+              1168,
+              2,
+              8,
+              "0"
+            ],
+            [
+              0,
+              8097,
+              28,
+              1,
+              "0"
+            ],
+            [
+              1,
+              9473,
+              18,
+              9,
+              "0"
+            ],
+            [
+              2,
+              10695,
+              20,
+              19,
+              "0"
+            ],
+            [
+              0,
+              10991,
+              6,
+              29,
+              "0"
+            ],
+            [
+              1,
+              4865,
+              7,
+              1,
+              "0"
+            ],
+            [
+              2,
+              3526,
+              25,
+              5,
+              "0"
+            ],
+            [
+              0,
+              8944,
+              12,
+              10,
+              "-1/676"
+            ],
+            [
+              1,
+              5802,
+              3,
+              6,
+              "0"
+            ],
+            [
+              2,
+              6037,
+              19,
+              11,
+              "0"
+            ],
+            [
+              0,
+              10858,
+              12,
+              18,
+              "1/52"
+            ],
+            [
+              1,
+              2791,
+              29,
+              14,
+              "-51/676"
+            ],
+            [
+              2,
+              3445,
+              19,
+              12,
+              "0"
+            ],
+            [
+              0,
+              6167,
+              0,
+              6,
+              "0"
+            ],
+            [
+              1,
+              1065,
+              26,
+              0,
+              "0"
+            ],
+            [
+              2,
+              5521,
+              9,
+              11,
+              "0"
+            ],
+            [
+              0,
+              8092,
+              22,
+              20,
+              "0"
+            ],
+            [
+              1,
+              1704,
+              17,
+              9,
+              "0"
+            ],
+            [
+              2,
+              958,
+              9,
+              11,
+              "1/676"
+            ]
+          ],
+          "elapsed_seconds": 2.441266135996557
+        },
+        {
+          "kind": "lita",
+          "n": 36,
+          "rank": 19687,
+          "source": "sources/lita_round6.py",
+          "exact_complete_trilinear_checks": 3,
+          "trilinear_grid": 30720,
+          "public_entry_vs_complete_source_probes": [
+            [
+              0,
+              10667,
+              6,
+              19,
+              "0"
+            ],
+            [
+              1,
+              11036,
+              22,
+              15,
+              "0"
+            ],
+            [
+              2,
+              15109,
+              34,
+              17,
+              "0"
+            ],
+            [
+              0,
+              7321,
+              3,
+              16,
+              "0"
+            ],
+            [
+              1,
+              4426,
+              0,
+              26,
+              "0"
+            ],
+            [
+              2,
+              10928,
+              35,
+              25,
+              "0"
+            ],
+            [
+              0,
+              14543,
+              24,
+              24,
+              "0"
+            ],
+            [
+              1,
+              6389,
+              23,
+              8,
+              "0"
+            ],
+            [
+              2,
+              12508,
+              19,
+              25,
+              "0"
+            ],
+            [
+              0,
+              10694,
+              21,
+              31,
+              "0"
+            ],
+            [
+              1,
+              13575,
+              26,
+              11,
+              "33/1024"
+            ],
+            [
+              2,
+              7984,
+              29,
+              17,
+              "0"
+            ],
+            [
+              0,
+              16803,
+              0,
+              1,
+              "0"
+            ],
+            [
+              1,
+              10979,
+              33,
+              12,
+              "0"
+            ],
+            [
+              2,
+              2360,
+              13,
+              32,
+              "0"
+            ],
+            [
+              0,
+              12993,
+              32,
+              10,
+              "1/1024"
+            ],
+            [
+              1,
+              3237,
+              12,
+              11,
+              "0"
+            ],
+            [
+              2,
+              13073,
+              12,
+              33,
+              "0"
+            ],
+            [
+              0,
+              13469,
+              15,
+              33,
+              "0"
+            ],
+            [
+              1,
+              10496,
+              6,
+              7,
+              "0"
+            ],
+            [
+              2,
+              1942,
+              3,
+              2,
+              "0"
+            ],
+            [
+              0,
+              16023,
+              13,
+              11,
+              "0"
+            ],
+            [
+              1,
+              4118,
+              14,
+              10,
+              "0"
+            ],
+            [
+              2,
+              5705,
+              26,
+              31,
+              "0"
+            ]
+          ],
+          "elapsed_seconds": 4.7861794639975415
+        }
+      ],
+      "local_identities": [
+        {
+          "q": 12,
+          "exact_zero_containing_coefficients": 469,
+          "all_positive_example": "359/288",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 17,
+          "exact_zero_containing_coefficients": 919,
+          "all_positive_example": "679/578",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 18,
+          "exact_zero_containing_coefficients": 1027,
+          "all_positive_example": "755/648",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        }
+      ],
+      "source_provenance": [
+        {
+          "path": "src/cwschemes/_engine/general_square.py",
+          "bytes": 9670,
+          "sha256": "23a8510abac7aa4946dd74efa6a240151b9a45016ee4f4ba0e452dc5ad14fd79"
+        },
+        {
+          "path": "src/cwschemes/_engine/lita_coefficients.py",
+          "bytes": 4109,
+          "sha256": "76fb8aa26b312ab4a412ced45b1a1a1d70bbdbe551dd428f979c5f623000a4e1"
+        },
+        {
+          "path": "src/cwschemes/_engine/sources/lita_round6.py",
+          "bytes": 12867,
+          "sha256": "92cc3fea756402b63774245a8cb88a1684f89b9ea43db20845261a1967ca33b4"
+        },
+        {
+          "path": "src/cwschemes/_engine/square_scheme.py",
+          "bytes": 5185,
+          "sha256": "69af8492a8306e2006c3774f3686b58d647bc0f820ebb996ffc472641c5b229a"
+        },
+        {
+          "path": "src/cwschemes/_engine/scheme.py",
+          "bytes": 6018,
+          "sha256": "4f3b34c4319a45ab1b0ad46a863d14dba42b83d2d2251a500c393ac74a144368"
+        },
+        {
+          "path": "src/cwschemes/_engine/restrictions.py",
+          "bytes": 4485,
+          "sha256": "e29db785535d7762f968aa9e67bd15cc6b127000098ad64d4881731fdc13ecbc"
+        }
+      ],
+      "elapsed_seconds": 11.928787976001331
+    }
+  },
+  "inner_final_result.json": {
+    "sha256": "da98045c8640b74dec1c45360161bb3c14f486200131685ecc416bfef494d812",
+    "result": {
+      "pass_all": true,
+      "files": [],
+      "supports": [
+        {
+          "m": 5,
+          "rows": 405,
+          "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+          "survivor_counts": [
+            1,
+            15,
+            105,
+            448,
+            488,
+            3
+          ],
+          "completed_partition_edges": 405,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 153360954974403748,
+            "17": 15104886595503418368,
+            "18": 32630221303437795712
+          },
+          "elapsed_seconds": 0.0073781050014076754
+        },
+        {
+          "m": 6,
+          "rows": 1522,
+          "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+          "survivor_counts": [
+            1,
+            18,
+            153,
+            816,
+            2804,
+            1228,
+            14
+          ],
+          "completed_partition_edges": 1522,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 423151983594933857082,
+            "17": 103854886630612141105152,
+            "18": 261585736467297280616910
+          },
+          "elapsed_seconds": 0.09205130900227232
+        }
+      ],
+      "recursive_nodes": [],
+      "primitive_checks": [],
+      "local_identities": [
+        {
+          "q": 12,
+          "exact_zero_containing_coefficients": 469,
+          "all_positive_example": "359/288",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 17,
+          "exact_zero_containing_coefficients": 919,
+          "all_positive_example": "679/578",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 18,
+          "exact_zero_containing_coefficients": 1027,
+          "all_positive_example": "755/648",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        }
+      ],
+      "source_provenance": [
+        {
+          "path": "src/cwschemes/_engine/general_square.py",
+          "bytes": 9670,
+          "sha256": "23a8510abac7aa4946dd74efa6a240151b9a45016ee4f4ba0e452dc5ad14fd79"
+        },
+        {
+          "path": "src/cwschemes/_engine/lita_coefficients.py",
+          "bytes": 4109,
+          "sha256": "76fb8aa26b312ab4a412ced45b1a1a1d70bbdbe551dd428f979c5f623000a4e1"
+        },
+        {
+          "path": "src/cwschemes/_engine/sources/lita_round6.py",
+          "bytes": 12867,
+          "sha256": "92cc3fea756402b63774245a8cb88a1684f89b9ea43db20845261a1967ca33b4"
+        },
+        {
+          "path": "src/cwschemes/_engine/square_scheme.py",
+          "bytes": 5185,
+          "sha256": "69af8492a8306e2006c3774f3686b58d647bc0f820ebb996ffc472641c5b229a"
+        },
+        {
+          "path": "src/cwschemes/_engine/scheme.py",
+          "bytes": 6018,
+          "sha256": "4f3b34c4319a45ab1b0ad46a863d14dba42b83d2d2251a500c393ac74a144368"
+        },
+        {
+          "path": "src/cwschemes/_engine/restrictions.py",
+          "bytes": 4485,
+          "sha256": "e29db785535d7762f968aa9e67bd15cc6b127000098ad64d4881731fdc13ecbc"
+        }
+      ],
+      "elapsed_seconds": 0.15869991099316394
+    }
+  },
+  "final5865_inner_result.json": {
+    "sha256": "c7e77701fe02dd06d9acda6622648fd475022be62128e620c14900d17504fb8d",
+    "result": {
+      "pass_all": true,
+      "files": [
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_final5865_inner/1074954240.json",
+          "bytes": 17600582,
+          "sha256": "19c4e21dde8ad7eb0e6c3cdaad270cad51b11cbd597878815b9ec9b2f23cd48f",
+          "n": 1074954240,
+          "rank": 2395518826983675734952390,
+          "exponent": 2.699407250753218,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_final5865_inner/1070057845.json",
+          "bytes": 17600582,
+          "sha256": "d80eb82684c7b579897063bd0d3fbdf2e1fed8da64869fcb2fbacee8bc695a80",
+          "n": 1070057845,
+          "rank": 2395518826983675734952390,
+          "exponent": 2.699999999892839,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": true
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/envelope_final5865_inner/12310160190.json",
+          "bytes": 339696,
+          "sha256": "a84ef971bab61887d0c8c7c0aa7d8dca67d07c62fa25094f7c86f0dbdc929304",
+          "n": 12310160190,
+          "rank": 1463616394485527559895695360,
+          "exponent": 2.6922415569545044,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        }
+      ],
+      "supports": [
+        {
+          "m": 4,
+          "rows": 109,
+          "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+          "survivor_counts": [
+            1,
+            12,
+            66,
+            131,
+            1
+          ],
+          "completed_partition_edges": 109,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 55292675461543,
+            "17": 2189699226332928,
+            "18": 4058137470831745
+          },
+          "elapsed_seconds": 0.0008729490000405349
+        },
+        {
+          "m": 5,
+          "rows": 405,
+          "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+          "survivor_counts": [
+            1,
+            15,
+            105,
+            448,
+            488,
+            3
+          ],
+          "completed_partition_edges": 405,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 153360954974403748,
+            "17": 15104886595503418368,
+            "18": 32630221303437795712
+          },
+          "elapsed_seconds": 0.0076586580034927465
+        },
+        {
+          "m": 7,
+          "rows": 5865,
+          "rows_sha256": "7dcc04f22f2fe80f86d0b71d7d3fbeee2bc333d0938c8bfff64328cd82231111",
+          "survivor_counts": [
+            1,
+            21,
+            210,
+            1330,
+            5985,
+            17065,
+            4368,
+            24
+          ],
+          "completed_partition_edges": 5865,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 1166089468761821273748156,
+            "17": 713425882309145430972235776,
+            "18": 2095345140292126580906448276
+          },
+          "elapsed_seconds": 1.3301299779996043
+        },
+        {
+          "m": 6,
+          "rows": 1522,
+          "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+          "survivor_counts": [
+            1,
+            18,
+            153,
+            816,
+            2804,
+            1228,
+            14
+          ],
+          "completed_partition_edges": 1522,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 423151983594933857082,
+            "17": 103854886630612141105152,
+            "18": 261585736467297280616910
+          },
+          "elapsed_seconds": 0.09458883199840784
+        }
+      ],
+      "recursive_nodes": [
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/1074954240.json.leaf.certificate.leaf.certificate",
+          "n": 248832,
+          "full_n": 248832,
+          "rank": 552926754615430,
+          "outer_n": 12,
+          "outer_rank": 1071,
+          "leaf_n": 20736,
+          "leaf_rank": 8916100448256,
+          "packet_count": 10,
+          "used_calls": 1071,
+          "leftovers": 0,
+          "zero_filled_calls": 19,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 9
+            },
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 90,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/1074954240.json.leaf.certificate",
+          "n": 35831808,
+          "full_n": 35831808,
+          "rank": 357852482825046256814,
+          "outer_n": 144,
+          "outer_rank": 944976,
+          "leaf_n": 248832,
+          "leaf_rank": 552926754615430,
+          "packet_count": 2333,
+          "used_calls": 944865,
+          "leftovers": 111,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 5,
+              "rows": 405,
+              "rank": 153360954974403748,
+              "used": 405,
+              "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+              "copies": 2333
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/1074954240.json",
+          "n": 1074954240,
+          "full_n": 1074954240,
+          "rank": 2395518826983675734952390,
+          "outer_n": 30,
+          "outer_rank": 11907,
+          "leaf_n": 35831808,
+          "leaf_rank": 357852482825046256814,
+          "packet_count": 2,
+          "used_calls": 11730,
+          "leftovers": 177,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 7,
+              "rows": 5865,
+              "rank": 1166089468761821273748156,
+              "used": 5865,
+              "rows_sha256": "7dcc04f22f2fe80f86d0b71d7d3fbeee2bc333d0938c8bfff64328cd82231111",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/1070057845.json.leaf.certificate.leaf.certificate",
+          "n": 248832,
+          "full_n": 248832,
+          "rank": 552926754615430,
+          "outer_n": 12,
+          "outer_rank": 1071,
+          "leaf_n": 20736,
+          "leaf_rank": 8916100448256,
+          "packet_count": 10,
+          "used_calls": 1071,
+          "leftovers": 0,
+          "zero_filled_calls": 19,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 9
+            },
+            {
+              "q": 12,
+              "m": 4,
+              "rows": 109,
+              "rank": 55292675461543,
+              "used": 90,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/1070057845.json.leaf.certificate",
+          "n": 35831808,
+          "full_n": 35831808,
+          "rank": 357852482825046256814,
+          "outer_n": 144,
+          "outer_rank": 944976,
+          "leaf_n": 248832,
+          "leaf_rank": 552926754615430,
+          "packet_count": 2333,
+          "used_calls": 944865,
+          "leftovers": 111,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 5,
+              "rows": 405,
+              "rank": 153360954974403748,
+              "used": 405,
+              "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+              "copies": 2333
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/1070057845.json",
+          "n": 1070057845,
+          "full_n": 1074954240,
+          "rank": 2395518826983675734952390,
+          "outer_n": 30,
+          "outer_rank": 11907,
+          "leaf_n": 35831808,
+          "leaf_rank": 357852482825046256814,
+          "packet_count": 2,
+          "used_calls": 11730,
+          "leftovers": 177,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 12,
+              "m": 7,
+              "rows": 5865,
+              "rank": 1166089468761821273748156,
+              "used": 5865,
+              "rows_sha256": "7dcc04f22f2fe80f86d0b71d7d3fbeee2bc333d0938c8bfff64328cd82231111",
+              "copies": 2
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/12310160190.json.leaf.certificate",
+          "n": 410338673,
+          "full_n": 410338673,
+          "rank": 207709773261224282210304,
+          "outer_n": 17,
+          "outer_rank": 3043,
+          "leaf_n": 24137569,
+          "leaf_rank": 14063084452067724991009,
+          "packet_count": 2,
+          "used_calls": 3043,
+          "leftovers": 0,
+          "zero_filled_calls": 1,
+          "packet_types": [
+            {
+              "q": 17,
+              "m": 6,
+              "rows": 1522,
+              "rank": 103854886630612141105152,
+              "used": 1522,
+              "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+              "copies": 1
+            },
+            {
+              "q": 17,
+              "m": 6,
+              "rows": 1522,
+              "rank": 103854886630612141105152,
+              "used": 1521,
+              "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/envelope_final5865_inner/12310160190.json",
+          "n": 12310160190,
+          "full_n": 12310160190,
+          "rank": 1463616394485527559895695360,
+          "outer_n": 30,
+          "outer_rank": 11907,
+          "leaf_n": 410338673,
+          "leaf_rank": 207709773261224282210304,
+          "packet_count": 2,
+          "used_calls": 11730,
+          "leftovers": 177,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 17,
+              "m": 7,
+              "rows": 5865,
+              "rank": 713425882309145430972235776,
+              "used": 5865,
+              "rows_sha256": "7dcc04f22f2fe80f86d0b71d7d3fbeee2bc333d0938c8bfff64328cd82231111",
+              "copies": 2
+            }
+          ]
+        }
+      ],
+      "primitive_checks": [],
+      "local_identities": [
+        {
+          "q": 12,
+          "exact_zero_containing_coefficients": 469,
+          "all_positive_example": "359/288",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 17,
+          "exact_zero_containing_coefficients": 919,
+          "all_positive_example": "679/578",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 18,
+          "exact_zero_containing_coefficients": 1027,
+          "all_positive_example": "755/648",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        }
+      ],
+      "source_provenance": [
+        {
+          "path": "src/cwschemes/_engine/general_square.py",
+          "bytes": 9670,
+          "sha256": "23a8510abac7aa4946dd74efa6a240151b9a45016ee4f4ba0e452dc5ad14fd79"
+        },
+        {
+          "path": "src/cwschemes/_engine/lita_coefficients.py",
+          "bytes": 4109,
+          "sha256": "76fb8aa26b312ab4a412ced45b1a1a1d70bbdbe551dd428f979c5f623000a4e1"
+        },
+        {
+          "path": "src/cwschemes/_engine/sources/lita_round6.py",
+          "bytes": 12867,
+          "sha256": "92cc3fea756402b63774245a8cb88a1684f89b9ea43db20845261a1967ca33b4"
+        },
+        {
+          "path": "src/cwschemes/_engine/square_scheme.py",
+          "bytes": 5185,
+          "sha256": "69af8492a8306e2006c3774f3686b58d647bc0f820ebb996ffc472641c5b229a"
+        },
+        {
+          "path": "src/cwschemes/_engine/scheme.py",
+          "bytes": 6018,
+          "sha256": "4f3b34c4319a45ab1b0ad46a863d14dba42b83d2d2251a500c393ac74a144368"
+        },
+        {
+          "path": "src/cwschemes/_engine/restrictions.py",
+          "bytes": 4485,
+          "sha256": "e29db785535d7762f968aa9e67bd15cc6b127000098ad64d4881731fdc13ecbc"
+        }
+      ],
+      "elapsed_seconds": 2.2276639680057997
+    }
+  },
+  "integration_final_result.json": {
+    "sha256": "7554fda6a4b5c4ef2ecfe96f01b5302da9ddac716c9036a85c05a87fd2dab989",
+    "result": {
+      "pass_all": true,
+      "files": [
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/536870912.json",
+          "bytes": 520410,
+          "sha256": "55607788e4cdb7676687333c4c011f81a9509b2d583265a467fb3828009e34ff",
+          "n": 536870912,
+          "rank": 355919505257948041899273,
+          "exponent": 2.697789557952912,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/528108169.json",
+          "bytes": 520410,
+          "sha256": "cd7e715ca023029118c1055ee527762921b4dbba5281dd59d7a43012b851d65d",
+          "n": 528108169,
+          "rank": 355919505257948041899273,
+          "exponent": 2.6999999998279245,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": true
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/5905580032.json",
+          "bytes": 379535,
+          "sha256": "f27700c160738a3307c1e803ca386781d24224179a8381c79de5e40bf99e8bcf",
+          "n": 5905580032,
+          "rank": 219405870380472051962264353,
+          "exponent": 2.6957875794581856,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        },
+        {
+          "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/integration_final/schemes/13468840704.json",
+          "bytes": 184139,
+          "sha256": "f0a8b991ff35eb137979fbe0fe443d401f9ff5a3bbd762d18afab16b365eb69a",
+          "n": 13468840704,
+          "rank": 2014523380268092193411235280,
+          "exponent": 2.695555552874949,
+          "strict_sub27": true,
+          "first_strict_size_for_this_rank": false
+        }
+      ],
+      "supports": [
+        {
+          "m": 3,
+          "rows": 28,
+          "rows_sha256": "4bb1f93fe2ded70e8a4173ec9eaf04424b1d2f0740d45c94eb4084392f4caaf5",
+          "survivor_counts": [
+            1,
+            8,
+            24,
+            4
+          ],
+          "completed_partition_edges": 28,
+          "absent_coordinates": [
+            [],
+            [],
+            [
+              8
+            ]
+          ],
+          "ranks": {
+            "12": 18655616785,
+            "16": 184338614453,
+            "17": 301348304640,
+            "18": 480197307367
+          },
+          "elapsed_seconds": 0.0002764269956969656
+        },
+        {
+          "m": 4,
+          "rows": 109,
+          "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+          "survivor_counts": [
+            1,
+            12,
+            66,
+            131,
+            1
+          ],
+          "completed_partition_edges": 109,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 55292675461543,
+            "16": 1142482577929539,
+            "17": 2189699226332928,
+            "18": 4058137470831745
+          },
+          "elapsed_seconds": 0.0008073479984886944
+        },
+        {
+          "m": 5,
+          "rows": 405,
+          "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+          "survivor_counts": [
+            1,
+            15,
+            105,
+            448,
+            488,
+            3
+          ],
+          "completed_partition_edges": 405,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 153360954974403748,
+            "16": 6705816639014712292,
+            "17": 15104886595503418368,
+            "18": 32630221303437795712
+          },
+          "elapsed_seconds": 0.007654581000679173
+        },
+        {
+          "m": 6,
+          "rows": 1569,
+          "rows_sha256": "8464bfab897f08a760073464c6055924f3a690f6dc952f8bc346321eea036fca",
+          "survivor_counts": [
+            1,
+            18,
+            153,
+            816,
+            2840,
+            1323,
+            10
+          ],
+          "completed_partition_edges": 1569,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 423322409087604805597,
+            "16": 39225611343419432801497,
+            "17": 103870353466181809078272,
+            "18": 261618486888154702601227
+          },
+          "elapsed_seconds": 0.10116739599470748
+        },
+        {
+          "m": 7,
+          "rows": 5110,
+          "rows_sha256": "264349d397492cb2700dfcd00bbc4464404ad7d7a26a4f13ad5507fb8c82fad9",
+          "survivor_counts": [
+            1,
+            20,
+            190,
+            1140,
+            4845,
+            13079,
+            2752,
+            9
+          ],
+          "completed_partition_edges": 5110,
+          "absent_coordinates": [
+            [],
+            [],
+            [
+              20
+            ]
+          ],
+          "ranks": {
+            "12": 1083882971642504211158812,
+            "16": 216484538802515484182539828,
+            "17": 676050216308846377093251072,
+            "18": 1990980663986035438155713380
+          },
+          "elapsed_seconds": 1.0434092830037116
+        },
+        {
+          "m": 6,
+          "rows": 1522,
+          "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+          "survivor_counts": [
+            1,
+            18,
+            153,
+            816,
+            2804,
+            1228,
+            14
+          ],
+          "completed_partition_edges": 1522,
+          "absent_coordinates": [
+            [],
+            [],
+            []
+          ],
+          "ranks": {
+            "12": 423151983594933857082,
+            "16": 39218611137239117223082,
+            "17": 103854886630612141105152,
+            "18": 261585736467297280616910
+          },
+          "elapsed_seconds": 0.09566584199637873
+        }
+      ],
+      "recursive_nodes": [
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/536870912.json.leaf.certificate.leaf.certificate.leaf.certificate",
+          "n": 65536,
+          "full_n": 65856,
+          "rank": 14360405808994,
+          "outer_n": 24,
+          "outer_rank": 6503,
+          "leaf_n": 2744,
+          "leaf_rank": 20661046784,
+          "packet_count": 929,
+          "used_calls": 6503,
+          "leftovers": 0,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 14,
+              "m": 3,
+              "rows": 7,
+              "rank": 15457917986,
+              "used": 7,
+              "rows_sha256": "5c5e8a6df88dc84994cbad961f132eecb1b0e29fa4c81f3a9e2a06eebef21e9c",
+              "copies": 929
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/536870912.json.leaf.certificate.leaf.certificate",
+          "n": 1048576,
+          "full_n": 1048576,
+          "rank": 23653834283894444,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 65536,
+          "leaf_rank": 14360405808994,
+          "packet_count": 20,
+          "used_calls": 2180,
+          "leftovers": 56,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 4,
+              "rows": 109,
+              "rank": 1142482577929539,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 20
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/536870912.json.leaf.certificate",
+          "n": 16777216,
+          "full_n": 16777216,
+          "rank": 38520042228975289144,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 1048576,
+          "leaf_rank": 23653834283894444,
+          "packet_count": 5,
+          "used_calls": 2025,
+          "leftovers": 211,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 5,
+              "rows": 405,
+              "rank": 6705816639014712292,
+              "used": 405,
+              "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+              "copies": 5
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/536870912.json",
+          "n": 536870912,
+          "full_n": 536870912,
+          "rank": 355919505257948041899273,
+          "outer_n": 32,
+          "outer_rank": 14196,
+          "leaf_n": 16777216,
+          "leaf_rank": 38520042228975289144,
+          "packet_count": 9,
+          "used_calls": 14121,
+          "leftovers": 75,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 6,
+              "rows": 1569,
+              "rank": 39225611343419432801497,
+              "used": 1569,
+              "rows_sha256": "8464bfab897f08a760073464c6055924f3a690f6dc952f8bc346321eea036fca",
+              "copies": 9
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/528108169.json.leaf.certificate.leaf.certificate.leaf.certificate",
+          "n": 65536,
+          "full_n": 65856,
+          "rank": 14360405808994,
+          "outer_n": 24,
+          "outer_rank": 6503,
+          "leaf_n": 2744,
+          "leaf_rank": 20661046784,
+          "packet_count": 929,
+          "used_calls": 6503,
+          "leftovers": 0,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 14,
+              "m": 3,
+              "rows": 7,
+              "rank": 15457917986,
+              "used": 7,
+              "rows_sha256": "5c5e8a6df88dc84994cbad961f132eecb1b0e29fa4c81f3a9e2a06eebef21e9c",
+              "copies": 929
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/528108169.json.leaf.certificate.leaf.certificate",
+          "n": 1048576,
+          "full_n": 1048576,
+          "rank": 23653834283894444,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 65536,
+          "leaf_rank": 14360405808994,
+          "packet_count": 20,
+          "used_calls": 2180,
+          "leftovers": 56,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 4,
+              "rows": 109,
+              "rank": 1142482577929539,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 20
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/528108169.json.leaf.certificate",
+          "n": 16777216,
+          "full_n": 16777216,
+          "rank": 38520042228975289144,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 1048576,
+          "leaf_rank": 23653834283894444,
+          "packet_count": 5,
+          "used_calls": 2025,
+          "leftovers": 211,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 5,
+              "rows": 405,
+              "rank": 6705816639014712292,
+              "used": 405,
+              "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+              "copies": 5
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/528108169.json",
+          "n": 528108169,
+          "full_n": 536870912,
+          "rank": 355919505257948041899273,
+          "outer_n": 32,
+          "outer_rank": 14196,
+          "leaf_n": 16777216,
+          "leaf_rank": 38520042228975289144,
+          "packet_count": 9,
+          "used_calls": 14121,
+          "leftovers": 75,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 6,
+              "rows": 1569,
+              "rank": 39225611343419432801497,
+              "used": 1569,
+              "rows_sha256": "8464bfab897f08a760073464c6055924f3a690f6dc952f8bc346321eea036fca",
+              "copies": 9
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/5905580032.json.leaf.certificate.leaf.certificate.leaf.certificate.leaf.child.certificate",
+          "n": 65856,
+          "full_n": 65856,
+          "rank": 14360405808994,
+          "outer_n": 24,
+          "outer_rank": 6503,
+          "leaf_n": 2744,
+          "leaf_rank": 20661046784,
+          "packet_count": 929,
+          "used_calls": 6503,
+          "leftovers": 0,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 14,
+              "m": 3,
+              "rows": 7,
+              "rank": 15457917986,
+              "used": 7,
+              "rows_sha256": "5c5e8a6df88dc84994cbad961f132eecb1b0e29fa4c81f3a9e2a06eebef21e9c",
+              "copies": 929
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/5905580032.json.leaf.certificate.leaf.certificate.leaf.certificate",
+          "n": 1048576,
+          "full_n": 1048576,
+          "rank": 23653834283894444,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 65536,
+          "leaf_rank": 14360405808994,
+          "packet_count": 20,
+          "used_calls": 2180,
+          "leftovers": 56,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 4,
+              "rows": 109,
+              "rank": 1142482577929539,
+              "used": 109,
+              "rows_sha256": "13e7bcd6a8439e27aabb010957700a7686a8873afd8fef3d09d52c241b98eaf9",
+              "copies": 20
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/5905580032.json.leaf.certificate.leaf.certificate",
+          "n": 16777216,
+          "full_n": 16777216,
+          "rank": 38520042228975289144,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 1048576,
+          "leaf_rank": 23653834283894444,
+          "packet_count": 5,
+          "used_calls": 2025,
+          "leftovers": 211,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 5,
+              "rows": 405,
+              "rank": 6705816639014712292,
+              "used": 405,
+              "rows_sha256": "694da58e6f5f3aeecb160201fe9dd351f7e9d3887f043a57c9f352d38c5be55d",
+              "copies": 5
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/5905580032.json.leaf.certificate",
+          "n": 268435456,
+          "full_n": 268435456,
+          "rank": 64918479510145950660545,
+          "outer_n": 16,
+          "outer_rank": 2236,
+          "leaf_n": 16777216,
+          "leaf_rank": 38520042228975289144,
+          "packet_count": 1,
+          "used_calls": 1569,
+          "leftovers": 667,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 6,
+              "rows": 1569,
+              "rank": 39225611343419432801497,
+              "used": 1569,
+              "rows_sha256": "8464bfab897f08a760073464c6055924f3a690f6dc952f8bc346321eea036fca",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/5905580032.json",
+          "n": 5905580032,
+          "full_n": 5905580032,
+          "rank": 219405870380472051962264353,
+          "outer_n": 22,
+          "outer_rank": 5155,
+          "leaf_n": 268435456,
+          "leaf_rank": 64918479510145950660545,
+          "packet_count": 1,
+          "used_calls": 5110,
+          "leftovers": 45,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 16,
+              "m": 7,
+              "rows": 5110,
+              "rank": 216484538802515484182539828,
+              "used": 5110,
+              "rows_sha256": "264349d397492cb2700dfcd00bbc4464404ad7d7a26a4f13ad5507fb8c82fad9",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/13468840704.json.leaf.certificate",
+          "n": 612220032,
+          "full_n": 612220032,
+          "rank": 523171472934594561233820,
+          "outer_n": 18,
+          "outer_rank": 3043,
+          "leaf_n": 34012224,
+          "leaf_rank": 39346408075296537575424,
+          "packet_count": 2,
+          "used_calls": 3043,
+          "leftovers": 0,
+          "zero_filled_calls": 1,
+          "packet_types": [
+            {
+              "q": 18,
+              "m": 6,
+              "rows": 1522,
+              "rank": 261585736467297280616910,
+              "used": 1522,
+              "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+              "copies": 1
+            },
+            {
+              "q": 18,
+              "m": 6,
+              "rows": 1522,
+              "rank": 261585736467297280616910,
+              "used": 1521,
+              "rows_sha256": "ec813135b574ecd5a2026567b58f583d98aee368108ce181b967256a1e8411f4",
+              "copies": 1
+            }
+          ]
+        },
+        {
+          "path": "research_oct10/composition/results/integration_final/schemes/13468840704.json",
+          "n": 13468840704,
+          "full_n": 13468840704,
+          "rank": 2014523380268092193411235280,
+          "outer_n": 22,
+          "outer_rank": 5155,
+          "leaf_n": 612220032,
+          "leaf_rank": 523171472934594561233820,
+          "packet_count": 1,
+          "used_calls": 5110,
+          "leftovers": 45,
+          "zero_filled_calls": 0,
+          "packet_types": [
+            {
+              "q": 18,
+              "m": 7,
+              "rows": 5110,
+              "rank": 1990980663986035438155713380,
+              "used": 5110,
+              "rows_sha256": "264349d397492cb2700dfcd00bbc4464404ad7d7a26a4f13ad5507fb8c82fad9",
+              "copies": 1
+            }
+          ]
+        }
+      ],
+      "primitive_checks": [],
+      "existing_explicit_primitives": [
+        {
+          "n": 32,
+          "rank": 14196,
+          "source": "seeds/explicit32_14196.npz",
+          "source_object_sha256": "2b93998db1c473c33932fc964fecc1fbbb75485bc28d83e3a879170082ae839e",
+          "format": "explicit-qcsr-square-v1",
+          "exact_complete_trilinear_checks": 2,
+          "exhaustive_tensor_replay": false,
+          "elapsed_seconds": 3.9455573959930916
+        },
+        {
+          "n": 16,
+          "rank": 2236,
+          "source": "seeds/explicit16_2236.npz",
+          "source_object_sha256": "8d72fd010f3db0539c362304388255577790ee82be0781ad12c85ed2bdcdbe21",
+          "format": "explicit-qcsr-square-v1",
+          "exact_complete_trilinear_checks": 2,
+          "exhaustive_tensor_replay": false,
+          "elapsed_seconds": 0.20426418499846477
+        }
+      ],
+      "local_identities": [
+        {
+          "q": 12,
+          "exact_zero_containing_coefficients": 469,
+          "all_positive_example": "359/288",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 17,
+          "exact_zero_containing_coefficients": 919,
+          "all_positive_example": "679/578",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        },
+        {
+          "q": 18,
+          "exact_zero_containing_coefficients": 1027,
+          "all_positive_example": "755/648",
+          "garbage_eliminated_by": "3m zero occurrences in 3m coordinates, with at most one zero per nonzero local coefficient"
+        }
+      ],
+      "existing_z4_dependencies": [
+        {
+          "q": 14,
+          "rows": 7,
+          "rank": 15457917986,
+          "compression": "z4-quotient-v1",
+          "rows_sha256": "5c5e8a6df88dc84994cbad961f132eecb1b0e29fa4c81f3a9e2a06eebef21e9c",
+          "relations_sha256": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+          "rank_count": "independent global Burnside sum on kept columns",
+          "prior_exact_replay": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/results/packed/validation.json",
+          "replayed_this_run": false
+        }
+      ],
+      "source_provenance": [
+        {
+          "path": "src/cwschemes/_resources.py",
+          "bytes": 2760,
+          "sha256": "bd6df5483f050e46581c1d26dd66a3a5462f659d22866c28835a12aa80e8b72a"
+        },
+        {
+          "path": "src/cwschemes/data/index.json",
+          "bytes": 22081,
+          "sha256": "c948a6e8bb97e8b7f325363c0124c00effe4e0b8fd98107e681985480444721a"
+        },
+        {
+          "path": "src/cwschemes/_engine/general_square.py",
+          "bytes": 10721,
+          "sha256": "d440f407da79b489d683dfb09e5e3825e0234e0bd61f38eec4c045fadfd12d67"
+        },
+        {
+          "path": "src/cwschemes/_engine/lita_coefficients.py",
+          "bytes": 4109,
+          "sha256": "76fb8aa26b312ab4a412ced45b1a1a1d70bbdbe551dd428f979c5f623000a4e1"
+        },
+        {
+          "path": "src/cwschemes/_engine/sources/lita_round6.py",
+          "bytes": 12867,
+          "sha256": "92cc3fea756402b63774245a8cb88a1684f89b9ea43db20845261a1967ca33b4"
+        },
+        {
+          "path": "src/cwschemes/_engine/square_scheme.py",
+          "bytes": 5185,
+          "sha256": "69af8492a8306e2006c3774f3686b58d647bc0f820ebb996ffc472641c5b229a"
+        },
+        {
+          "path": "src/cwschemes/_engine/scheme.py",
+          "bytes": 6018,
+          "sha256": "4f3b34c4319a45ab1b0ad46a863d14dba42b83d2d2251a500c393ac74a144368"
+        },
+        {
+          "path": "src/cwschemes/_engine/restrictions.py",
+          "bytes": 4485,
+          "sha256": "e29db785535d7762f968aa9e67bd15cc6b127000098ad64d4881731fdc13ecbc"
+        }
+      ],
+      "elapsed_seconds": 5.963273811001272
+    }
+  }
+}

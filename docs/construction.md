@@ -12,7 +12,7 @@ Rational compression removes a term when its pair factor lies in the span of ret
 
 The source reader implements the resulting coefficient maps, not the search that selected a support or deletion set. Proof files store the specific support, rational coefficients and composition recipes. The exact checker reconstructs the relevant relations without choosing new supports or solving an optimization problem.
 
-The largest new support has power 21 and 5,032 independent size-q^7 products. Its exact packet rank is
+The original power-21 support has 5,032 independent size-q^7 products. Its exact packet rank is
 
 ```
 P(q) = (q+1)^21 + 21(q+1)^20 + 210(q+1)^19 + 1330(q+1)^18
@@ -53,6 +53,24 @@ This computes the 7 orbit products independently from 7 independent pairs of inp
 R7(q) = (q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 131q^4 + 2q^3 + 2q^2)/4.
 ```
 
-Strassen's outer scheme gives R(2q³) ≤ R7(q): 198,683,936 at q = 8 and 74,352,484,826 at q = 17 (n = 9,826, exponent 2.723013). An outer scheme of rank R_k with 7j of its products grouped into units gives R(kq³) ≤ j·R7(q) + (R_k − 7j)·R(q³). The catalogue uses this at 10,976, 16,384 (Strassen², j = 7), 32,768 (⟨8;336⟩, j = 48) and 65,536 (⟨16;2236⟩, j = 319, three products by the size-4,096 entry).
+Strassen's outer scheme gives R(2q³) ≤ R7(q): 198,683,936 at q = 8 and 74,352,484,826 at q = 17 (n = 9,826, exponent 2.723013). An outer scheme of rank R_k with 7j of its products grouped into units gives R(kq³) ≤ j·R7(q) + (R_k − 7j)·R(q³). The catalogue uses this at 10,976, 16,384 (Strassen², j = 7), 32,768 (⟨8;336⟩, j = 48) and 65,536 (padded from ⟨24·14³⟩ using the original rank-6503 outer scheme, j = 929, no remainder).
 
 The input and output dimensions and every coefficient are finite and specified. The constructions are not border-rank approximations and do not rely on numerical near-identities.
+
+## October 2026 support and composition update
+
+The new power-21 supports are found by streaming all currently admissible rows, followed by bounded exchanges. Each accepted witness is audited independently for both mixed completion roles. For each mode, the allowed pure subsets are the downset of that mode's zero masks; only subsets in all three downsets survive. If their cardinality counts are c_d, the exact rank is P(q) = Σ_d c_d(q+1)^(21−d). For power 3m, replace 21 by 3m in this same polynomial. This is ordinary exact rank over Q.
+
+The square construction assigns disjoint contiguous batches of outer calls to packet rows. Unused rows of the final packet receive zero input; the remaining calls use the explicit recursive leaf recipe. Its rank is the sum of full packet ranks and the specified leaf ranks. The leaf envelope considers existing finite schemes, tensor products, padding, uncompressed CW packets and the certified Z4 units. Improved power-15 and power-18 supports supply the inner recipes. Integer counts determine the final choices.
+
+For the first strict threshold, q = 16 and m = 6, the outer scheme has 14196 calls, and the selected support has 1569 rows. The actual certificate gives
+
+```text
+P(16) = 39225611343419432801497
+R(16^6) = 38520042228975289144
+R(536870912) = 9*P(16) + 75*R(16^6) = 355919505257948041899273.
+```
+
+The constrained second support forbids one coordinate in the output zero mask. This removes every pure correction subset containing that coordinate; its missing outer calls are supplied explicitly. The counts and recursive trees are stored in the immutable catalogue objects.
+
+Repeated identical packets share an immutable coefficient table in the loader while retaining their separate batch positions. This changes memory use, not ranks or wiring. No asymptotic limit, tensor degeneration or numerical approximation is used.

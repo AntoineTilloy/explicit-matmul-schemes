@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "65536",
-  "rank": "14507078850188",
+  "rank": "14360405808994",
   "field": "Q",
-  "root_object": "dfacef7a66712d0278b9babf6c2d48f1ed31fb2840691d8bcf6f3fecbd27f29d",
-  "effective_exponent": 2.7326138925419823,
+  "root_object": "1c2c12626b0330734b8eb9ca7ddcc7b8417f635a22399ffbf8ddb7e1d19daac1",
+  "effective_exponent": 2.7316976095137324,
   "provenance": {
-    "construction": "319 Z4-quotient units (q = 16) inside the explicit outer <16;2236>, 3 remaining products by the size-4,096 Z4-quotient scheme"
+    "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves"
   },
-  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
 }

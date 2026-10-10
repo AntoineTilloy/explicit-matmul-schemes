@@ -1,0 +1,24 @@
+{
+  "source": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/source",
+  "python": "3.12.11 | packaged by conda-forge | (main, Jun  4 2025, 14:45:31) [GCC 13.3.0]",
+  "cpu_affinity": "32-39",
+  "compute_host": "atlas",
+  "files": {
+    "resource_index": {
+      "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/source/src/cwschemes/data/index.json",
+      "sha256": "c948a6e8bb97e8b7f325363c0124c00effe4e0b8fd98107e681985480444721a"
+    },
+    "catalogue": {
+      "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/source/catalogue.json",
+      "sha256": "93b7c8e49847a7084d46daad698d7093bd0b46d928cbe7e2c655c803c3efea54"
+    },
+    "general_square": {
+      "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/source/src/cwschemes/_engine/general_square.py",
+      "sha256": "d440f407da79b489d683dfb09e5e3825e0234e0bd61f38eec4c045fadfd12d67"
+    },
+    "validator": {
+      "path": "/home/antoine/Projects/experimental_fast_matmul/research_oct10/composition/validate.py",
+      "sha256": "2824ddaa5d46d1f222244cc99f7dfd541917d86f3b50640363290f6b14ece057"
+    }
+  }
+}
