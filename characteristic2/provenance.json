@@ -1,0 +1,30 @@
+{
+  "bookkeeping_hash_negative_control": true,
+  "hash_consistent_bad_allocation_negative_control": true,
+  "alphatensor": {
+    "repository": "https://github.com/google-deepmind/alphatensor",
+    "commit": "1949163da3bef7e3eb268a3ac015fd1c2dbfc767",
+    "archive_path": "algorithms/factorizations_f2.npz",
+    "archive_sha256": "70f09f349d8d2874ef0e0e089459c7320f5aa3eef277df5ffa67f573709db2da",
+    "rank47_exact_match": {
+      "mode_permutation": [
+        0,
+        1,
+        2
+      ],
+      "coordinate_transposes": [
+        false,
+        false,
+        true
+      ]
+    },
+    "rank2209_exact_Kronecker_square": true,
+    "redistribution_license": "Apache-2.0",
+    "license_file": "AlphaTensor_LICENSE",
+    "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "KM": {
+    "redistributed_coefficients": false,
+    "note": "Kauers-Moosbauer gauge used only in comparison sweep; selected frozen witnesses use AlphaTensor exclusively."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "106",
+  "rank": "424690",
+  "field": "Q",
+  "root_object": "d3146e77fd428c727dea4d7f20b438712ce5a1a12bdd17f2546495d454bb133f",
+  "effective_exponent": 2.7788750980694674,
+  "provenance": {
+    "construction": "uneven rectangular Strassen composition",
+    "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+  },
+  "verification": "Exact rectangular recipe dimensions and ranks, frozen hash-checked rational coefficients, full small wiring and rectangular primitive tensor checks; LITA identities use the published construction theorem and exact coefficient regeneration. See docs/rectangular.md."
+}

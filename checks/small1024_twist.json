@@ -1,0 +1,31 @@
+{
+  "coefficient_field": "Q",
+  "changes": [
+    {
+      "n": 1024,
+      "q": 8,
+      "old_rank": "198683936",
+      "rank": "198683360",
+      "saving": 576,
+      "old_root_object": "0b9a92cbd55f5c425476b252674daa9450f70fe2ebfe2ac9d56ef2772893de01",
+      "root_object": "2ed39a4647e3d38acde0082a4bcf15760c04fae4e887cc793322183ea4923dea",
+      "audit": {
+        "q": 8,
+        "rank": "198683360",
+        "unquotiented_rank": "794689536",
+        "support_rows": 28,
+        "row_orbits": 7,
+        "kernel_profile": [
+          0,
+          8,
+          24,
+          4
+        ],
+        "kept_patterns": 1152,
+        "relation_object": "304e9d51f14f180e9370e038a0fba2a649cac88b4c884dae751f5994fff1d086",
+        "input_character": "odd",
+        "counts": "orbit unranking = character-weighted Burnside = closed form"
+      }
+    }
+  ]
+}

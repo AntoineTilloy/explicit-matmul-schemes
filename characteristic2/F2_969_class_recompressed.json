@@ -1,0 +1,2149 @@
+{
+  "format": "exact-f2-class-recompression-v1",
+  "coefficient_field": "F2",
+  "tensor": [
+    969,
+    969,
+    969
+  ],
+  "rank": 224263400,
+  "base": "F2_969.json",
+  "base_sha256": "3b1fc2e0d0c5faabdb6dc9a01912c504ab2c9a44115d3710acd561dc0baac47b",
+  "allocation": "class_ids_969.npz",
+  "allocation_sha256": "6f6394dd0376a626fc22a031bb637376bd43901c2352b9dd365b1379a66fdc01",
+  "classes": [
+    {
+      "key": 0,
+      "inner_multiplicity": 4861,
+      "old_outer_calls": 2114,
+      "new_outer_calls": 2109,
+      "weighted_saving": 24305,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 1,
+      "inner_multiplicity": 2778,
+      "old_outer_calls": 2129,
+      "new_outer_calls": 2124,
+      "weighted_saving": 13890,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 2,
+      "inner_multiplicity": 553,
+      "old_outer_calls": 2135,
+      "new_outer_calls": 2135,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 3,
+      "inner_multiplicity": 684,
+      "old_outer_calls": 2150,
+      "new_outer_calls": 2150,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 7,
+      "inner_multiplicity": 184,
+      "old_outer_calls": 2150,
+      "new_outer_calls": 2150,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 8,
+      "inner_multiplicity": 553,
+      "old_outer_calls": 2137,
+      "new_outer_calls": 2132,
+      "weighted_saving": 2765,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 9,
+      "inner_multiplicity": 592,
+      "old_outer_calls": 2152,
+      "new_outer_calls": 2147,
+      "weighted_saving": 2960,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 10,
+      "inner_multiplicity": 1729,
+      "old_outer_calls": 2161,
+      "new_outer_calls": 2161,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 11,
+      "inner_multiplicity": 741,
+      "old_outer_calls": 2176,
+      "new_outer_calls": 2176,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 15,
+      "inner_multiplicity": 571,
+      "old_outer_calls": 2177,
+      "new_outer_calls": 2177,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 16,
+      "inner_multiplicity": 2778,
+      "old_outer_calls": 2124,
+      "new_outer_calls": 2121,
+      "weighted_saving": 8334,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 17,
+      "inner_multiplicity": 2323,
+      "old_outer_calls": 2139,
+      "new_outer_calls": 2136,
+      "weighted_saving": 6969,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 18,
+      "inner_multiplicity": 592,
+      "old_outer_calls": 2145,
+      "new_outer_calls": 2145,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 19,
+      "inner_multiplicity": 650,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2160,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 23,
+      "inner_multiplicity": 517,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2160,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 24,
+      "inner_multiplicity": 684,
+      "old_outer_calls": 2145,
+      "new_outer_calls": 2142,
+      "weighted_saving": 2052,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 25,
+      "inner_multiplicity": 650,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2157,
+      "weighted_saving": 1950,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 26,
+      "inner_multiplicity": 741,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 27,
+      "inner_multiplicity": 1033,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 31,
+      "inner_multiplicity": 94,
+      "old_outer_calls": 2185,
+      "new_outer_calls": 2185,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 56,
+      "inner_multiplicity": 184,
+      "old_outer_calls": 2145,
+      "new_outer_calls": 2142,
+      "weighted_saving": 552,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 57,
+      "inner_multiplicity": 517,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2157,
+      "weighted_saving": 1551,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 58,
+      "inner_multiplicity": 571,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 59,
+      "inner_multiplicity": 94,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 63,
+      "inner_multiplicity": 341,
+      "old_outer_calls": 2185,
+      "new_outer_calls": 2185,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 64,
+      "inner_multiplicity": 1690,
+      "old_outer_calls": 2132,
+      "new_outer_calls": 2127,
+      "weighted_saving": 8450,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 65,
+      "inner_multiplicity": 4675,
+      "old_outer_calls": 2147,
+      "new_outer_calls": 2142,
+      "weighted_saving": 23375,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 66,
+      "inner_multiplicity": 358,
+      "old_outer_calls": 2153,
+      "new_outer_calls": 2153,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 67,
+      "inner_multiplicity": 2031,
+      "old_outer_calls": 2168,
+      "new_outer_calls": 2168,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 71,
+      "inner_multiplicity": 728,
+      "old_outer_calls": 2168,
+      "new_outer_calls": 2168,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 72,
+      "inner_multiplicity": 195,
+      "old_outer_calls": 2155,
+      "new_outer_calls": 2150,
+      "weighted_saving": 975,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 73,
+      "inner_multiplicity": 414,
+      "old_outer_calls": 2170,
+      "new_outer_calls": 2165,
+      "weighted_saving": 2070,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 74,
+      "inner_multiplicity": 355,
+      "old_outer_calls": 2179,
+      "new_outer_calls": 2179,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 75,
+      "inner_multiplicity": 1392,
+      "old_outer_calls": 2194,
+      "new_outer_calls": 2194,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 79,
+      "inner_multiplicity": 1020,
+      "old_outer_calls": 2195,
+      "new_outer_calls": 2195,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 80,
+      "inner_multiplicity": 587,
+      "old_outer_calls": 2142,
+      "new_outer_calls": 2139,
+      "weighted_saving": 1761,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 81,
+      "inner_multiplicity": 3509,
+      "old_outer_calls": 2157,
+      "new_outer_calls": 2154,
+      "weighted_saving": 10527,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 82,
+      "inner_multiplicity": 404,
+      "old_outer_calls": 2163,
+      "new_outer_calls": 2163,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 83,
+      "inner_multiplicity": 1298,
+      "old_outer_calls": 2178,
+      "new_outer_calls": 2178,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 87,
+      "inner_multiplicity": 1693,
+      "old_outer_calls": 2178,
+      "new_outer_calls": 2178,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 88,
+      "inner_multiplicity": 42,
+      "old_outer_calls": 2163,
+      "new_outer_calls": 2160,
+      "weighted_saving": 126,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 89,
+      "inner_multiplicity": 428,
+      "old_outer_calls": 2178,
+      "new_outer_calls": 2175,
+      "weighted_saving": 1284,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 90,
+      "inner_multiplicity": 134,
+      "old_outer_calls": 2187,
+      "new_outer_calls": 2187,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 91,
+      "inner_multiplicity": 606,
+      "old_outer_calls": 2202,
+      "new_outer_calls": 2202,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 95,
+      "inner_multiplicity": 282,
+      "old_outer_calls": 2203,
+      "new_outer_calls": 2203,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 120,
+      "inner_multiplicity": 69,
+      "old_outer_calls": 2163,
+      "new_outer_calls": 2160,
+      "weighted_saving": 207,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 121,
+      "inner_multiplicity": 282,
+      "old_outer_calls": 2178,
+      "new_outer_calls": 2175,
+      "weighted_saving": 846,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 122,
+      "inner_multiplicity": 54,
+      "old_outer_calls": 2187,
+      "new_outer_calls": 2187,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 123,
+      "inner_multiplicity": 282,
+      "old_outer_calls": 2202,
+      "new_outer_calls": 2202,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 127,
+      "inner_multiplicity": 676,
+      "old_outer_calls": 2203,
+      "new_outer_calls": 2203,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 128,
+      "inner_multiplicity": 1690,
+      "old_outer_calls": 2129,
+      "new_outer_calls": 2127,
+      "weighted_saving": 3380,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 129,
+      "inner_multiplicity": 587,
+      "old_outer_calls": 2144,
+      "new_outer_calls": 2142,
+      "weighted_saving": 1174,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 130,
+      "inner_multiplicity": 195,
+      "old_outer_calls": 2150,
+      "new_outer_calls": 2150,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 131,
+      "inner_multiplicity": 42,
+      "old_outer_calls": 2165,
+      "new_outer_calls": 2165,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 135,
+      "inner_multiplicity": 69,
+      "old_outer_calls": 2165,
+      "new_outer_calls": 2165,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 136,
+      "inner_multiplicity": 358,
+      "old_outer_calls": 2152,
+      "new_outer_calls": 2150,
+      "weighted_saving": 716,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 137,
+      "inner_multiplicity": 404,
+      "old_outer_calls": 2167,
+      "new_outer_calls": 2165,
+      "weighted_saving": 808,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 138,
+      "inner_multiplicity": 355,
+      "old_outer_calls": 2176,
+      "new_outer_calls": 2176,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 139,
+      "inner_multiplicity": 134,
+      "old_outer_calls": 2191,
+      "new_outer_calls": 2191,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 143,
+      "inner_multiplicity": 54,
+      "old_outer_calls": 2192,
+      "new_outer_calls": 2192,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 144,
+      "inner_multiplicity": 4675,
+      "old_outer_calls": 2139,
+      "new_outer_calls": 2139,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 145,
+      "inner_multiplicity": 3509,
+      "old_outer_calls": 2154,
+      "new_outer_calls": 2154,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 146,
+      "inner_multiplicity": 414,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2160,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 147,
+      "inner_multiplicity": 428,
+      "old_outer_calls": 2175,
+      "new_outer_calls": 2175,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 151,
+      "inner_multiplicity": 282,
+      "old_outer_calls": 2175,
+      "new_outer_calls": 2175,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 152,
+      "inner_multiplicity": 2031,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2160,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 153,
+      "inner_multiplicity": 1298,
+      "old_outer_calls": 2175,
+      "new_outer_calls": 2175,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 154,
+      "inner_multiplicity": 1392,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 155,
+      "inner_multiplicity": 606,
+      "old_outer_calls": 2199,
+      "new_outer_calls": 2199,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 159,
+      "inner_multiplicity": 282,
+      "old_outer_calls": 2200,
+      "new_outer_calls": 2200,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 184,
+      "inner_multiplicity": 728,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2160,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 185,
+      "inner_multiplicity": 1693,
+      "old_outer_calls": 2175,
+      "new_outer_calls": 2175,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 186,
+      "inner_multiplicity": 1020,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 187,
+      "inner_multiplicity": 282,
+      "old_outer_calls": 2199,
+      "new_outer_calls": 2199,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 191,
+      "inner_multiplicity": 676,
+      "old_outer_calls": 2200,
+      "new_outer_calls": 2200,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 192,
+      "inner_multiplicity": 1638,
+      "old_outer_calls": 2138,
+      "new_outer_calls": 2136,
+      "weighted_saving": 3276,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 193,
+      "inner_multiplicity": 1208,
+      "old_outer_calls": 2153,
+      "new_outer_calls": 2151,
+      "weighted_saving": 2416,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 194,
+      "inner_multiplicity": 194,
+      "old_outer_calls": 2159,
+      "new_outer_calls": 2159,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 195,
+      "inner_multiplicity": 460,
+      "old_outer_calls": 2174,
+      "new_outer_calls": 2174,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 199,
+      "inner_multiplicity": 138,
+      "old_outer_calls": 2174,
+      "new_outer_calls": 2174,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 200,
+      "inner_multiplicity": 194,
+      "old_outer_calls": 2161,
+      "new_outer_calls": 2159,
+      "weighted_saving": 388,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 201,
+      "inner_multiplicity": 122,
+      "old_outer_calls": 2176,
+      "new_outer_calls": 2174,
+      "weighted_saving": 244,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 202,
+      "inner_multiplicity": 826,
+      "old_outer_calls": 2185,
+      "new_outer_calls": 2185,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 203,
+      "inner_multiplicity": 636,
+      "old_outer_calls": 2200,
+      "new_outer_calls": 2200,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 207,
+      "inner_multiplicity": 108,
+      "old_outer_calls": 2201,
+      "new_outer_calls": 2201,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 208,
+      "inner_multiplicity": 1208,
+      "old_outer_calls": 2148,
+      "new_outer_calls": 2148,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 209,
+      "inner_multiplicity": 4758,
+      "old_outer_calls": 2163,
+      "new_outer_calls": 2163,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 210,
+      "inner_multiplicity": 122,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 211,
+      "inner_multiplicity": 680,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 215,
+      "inner_multiplicity": 188,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 216,
+      "inner_multiplicity": 460,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 217,
+      "inner_multiplicity": 680,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 218,
+      "inner_multiplicity": 636,
+      "old_outer_calls": 2193,
+      "new_outer_calls": 2193,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 219,
+      "inner_multiplicity": 972,
+      "old_outer_calls": 2208,
+      "new_outer_calls": 2208,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 223,
+      "inner_multiplicity": 740,
+      "old_outer_calls": 2209,
+      "new_outer_calls": 2209,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 248,
+      "inner_multiplicity": 138,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 249,
+      "inner_multiplicity": 188,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 250,
+      "inner_multiplicity": 108,
+      "old_outer_calls": 2193,
+      "new_outer_calls": 2193,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 251,
+      "inner_multiplicity": 740,
+      "old_outer_calls": 2208,
+      "new_outer_calls": 2208,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 255,
+      "inner_multiplicity": 142,
+      "old_outer_calls": 2209,
+      "new_outer_calls": 2209,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 448,
+      "inner_multiplicity": 454,
+      "old_outer_calls": 2138,
+      "new_outer_calls": 2136,
+      "weighted_saving": 908,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 449,
+      "inner_multiplicity": 1327,
+      "old_outer_calls": 2153,
+      "new_outer_calls": 2151,
+      "weighted_saving": 2654,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 450,
+      "inner_multiplicity": 156,
+      "old_outer_calls": 2159,
+      "new_outer_calls": 2159,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 451,
+      "inner_multiplicity": 509,
+      "old_outer_calls": 2174,
+      "new_outer_calls": 2174,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 455,
+      "inner_multiplicity": 123,
+      "old_outer_calls": 2174,
+      "new_outer_calls": 2174,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 456,
+      "inner_multiplicity": 156,
+      "old_outer_calls": 2161,
+      "new_outer_calls": 2159,
+      "weighted_saving": 312,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 457,
+      "inner_multiplicity": 178,
+      "old_outer_calls": 2176,
+      "new_outer_calls": 2174,
+      "weighted_saving": 356,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 458,
+      "inner_multiplicity": 334,
+      "old_outer_calls": 2185,
+      "new_outer_calls": 2185,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 459,
+      "inner_multiplicity": 482,
+      "old_outer_calls": 2200,
+      "new_outer_calls": 2200,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 463,
+      "inner_multiplicity": 549,
+      "old_outer_calls": 2201,
+      "new_outer_calls": 2201,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 464,
+      "inner_multiplicity": 1327,
+      "old_outer_calls": 2148,
+      "new_outer_calls": 2148,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 465,
+      "inner_multiplicity": 4029,
+      "old_outer_calls": 2163,
+      "new_outer_calls": 2163,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 466,
+      "inner_multiplicity": 178,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 467,
+      "inner_multiplicity": 588,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 471,
+      "inner_multiplicity": 176,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 472,
+      "inner_multiplicity": 509,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 473,
+      "inner_multiplicity": 588,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 474,
+      "inner_multiplicity": 482,
+      "old_outer_calls": 2193,
+      "new_outer_calls": 2193,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 475,
+      "inner_multiplicity": 410,
+      "old_outer_calls": 2208,
+      "new_outer_calls": 2208,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 479,
+      "inner_multiplicity": 408,
+      "old_outer_calls": 2209,
+      "new_outer_calls": 2209,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 504,
+      "inner_multiplicity": 123,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 505,
+      "inner_multiplicity": 176,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 506,
+      "inner_multiplicity": 549,
+      "old_outer_calls": 2193,
+      "new_outer_calls": 2193,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 507,
+      "inner_multiplicity": 408,
+      "old_outer_calls": 2208,
+      "new_outer_calls": 2208,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 511,
+      "inner_multiplicity": 897,
+      "old_outer_calls": 2209,
+      "new_outer_calls": 2209,
+      "weighted_saving": 0,
+      "merges": []
+    }
+  ],
+  "proof_rule": "Classify each inner term by exact row/column/corner nonzero profiles. Retain distinct outer block copies. Replay complete exact outer pair merges within each profile, then multiply by the class multiplicity."
+}

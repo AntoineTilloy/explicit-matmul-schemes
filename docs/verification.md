@@ -30,6 +30,14 @@ Machine-readable results under `checks/` record the checks actually run on the s
 
 To reproduce without the original project, install the release, choose an empty `CWSCHEMES_CACHE`, change to another directory and run `cwschemes verify --all`. Exact replays use the same offline object bundle. No search executable, researcher home directory, cluster credential or hidden coefficient cache is needed.
 
+The small rational rectangular update checks every graph node's dimensions
+and count and every frozen coefficient object's hash. LITA primitive identities
+use the pinned published construction theorem and complete coefficient
+regeneration; the seven imported rectangular tensors and small uneven wiring
+examples were checked completely over Q. `--exact` does not expand the large
+LITA primitive tensors. See [rectangular.md](rectangular.md) and
+`checks/small1024_rectangular*.json` for this scope.
+
 ## Explicit sparse schemes (sizes 14, 16, 32)
 
 Entries in format `explicit-qcsr-square-v1` bundle every coefficient. The default check evaluates the algorithm on two random
@@ -39,11 +47,11 @@ Results are recorded in [checks/explicit.jsonl](../checks/explicit.jsonl). A sin
 
 ## Z4-quotient schemes (sizes 1,024 to 65,536)
 
-`cwschemes verify <n>` walks the entry's composition tree and checks each distinct unit (one per q) in three ways.
+`cwschemes verify <n>` walks the entry's composition tree and checks each distinct unit (including its q and input character) in three ways.
 
 - **Audit.** It checks the support structure: 28 CW rows in 7 free Z4-orbits, and the sunflower kernels with their Möbius coefficients. It checks the relation object: the kept, zero and deleted pattern sets partition each step and are Z4-stable, and relation steps modify only the output mode. The rank is computed three independent ways: orbit unranking, Burnside's lemma over the kept patterns, and the closed-form polynomial.
 - **Exact packet identity.** It evaluates the packet tensor Σ_columns u(x) v(y) w(z) exactly over Q, with Fractions, at four sampled entries: a valid triple, a sunflower "garbage" block triple where the corrections must cancel, a label-perturbed diagonal entry and a uniform entry. Each value is compared with the 28 copies of ⟨q³⟩. The label sums factor coordinate-wise; packet modes 1 and 2 use the generator's own coefficient tables.
-- **Orbit lemma.** Every member of a term's column orbit has the same input factor, equal to the published coefficient, checked exactly.
+- **Orbit lemma.** Every member of a term's column orbit has the input factor prescribed by its character: equal for the even character and differing by the exact character sign for the odd one.
 
 `--exact` additionally instantiates the q-independent relation object at each unit's q. It replays both steps exactly over Q with the same checker as other compact-orbit proofs (`replay_orbit`): zero patterns must be zero, and every relation G[:, B] C = G[:, J] must hold for the reconstructed pair Gram. One replay takes 8 to 9 minutes and about 3.2 GB of memory on one core.
 
@@ -65,3 +73,11 @@ The new power-21 witnesses and recursive composition trees were audited independ
 For every new threshold the integer inequality (n−1)^27 ≤ R^10 < n^27 is checked. Recursive audits verify the certified primitive rank, every inner dimension, each packet's exact rank, contiguous call allocation and the full square rank. Rational coefficient samples exercise the actual published loader. Relevant Z4 relation replays use the existing exact rational checker.
 
 [checks/oct10.json](../checks/oct10.json) records changed objects and headline counts. Companion October check files record independent audits, package tests and fresh wheel loading. Earlier check files describe their historical object versions. No exhaustive expansion of a large target tensor is claimed.
+
+## Small-square real-character update
+
+At size 1,024 the odd-character Z4 unit removes 576 products. The generator-fixed input factors vanish over Q; all other orbit products use the same exact relation object and the documented signed row embedding. The uniform argument is in [real_character.md](real_character.md).
+
+The q = 2 instance has rank 15,854 at size 16. Every one of its 16⁶ tensor coefficients passed an exact rational CRT check with a rigorously computed clearing denominator and entry bound. The port comparison checks every q = 2 input coefficient, every underlying rational coefficient table, every orbit unranking and 576 exact Fraction samples. All twelve excluded fixed columns and all thirty-four length-two stabilizer identities are checked. Larger dimensions follow from the uniform construction, rather than exhaustive expansion at size 1,024. The complete regression suite passed after the character and mixed-certificate changes.
+
+Evidence is recorded in the `checks/small1024*` files. Earlier Z4 results refer to the even-character object versions and retain their historical counts.

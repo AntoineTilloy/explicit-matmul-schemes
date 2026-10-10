@@ -1,0 +1,164 @@
+{
+  "format": "exact-three-vertex-crop-v1",
+  "coefficient_field": "F2",
+  "tensor": [
+    243,
+    243,
+    243
+  ],
+  "rank": 4765303,
+  "outer": {
+    "file": "bases/16at.npz",
+    "sha256": "b579ca1948288ca167384417bb7e41f7f0f0f91236304644757daba191f79ac2",
+    "name": "16at"
+  },
+  "inner": {
+    "file": "bases/16at.npz",
+    "sha256": "b579ca1948288ca167384417bb7e41f7f0f0f91236304644757daba191f79ac2",
+    "name": "16at"
+  },
+  "vertex_orders": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      3
+    ],
+    [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      1
+    ]
+  ],
+  "tail_anchors": [
+    0,
+    3,
+    1
+  ],
+  "baseline": 4879681,
+  "saving": 114378,
+  "proof_rule": "Independent outer and inner row/contraction/column permutations, Kronecker composition, exact square restriction, complete zero-factor removal",
+  "source": {
+    "primitive_audit": "base_audit.json",
+    "provenance": "provenance.json"
+  },
+  "bookkeeping": "active_243.npz",
+  "bookkeeping_sha256": "889447539ecdb5a9cd420f183c86f405a5367c593aaca1612ea3e5c2747468d2",
+  "inner_vertex_orders": [
+    [
+      6,
+      10,
+      14,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      15
+    ],
+    [
+      0,
+      4,
+      12,
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15
+    ],
+    [
+      6,
+      10,
+      14,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      15
+    ]
+  ],
+  "inner_partial_indices": [
+    [
+      6,
+      10,
+      14
+    ],
+    [
+      0,
+      4,
+      12
+    ],
+    [
+      6,
+      10,
+      14
+    ]
+  ],
+  "expected_class_recompressed_rank": 4761204
+}

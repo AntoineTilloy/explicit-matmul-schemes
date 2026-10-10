@@ -2,4 +2,7 @@
 comparisons/*.csv -text whitespace=cr-at-eol
 comparisons/lita_snapshot.md -text -whitespace
 figures/*.svg -text -whitespace
+characteristic2/*.svg -text -whitespace
+characteristic2/*.npz binary
+characteristic2/bases/*.npz binary
 src/cwschemes/data/objects/*.gz binary

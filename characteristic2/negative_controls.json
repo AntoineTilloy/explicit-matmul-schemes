@@ -1,0 +1,17 @@
+{
+  "exact": true,
+  "controls": [
+    {
+      "control": "incorrect allocation hash",
+      "rejected": true
+    },
+    {
+      "control": "hash-consistent incomplete allocation",
+      "rejected": true
+    },
+    {
+      "control": "invalid pair merge membership",
+      "rejected": true
+    }
+  ]
+}

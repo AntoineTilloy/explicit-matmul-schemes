@@ -1,0 +1,138 @@
+{
+  "exact": true,
+  "primitives": [
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        12,
+        14
+      ],
+      "rank": 259,
+      "sha256": "7a700da52ea22d62d1ea162156b0ac21ea94f5477abf95c37c2b0b55ecb972f2",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 15084,
+      "remaining_error_coefficients": 0,
+      "seconds": 0.0019009790048585273
+    },
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        12,
+        16
+      ],
+      "rank": 296,
+      "sha256": "bbacb761f0605bd6a8acbd2c2ac26ca950da9e01ce95cd86ff97a6d10d5aa754",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 10812,
+      "remaining_error_coefficients": 0,
+      "seconds": 0.0014225799968698993
+    },
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        13,
+        13
+      ],
+      "rank": 260,
+      "sha256": "79a58d97854115b30acb0231a05dac23c9885368ddfa706acaa097715132a32b",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 4444,
+      "remaining_error_coefficients": 0,
+      "seconds": 0.0006264190014917403
+    },
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        14,
+        14
+      ],
+      "rank": 301,
+      "sha256": "9d0a292f55b31bd1fa52c85b12d0f87f2b70286dedcfac3dbb853b60e39983cb",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 5112,
+      "remaining_error_coefficients": 0,
+      "seconds": 0.0007032969951978885
+    },
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        14,
+        16
+      ],
+      "rank": 344,
+      "sha256": "c8871c647f8c8b6dd1e6cc2c7b872ce734b2ca8ca1fd6020bde71300bed9432a",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 20626,
+      "remaining_error_coefficients": 0,
+      "seconds": 0.002719885000260547
+    },
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        15,
+        15
+      ],
+      "rank": 345,
+      "sha256": "40e21d87c66ea7183916db3e2a37ccc56bb79d75798cef4695b7aad907cc4ed1",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 6090,
+      "remaining_error_coefficients": 0,
+      "seconds": 0.0008398380014114082
+    },
+    {
+      "exact": true,
+      "tensor": [
+        2,
+        3,
+        3
+      ],
+      "rank": 15,
+      "sha256": "7a09ff03f050e7d0331a3187b763ade0184bb73725fcac3b952c143ff1613a4c",
+      "gate": "All rational tensor coefficients after exact global denominator scaling; sparse integer accumulation",
+      "denominator_scales": [
+        1,
+        1,
+        1
+      ],
+      "cartesian_expansions": 114,
+      "remaining_error_coefficients": 0,
+      "seconds": 3.925000055460259e-05
+    }
+  ]
+}

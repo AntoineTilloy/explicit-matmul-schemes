@@ -6,7 +6,17 @@ This catalogue builds on published mathematical algorithms. The new CW restricti
 - **Lille catalogue:** [Collection of fast matrix multiplication algorithms](https://fmm.univ-lille.fr/), maintained by Alexandre Sedoglavic. Imported coefficient objects include the size-three rank-23 Laderman scheme, size-four rank-48 DPS scheme, size-five rank-93, size-six rank-153, size-seven rank-250, and rectangular 3×3×4 rank-29 and 3×4×4 rank-38 schemes. Original source labels and hashes are retained in the objects and in `imported_objects.json`. The rank-249 size-seven construction combines these published rectangular and size-four schemes. Imported coefficient data is identified separately from the new construction data; this repository does not impose an additional license on the upstream material.
 - **Strassen:** the seven-product size-two identity is used for composition and in the small executable example.
 - **Schwartz–Zwecher:** the comparison primitives include the recompression described in [arXiv:2508.01748](https://arxiv.org/abs/2508.01748), Claim 3.7 and Theorem 4.2. These are comparison constructions, not new discoveries in this catalogue.
+- **AlphaTensor:** the separate characteristic-two bundle uses the size-four rank-47 decomposition from Fawzi et al., *Discovering faster matrix multiplication algorithms with reinforcement learning*, Nature 610 (2022). Its frozen coefficient data and derived data retain Apache License 2.0, included in [characteristic2/AlphaTensor_LICENSE](../characteristic2/AlphaTensor_LICENSE). The exact source revision, coefficient match and changes are recorded in [characteristic2/README.md](../characteristic2/README.md) and `provenance.json`. This data is separate from the rational package catalogue.
 
 The installed third-party dependencies—NumPy, python-flint/FLINT, SymPy and Numba—are separate packages with their own licenses. They are not copied into this repository.
+
+The small rectangular update uses the newer LITA revision
+`472a79fbc8248423a97bebb3aacbc89e769b9b3e`. Its pinned generator
+`sources/lita_current.py` is likewise imported upstream material and excluded
+from this repository's MIT grant. Coefficient provenance records the exact
+generator hash, parameters and complete regeneration checks. Additional
+published narrow rectangular coefficients are pinned to the
+[Perminov collection](https://github.com/dronperminov/FastMatrixMultiplication/tree/7e3ac35ca92cb30d568519ea63d7a1accad2c908),
+with original paths and hashes retained in each recipe node.
 
 The mathematical coefficient data and provenance remain inspectable without executing discovery code. `imported_objects.json` lists exact object identifiers, so a downstream user can identify the primitive components of a construction.

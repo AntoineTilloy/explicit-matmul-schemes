@@ -37,15 +37,42 @@
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
-    "n": "432",
-    "rank": "19788629",
+    "n": "106",
+    "rank": "424690",
     "field": "Q",
-    "root_object": "2932c762217e1af30fd0379a6aaefe2d7318452caaab5debc7e6e6607f06a534",
-    "effective_exponent": 2.768529957805309,
+    "root_object": "d3146e77fd428c727dea4d7f20b438712ce5a1a12bdd17f2546495d454bb133f",
+    "effective_exponent": 2.7788750980694674,
     "provenance": {
-      "construction": "Exact finite CW composition update (October 2026): packed rebuild"
+      "construction": "uneven rectangular Strassen composition",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
     },
-    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+    "verification": "Exact rectangular recipe dimensions and ranks, frozen hash-checked rational coefficients, full small wiring and rectangular primitive tensor checks; LITA identities use the published construction theorem and exact coefficient regeneration. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "146",
+    "rank": "1044715",
+    "field": "Q",
+    "root_object": "d188fa308f61135b63a69d615a8d5bf555386c6178b298e1d039b36a165c019c",
+    "effective_exponent": 2.7809688305937446,
+    "provenance": {
+      "construction": "uneven rectangular Strassen composition",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact rectangular recipe dimensions and ranks, frozen hash-checked rational coefficients, full small wiring and rectangular primitive tensor checks; LITA identities use the published construction theorem and exact coefficient regeneration. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "432",
+    "rank": "19665128",
+    "field": "Q",
+    "root_object": "f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd",
+    "effective_exponent": 2.7674982956679,
+    "provenance": {
+      "construction": "routine current-upstream primitive refresh",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact rectangular recipe dimensions and ranks, frozen hash-checked rational coefficients, full small wiring and rectangular primitive tensor checks; LITA identities use the published construction theorem and exact coefficient regeneration. See docs/rectangular.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -74,14 +101,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "1024",
-    "rank": "198683936",
+    "rank": "198683360",
     "field": "Q",
-    "root_object": "0b9a92cbd55f5c425476b252674daa9450f70fe2ebfe2ac9d56ef2772893de01",
-    "effective_exponent": 2.756589999157575,
+    "root_object": "2ed39a4647e3d38acde0082a4bcf15760c04fae4e887cc793322183ea4923dea",
+    "effective_exponent": 2.7565895809085887,
     "provenance": {
-      "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 8) computing 7 independent <512> products, fed to Strassen <2;7>"
+      "construction": "Z4-quotient CW packet with the odd real character on both inputs and the even output character; power 9, seven free row orbits, q=8, fed to Strassen; generator-fixed input columns vanish exactly over Q"
     },
-    "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+    "verification": "Exact rational relation witnesses and coefficient access included; all tensor coefficients checked at q=2 with a rigorous CRT bound, uniform character construction and orbit counts; see checks/small1024_twist.json and docs/verification.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",

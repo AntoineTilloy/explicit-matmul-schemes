@@ -8,8 +8,10 @@ is written in the joint triangular representation (pure / ordinary / special col
 H in {0,1,2}^9) of the mode-permuted rows, then compressed by two certified relation steps:
     step 1  zero-pattern removal (patterns whose factor vanishes identically on the support);
     step 2  a Z4-invariant pair-(0,2) Gram elimination whose free mode is the OUTPUT C.
-The coordinate permutation acts on columns; both input factors are equivariant, so on Z4-invariant inputs the
-columns of one Z4-orbit give the same product.  One multiplication per column orbit (output factor = sum over
+The coordinate permutation acts on columns; both input factors are equivariant, so their invariant or matching
+real-character restrictions give the same product on each orbit. The odd restriction embeds both inputs with
+the character chi(g)=-1 and omits the generator-fixed columns; length-two orbits remain. One multiplication per
+surviving column orbit (output factor = sum over
 the orbit) computes the 7 row-orbit products independently: a scheme for 7 disjoint <q^3> products ("unit").
 Fed to Strassen's <2,2,2;7> it is a <2q^3> scheme; inside a larger outer scheme, groups of 7 outer products
 use one unit each.
@@ -30,6 +32,7 @@ from .compact_orbit_packet import CompactOrbitPacket
 from .triangular_full_compression import allowed
 
 FORMAT = 'cw-z4-quotient-square-v1'
+ODD_FORMAT = 'cw-z4-real-character-square-v1'
 COMPRESSION = 'z4-quotient-v1'
 RELATIONS_FORMAT = 'cw-z4-quotient-relations-v1'
 K9 = 9
@@ -390,6 +393,53 @@ class OrbitIndex:
         return sorted({(hact(g, H), lact(g, lab)) for g in self.sup.G})
 
 
+def real_character(g):
+    """The real Z4 character is negative on the two elements of order four."""
+    return -1 if any(g[g[i]] != i for i in range(len(g))) else 1
+
+
+class OddOrbitIndex:
+    """Column orbits whose stabilizer is contained in the even subgroup.
+
+    The length-one columns are the constant necklaces. Both odd input factors
+    vanish on those columns over Q; the length-two and length-four orbits stay.
+    """
+
+    def __init__(self, sup, kept, q):
+        self.sup, self.q = sup, q
+        self.original = original = OrbitIndex(sup, kept, q)
+        self.preps = []
+        for j, p in enumerate(original.preps):
+            p = dict(p, original_start=original.ends[j - 1] if j else 0)
+            if len(p['stab']) == 4:
+                cycles = [c for c in sup.cyc4 if c[0] in p['ones']]
+                fixed = [t for t in p['ones'] if t in sup.fix]
+                p['alphabet'] = q ** len(cycles)
+                p['old_necklaces'] = neck_count(p['alphabet']) if cycles else 1
+                p['new_necklaces'] = p['old_necklaces'] - p['alphabet']
+                p['count'] -= q ** (len(cycles) + len(fixed))
+            if p['count']:
+                self.preps.append(p)
+        self.ends = list(accumulate(p['count'] for p in self.preps))
+        self.rank = self.ends[-1] if self.ends else 0
+        self.removed = original.rank - self.rank
+
+    @lru_cache(4096)
+    def unrank(self, term):
+        if not 0 <= term < self.rank:
+            raise IndexError(term)
+        j = bisect_right(self.ends, term)
+        p = self.preps[j]
+        index = term - (self.ends[j - 1] if j else 0)
+        if len(p['stab']) == 4:
+            fixed, necklace = divmod(index, p['new_necklaces'])
+            index = fixed * p['old_necklaces'] + necklace + p['alphabet']
+        return self.original.unrank(p['original_start'] + index)
+
+    def members(self, H, lab):
+        return self.original.members(H, lab)
+
+
 # ------------------------------------------------------------------------------------------ joint packet
 class JointPacket(CompactOrbitPacket):
     """The package's ``CompactOrbitPacket`` (joint-orbit-v1) on the mode-permuted rows, driven by the
@@ -450,23 +500,29 @@ class JointPacket(CompactOrbitPacket):
 
 # ------------------------------------------------------------------------------------------ the unit
 class Z4QuotientUnit:
-    """Scheme for 7 independent <q^3> products (outer product h <-> row orbit h), rank = number of column orbits.
+    """Scheme for 7 independent <q^3> products, using matching even or odd input characters.
 
     ``matrix_variable(h, mode, i1, i2)`` and ``factor_entry(mode, term, variable)`` follow the packet interface
     of ``general_square.MixedSquare``."""
     compression = COMPRESSION
 
-    def __init__(self, q, support, relations):
+    def __init__(self, q, support, relations, input_character='even'):
+        if input_character not in ('even', 'odd'):
+            raise ValueError('The Z4 input character must be even or odd')
+        self.input_character = input_character
         self.q = q
         self.m = 3
         self.support_path = support
         self.relations_path = relations
         self.sup = support_object(support)
         self.packet = JointPacket(self.sup, q, relations)
-        self.orbits = OrbitIndex(self.sup, self.packet.kept, q)
+        self.orbits = (OddOrbitIndex if input_character == 'odd' else OrbitIndex)(self.sup, self.packet.kept, q)
         self.rank = self.orbits.rank
         self.rows = [list(r) for r in self.sup.reps]
         self.patched = True
+
+    def row_character(self, row):
+        return real_character(self.sup.rowinfo[row][1]) if self.input_character == 'odd' else 1
 
     def matrix_variable(self, h, mode, row, col):
         s = self.q ** self.m
@@ -478,23 +534,25 @@ class Z4QuotientUnit:
         h, i1, i2 = variable
         H, lab = self.orbits.unrank(term)
         sup, q, pk = self.sup, self.q, self.packet
-        if mode < 2:  # input factor of the representative column on the Z4-invariant embedding
-            return sum((pk.entry(mode, H, lab, sup.local_var(rho, mode, i1, i2, q)) for rho in sup.orbs[h]), F(0))
+        if mode < 2:
+            return sum((self.row_character(rho) * pk.entry(mode, H, lab, sup.local_var(rho, mode, i1, i2, q))
+                        for rho in sup.orbs[h]), F(0))
         rep = sup.reps[h]  # output factor: sum over the column orbit at the representative row
         return sum((pk.entry(2, H2, lab2, sup.local_var(rep, 2, i1, i2, q)) for H2, lab2 in self.orbits.members(H, lab)), F(0))
 
     def spec(self):
         return dict(q=self.q, m=self.m, compression=COMPRESSION, rank=self.rank, support=self.support_path,
-                    relations=self.relations_path)
+                    relations=self.relations_path,
+                    **({'input_character': 'odd'} if self.input_character == 'odd' else {}))
 
 
 @lru_cache(None)
-def _unit(q, support, relations):
-    return Z4QuotientUnit(q, support, relations)
+def _unit(q, support, relations, input_character='even'):
+    return Z4QuotientUnit(q, support, relations, input_character)
 
 
 def unit_from_spec(spec):
-    u = _unit(spec['q'], spec['support'], spec['relations'])
+    u = _unit(spec['q'], spec['support'], spec['relations'], spec.get('input_character', 'even'))
     assert spec.get('m', 3) == 3
     if 'rank' in spec:
         assert u.rank == spec['rank'], 'Z4 unit rank mismatch'
@@ -503,11 +561,13 @@ def unit_from_spec(spec):
 
 # ------------------------------------------------------------------------------------------ square format
 def load_certificate(data):
-    """``cw-z4-quotient-square-v1``: one unit fed to the outer <2;7> (Strassen), optionally padded to n < 2q^3."""
+    """One even or real-character unit fed to Strassen, optionally padded to n < 2q^3."""
     from .general_square import MixedSquare
-    if data['format'] != FORMAT:
+    if data['format'] not in (FORMAT, ODD_FORMAT):
         raise ValueError(data['format'])
     unit = data['unit']
+    if data['format'] == ODD_FORMAT:
+        assert unit.get('input_character') == 'odd'
     assert data['outer_recipe'] == dict(kind='lille', n=2, rank=7)
     q = unit['q']
     s = MixedSquare(data['outer_recipe'], dict(kind='classical', n=q ** 3), [dict(unit, compression=COMPRESSION)],
@@ -516,11 +576,12 @@ def load_certificate(data):
     return s
 
 
-def square(q, support, relations, n=None):
+def square(q, support, relations, n=None, input_character='even'):
     """The <2q^3> scheme (Strassen outer, one unit) at any q, from bundled support/relation objects."""
-    return load_certificate(dict(format=FORMAT, n=n or 2 * q ** 3, full_n=2 * q ** 3, outer_recipe=dict(kind='lille', n=2, rank=7),
-                                 unit=dict(q=q, m=3, support=support, relations=relations),
-                                 rank=_unit(q, support, relations).rank))
+    return load_certificate(dict(format=ODD_FORMAT if input_character == 'odd' else FORMAT,
+                                 n=n or 2 * q ** 3, full_n=2 * q ** 3, outer_recipe=dict(kind='lille', n=2, rank=7),
+                                 unit=dict(q=q, m=3, support=support, relations=relations, input_character=input_character),
+                                 rank=_unit(q, support, relations, input_character).rank))
 
 
 def units(engine):

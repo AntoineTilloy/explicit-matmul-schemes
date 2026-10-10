@@ -1,0 +1,43 @@
+{
+  "field": "F2",
+  "n": 7,
+  "rank": 305,
+  "exact": true,
+  "independent_outer_vertex_orders": [
+    [
+      1,
+      2,
+      3,
+      0
+    ],
+    [
+      0,
+      2,
+      3,
+      1
+    ],
+    [
+      0,
+      1,
+      2,
+      3
+    ]
+  ],
+  "independent_inner_vertex_orders": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "all_input_coordinate_pairs": 2401,
+  "all_tensor_coefficients": 117649,
+  "primitive_basis": "Exact AlphaTensor4 plus classical2"
+}

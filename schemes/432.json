@@ -1,12 +1,13 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "432",
-  "rank": "19788629",
+  "rank": "19665128",
   "field": "Q",
-  "root_object": "2932c762217e1af30fd0379a6aaefe2d7318452caaab5debc7e6e6607f06a534",
-  "effective_exponent": 2.768529957805309,
+  "root_object": "f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd",
+  "effective_exponent": 2.7674982956679,
   "provenance": {
-    "construction": "Exact finite CW composition update (October 2026): packed rebuild"
+    "construction": "routine current-upstream primitive refresh",
+    "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
   },
-  "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+  "verification": "Exact rectangular recipe dimensions and ranks, frozen hash-checked rational coefficients, full small wiring and rectangular primitive tensor checks; LITA identities use the published construction theorem and exact coefficient regeneration. See docs/rectangular.md."
 }

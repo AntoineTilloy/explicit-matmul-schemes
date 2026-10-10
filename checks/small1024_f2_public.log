@@ -1,0 +1,4 @@
+{"n": 61, "field": "F2", "rank": 101501, "masked_outer_tensors": 22, "complete_allocations": true, "exact": true}
+{"n": 243, "field": "F2", "rank": 4761204, "masked_outer_tensors": 76, "complete_allocations": true, "exact": true}
+{"n": 969, "field": "F2", "rank": 224263400, "masked_outer_tensors": 125, "complete_allocations": true, "exact": true}
+{"exact": true, "primitive_input_pairs": 256, "kronecker_coefficient_checks": {"size16": 67524, "size64": 10135848}, "points": [{"n": 61, "field": "F2", "rank": 101501, "masked_outer_tensors": 22, "complete_allocations": true, "exact": true}, {"n": 243, "field": "F2", "rank": 4761204, "masked_outer_tensors": 76, "complete_allocations": true, "exact": true}, {"n": 969, "field": "F2", "rank": 224263400, "masked_outer_tensors": 125, "complete_allocations": true, "exact": true}], "seconds": 32.410303982993355}

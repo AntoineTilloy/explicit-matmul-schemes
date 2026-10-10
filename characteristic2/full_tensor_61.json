@@ -1,0 +1,11 @@
+{
+  "field": "F2",
+  "n": 61,
+  "rank": 101501,
+  "exact": true,
+  "descriptor": "F2_61_class_recompressed.json",
+  "sha256": "c68688f34df63579b0598532d2db449a6441dc150f5d7a8c986b9d791e2df391",
+  "all_input_coordinate_pairs": 13845841,
+  "whole_tensor_coefficients": 51520374361,
+  "seconds": 243.4959841949967
+}

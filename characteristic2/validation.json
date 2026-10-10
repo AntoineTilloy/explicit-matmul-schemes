@@ -1,0 +1,105 @@
+{
+  "exact_composition": true,
+  "primitive_provenance": "provenance.json and base_audit.json",
+  "points": [
+    {
+      "field": "F2",
+      "n": 969,
+      "rank": 224394981,
+      "expected_recompressed_rank": 224263400,
+      "baseline": 229345007,
+      "inner_sets": [
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          42
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          12
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          42
+        ]
+      ],
+      "complete_bookkeeping": true,
+      "descriptor": "F2_969.json",
+      "sha256": "3b1fc2e0d0c5faabdb6dc9a01912c504ab2c9a44115d3710acd561dc0baac47b",
+      "coefficient_probes": 83083,
+      "seconds": 8.970347056005266
+    },
+    {
+      "field": "F2",
+      "n": 61,
+      "rank": 101579,
+      "expected_recompressed_rank": 101501,
+      "baseline": 103823,
+      "inner_sets": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "complete_bookkeeping": true,
+      "descriptor": "F2_61.json",
+      "sha256": "e464c6d3941289c787001bd08178a36cfa9558ea17e84120b63191925b4c3189",
+      "coefficient_probes": 7345,
+      "seconds": 0.0707296469990979
+    },
+    {
+      "field": "F2",
+      "n": 243,
+      "rank": 4765303,
+      "expected_recompressed_rank": 4761204,
+      "baseline": 4879681,
+      "inner_sets": [
+        [
+          6,
+          10,
+          14
+        ],
+        [
+          0,
+          4,
+          12
+        ],
+        [
+          6,
+          10,
+          14
+        ]
+      ],
+      "complete_bookkeeping": true,
+      "descriptor": "F2_243.json",
+      "sha256": "d598264fada06a4c9236958efb2115c88d5fcc4d6920b43436f4a6d0614be7da",
+      "coefficient_probes": 21658,
+      "seconds": 0.3877199799972004
+    }
+  ]
+}

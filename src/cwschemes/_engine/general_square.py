@@ -187,11 +187,20 @@ class MixedSquare:
         return value
 
     def certificate(self):
-        return dict(format='cw-mixed-square-v1', coefficient_field='Q', n=self.n, full_n=self.full_n, rank=self.rank, outer_recipe=self.outer.recipe, leaf_recipe=self.leaf.recipe, packets=[dict(q=p.q, m=p.m, rows=p.rows, patched=p.patched, rank=p.rank, **{'compression': p.compression} if hasattr(p, 'compression') else {}, **{'relations': p.relations_path} if hasattr(p, 'relations_path') else {}) for p in self.packets], packet_products_used=self.used, leftover_products=self.leaves, coefficient_generator='general_square.load_certificate')
+        def packet_spec(p):
+            if hasattr(p, 'spec'):
+                return p.spec()
+            return dict(q=p.q, m=p.m, rows=p.rows, patched=p.patched, rank=p.rank,
+                        **({'compression': p.compression} if hasattr(p, 'compression') else {}),
+                        **({'relations': p.relations_path} if hasattr(p, 'relations_path') else {}))
+        return dict(format='cw-mixed-square-v1', coefficient_field='Q', n=self.n, full_n=self.full_n, rank=self.rank, outer_recipe=self.outer.recipe, leaf_recipe=self.leaf.recipe, packets=[packet_spec(p) for p in self.packets], packet_products_used=self.used, leftover_products=self.leaves, coefficient_generator='general_square.load_certificate')
 
 def load_certificate(value):
     data = json.loads(Path(value).read_text()) if isinstance(value, (str, Path)) else value
-    if data['format'] == 'cw-z4-quotient-square-v1':
+    if data['format'] == 'exact-rectangular-recipe-v1':
+        from .rectangular_square import load_certificate as load_rectangular
+        return load_rectangular(data)
+    if data['format'] in ('cw-z4-quotient-square-v1', 'cw-z4-real-character-square-v1'):
         from .z4_quotient import load_certificate as load_z4
         return load_z4(data)
     if data['format'] == 'explicit-qcsr-square-v1':

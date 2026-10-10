@@ -1,0 +1,34 @@
+{
+  "field": "Q",
+  "changes": [
+    {
+      "n": 106,
+      "rank": 424690,
+      "previous_catalogue_rank": null,
+      "comparison_rank": 431011,
+      "saving": 6321,
+      "root_object": "d3146e77fd428c727dea4d7f20b438712ce5a1a12bdd17f2546495d454bb133f",
+      "classification": "uneven rectangular Strassen composition"
+    },
+    {
+      "n": 146,
+      "rank": 1044715,
+      "previous_catalogue_rank": null,
+      "comparison_rank": 1063741,
+      "saving": 19026,
+      "root_object": "d188fa308f61135b63a69d615a8d5bf555386c6178b298e1d039b36a165c019c",
+      "classification": "uneven rectangular Strassen composition"
+    },
+    {
+      "n": 432,
+      "rank": 19665128,
+      "previous_catalogue_rank": 19788629,
+      "comparison_rank": 19788629,
+      "saving": 123501,
+      "root_object": "f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd",
+      "classification": "routine current-upstream primitive refresh"
+    }
+  ],
+  "imported_primitive_objects": 13,
+  "primitive_identity_basis": "Pinned published construction theorem plus exact regenerated coefficients"
+}

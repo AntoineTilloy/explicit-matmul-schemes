@@ -1,0 +1,107 @@
+{
+  "installed_module": "/home/antoine/matmul_oct10/small1024/installed/cwschemes/__init__.py",
+  "fresh_cache": "/home/antoine/matmul_oct10/small1024/wheel_cache_final0930/cd06671e6431da73",
+  "n": 1024,
+  "rank": 198683360,
+  "coefficient_samples": [
+    {
+      "mode": "U",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "455625/65536"
+    },
+    {
+      "mode": "U",
+      "term": 198683359,
+      "row": 1023,
+      "col": 1023,
+      "value": "-421875/512"
+    },
+    {
+      "mode": "V",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "0"
+    },
+    {
+      "mode": "V",
+      "term": 198683359,
+      "row": 1023,
+      "col": 1023,
+      "value": "-885735/524288"
+    },
+    {
+      "mode": "W",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "115246051714243927/3565316776919040"
+    },
+    {
+      "mode": "W",
+      "term": 198683359,
+      "row": 1023,
+      "col": 1023,
+      "value": "-3267621613/21101543424"
+    }
+  ],
+  "small_roundtrip_rank": 15854,
+  "orbit_lemma": {
+    "checks": 8,
+    "passed": true
+  },
+  "rectangular_entries": [
+    {
+      "n": 106,
+      "rank": 424690,
+      "audit": {
+        "nodes": 14,
+        "primitive_objects": 4,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned published LITA construction theorem and cited exact rectangular algorithms; no modular-only proof is claimed"
+      },
+      "coefficient_samples": [
+        "-25/48",
+        "97/25",
+        "0"
+      ]
+    },
+    {
+      "n": 146,
+      "rank": 1044715,
+      "audit": {
+        "nodes": 29,
+        "primitive_objects": 8,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned published LITA construction theorem and cited exact rectangular algorithms; no modular-only proof is claimed"
+      },
+      "coefficient_samples": [
+        "-35/68",
+        "137/35",
+        "0"
+      ]
+    },
+    {
+      "n": 432,
+      "rank": 19665128,
+      "audit": {
+        "nodes": 3,
+        "primitive_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned published LITA construction theorem and cited exact rectangular algorithms; no modular-only proof is claimed"
+      },
+      "coefficient_samples": [
+        "35/108",
+        "789659/5040",
+        "185/14"
+      ]
+    }
+  ],
+  "seconds": 142.37643919199763,
+  "passed": true
+}

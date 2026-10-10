@@ -1,0 +1,131 @@
+[
+  {
+    "name": "2",
+    "n": 2,
+    "rank": 7,
+    "sha256": "e9534f43e860f7071a33a77f2d90a3f7e8a15f467000861b683a7c64121f0b63",
+    "all_input_coordinate_pairs": 16
+  },
+  {
+    "name": "3",
+    "n": 3,
+    "rank": 23,
+    "sha256": "258f4d6fab0616f0561ad278e96212f924001d54b750df028a5c2de8e4365bcc",
+    "all_input_coordinate_pairs": 81
+  },
+  {
+    "name": "4at",
+    "n": 4,
+    "rank": 47,
+    "sha256": "fe420dbd062c3da4ad8d76185ae304dc1abd480744d0692c91c6c35f7264fc6f",
+    "all_input_coordinate_pairs": 256
+  },
+  {
+    "name": "4km",
+    "n": 4,
+    "rank": 47,
+    "sha256": "f724e032bc55630bbb4a72b22bc3d6a09e363d37e2d0d714c4e6e5cd17675d00",
+    "all_input_coordinate_pairs": 256
+  },
+  {
+    "name": "5",
+    "n": 5,
+    "rank": 93,
+    "sha256": "4fe9b29c50de9cd88adfa33cc03890e3b510f341372d91125e1f089af9c3058e",
+    "all_input_coordinate_pairs": 625
+  },
+  {
+    "name": "6",
+    "n": 6,
+    "rank": 153,
+    "sha256": "2207eb28b0db69351ec3d39ef1be243a4b5236cf845a32de63a9fb70bb538880",
+    "all_input_coordinate_pairs": 1296
+  },
+  {
+    "name": "7",
+    "n": 7,
+    "rank": 245,
+    "sha256": "416a0960c433ad3f3b6950c1d873b75788809516701405abda79967e7a6d7741",
+    "all_input_coordinate_pairs": 2401
+  },
+  {
+    "name": "16at",
+    "n": 16,
+    "rank": 2209,
+    "sha256": "b579ca1948288ca167384417bb7e41f7f0f0f91236304644757daba191f79ac2",
+    "all_input_coordinate_pairs": 65536
+  },
+  {
+    "name": "16km",
+    "n": 16,
+    "rank": 2209,
+    "sha256": "c7591b559dc5c656544fb09c9aa2652caf6cb1834d254e7e44481e3768c529e0",
+    "all_input_coordinate_pairs": 65536
+  },
+  {
+    "name": "8at",
+    "n": 8,
+    "rank": 329,
+    "sha256": "6ebe53a88a8fe7f8b9aebac5aff892b2dc1f8ea69ca42ff2b1acd896b51b8ff3",
+    "exact_identity": "Kronecker product of exact audited parents",
+    "parents": [
+      "4at",
+      "2"
+    ]
+  },
+  {
+    "name": "8km",
+    "n": 8,
+    "rank": 329,
+    "sha256": "bcbf27a49c39cf4e765a2db690df455d1e75414b6f2c644092c95880e526b642",
+    "exact_identity": "Kronecker product of exact audited parents",
+    "parents": [
+      "4km",
+      "2"
+    ]
+  },
+  {
+    "name": "32at",
+    "n": 32,
+    "rank": 15463,
+    "sha256": "0602421ecc5e098ffca3d7fff2f6b6f4bd66e497a07ea6347c5cbc54fb5a933f",
+    "exact_identity": "Kronecker product of exact audited parents",
+    "parents": [
+      "16at",
+      "2"
+    ]
+  },
+  {
+    "name": "32km",
+    "n": 32,
+    "rank": 15463,
+    "sha256": "33eeb1462fcf9422ae9266d5ad1aedf5865ccf15b5b3d59f9d93bb2b3880f3e2",
+    "exact_identity": "Kronecker product of exact audited parents",
+    "parents": [
+      "16km",
+      "2"
+    ]
+  },
+  {
+    "name": "64at",
+    "n": 64,
+    "rank": 103823,
+    "sha256": "96bc3a56232fc9385f09bd315f18cc2fde912656cea30994966fca86d9987225",
+    "exact_identity": "Kronecker product of exact audited parents",
+    "parents": [
+      "16at",
+      "4at"
+    ]
+  },
+  {
+    "name": "64km",
+    "n": 64,
+    "rank": 103823,
+    "sha256": "1dc7cd0862227c19f9dbc7ff76fddf8aa761f2567e79e6e36361af317d205fb5",
+    "exact_identity": "Kronecker product of exact audited parents",
+    "parents": [
+      "16km",
+      "4km"
+    ]
+  }
+]

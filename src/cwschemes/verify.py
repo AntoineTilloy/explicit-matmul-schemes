@@ -138,10 +138,10 @@ def verify_z4(engine,exact,threads):
     from ._engine import z4_checks
     from ._engine.z4_quotient import units,replay_document
     distinct={}
-    for u in units(engine):distinct.setdefault((u.q,u.support_path,u.relations_path),u)
+    for u in units(engine):distinct.setdefault((u.q,u.support_path,u.relations_path,u.input_character),u)
     out=[]
-    for (q,_,relations),u in sorted(distinct.items()):
-        rec=dict(q=q,unit_rank=str(u.rank),audit=z4_checks.audit(u))
+    for (q,_,relations,character),u in sorted(distinct.items()):
+        rec=dict(q=q,input_character=character,unit_rank=str(u.rank),audit=z4_checks.audit(u))
         packet=z4_checks.packet_identity(u,samples=4,seed=q);packet.pop('records')
         assert packet['passed'],'Z4 packet identity fails'
         rec['exact_packet_entries']=packet
@@ -196,11 +196,12 @@ def verify(n,*,exact=False,threads=1):
     from ._engine.z4_quotient import units as z4_units
     if z4_units(s._engine):
         z4=verify_z4(s._engine,exact,threads)
+    rectangular=s._engine.audit() if read(path).get('format')=='exact-rectangular-recipe-v1' else None
     queries=[]
     for factor in ('U','V','W'):
         for term,i,j in [(0,s.n-1,s.n-1),(s.rank-1,s.n-1,s.n-1)]:
             queries.append(str(s.coefficient(factor,term,i,j)))
     return dict(n=str(s.n),rank=str(s.rank),mode='exact reduction replay' if exact else 'integrity, support, count and coefficient checks',
                 dependencies=len(visited),new_support_audits=supports,reduction_proofs=proofs,coefficient_queries=queries,
-                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),**({'z4_quotient_checks':z4} if z4 else {}),seconds=time.monotonic()-start,
+                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),**({'z4_quotient_checks':z4} if z4 else {}),**({'rectangular_composition_checks':rectangular} if rectangular else {}),seconds=time.monotonic()-start,
                 proof_basis='Documented base identities and published primitive schemes; see docs/verification.md')

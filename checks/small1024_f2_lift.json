@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "source_sha256": "fe420dbd062c3da4ad8d76185ae304dc1abd480744d0692c91c6c35f7264fc6f",
+  "source_rank": 47,
+  "source_tensor_coefficients_verified": 4096,
+  "witness_weight": 520,
+  "derivative_columns_annihilated": 2256,
+  "residual_pairing": 1,
+  "conclusion": "No rank-47 lift modulo 4 with these binary factor residues.",
+  "scope": "Also excludes rational odd-denominator factor lifts reducing to this seed; no general rational, real, or complex rank lower bound."
+}

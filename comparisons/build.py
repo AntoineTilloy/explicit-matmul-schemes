@@ -64,12 +64,14 @@ def main():
         comparison=evaluate(recipe,seeds)
         assert n>16384 or comparison==ranks[n]
         witnesses[str(n)]=recipe
-        points.append(dict(n=n,rank=rank,effective_exponent=math.log(rank)/math.log(n),z4='Z4-quotient' in entry['provenance']['construction'],
+        construction=entry['provenance']['construction']
+        points.append(dict(n=n,rank=rank,effective_exponent=math.log(rank)/math.log(n),z4='Z4-quotient' in construction,
+                           rectangular='rectangular' in construction or 'upstream primitive refresh' in construction,
                            comparison_rank=comparison,comparison_exponent=math.log(comparison)/math.log(n),
                            scope='finite closure' if n<=16384 else 'specific published construction',
                            improves_comparison=rank<comparison))
     with (HERE/'counts.csv').open('w',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=[k for k in points[0] if k!='z4']);w.writeheader();w.writerows({k:v for k,v in p.items() if k!='z4'} for p in points)
+        w=csv.DictWriter(f,fieldnames=[k for k in points[0] if k not in ('z4','rectangular')]);w.writeheader();w.writerows({k:v for k,v in p.items() if k not in ('z4','rectangular')} for p in points)
     (HERE/'recipes.json').write_text(json.dumps(witnesses,separators=(',',':'))+'\n')
     with (HERE/'closure.csv').open('w',newline='') as f:
         w=csv.writer(f);w.writerow(['n','literature_rank','with_catalogue_rank'])
@@ -87,10 +89,11 @@ def draw(points):
     fig,axes=plt.subplots(1,2,figsize=(14,6.3),gridspec_kw={'width_ratios':[1.1,1]})
     blue='#176c99';orange='#d9822b';purple='#7b4ea3'
     for ax,subset,title in [(axes[0],[p for p in points if p['n']<=16384],'Detail through 16,384'),(axes[1],points,'Wider range: all saved sizes')]:
-        cw=[p for p in subset if p['n']>32 and not p['z4']];ex=[p for p in subset if p['n']<=32];z4=[p for p in subset if p['z4']]
+        cw=[p for p in subset if p['n']>32 and not p['z4'] and not p['rectangular']];ex=[p for p in subset if p['n']<=32];z4=[p for p in subset if p['z4']];rect=[p for p in subset if p['rectangular']]
         ax.scatter([p['n'] for p in cw],[p['effective_exponent'] for p in cw],color=blue,s=30,zorder=4,label='CW-based constructions')
         ax.scatter([p['n'] for p in z4],[p['effective_exponent'] for p in z4],color=purple,marker='s',s=28,zorder=4,label='Z4-quotient CW constructions')
         ax.scatter([p['n'] for p in ex],[p['effective_exponent'] for p in ex],color=orange,marker='D',s=34,zorder=5,label='Explicit schemes (one below LITA)')
+        ax.scatter([p['n'] for p in rect],[p['effective_exponent'] for p in rect],color='#348568',marker='^',s=38,zorder=5,label='Rectangular compositions / LITA refresh')
         ax.set_xscale('log',base=2);ax.set_title(title,loc='left',pad=12);ax.grid(axis='y',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Square matrix size n (log scale)',labelpad=10)
     axes[0].set_ylabel(r'Effective exponent $\log_n R(n)$ — lower is better')
@@ -107,7 +110,7 @@ def draw(points):
     best_all=min(points,key=lambda p:p['effective_exponent'])
     axes[1].annotate(f"{best_all['effective_exponent']:.6f} at n = {best_all['n']:,}",(best_all['n'],best_all['effective_exponent']),xytext=(-190,32),textcoords='offset points',fontsize=9,arrowprops={'arrowstyle':'-','color':'#a4adb5'})
     fig.suptitle('Explicit square matrix multiplication schemes',x=.075,y=.98,ha='left',fontsize=19,weight='bold')
-    fig.text(.075,.916,f'Our {len(points)} saved schemes • Exact bilinear counts over Q • One best saved scheme per size',color='#526171',fontsize=10.5)
+    fig.text(.075,.916,f'Our {len(points)} saved schemes • Over R and C, with rational coefficients • One best saved scheme per size',color='#526171',fontsize=10.5)
     fig.text(.075,.035,'Each point is an explicit saved construction; intermediate sizes are not interpolated.',fontsize=9,color='#526171')
     fig.subplots_adjust(left=.075,right=.98,top=.825,bottom=.19,wspace=.22)
     (ROOT/'figures').mkdir(exist_ok=True)

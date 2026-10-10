@@ -1,0 +1,542 @@
+{
+  "format": "exact-f2-class-recompression-v1",
+  "coefficient_field": "F2",
+  "tensor": [
+    61,
+    61,
+    61
+  ],
+  "rank": 101501,
+  "base": "F2_61.json",
+  "base_sha256": "e464c6d3941289c787001bd08178a36cfa9558ea17e84120b63191925b4c3189",
+  "allocation": "class_ids_61.npz",
+  "allocation_sha256": "49f75eb272aeb0420520e71e724b410f7baf7d7324024bd7a6c853a7f410339e",
+  "classes": [
+    {
+      "key": 0,
+      "inner_multiplicity": 4,
+      "old_outer_calls": 2114,
+      "new_outer_calls": 2109,
+      "weighted_saving": 20,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 1,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2129,
+      "new_outer_calls": 2124,
+      "weighted_saving": 10,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 7,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2150,
+      "new_outer_calls": 2150,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 16,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2124,
+      "new_outer_calls": 2121,
+      "weighted_saving": 6,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 17,
+      "inner_multiplicity": 3,
+      "old_outer_calls": 2139,
+      "new_outer_calls": 2136,
+      "weighted_saving": 9,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 56,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2145,
+      "new_outer_calls": 2142,
+      "weighted_saving": 6,
+      "merges": [
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2211
+        }
+      ]
+    },
+    {
+      "key": 65,
+      "inner_multiplicity": 3,
+      "old_outer_calls": 2147,
+      "new_outer_calls": 2142,
+      "weighted_saving": 15,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 73,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2170,
+      "new_outer_calls": 2165,
+      "weighted_saving": 10,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            248,
+            249
+          ],
+          "new_id": 2211
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            252,
+            278
+          ],
+          "new_id": 2212
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "members": [
+            253,
+            279
+          ],
+          "new_id": 2213
+        }
+      ]
+    },
+    {
+      "key": 79,
+      "inner_multiplicity": 3,
+      "old_outer_calls": 2195,
+      "new_outer_calls": 2195,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 144,
+      "inner_multiplicity": 3,
+      "old_outer_calls": 2139,
+      "new_outer_calls": 2139,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 146,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2160,
+      "new_outer_calls": 2160,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 186,
+      "inner_multiplicity": 3,
+      "old_outer_calls": 2184,
+      "new_outer_calls": 2184,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 192,
+      "inner_multiplicity": 1,
+      "old_outer_calls": 2138,
+      "new_outer_calls": 2136,
+      "weighted_saving": 2,
+      "merges": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            210,
+            228
+          ],
+          "new_id": 2209
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "members": [
+            213,
+            219
+          ],
+          "new_id": 2210
+        }
+      ]
+    },
+    {
+      "key": 202,
+      "inner_multiplicity": 1,
+      "old_outer_calls": 2185,
+      "new_outer_calls": 2185,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 451,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2174,
+      "new_outer_calls": 2174,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 458,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2185,
+      "new_outer_calls": 2185,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 463,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2201,
+      "new_outer_calls": 2201,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 465,
+      "inner_multiplicity": 1,
+      "old_outer_calls": 2163,
+      "new_outer_calls": 2163,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 472,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2169,
+      "new_outer_calls": 2169,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 475,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2208,
+      "new_outer_calls": 2208,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 506,
+      "inner_multiplicity": 2,
+      "old_outer_calls": 2193,
+      "new_outer_calls": 2193,
+      "weighted_saving": 0,
+      "merges": []
+    },
+    {
+      "key": 511,
+      "inner_multiplicity": 1,
+      "old_outer_calls": 2209,
+      "new_outer_calls": 2209,
+      "weighted_saving": 0,
+      "merges": []
+    }
+  ],
+  "proof_rule": "Classify each inner term by exact row/column/corner nonzero profiles. Retain distinct outer block copies. Replay complete exact outer pair merges within each profile, then multiply by the class multiplicity."
+}

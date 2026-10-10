@@ -1,0 +1,80 @@
+{
+  "exact": true,
+  "coefficient_field": "Q",
+  "n": 16,
+  "rank": 15854,
+  "all_coefficients": 16777216,
+  "primes": [
+    1048573,
+    1048571,
+    1048559,
+    1048549,
+    1048517,
+    1048507,
+    1048447,
+    1048433
+  ],
+  "rigorous_rational_entry_bounds": [
+    "729/128",
+    "5103/16",
+    "1183127513116313/4981616640"
+  ],
+  "denominators": [
+    "56623104",
+    "32768",
+    "22910725608481751040"
+  ],
+  "modulus": "1460871746226286805701224672854432851398080406157",
+  "required_modulus": "581481224554902798090182861185982608548298752",
+  "mismatches": {
+    "1048573": 0,
+    "1048571": 0,
+    "1048559": 0,
+    "1048549": 0,
+    "1048517": 0,
+    "1048507": 0,
+    "1048447": 0,
+    "1048433": 0
+  },
+  "anti_input_gate": {
+    "all_fixed_columns": 12,
+    "all_length_two_orbits": 34,
+    "length_four_samples": 8,
+    "input_anti_equivariance_and_fixed_vanishing_exact": true
+  },
+  "seconds": 259.14964051300194,
+  "certificate": {
+    "format": "cw-z4-real-character-square-v1",
+    "coefficient_field": "Q",
+    "n": 16,
+    "rank": 15854,
+    "q": 2,
+    "N": 9,
+    "m": 3,
+    "outer": "Strassen <2,2,2;7> (7 row orbits -> 7 products)",
+    "group": "Z4 = <[1, 2, 3, 0, 5, 6, 7, 4, 8]> on the 9 CW coordinates",
+    "support": "/home/antoine/cw55/cwpack/z4_441_first.json",
+    "support_sha256": "5c5e8a6df88dc84994cbad961f132eecb1b0e29fa4c81f3a9e2a06eebef21e9c",
+    "packet": {
+      "kind": "joint",
+      "perm": [
+        1,
+        2,
+        0
+      ],
+      "relations": "/home/antoine/cw55/deliver/relG/relG_120_q2.json",
+      "relations_sha256": "96532263ce3c0f8603721764125125f7ae5595ac18caaa5ec3589c6d54d160c8",
+      "relation_steps": 2,
+      "note": "cw_approach CompactOrbitPacket (joint-orbit-v1) on the mode-permuted rows; step 1 = Z4-canonical zero-pattern removal; step 2 = Z4-invariant pair-(0,2) Gram elimination (free mode = output C); relations certified exactly by exact_compact_orbits.py"
+    },
+    "exponent": 3.48813981526421,
+    "coefficient_generator": "twisted_square.TwistedSquare.factor_entry",
+    "conventions": "mode 0 = A row-major, mode 1 = B row-major, mode 2 = C = AB row-major; sum_t U_t[a] V_t[b] W_t[c] = <n,n,n>",
+    "input_characters": [
+      "odd",
+      "odd"
+    ],
+    "output_character": "even",
+    "removed_fixed_columns": 12
+  }
+}

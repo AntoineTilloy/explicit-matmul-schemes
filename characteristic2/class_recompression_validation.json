@@ -1,0 +1,54 @@
+{
+  "exact": true,
+  "primitive_and_restriction_proof": "validation.json and provenance.json",
+  "points": [
+    {
+      "n": 61,
+      "field": "F2",
+      "old_crop_rank": 101579,
+      "rank": 101501,
+      "extra_saving": 78,
+      "baseline": 103823,
+      "total_saving": 2322,
+      "profile_classes": 22,
+      "outer_merge_events": 31,
+      "weighted_exact": true,
+      "coefficient_probes": 8395,
+      "descriptor": "F2_61_class_recompressed.json",
+      "sha256": "c68688f34df63579b0598532d2db449a6441dc150f5d7a8c986b9d791e2df391",
+      "seconds": 1.3618351709956187
+    },
+    {
+      "n": 243,
+      "field": "F2",
+      "old_crop_rank": 4765303,
+      "rank": 4761204,
+      "extra_saving": 4099,
+      "baseline": 4879681,
+      "total_saving": 118477,
+      "profile_classes": 76,
+      "outer_merge_events": 78,
+      "weighted_exact": true,
+      "coefficient_probes": 25862,
+      "descriptor": "F2_243_class_recompressed.json",
+      "sha256": "f483f6007184bc60a5f05a15cd03cd1b1cc5ebe72a5f82e4e521d169b8f428f1",
+      "seconds": 6.168431461999717
+    },
+    {
+      "n": 969,
+      "field": "F2",
+      "old_crop_rank": 224394981,
+      "rank": 224263400,
+      "extra_saving": 131581,
+      "baseline": 229345007,
+      "total_saving": 5081607,
+      "profile_classes": 125,
+      "outer_merge_events": 100,
+      "weighted_exact": true,
+      "coefficient_probes": 88669,
+      "descriptor": "F2_969_class_recompressed.json",
+      "sha256": "e19383bf0d523437cff7047867e582a0e5dcfa71833fc98e5a1f41e09c3bc6d4",
+      "seconds": 20.978567484999076
+    }
+  ]
+}

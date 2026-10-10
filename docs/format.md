@@ -8,6 +8,8 @@ The root object contains one of the explicit construction formats interpreted by
 
 **Z4-quotient schemes.** A `cw-z4-quotient-square-v1` root object has `n`, `full_n` = 2q³ (`n < full_n` means zero padding), `rank`, `outer_recipe` (always Strassen, `{"kind": "lille", "n": 2, "rank": 7}`) and `unit`. The unit is `{q, m: 3, rank, support, relations}`. Composite entries are ordinary `cw-mixed-square-v1` objects whose `packets` carry the same unit fields plus `"compression": "z4-quotient-v1"`; each such packet covers 7 consecutive outer products. `support` and `relations` are logical paths `z4q/support-<sha16>.json` and `z4q/relations-<sha16>.json`, shared by every size.
 
+A `cw-z4-real-character-square-v1` object has the same fields and requires `unit.input_character = "odd"`. Both input row embeddings carry the character χ(g) = −1, while the output embedding is even. The reader excludes generator-fixed column orbits and retains the character in mixed certificates. Existing units without this field use the even character and their historical term ordering.
+
 - The support object stores `N = 9`, the Z4 generator `gens` and the 28 `rows` of zero masks (A, B, C). Rows are grouped into Z4-orbits in stored order; row orbit h is outer product h.
 - The relation object has format `cw-z4-quotient-relations-v1`. It stores the mode permutation `perm` (packet mode j reads original mode `perm[j]`), the permuted `rows` and two `steps`. Each step lists its `pair`, `kept`, `deleted` and `zero_patterns` pattern codes (base-3 digits, 0 = pure, 1 = ordinary, 2 = special), plus per-block rational `basis`/`deleted`/`coefficients`. The object contains no q; `z4_quotient.replay_document(path, q)` instantiates it as a `cw-compact-orbit-relations-v1` proof at a given q.
 - Unit terms are Z4-orbits of columns (pattern, labels) of the compressed packet, ordered by pattern-orbit representative and then by an explicit unranking of label orbits (mixed radix; unordered pairs for stabiliser {e, g²}; necklaces for Z4). An input coefficient is the representative column's factor summed over the 4 rows of the product's row orbit. An output coefficient sums the factors of all members of the column orbit at the representative row.
@@ -15,6 +17,15 @@ The root object contains one of the explicit construction formats interpreted by
 These internal proof formats retain exact JSON integer literals and rational strings from the mathematical certificates. A non-Python implementation must parse those integer literals without floating-point rounding. They are not all bounded by 2^53. Rational strings are integers or `numerator/denominator`, never approximate decimals.
 
 The reader verifies object hashes and allowed resource paths before unpacking dependencies into its cache. Coefficient tables generated later are disposable caches, not proof inputs. Delete the cache to reproduce a read from the bundled objects.
+
+The `exact-rectangular-recipe-v1` square format stores a graph with a `root`
+node, `nodes`, `tensor: [n,n,n]`, `rank` and `coefficient_field: "Q"`.
+Node operations are `qcsr`, `classical`, `product`, `split`, `pad`, `permute`
+and `uneven_strassen`. Frozen `qcsr` primitives use logical paths
+`rectbases/<sha256>.npz` in the same object index, with one sparse CSR matrix
+per factor. Rectangular dimensions refer to row, contraction and column
+indices; factor edges are `(0,1)`, `(1,2)` and `(0,2)`. See
+[rectangular.md](rectangular.md) for the construction and verification scope.
 
 For a catalogue entry `s`, `s.coefficient("U", t, i, j)`, and similarly V or W, returns a `fractions.Fraction`. Indices are zero-based; `0 <= t < s.rank` and `0 <= i,j < s.n`. W describes the output directly, without transposing C. A requested batch is bounded by `max_queries`; full-array export is intentionally not automatic.
 

@@ -4,7 +4,7 @@
   modified), and three independent rank counts (orbit unranking, Burnside, the closed-form polynomial).
 * ``packet_identity``: exact rational evaluation (Fractions) of the packet tensor
   sum_{all columns} u(x) v(y) w(z) at sampled entries, compared with the 28 copies of <q^3>.
-* ``orbit_lemma``: the input factor of a term is identical on every member of its column orbit (exact).
+* ``orbit_lemma``: input factors on a column orbit obey the chosen matching character (exact).
 * ``tensor_entries``: full square tensor entries T[a,b,c] through the Strassen wiring, modulo primes.
 * ``full_exact_check``: every n^6 coefficient of a small square (q = 2), modulo primes whose product exceeds a
   rigorous bound, hence exact over Q.
@@ -16,14 +16,15 @@ from fractions import Fraction as F
 import math
 import random
 import time
-from .z4_quotient import K9, hdig, hact, relations_object, Z4QuotientUnit
+from .z4_quotient import K9, hdig, hact, lact, real_character, relations_object, Z4QuotientUnit
 from .triangular_full_compression import allowed
 
 POLY_GRAM = (1, 17, 122, 392, 493, 131, 2, 2, 0, 0)  # 4 R(q) = q^9 + 17 q^8 + ... + 2 q^2  (docs/construction.md)
 
 
-def closed_form_rank(q):
-    return sum(c * q ** (9 - i) for i, c in enumerate(POLY_GRAM)) // 4
+def closed_form_rank(q, input_character='even'):
+    rank = sum(c * q ** (9 - i) for i, c in enumerate(POLY_GRAM)) // 4
+    return rank - q ** 3 - q ** 2 if input_character == 'odd' else rank
 
 
 def audit(unit):
@@ -66,14 +67,15 @@ def audit(unit):
                 while j not in seen:
                     seen.add(j)
                     j = g[j]
-            burnside += q ** cycles
+            chi = real_character(g) if unit.input_character == 'odd' else 1
+            burnside += chi * q ** cycles
     assert burnside % len(G) == 0 and burnside // len(G) == unit.rank, 'Burnside count mismatch'
-    assert closed_form_rank(q) == unit.rank, 'closed-form rank mismatch'
+    assert closed_form_rank(q, unit.input_character) == unit.rank, 'closed-form rank mismatch'
     unquotiented = sum(q ** ordinary[H].bit_count() for H in pk.kept)
     assert unquotiented == pk.rank
     return dict(q=q, rank=str(unit.rank), unquotiented_rank=str(unquotiented), support_rows=len(sup.rows), row_orbits=len(sup.orbs),
                 kernel_profile=sup.kernel_profile, kept_patterns=len(pk.kept), relation_object=digest,
-                counts='orbit unranking = Burnside = closed form')
+                input_character=unit.input_character, counts='orbit unranking = character-weighted Burnside = closed form')
 
 
 # ------------------------------------------------------------------------------------------ packet tensor
@@ -193,8 +195,7 @@ def packet_identity(unit, samples=8, seed=1, perturb=None):
 
 
 def orbit_lemma(unit, samples=6, seed=1):
-    """For random terms, outer products h and entries: the input factor of every member of the term's column orbit
-    coincides with the published (representative) unit coefficient, exactly."""
+    """Check input equivariance or anti-equivariance at exact rational entries."""
     rng = random.Random(seed)
     sup, q, pk = unit.sup, unit.q, unit.packet
     s = q ** 3
@@ -204,10 +205,13 @@ def orbit_lemma(unit, samples=6, seed=1):
         H, lab = unit.orbits.unrank(term)
         for mode in (0, 1):
             h, i1, i2 = rng.randrange(7), rng.randrange(s), rng.randrange(s)
-            values = [sum((pk.entry(mode, H2, lab2, sup.local_var(rho, mode, i1, i2, q)) for rho in sup.orbs[h]), F(0))
-                      for H2, lab2 in unit.orbits.members(H, lab)]
-            assert all(v == values[0] for v in values), ('orbit lemma fails', term, mode)
-            assert values[0] == unit.factor_entry(mode, term, unit.matrix_variable(h, mode, i1, i2))
+            base = unit.factor_entry(mode, term, unit.matrix_variable(h, mode, i1, i2))
+            for g in sup.G:
+                H2, lab2 = hact(g, H), lact(g, lab)
+                value = sum((unit.row_character(rho) * pk.entry(mode, H2, lab2, sup.local_var(rho, mode, i1, i2, q))
+                             for rho in sup.orbs[h]), F(0))
+                chi = real_character(g) if unit.input_character == 'odd' else 1
+                assert value == chi * base, ('orbit lemma fails', term, mode, g)
             checks += 1
     return dict(checks=checks, passed=True)
 
@@ -315,6 +319,8 @@ def tensor_entries(square, unit, samples=8, seed=1, primes=(2147483647, 21474836
         out = []
         for rho in rows:
             c = square.outer.factor_entry(h, sup.rowinfo[rho][0], br, bc)
+            if h < 2:
+                c *= unit.row_character(rho)
             if c:
                 out.append((int(c), sup.local_var(rho, h, i1, i2, q)))
         return out
@@ -415,6 +421,7 @@ def factor_matrices(square, unit, p=None):
                     labs = np.array([terms[t][1] for t in ts], dtype=np.int64)
                     if mode < 2:
                         vals = pvals(j, zero, np.full(len(ts), H), labs, X)
+                        vals = (unit.row_character(rho) * vals) % p if p else unit.row_character(rho) * vals
                     else:
                         vals = np.zeros((len(ts), len(X)), dtype=dt)
                         stab = np.zeros(len(ts), dtype=np.int64)
@@ -445,17 +452,29 @@ def factor_matrices(square, unit, p=None):
 def full_exact_check(square, unit, extra_primes=0, perturb=False):
     """All n^6 coefficients of a single-unit Strassen square modulo primes p ~ 2^20 with prod p > 2 Delta (S+1):
     Delta = D_0 D_1 D_2 clears all denominators (D_h = lcm of table denominators times q^9) and
-    S = sum_t max|U_t| max|V_t| max|W_t|, so every coefficient of Delta (sum_t U_t V_t W_t - T) is an integer of
-    absolute value at most Delta (S + 1): zero modulo the primes means zero.  Feasible for q = 2."""
+    B_h bounds every factor entry from exact coefficient tables. Every coefficient of
+    Delta (sum_t U_t V_t W_t - T) is an integer of absolute value at most
+    Delta (R B_0 B_1 B_2 + 1): zero modulo the primes means zero. Feasible for q = 2."""
     import numpy as np
     t0 = time.monotonic()
     n, R, q = square.full_n, unit.rank, unit.q
     n2 = n * n
     D = [unit.packet.denominator(h) for h in range(3)]
     Delta = D[0] * D[1] * D[2]
-    Uf = factor_matrices(square, unit)
-    S = float(np.sum(np.abs(Uf[0]).max(axis=1) * np.abs(Uf[1]).max(axis=1) * np.abs(Uf[2]).max(axis=1))) * (1 + 1e-6)
-    need = 2 * Delta * (S + 1)
+    # Exact table bounds avoid relying on an inflated floating-point estimate.
+    # Every centered factor has magnitude at most (q-1)/q for q >= 2.
+    assert q >= 2
+    centered = F(q - 1, q)
+    B = []
+    for mode in range(3):
+        j = unit.packet.perm.index(mode)
+        totals = {H: F(0) for H in unit.packet.kept}
+        rows = unit.sup.rowlist if mode < 2 else unit.sup.reps
+        for rho in rows:
+            for H, table in unit.packet.table(j, rho[mode]).items():
+                totals[H] += sum((abs(v) * centered ** I.bit_count() for I, v in table.items()), F(0))
+        B.append(max(totals.values()) * (4 if mode == 2 else 1))
+    need = 2 * Delta * (R * math.prod(B) + 1)
     primes, prod = [], 1
     gen = _primes_below(1 << 20, [6 * q] + D)
     while prod <= need or len(primes) < extra_primes:
@@ -468,6 +487,7 @@ def full_exact_check(square, unit, extra_primes=0, perturb=False):
             U[0, 0] = (U[0, 0] + 1) % p
         bad = 0
         CH = 1 << 12
+        assert CH * (p - 1) ** 2 < 2 ** 53
         for a0 in range(0, n2, 8):
             a1 = min(n2, a0 + 8)
             acc = np.zeros(((a1 - a0) * n2, n2))
@@ -483,5 +503,6 @@ def full_exact_check(square, unit, extra_primes=0, perturb=False):
                 bad += int(np.count_nonzero(np.mod(acc[t] - E, p)))
         mismatches[str(p)] = bad
     exact = all(v == 0 for v in mismatches.values())
-    return dict(exact=exact, n=n, rank=R, primes=primes, log2_delta=round(math.log2(Delta), 1), log2_bound=round(math.log2(need), 1),
+    return dict(exact=exact, n=n, rank=R, primes=primes, rigorous_factor_bounds=list(map(str, B)),
+                log2_delta=round(math.log2(Delta), 1), log2_bound=round(math.log2(need), 1),
                 log2_prime_product=round(math.log2(prod), 1), mismatches=mismatches, seconds=time.monotonic() - t0)

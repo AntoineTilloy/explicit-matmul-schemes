@@ -1,0 +1,122 @@
+{
+  "format": "exact-three-vertex-crop-v1",
+  "coefficient_field": "F2",
+  "tensor": [
+    61,
+    61,
+    61
+  ],
+  "rank": 101579,
+  "outer": {
+    "file": "bases/16at.npz",
+    "sha256": "b579ca1948288ca167384417bb7e41f7f0f0f91236304644757daba191f79ac2",
+    "name": "16at"
+  },
+  "inner": {
+    "file": "bases/4at.npz",
+    "sha256": "fe420dbd062c3da4ad8d76185ae304dc1abd480744d0692c91c6c35f7264fc6f",
+    "name": "4at"
+  },
+  "vertex_orders": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      3
+    ],
+    [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      1
+    ]
+  ],
+  "tail_anchors": [
+    0,
+    3,
+    1
+  ],
+  "baseline": 103823,
+  "saving": 2244,
+  "proof_rule": "Independent outer and inner row/contraction/column permutations, Kronecker composition, exact square restriction, complete zero-factor removal",
+  "source": {
+    "primitive_audit": "base_audit.json",
+    "provenance": "provenance.json"
+  },
+  "bookkeeping": "active_61.npz",
+  "bookkeeping_sha256": "4f54315f55173d87d59b3484f1d3211a811f28dfc5fa5896775487a7ae01714d",
+  "inner_vertex_orders": [
+    [
+      1,
+      0,
+      2,
+      3
+    ],
+    [
+      2,
+      0,
+      1,
+      3
+    ],
+    [
+      1,
+      0,
+      2,
+      3
+    ]
+  ],
+  "inner_partial_indices": [
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      1
+    ]
+  ],
+  "expected_class_recompressed_rank": 101501
+}
