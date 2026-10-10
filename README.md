@@ -2,7 +2,7 @@
 
 A catalogue of **47 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
 
-Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the best published counts (LITA): **1,593**, **2,236** and **14,196**. Every coefficient is accessible as an exact rational number.
+Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the pinned LITA comparison: **1,593**, **2,236** and **14,196**. Current upstream LITA also attains these counts. Every coefficient is accessible as an exact rational number.
 
 Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,683,360**, a saving of **576** using the odd real character on both inputs. This is 1.42% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best catalogue exponent is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
 
@@ -96,7 +96,7 @@ The October 2026 update rebuilds the older large recipes with the current certif
 
 ## Explicit schemes at sizes 14, 16 and 32
 
-These three entries store every coefficient explicitly (sparse rational factor matrices, format `explicit-qcsr-square-v1`). They are new points of the exact (γ, r₀) parameter family of the [LITA](https://github.com/khoruzhii/lita) row–column aggregation scheme. Two of LITA's three parameter views are unchanged; the third is re-anchored so that one more raw term vanishes (at size 32: 14,314 raw terms − 104 vanishing − 14 merged = 14,196). The same choice gives one product fewer than LITA's published counts 1,594, 2,237 and 14,197.
+These three entries store every coefficient explicitly (sparse rational factor matrices, format `explicit-qcsr-square-v1`). They are points of the exact (γ, r₀) parameter family of the [LITA](https://github.com/khoruzhii/lita) row–column aggregation scheme. Two of LITA's three parameter views are unchanged; the third is re-anchored so that one more raw term vanishes (at size 32: 14,314 raw terms − 104 vanishing − 14 merged = 14,196). The same choice gives one product fewer than the pinned LITA counts 1,594, 2,237 and 14,197. The newer upstream revision [472a79f](https://github.com/khoruzhii/lita/tree/472a79fbc8248423a97bebb3aacbc89e769b9b3e) also attains the saved ranks; these three entries are not claimed as improvements over that revision.
 
 `cwschemes verify 32` evaluates the algorithm on random matrices modulo 2³¹−1; `cwschemes verify 32 --exact` checks every tensor coefficient modulo enough primes to certify equality over Q (a few minutes of CPU at size 32).
 

@@ -92,7 +92,7 @@ def draw(points):
         cw=[p for p in subset if p['n']>32 and not p['z4'] and not p['rectangular']];ex=[p for p in subset if p['n']<=32];z4=[p for p in subset if p['z4']];rect=[p for p in subset if p['rectangular']]
         ax.scatter([p['n'] for p in cw],[p['effective_exponent'] for p in cw],color=blue,s=30,zorder=4,label='CW-based constructions')
         ax.scatter([p['n'] for p in z4],[p['effective_exponent'] for p in z4],color=purple,marker='s',s=28,zorder=4,label='Z4-quotient CW constructions')
-        ax.scatter([p['n'] for p in ex],[p['effective_exponent'] for p in ex],color=orange,marker='D',s=34,zorder=5,label='Explicit schemes (one below LITA)')
+        ax.scatter([p['n'] for p in ex],[p['effective_exponent'] for p in ex],color=orange,marker='D',s=34,zorder=5,label='Explicit small rational schemes')
         ax.scatter([p['n'] for p in rect],[p['effective_exponent'] for p in rect],color='#348568',marker='^',s=38,zorder=5,label='Rectangular compositions / LITA refresh')
         ax.set_xscale('log',base=2);ax.set_title(title,loc='left',pad=12);ax.grid(axis='y',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Square matrix size n (log scale)',labelpad=10)
