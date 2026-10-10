@@ -74,9 +74,11 @@ def test_z4_quotient_catalogue_counts():
     from cwschemes._engine.z4_checks import closed_form_rank
     e={r['n']:int(r['rank']) for r in cwschemes.catalogue()}
     assert e['9826']==closed_form_rank(17)==74352484826
-    assert e['1024']==closed_form_rank(8,'odd')-72==198683288
     gauged=cwschemes.load(1024)
-    assert gauged._engine.unit.rank==198683360
+    relation=gauged._engine.unit.packet.proof
+    assert relation['certified_q']==8
+    assert e['1024']==closed_form_rank(8,'odd',relation['rank_polynomials'])-72==198679192
+    assert gauged._engine.unit.rank==198679264
     assert gauged._engine.audit_deletions()['deleted_terms']==72
     assert e['16384']==7*closed_form_rank(16) and e['32768']==48*closed_form_rank(16)
     assert e['65536']==929*closed_form_rank(14)

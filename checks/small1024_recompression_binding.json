@@ -1,0 +1,64 @@
+{
+  "n": "1024",
+  "rank": "198679192",
+  "mode": "integrity, support, count and coefficient checks",
+  "dependencies": 2,
+  "new_support_audits": 0,
+  "reduction_proofs": 0,
+  "coefficient_queries": [
+    "1/589824",
+    "-421875/512",
+    "0",
+    "295245/1048576",
+    "7586852119888463/1192652481830584320",
+    "-61903708540811119/170297013030617088"
+  ],
+  "sub_2_7": false,
+  "z4_quotient_checks": [
+    {
+      "q": 8,
+      "input_character": "odd",
+      "unit_rank": "198679264",
+      "audit": {
+        "q": 8,
+        "rank": "198679264",
+        "unquotiented_rank": "794673152",
+        "support_rows": 28,
+        "row_orbits": 7,
+        "kernel_profile": [
+          0,
+          8,
+          24,
+          4
+        ],
+        "kept_patterns": 1148,
+        "relation_object": "f4d30d0e65a290d99da9e4c5f8cdf2a6d3b7659b97b28d74c10965f039f4174c",
+        "input_character": "odd",
+        "counts": "orbit unranking = character-weighted Burnside = closed form"
+      },
+      "exact_packet_entries": {
+        "samples": 4,
+        "targets_one": 1,
+        "mismatches": 0,
+        "passed": true,
+        "exact": true,
+        "seconds": 19.074199739996402
+      },
+      "orbit_lemma": {
+        "checks": 4,
+        "passed": true
+      }
+    }
+  ],
+  "gauged_square_zero_factor_checks": {
+    "exact": true,
+    "coefficient_field": "Q",
+    "deleted_terms": 72,
+    "distinct_normalized_factors": 3,
+    "unit_rank_unchanged": "198679264",
+    "proof_sha256": "630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62",
+    "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+  },
+  "seconds": 134.6624919140013,
+  "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+}

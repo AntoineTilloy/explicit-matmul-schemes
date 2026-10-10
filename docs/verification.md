@@ -53,7 +53,7 @@ Results are recorded in [checks/explicit.jsonl](../checks/explicit.jsonl). A sin
 - **Exact packet identity.** It evaluates the packet tensor Σ_columns u(x) v(y) w(z) exactly over Q, with Fractions, at four sampled entries: a valid triple, a sunflower "garbage" block triple where the corrections must cancel, a label-perturbed diagonal entry and a uniform entry. Each value is compared with the 28 copies of ⟨q³⟩. The label sums factor coordinate-wise; packet modes 1 and 2 use the generator's own coefficient tables.
 - **Orbit lemma.** Every member of a term's column orbit has the input factor prescribed by its character: equal for the even character and differing by the exact character sign for the odd one.
 
-`--exact` additionally instantiates the q-independent relation object at each unit's q. It replays both steps exactly over Q with the same checker as other compact-orbit proofs (`replay_orbit`): zero patterns must be zero, and every relation G[:, B] C = G[:, J] must hold for the reconstructed pair Gram. One replay takes 8 to 9 minutes and about 3.2 GB of memory on one core.
+`--exact` additionally instantiates the relation object at each unit's q. A finite-q object rejects any q other than its saved `certified_q`; legacy objects retain their documented replay scope. It replays both steps exactly over Q with the same checker as other compact-orbit proofs (`replay_orbit`): zero patterns must be zero, and every relation G[:, B] C = G[:, J] must hold for the reconstructed pair Gram. One historical replay takes 8 to 9 minutes and about 3.2 GB of memory on one core.
 
 The quotient step itself is covered by the orbit lemma above and the construction argument in construction.md, not by the replay. The same holds for the Strassen or outer wiring.
 
@@ -83,3 +83,22 @@ The q = 2 instance has rank 15,854 at size 16. Every one of its 16⁶ tensor coe
 Evidence is recorded in the `checks/small1024*` files. Earlier Z4 results refer to the even-character object versions and retain their historical counts.
 
 The subsequent gauged square embedding removes 72 further products at q=8 without changing the odd direct-sum unit. The default public verifier replays every declared zero factor exactly over Q from the public packet tables, even when relation replay is not requested. The six q=2 deletions also pass a full rational CRT tensor check at rank 15,848; scalar queries agree with the independently assembled vectorized factors. The hash-bound proof and independent results are in `checks/small1024_gauge.json`. See [the square cancellation argument](real_character.md#further-square-only-cancellation).
+
+## Further C4 rational compression
+
+The current size-1,024 entry uses a new retained set and separate q=2/q=8
+coefficient witnesses. Source rational replays check every original and
+averaged relation; the public exact-mode check replays the transported q=8
+object. The audit reconstructs the entire advertised count polynomial from
+fixed patterns, and the reader rejects uses outside `certified_q`.
+
+The independent q=2 full tensor gate covers the odd square with ordinary
+Strassen wiring at rank 15,838. Its eight-prime CRT modulus exceeds the
+rigorous denominator and entry bound, and every one of 16⁶ coefficients
+agrees. This gate is not a full contraction of the gauged rank-15,832 variant.
+Exact coordinate transport, complete rational MM2 wiring and separately
+replayed physical zero factors certify the gauged construction. All 72 q=8
+deletions bind to the new unit rank 198,679,264, giving 198,679,192 at size
+1,024. See [c4_recompression.md](c4_recompression.md) and
+`checks/small1024_recompression*.json` for the current object versions and
+distinct check scopes. Historical evidence above retains its historical ranks.

@@ -1,5 +1,11 @@
 # Rational real-character restriction of the Z4 CW packet
 
+The counts below describe the original compression and its first square
+cancellation update. The current size-1,024 certificate uses the same character
+and gauges with the improved [C4 recompression](c4_recompression.md), for
+**198,679,192** products. Its q-specific coefficient witnesses and newly bound
+deletion ordinals are recorded separately.
+
 This row identification changes the two input embeddings and term unranking
 of the existing certified packet, retaining its relation coefficients and
 Schur-updated output factors.

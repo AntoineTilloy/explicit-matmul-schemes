@@ -17,7 +17,8 @@ Fed to Strassen's <2,2,2;7> it is a <2q^3> scheme; inside a larger outer scheme,
 use one unit each.
 
 Coefficients are exact Fractions computed lazily; per-(mode, zero-sector) coefficient tables are built from the
-bundled q-independent relation object on first use and cached (``coefficient_cache/joint``).
+bundled relation object on first use and cached (``coefficient_cache/joint``). New q-specific objects explicitly
+bind their certified q; legacy objects retain their documented replay scope.
 Conventions: mode 0 = A (row-major), mode 1 = B, mode 2 = C = AB (direct output).
 """
 from bisect import bisect_right
@@ -66,12 +67,24 @@ def replay_document(logical, q):
     """The relation object instantiated at q in the ``cw-compact-orbit-relations-v1`` layout (with the
     q-dependent step ranks recomputed), for the exact replay in ``verify.replay_orbit``."""
     d, _, _ = relations_object(logical)
+    _check_certified_q(d, q)
     ordinary = [sum((v == 1) << i for i, v in enumerate(ds)) for ds in product(range(3), repeat=3 * d['m'])]
     rank = lambda kept: sum(q ** ordinary[H].bit_count() for H in kept)
     steps = [dict(pair=s['pair'], kept=s['kept'], deleted=s['deleted'], zero_patterns=s['zero_patterns'],
                   blocks=s['blocks'], rank=rank(s['kept'])) for s in d['steps']]
     return dict(format='cw-compact-orbit-relations-v1', coefficient_field='Q', q=q, m=d['m'], rows=d['rows'],
                 initial_pair=d['initial_pair'], steps=steps, rank=steps[-1]['rank'], complete=True)
+
+
+def _check_certified_q(document, q):
+    """Accept historical lists of replayed q and new single-q bindings."""
+    if 'certified_q' not in document:
+        return
+    certified = document['certified_q']
+    choices = certified if type(certified) is list else [certified]
+    if (not choices or any(type(value) is not int or value <= 0 for value in choices)
+            or type(q) is not int or q not in choices):
+        raise ValueError('The Z4 relation object is certified only at its saved q')
 
 
 # ------------------------------------------------------------------------------------------ support / group
@@ -443,11 +456,12 @@ class OddOrbitIndex:
 # ------------------------------------------------------------------------------------------ joint packet
 class JointPacket(CompactOrbitPacket):
     """The package's ``CompactOrbitPacket`` (joint-orbit-v1) on the mode-permuted rows, driven by the
-    q-independent Z4 relation object instead of a per-q proof file.  Original mode h is packet mode
+    bundled Z4 relation object instead of a discovery proof file.  Original mode h is packet mode
     perm.index(h)."""
 
     def __init__(self, sup, q, relations):
         d, steps, digest = relations_object(relations)
+        _check_certified_q(d, q)
         self.q = q
         self.m = d['m']
         self.k = 3 * self.m

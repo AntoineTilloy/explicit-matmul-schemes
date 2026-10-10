@@ -105,6 +105,11 @@ def draw(points):
     axes[0].legend(loc='lower left',frameon=False,fontsize=9)
     for p in points:
         if p['n']<=32:axes[0].annotate(f"{p['n']}: {p['rank']:,}",(p['n'],p['effective_exponent']),xytext=(7,4),textcoords='offset points',fontsize=8.5,color='#8a4f13')
+        if p['n']==1024:
+            axes[0].annotate(f"1,024: {p['rank']:,}\nexponent {p['effective_exponent']:.6f}",
+                             (p['n'],p['effective_exponent']),xytext=(20,45),
+                             textcoords='offset points',fontsize=8.5,color=purple,
+                             arrowprops={'arrowstyle':'-','color':'#a4adb5'})
     best=min((p for p in points if p['n']<=16384),key=lambda p:p['effective_exponent'])
     axes[0].annotate(f"{best['effective_exponent']:.6f} at n = {best['n']:,}",(best['n'],best['effective_exponent']),xytext=(-150,-22),textcoords='offset points',fontsize=9,arrowprops={'arrowstyle':'-','color':'#a4adb5'})
     best_all=min(points,key=lambda p:p['effective_exponent'])

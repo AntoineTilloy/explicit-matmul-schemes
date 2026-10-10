@@ -1,0 +1,271 @@
+{
+  "passed": true,
+  "coefficient_field": "Q",
+  "public_source_manifest_sha256": "c11821626f61d1d9306b303c3d32d680bb519053675b9289ea00cb9897971304",
+  "certificate_scope": "Q2 raw ungauged tensor is exhaustively proven by CRT. The gauged companions use exact coordinate/role transport, the complete MM2 outer tensor, exact finite-q rational relation certificates, and every advertised physical zero factor. No full Q8 or full gauged tensor contraction is claimed.",
+  "q2": {
+    "coefficient_field": "Q",
+    "n": 16,
+    "rank": 15832,
+    "transport": {
+      "exact_relation_coefficients_transported": 2528592,
+      "coordinate_permutation": [
+        4,
+        7,
+        6,
+        5,
+        3,
+        2,
+        1,
+        0,
+        8
+      ],
+      "raw_support_role_permutation": [
+        1,
+        0,
+        2
+      ],
+      "legacy_packet_permutation": [
+        1,
+        2,
+        0
+      ],
+      "odd_character_conjugation_verified": true,
+      "scope": "All rows, pattern sets, sector masks, basis/deletion indices, and relation coefficients mapped exactly. Matrix variables swap inputs and transpose all three factors, with shared digit permutations; each row remains the ordinary MM tensor."
+    },
+    "outer_complete_tensor": {
+      "coefficient_field": "Q",
+      "all_coefficients": 64,
+      "exact": true
+    },
+    "certificate_binding": {
+      "coefficient_field": "Q",
+      "n": 16,
+      "full_n": 16,
+      "full_rank": 15838,
+      "assignment": [
+        1,
+        0,
+        5,
+        2,
+        3,
+        4,
+        6
+      ],
+      "input_gauges": [
+        [
+          "1",
+          "1",
+          "-1",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ],
+        [
+          "1",
+          "-1",
+          "-1",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ]
+      ],
+      "deleted_terms": [
+        0,
+        127,
+        13950,
+        13951,
+        14076,
+        14077
+      ]
+    },
+    "source_wrapper_sha256": "1d5453d815a16e0328a07e0d4506a4cd06d9b5cc1efe22986e58da7a3cbddfc1",
+    "source_deletion_proof_sha256": "4cb15a0a39a6d846e60c1c50c0fb729ea72ccb0e9502b3a8e3574ebf331807e5",
+    "source_square_sha256": "ae69734326a4a45d277f3eb98329cab0b0ba1673a8cbf373c71db6fea67faff2",
+    "public_commit": "614d4e94df82840f720ca055d6cb381667667cfe",
+    "elapsed_seconds": 113.55292925999674,
+    "peak_process_rss_kib": 492268,
+    "full_tensor_scope": "The raw q2 ungauged square was exhaustively checked separately. This q2 gauged square uses exact coordinate/role transport, MM2 outer tensor, q2 rational relations, and all6 zero-factor polynomials; no second full tensor census claimed.",
+    "zero_factor_replay": {
+      "exact": true,
+      "coefficient_field": "Q",
+      "deleted_terms": 6,
+      "distinct_normalized_factors": 3,
+      "unit_rank_unchanged": "15838",
+      "proof_sha256": "4cb15a0a39a6d846e60c1c50c0fb729ea72ccb0e9502b3a8e3574ebf331807e5",
+      "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+    },
+    "source_receipt_sha256": "9e7f706ae7a41c06ead91db4a7d598d91f291cf250f733740610ea072432f80e",
+    "query_count": 33,
+    "queries_sha256": "9c7c0c1c96b2077945ab7d3d35a3a26aafa432de56a7dd315945fb65aec6ae00",
+    "queries_hash_encoding": "UTF-8 JSON, sorted keys, compact separators, trailing newline"
+  },
+  "q8": {
+    "coefficient_field": "Q",
+    "n": 1024,
+    "rank": 198679192,
+    "transport": {
+      "exact_relation_coefficients_transported": 2528592,
+      "coordinate_permutation": [
+        4,
+        7,
+        6,
+        5,
+        3,
+        2,
+        1,
+        0,
+        8
+      ],
+      "raw_support_role_permutation": [
+        1,
+        0,
+        2
+      ],
+      "legacy_packet_permutation": [
+        1,
+        2,
+        0
+      ],
+      "odd_character_conjugation_verified": true,
+      "scope": "All rows, pattern sets, sector masks, basis/deletion indices, and relation coefficients mapped exactly. Matrix variables swap inputs and transpose all three factors, with shared digit permutations; each row remains the ordinary MM tensor."
+    },
+    "outer_complete_tensor": {
+      "coefficient_field": "Q",
+      "all_coefficients": 64,
+      "exact": true
+    },
+    "certificate_binding": {
+      "coefficient_field": "Q",
+      "n": 1024,
+      "full_n": 1024,
+      "full_rank": 198679264,
+      "assignment": [
+        1,
+        0,
+        5,
+        2,
+        3,
+        4,
+        6
+      ],
+      "input_gauges": [
+        [
+          "1",
+          "1",
+          "-1",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ],
+        [
+          "1",
+          "-1",
+          "-1",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ]
+      ],
+      "deleted_terms": [
+        0,
+        299593,
+        599186,
+        898779,
+        1198372,
+        1497965,
+        1797558,
+        2097151,
+        184163040,
+        184163041,
+        184163042,
+        184163043,
+        184163044,
+        184163045,
+        184163046,
+        184163047,
+        184462632,
+        184462633,
+        184462634,
+        184462635,
+        184462636,
+        184462637,
+        184462638,
+        184462639,
+        184762224,
+        184762225,
+        184762226,
+        184762227,
+        184762228,
+        184762229,
+        184762230,
+        184762231,
+        185061816,
+        185061817,
+        185061818,
+        185061819,
+        185061820,
+        185061821,
+        185061822,
+        185061823,
+        185361408,
+        185361409,
+        185361410,
+        185361411,
+        185361412,
+        185361413,
+        185361414,
+        185361415,
+        185661000,
+        185661001,
+        185661002,
+        185661003,
+        185661004,
+        185661005,
+        185661006,
+        185661007,
+        185960592,
+        185960593,
+        185960594,
+        185960595,
+        185960596,
+        185960597,
+        185960598,
+        185960599,
+        186260184,
+        186260185,
+        186260186,
+        186260187,
+        186260188,
+        186260189,
+        186260190,
+        186260191
+      ]
+    },
+    "source_wrapper_sha256": "2b8392b67226043b23e6bb936c58c82c2ff84d989f2e0f55753a0d7f8f639954",
+    "source_deletion_proof_sha256": "aa5e80232159264aa5f01c8ca2800f7bf30d45373f3ead0860668d324ecc821a",
+    "source_square_sha256": "c95972326649ba5e9c27e01c69fa03f931e462325c6a4b2c2edfdf88d2ab6bb6",
+    "public_commit": "614d4e94df82840f720ca055d6cb381667667cfe",
+    "elapsed_seconds": 115.69333783700131,
+    "peak_process_rss_kib": 497064,
+    "full_tensor_scope": "The raw q2 ungauged square was exhaustively checked separately. This q8 gauged square uses exact coordinate/role transport, MM2 outer tensor, q8 rational relations, and all72 zero-factor polynomials; no second full tensor census claimed.",
+    "zero_factor_replay": {
+      "exact": true,
+      "coefficient_field": "Q",
+      "deleted_terms": 72,
+      "distinct_normalized_factors": 3,
+      "unit_rank_unchanged": "198679264",
+      "proof_sha256": "aa5e80232159264aa5f01c8ca2800f7bf30d45373f3ead0860668d324ecc821a",
+      "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+    },
+    "source_receipt_sha256": "67c361a6b3f78cb82805916ae1430d3a1dc8a79526ac4da8e1071a0e9041f4c7",
+    "query_count": 33,
+    "queries_sha256": "afe255f71a91e228dc4b2d31bf0762900dc6d0f94504155634740ea2c41880fc",
+    "queries_hash_encoding": "UTF-8 JSON, sorted keys, compact separators, trailing newline"
+  },
+  "shared_outer_wiring_verified": true
+}

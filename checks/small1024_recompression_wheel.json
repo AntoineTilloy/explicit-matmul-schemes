@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "installed_module": "/home/antoine/matmul_oct10/small1024/recompression_installed/cwschemes/__init__.py",
+  "cache": "/home/antoine/matmul_oct10/small1024/recompression_wheel_cache/083bfec23a7fec20",
+  "n": 1024,
+  "rank": 198679192,
+  "structural_audit": {
+    "q": 8,
+    "rank": "198679264",
+    "unquotiented_rank": "794673152",
+    "support_rows": 28,
+    "row_orbits": 7,
+    "kernel_profile": [
+      0,
+      8,
+      24,
+      4
+    ],
+    "kept_patterns": 1148,
+    "relation_object": "f4d30d0e65a290d99da9e4c5f8cdf2a6d3b7659b97b28d74c10965f039f4174c",
+    "input_character": "odd",
+    "counts": "orbit unranking = character-weighted Burnside = closed form"
+  },
+  "zero_factor_replay": {
+    "exact": true,
+    "coefficient_field": "Q",
+    "deleted_terms": 72,
+    "distinct_normalized_factors": 3,
+    "unit_rank_unchanged": "198679264",
+    "proof_sha256": "630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62",
+    "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+  },
+  "coefficient_samples": [
+    {
+      "mode": "U",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "0"
+    },
+    {
+      "mode": "U",
+      "term": 198679191,
+      "row": 1023,
+      "col": 1023,
+      "value": "-421875/512"
+    },
+    {
+      "mode": "V",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "59049/32768"
+    },
+    {
+      "mode": "V",
+      "term": 198679191,
+      "row": 1023,
+      "col": 1023,
+      "value": "295245/1048576"
+    },
+    {
+      "mode": "W",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "-205991743262659811/819948581258526720"
+    },
+    {
+      "mode": "W",
+      "term": 198679191,
+      "row": 1023,
+      "col": 1023,
+      "value": "-61903708540811119/170297013030617088"
+    }
+  ],
+  "exact_certificate_roundtrip": true,
+  "wrong_q_rejections": [
+    "unit",
+    "replay"
+  ],
+  "bundled_objects_verified": 123,
+  "seconds": 135.31152478799777
+}

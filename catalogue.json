@@ -101,14 +101,14 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "1024",
-    "rank": "198683288",
+    "rank": "198679192",
     "field": "Q",
-    "root_object": "eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3",
-    "effective_exponent": 2.75658952862738,
+    "root_object": "6283c2eb285ee6322bf142bfe0ed06cfb86956f37a10de4e821b5cb5a7022a0f",
+    "effective_exponent": 2.7565865543763195,
     "provenance": {
-      "construction": "Z4-quotient CW packet with the odd real character, power 9 and q=8, with a permuted and signed Strassen embedding; 72 further square-only products have exactly zero input factors"
+      "construction": "Z4-quotient CW packet, power9 at q=8, with 304 rational pattern deletions, odd real input characters, and 72 exact square-only cancellations after a permuted signed Strassen embedding"
     },
-    "verification": "Exact rational packet witnesses and lazy coefficient access included; all 72 deleted factors replayed from public coefficient tables at q=8, all size-16 tensor coefficients checked with a rigorous CRT bound at q=2; see checks/small1024_gauge.json and docs/real_character.md."
+    "verification": "Finite-q exact rational relations and lazy coefficient access included; independent full q2 ungauged tensor CRT check, exact coordinate transport, outer MM2 identity and all72 q8 physical zero factors; see checks/small1024_recompression.json and docs/c4_recompression.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",

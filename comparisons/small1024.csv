@@ -2,7 +2,7 @@ field,n,rank,baseline_rank,construction,saving,saving_percent
 Q,106,424690,431011,uneven rectangular Strassen composition,6321,1.4665518977473893
 Q,146,1044715,1063741,uneven rectangular Strassen composition,19026,1.7885932759948144
 Q,432,19665128,19788629,routine current-upstream primitive refresh,123501,0.6241008409425434
-Q,1024,198683288,198683936,odd real CW character and square cancellation,648,0.00032614614600749606
+Q,1024,198679192,198683936,"rational CW recompression, odd real character and square cancellation",4744,0.002387711908425249
 F2,61,101501,103823,permuted restriction and exact pair merges,2322,2.236498656367086
 F2,243,4761204,4879681,permuted restriction and exact pair merges,118477,2.4279660904063194
 F2,969,224263400,229345007,permuted restriction and exact pair merges,5081607,2.2157042206722206

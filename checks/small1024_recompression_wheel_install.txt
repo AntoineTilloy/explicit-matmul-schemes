@@ -1,0 +1,3 @@
+Processing /home/antoine/matmul_oct10/small1024/recompression_wheels/explicit_matmul_schemes-0.1.0-py3-none-any.whl
+Installing collected packages: explicit-matmul-schemes
+Successfully installed explicit-matmul-schemes-0.1.0

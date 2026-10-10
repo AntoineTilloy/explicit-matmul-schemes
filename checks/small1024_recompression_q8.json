@@ -1,0 +1,124 @@
+{
+  "receipt": {
+    "q": 8,
+    "n": 1024,
+    "rank": 198679264,
+    "public_commit": "614d4e94df82840f720ca055d6cb381667667cfe",
+    "published_source_files_verified": 40,
+    "support_sha256": "8c9d66466a8cec20c8c1078a588c6257aa1b0498237b1bb99a6b9a1d1b00953b",
+    "relations_sha256": "9342e9e850a0bcff29d52e5481549fc53b33dae4fb7ffb0f20f587bf016b25c5",
+    "source_rational_relations_sha256": "30c4e2e2e7937b983ff540aac0e37f378f30ee105bccbb13ef7c2980845c9fac",
+    "source_discovery_sha256": "7716ba8358d19e771662a67352f046e72a173b6e9a57aa862e17901a3e1bafb5",
+    "support_orientation": "Original witness rows; relation perm=[0,2,1]",
+    "engine": "Unmodified public Z4QuotientUnit with new object names and private coefficient-cache directory"
+  },
+  "structural_audit": {
+    "induced_matching_K0_products": 28,
+    "kept_patterns": 1148,
+    "row_orbits": 7,
+    "odd_rank": 198679264,
+    "unquotiented_rank": 794673152,
+    "burnside_terms": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "fixed_columns": 794673152,
+        "character": 1
+      },
+      {
+        "group": [
+          1,
+          2,
+          3,
+          0,
+          5,
+          6,
+          7,
+          4,
+          8
+        ],
+        "fixed_columns": 576,
+        "character": -1
+      },
+      {
+        "group": [
+          2,
+          3,
+          0,
+          1,
+          6,
+          7,
+          4,
+          5,
+          8
+        ],
+        "fixed_columns": 45056,
+        "character": 1
+      },
+      {
+        "group": [
+          3,
+          0,
+          1,
+          2,
+          7,
+          4,
+          5,
+          6,
+          8
+        ],
+        "fixed_columns": 576,
+        "character": -1
+      }
+    ],
+    "rank_method": "Weighted Burnside = public odd orbit index; old hardcoded polynomial not used",
+    "physical_inputs_never_modified": true
+  },
+  "input_equivariance": {
+    "exact_nonzero_coefficient_checks": 315552,
+    "tables": 56,
+    "generator": [
+      1,
+      2,
+      3,
+      0,
+      5,
+      6,
+      7,
+      4,
+      8
+    ],
+    "all_input_tables_equivariant": true,
+    "group_scope": "Generator equality implies all four group elements; zero entries matched by dictionary cardinality."
+  },
+  "q2_q8_relation_comparison": {
+    "all_steps_basis_deleted_and_zero_sets_equal": true,
+    "coefficient_entries_compared": 2528592,
+    "all_coefficients_exactly_equal": true,
+    "scope": "Equality at q2 and q8 only; no all-q relation proof follows from two specializations."
+  },
+  "gate": {
+    "sampled_orbit_boundary_terms": 48,
+    "total_boundary_terms": 578,
+    "exact_factor_queries": 864,
+    "distinct_column_samples": 48,
+    "lazy_vs_direct_outer_wiring_equal": true,
+    "bulk_modular_match": false,
+    "scope": "Sampled boundaries and six coordinate entries per mode; no full q8 tensor claim.",
+    "query_count": 864,
+    "queries_sha256": "6044b0a3ffccb9d2f7276f8412cd4dcbcfe02f879c49a5bc898fa664234067f9"
+  },
+  "elapsed_seconds": 109.87462283300556,
+  "peak_process_rss_kib": 386564,
+  "scope": "New C4 compression only. q2 full tensor proven over Q; q8 coefficient generator/accessor gates and exact relation replay, without full q8 tensor census.",
+  "source_receipt_sha256": "3cd4fdc0bb21113c52bec8f7d42ad5cad64e3df50f85265d647d1886c201dfa3"
+}

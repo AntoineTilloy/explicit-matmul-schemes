@@ -4,7 +4,7 @@ A catalogue of **47 explicit schemes for square matrix multiplication over R and
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the pinned LITA comparison: **1,593**, **2,236** and **14,196**. Current upstream LITA also attains these counts. Every coefficient is accessible as an exact rational number.
 
-Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,683,288**, a saving of **648** using the odd real character on both inputs and further square-only cancellations. This is 1.42% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best catalogue exponent is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
+Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best catalogue exponent is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
@@ -43,7 +43,7 @@ First use of a construction can take minutes to build exact intermediate tables.
 | [16](schemes/16.json) | 2,236 | 2.781676118 |
 | [32](schemes/32.json) | 14,196 | 2.758639372 |
 | [686](schemes/686.json) | 70,153,048 | 2.766272903 |
-| [1,024](schemes/1024.json) | 198,683,288 | 2.756589529 |
+| [1,024](schemes/1024.json) | 198,679,192 | 2.756586554 |
 | [2,025](schemes/2025.json) | 1,303,338,368 | 2.756771167 |
 | [2,048](schemes/2048.json) | 1,303,338,368 | 2.752687685 |
 | [8,192](schemes/8192.json) | 45,396,314,240 | 2.723219701 |
@@ -76,7 +76,7 @@ This is the strict threshold for this particular scheme. It is **91.01% smaller*
 
 ## Z4-quotient schemes (sizes 1,024 to 65,536)
 
-These entries (formats `cw-z4-quotient-square-v1`, `cw-z4-real-character-square-v1` and `cw-z4-gauged-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one CW support and one relation certificate.
+These entries (formats `cw-z4-quotient-square-v1`, `cw-z4-real-character-square-v1` and `cw-z4-gauged-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one CW support. The larger entries retain the original relation certificate; size 1,024 uses a new certificate bound to q=8.
 
 - **Packet.** A power-9 CW support with 28 rows is invariant under a cyclic group Z4 permuting the 9 coordinates. Its rows form 7 free Z4-orbits. The packet tensor is the local completion G_q^{⊗9} restricted to the support, plus Möbius corrections on the 36 sunflower kernels; it equals 28 independent ⟨q³⟩ products.
 - **Compression.** In the joint triangular representation, patterns whose factor vanishes on the support are removed. A Z4-invariant pair Gram elimination then deletes 300 more patterns, and its relations are absorbed into the output factor. Both steps delete whole Z4-orbits and leave the two input factors equivariant.
@@ -88,9 +88,9 @@ These entries (formats `cw-z4-quotient-square-v1`, `cw-z4-real-character-square-
 
 - **Sizes.** Strassen's 7 products give ⟨2q³⟩ with R7(q) multiplications for q = 8, …, 20; sizes 4,096, 5,324 and 13,500 are padded from these. Sizes 10,976 and 16,384 place 7 units inside Strassen squared. Size 32,768 places 48 units inside ⟨8;336⟩. Size 65,536 is padded from 24·14³ = 65,856 and uses 929 units inside the original rank-6,503 size-24 scheme, with no remainder products.
 
-The relation data does not depend on q. It was replayed exactly over Q for every q from 2 to 25 before inclusion; `cwschemes verify <n> --exact` replays it again at the q in use.
+The original relation data does not depend on q. It was replayed exactly over Q for every q from 2 to 25 before inclusion; `cwschemes verify <n> --exact` replays it again at the q in use. The new size-1,024 certificate has separate exact q=2 and q=8 witnesses and rejects other q values.
 
-The size-1,024 entry uses the character χ(g) = −1 for a generator of Z4 on both inputs and the even output character. Columns fixed by g have zero input factors over Q, removing q³ + q² products. At q = 8 the unchanged odd unit has rank **198,683,360**. A permuted and signed Strassen embedding then makes another **72** input factors vanish, lowering the square count to **198,683,288**. The uniform character construction and square-only cancellations are documented in [the real-character proof](docs/real_character.md), [the character checks](checks/small1024_twist.json) and [the cancellation replay](checks/small1024_gauge.json). These arguments give rational schemes; characteristic-2 results are reported separately.
+The size-1,024 entry uses the character χ(g) = −1 for a generator of Z4 on both inputs and the even output character. Columns fixed by g have zero input factors over Q, removing q³ + q² products. The new compression deletes **304** patterns rather than 300, changing the q⁴ coefficient in the displayed numerator from **131 to 127**. At q=8 the odd unit has rank **198,679,264**. A permuted and signed Strassen embedding makes another **72** input factors vanish, lowering the square count to **198,679,192**. See [the new compression and its finite-q proof scope](docs/c4_recompression.md) and [the real-character argument](docs/real_character.md). These arguments give rational schemes; characteristic-2 results are reported separately.
 
 The October 2026 update rebuilds the older large recipes with the current certified leaves and adds two independently audited power-21 supports. Recursive recipes retain the exact primitive versions used by their coefficient generators. The update and its validation scope are recorded in [checks/oct10.json](checks/oct10.json) and [verification.md](docs/verification.md).
 

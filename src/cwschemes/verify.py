@@ -134,7 +134,7 @@ def replay_quotient(path,d,threads):
 
 def verify_z4(engine,exact,threads):
     """Z4-quotient units: structure and count audit, exact packet identity at sampled entries, orbit lemma;
-    with exact=True the bundled q-independent relation certificate is replayed exactly over Q at each unit's q."""
+    with exact=True the bundled relation certificate is replayed exactly over Q at each certified unit's q."""
     from ._engine import z4_checks
     from ._engine.z4_quotient import units,replay_document
     distinct={}

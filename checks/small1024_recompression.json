@@ -1,0 +1,347 @@
+{
+  "coefficient_field": "Q",
+  "changes": [
+    {
+      "n": 1024,
+      "old_rank": 198683288,
+      "rank": 198679192,
+      "saving": 4096,
+      "baseline_rank": 198683936,
+      "total_saving": 4744,
+      "old_root_object": "eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3",
+      "root_object": "6283c2eb285ee6322bf142bfe0ed06cfb86956f37a10de4e821b5cb5a7022a0f",
+      "unit_rank": 198679264,
+      "relation_object": {
+        "file": "z4q/relations-f4d30d0e65a290d9.json",
+        "sha256": "f4d30d0e65a290d99da9e4c5f8cdf2a6d3b7659b97b28d74c10965f039f4174c"
+      },
+      "deletion_proof": {
+        "file": "proofs/630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62.json",
+        "sha256": "630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62"
+      }
+    }
+  ],
+  "exact_source_replays": [
+    {
+      "q": 2,
+      "source_proof_sha256": "ba78d8fb52b61b90a5d35af7b4acedb2b869367b89018d81691bf075f8ee5163",
+      "transported_source_sha256": "1d5453d815a16e0328a07e0d4506a4cd06d9b5cc1efe22986e58da7a3cbddfc1",
+      "relation_object": {
+        "file": "z4q/relations-d4db04029343a8a9.json",
+        "sha256": "d4db04029343a8a99c13a3a5875042b1479e3b2ce616e7a46d8c47ac7e70ef48"
+      },
+      "complete": true,
+      "original_equations": 3213436,
+      "averaged_equations": 3213436,
+      "direct_factor_averaging_equality": true,
+      "seconds": 265.09553604300163
+    },
+    {
+      "q": 8,
+      "source_proof_sha256": "30c4e2e2e7937b983ff540aac0e37f378f30ee105bccbb13ef7c2980845c9fac",
+      "transported_source_sha256": "2b8392b67226043b23e6bb936c58c82c2ff84d989f2e0f55753a0d7f8f639954",
+      "relation_object": {
+        "file": "z4q/relations-f4d30d0e65a290d9.json",
+        "sha256": "f4d30d0e65a290d99da9e4c5f8cdf2a6d3b7659b97b28d74c10965f039f4174c"
+      },
+      "complete": true,
+      "original_equations": 3213436,
+      "averaged_equations": 3213436,
+      "direct_factor_averaging_equality": true,
+      "seconds": 265.6846686169956
+    }
+  ],
+  "independent_support_count_transport": {
+    "status": "PASS",
+    "scope": "Independent support/isotypic action/character count only; coefficient Q replay remains a separate gate.",
+    "discovery_sha256": "7716ba8358d19e771662a67352f046e72a173b6e9a57aa862e17901a3e1bafb5",
+    "source_sha256": "fe63f03009e397783306d03ea77b175774bdfaaf2c3760dd2a9159c3e4ed18d6",
+    "row_orbits": 7,
+    "kernel_profile": {
+      "1": 8,
+      "2": 24,
+      "3": 4
+    },
+    "mobius_profile": {
+      "1": 8,
+      "2": 24,
+      "3": 4
+    },
+    "standard_I_action": "I -> gI; ordinary(gH) = g ordinary(H), all 3^9 patterns checked",
+    "steps": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "patterns": 1452,
+        "deleted_patterns": 0,
+        "zero_patterns": 1816,
+        "fixed_polynomials": [
+          {
+            "3": 36,
+            "4": 288,
+            "5": 584,
+            "6": 404,
+            "7": 122,
+            "8": 17,
+            "9": 1
+          },
+          {
+            "2": 1,
+            "3": 1
+          },
+          {
+            "4": 3,
+            "5": 1
+          },
+          {
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "four_times_even": {
+          "2": 2,
+          "3": 38,
+          "4": 291,
+          "5": 585,
+          "6": 404,
+          "7": 122,
+          "8": 17,
+          "9": 1
+        },
+        "four_times_odd": {
+          "2": -2,
+          "3": 34,
+          "4": 291,
+          "5": 585,
+          "6": 404,
+          "7": 122,
+          "8": 17,
+          "9": 1
+        },
+        "ranks": [
+          {
+            "q": 2,
+            "unquotiented": 69920,
+            "even": 17506,
+            "odd": 17494,
+            "excluded_fixed": 12
+          },
+          {
+            "q": 8,
+            "unquotiented": 801523712,
+            "even": 200392480,
+            "odd": 200391904,
+            "excluded_fixed": 576
+          }
+        ]
+      },
+      {
+        "pair": [
+          0,
+          2
+        ],
+        "patterns": 1148,
+        "deleted_patterns": 304,
+        "zero_patterns": 0,
+        "fixed_polynomials": [
+          {
+            "4": 124,
+            "5": 492,
+            "6": 392,
+            "7": 122,
+            "8": 17,
+            "9": 1
+          },
+          {
+            "2": 1,
+            "3": 1
+          },
+          {
+            "4": 3,
+            "5": 1
+          },
+          {
+            "2": 1,
+            "3": 1
+          }
+        ],
+        "four_times_even": {
+          "2": 2,
+          "3": 2,
+          "4": 127,
+          "5": 493,
+          "6": 392,
+          "7": 122,
+          "8": 17,
+          "9": 1
+        },
+        "four_times_odd": {
+          "2": -2,
+          "3": -2,
+          "4": 127,
+          "5": 493,
+          "6": 392,
+          "7": 122,
+          "8": 17,
+          "9": 1
+        },
+        "ranks": [
+          {
+            "q": 2,
+            "unquotiented": 63296,
+            "even": 15850,
+            "odd": 15838,
+            "excluded_fixed": 12
+          },
+          {
+            "q": 8,
+            "unquotiented": 794673152,
+            "even": 198679840,
+            "odd": 198679264,
+            "excluded_fixed": 576
+          }
+        ]
+      }
+    ],
+    "transport": {
+      "status": "PASS",
+      "root_support_sha256": "4bf1d2f3975937a1a7dbbad2cde3f422b7dc21f95c622a4df34b0669ceba619a",
+      "legacy_support_sha256": "5c5e8a6df88dc84994cbad961f132eecb1b0e29fa4c81f3a9e2a06eebef21e9c",
+      "coordinate_map": [
+        4,
+        7,
+        6,
+        5,
+        3,
+        2,
+        1,
+        0,
+        8
+      ],
+      "target_mode_reads_root_mode": [
+        1,
+        0,
+        2
+      ],
+      "legacy_relation_perm": [
+        1,
+        2,
+        0
+      ],
+      "generator_conjugated_to_power": 3,
+      "all_28_rows_and_all_pattern_standard_masks_checked": true,
+      "character_invariant_under_inversion": true,
+      "scalar_coefficient_transport": "Unchanged; rows/columns must be reordered with transported basis/deleted lists."
+    },
+    "seconds": 1.063944387002266
+  },
+  "independent_q2_tensor_receipt": {
+    "file": "checks/small1024_recompression_q2.json",
+    "source_sha256": "b8cab092181c66045c68cbfd7a02f42709b7357efe559c7d5d4e627eddeb3e52",
+    "rank": 15838,
+    "all_coefficients": 16777216,
+    "exact": true,
+    "embedding": "Raw support, odd character, ungauged Strassen"
+  },
+  "independent_q8_accessor_receipt": {
+    "file": "checks/small1024_recompression_q8.json",
+    "source_sha256": "3cd4fdc0bb21113c52bec8f7d42ad5cad64e3df50f85265d647d1886c201dfa3",
+    "rank": 198679264
+  },
+  "independent_zero_factor_replay": {
+    "file": "checks/small1024_recompression_deletions.json",
+    "source_sha256": "a7a738a0c14ec7133e9d5b31b74169c1ef31fbc6857f14c4835de04b3085504b",
+    "q8_deleted": 72,
+    "q2_deleted": 6
+  },
+  "q2_companion_square": {
+    "file": "proofs/d3f0b148e15d7ad39f319dbdf7f670ae96182a29f7b97e08d957b007c2b4310f.json",
+    "sha256": "d3f0b148e15d7ad39f319dbdf7f670ae96182a29f7b97e08d957b007c2b4310f"
+  },
+  "rank_polynomials": {
+    "even": [
+      1,
+      17,
+      122,
+      392,
+      493,
+      127,
+      2,
+      2,
+      0,
+      0
+    ],
+    "odd": [
+      1,
+      17,
+      122,
+      392,
+      493,
+      127,
+      -2,
+      -2,
+      0,
+      0
+    ]
+  },
+  "certificate_scope": "Each coefficient object is bound to its certified q. Pattern-count polynomials do not prove coefficient validity at other q. No larger catalogue entry changes.",
+  "compute": "Atlas CPU only; no paid compute used for this improvement",
+  "public_release_validation": {
+    "exact_q8_replay": "checks/small1024_recompression_verify.json",
+    "exact_q8_replay_passed": true,
+    "regression_tests": {
+      "file": "checks/small1024_recompression_tests.txt",
+      "passed": 44
+    },
+    "cold_wheel": {
+      "file": "checks/small1024_recompression_wheel.json",
+      "passed": true,
+      "bundled_objects_verified": 123
+    },
+    "main_figure": "figures/exponents.svg",
+    "rational_small_figure": "figures/small1024.svg",
+    "coefficient_fields_separated": true,
+    "final_bindings": {
+      "file": "checks/small1024_recompression_binding.json",
+      "passed": true
+    }
+  },
+  "metadata_normalization": {
+    "changes": "Removed two stale private Await replay status annotations. All numerical labels, ordinals, gauges, coefficient objects and ranks are unchanged.",
+    "objects": {
+      "deletion_proof": {
+        "previous": {
+          "file": "proofs/27397b3c1ee6c773034809fe8ac7f9c7c7747ef99e0ce0f40b5289eaf4e931bb.json",
+          "sha256": "27397b3c1ee6c773034809fe8ac7f9c7c7747ef99e0ce0f40b5289eaf4e931bb"
+        },
+        "current": {
+          "file": "proofs/630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62.json",
+          "sha256": "630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62"
+        }
+      },
+      "8": {
+        "previous": {
+          "file": "proofs/4990e8137f98e5239111870b1790397c42309f956ef7746d927877f70fd69c53.json",
+          "sha256": "4990e8137f98e5239111870b1790397c42309f956ef7746d927877f70fd69c53"
+        },
+        "current": {
+          "file": "proofs/6283c2eb285ee6322bf142bfe0ed06cfb86956f37a10de4e821b5cb5a7022a0f.json",
+          "sha256": "6283c2eb285ee6322bf142bfe0ed06cfb86956f37a10de4e821b5cb5a7022a0f"
+        }
+      },
+      "2": {
+        "previous": {
+          "file": "proofs/ee4914a75bc17eeb2146359dcb43f8a85bb1358f9eef3d41bafb3e4254d0d15c.json",
+          "sha256": "ee4914a75bc17eeb2146359dcb43f8a85bb1358f9eef3d41bafb3e4254d0d15c"
+        },
+        "current": {
+          "file": "proofs/d3f0b148e15d7ad39f319dbdf7f670ae96182a29f7b97e08d957b007c2b4310f.json",
+          "sha256": "d3f0b148e15d7ad39f319dbdf7f670ae96182a29f7b97e08d957b007c2b4310f"
+        }
+      }
+    },
+    "previous_public_exact_receipt": "checks/small1024_recompression_verify.json"
+  }
+}

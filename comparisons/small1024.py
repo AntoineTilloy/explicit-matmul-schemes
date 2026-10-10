@@ -14,9 +14,9 @@ def main():
     rational=json.loads((ROOT/'checks/small1024_rectangular.json').read_text())['changes']
     rational=[dict(field='Q',n=p['n'],rank=p['rank'],baseline_rank=p['comparison_rank'],
                    construction=p['classification']) for p in rational]
-    gauge=json.loads((ROOT/'checks/small1024_gauge.json').read_text())['changes'][0]
+    gauge=json.loads((ROOT/'checks/small1024_recompression.json').read_text())['changes'][0]
     rational.append(dict(field='Q',n=1024,rank=int(gauge['rank']),
-                         baseline_rank=int(gauge['baseline_rank']),construction='odd real CW character and square cancellation'))
+                         baseline_rank=int(gauge['baseline_rank']),construction='rational CW recompression, odd real character and square cancellation'))
     binary=[]
     for n in (61,243,969):
         root=ROOT/'characteristic2'

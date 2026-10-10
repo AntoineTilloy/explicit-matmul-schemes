@@ -1,0 +1,166 @@
+{
+  "receipt": {
+    "q": 2,
+    "n": 16,
+    "rank": 15838,
+    "public_commit": "614d4e94df82840f720ca055d6cb381667667cfe",
+    "published_source_files_verified": 40,
+    "support_sha256": "8c9d66466a8cec20c8c1078a588c6257aa1b0498237b1bb99a6b9a1d1b00953b",
+    "relations_sha256": "181e3fa09e4a4b99f979e8f123151b4f495cea2c1eb169859f056afd96936eed",
+    "source_rational_relations_sha256": "ba78d8fb52b61b90a5d35af7b4acedb2b869367b89018d81691bf075f8ee5163",
+    "source_discovery_sha256": "7716ba8358d19e771662a67352f046e72a173b6e9a57aa862e17901a3e1bafb5",
+    "support_orientation": "Original witness rows; relation perm=[0,2,1]",
+    "engine": "Unmodified public Z4QuotientUnit with new object names and private coefficient-cache directory"
+  },
+  "structural_audit": {
+    "induced_matching_K0_products": 28,
+    "kept_patterns": 1148,
+    "row_orbits": 7,
+    "odd_rank": 15838,
+    "unquotiented_rank": 63296,
+    "burnside_terms": [
+      {
+        "group": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "fixed_columns": 63296,
+        "character": 1
+      },
+      {
+        "group": [
+          1,
+          2,
+          3,
+          0,
+          5,
+          6,
+          7,
+          4,
+          8
+        ],
+        "fixed_columns": 12,
+        "character": -1
+      },
+      {
+        "group": [
+          2,
+          3,
+          0,
+          1,
+          6,
+          7,
+          4,
+          5,
+          8
+        ],
+        "fixed_columns": 80,
+        "character": 1
+      },
+      {
+        "group": [
+          3,
+          0,
+          1,
+          2,
+          7,
+          4,
+          5,
+          6,
+          8
+        ],
+        "fixed_columns": 12,
+        "character": -1
+      }
+    ],
+    "rank_method": "Weighted Burnside = public odd orbit index; old hardcoded polynomial not used",
+    "physical_inputs_never_modified": true
+  },
+  "input_equivariance": {
+    "exact_nonzero_coefficient_checks": 315552,
+    "tables": 56,
+    "generator": [
+      1,
+      2,
+      3,
+      0,
+      5,
+      6,
+      7,
+      4,
+      8
+    ],
+    "all_input_tables_equivariant": true,
+    "group_scope": "Generator equality implies all four group elements; zero entries matched by dictionary cardinality."
+  },
+  "q2_q8_relation_comparison": {
+    "all_steps_basis_deleted_and_zero_sets_equal": true,
+    "coefficient_entries_compared": 2528592,
+    "all_coefficients_exactly_equal": true,
+    "scope": "Equality at q2 and q8 only; no all-q relation proof follows from two specializations."
+  },
+  "gate": {
+    "exact": true,
+    "coefficient_field": "Q",
+    "n": 16,
+    "rank": 15838,
+    "all_coefficients": 16777216,
+    "rigorous_factor_entry_bounds": [
+      "5103/16",
+      "729/128",
+      "136287383646902639/81892946903040"
+    ],
+    "clearing_denominators": [
+      "32768",
+      "56623104",
+      "708435574207367086080"
+    ],
+    "integer_residual_bound": "62932735144095728009701422617445028029530112",
+    "required_modulus": "125865470288191456019402845234890056059060224",
+    "modulus": "1460871746226286805701224672854432851398080406157",
+    "primes": [
+      1048573,
+      1048571,
+      1048559,
+      1048549,
+      1048517,
+      1048507,
+      1048447,
+      1048433
+    ],
+    "mismatches": {
+      "1048573": 0,
+      "1048571": 0,
+      "1048559": 0,
+      "1048549": 0,
+      "1048517": 0,
+      "1048507": 0,
+      "1048447": 0,
+      "1048433": 0
+    },
+    "lazy_bulk_accessor_gate": {
+      "sampled_orbit_boundary_terms": 48,
+      "total_boundary_terms": 578,
+      "exact_factor_queries": 864,
+      "distinct_column_samples": 48,
+      "lazy_vs_direct_outer_wiring_equal": true,
+      "bulk_modular_match": true,
+      "scope": "Sampled boundaries and six coordinate entries per mode; no full q8 tensor claim.",
+      "query_count": 864,
+      "queries_sha256": "1d9e98af0a3b8571ed3da29b55b25789d2cd97e6b3ce5e37479485b234d05a11"
+    },
+    "arithmetic": "Float64 integer products/sums proved below2^53; CRT integer residual bound over Fraction",
+    "proof": "Every D_h clears all factors. The integer Delta*(sum_t U_tV_tW_t\u2212T) has magnitude\u2264Delta*(R*B0*B1*B2+1). Prime product exceeds twice this exact bound."
+  },
+  "elapsed_seconds": 340.9827581079953,
+  "peak_process_rss_kib": 829400,
+  "scope": "All16^6 coefficients of the raw-support, ungauged q2 odd square at rank15838. Exact transport and separately checked MM2 wiring/zero factors establish the gauged variant; no full gauged contraction is claimed.",
+  "source_receipt_sha256": "b8cab092181c66045c68cbfd7a02f42709b7357efe559c7d5d4e627eddeb3e52"
+}

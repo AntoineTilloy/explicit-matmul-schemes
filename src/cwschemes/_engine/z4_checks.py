@@ -22,7 +22,13 @@ from .triangular_full_compression import allowed
 POLY_GRAM = (1, 17, 122, 392, 493, 131, 2, 2, 0, 0)  # 4 R(q) = q^9 + 17 q^8 + ... + 2 q^2  (docs/construction.md)
 
 
-def closed_form_rank(q, input_character='even'):
+def closed_form_rank(q, input_character='even', polynomials=None):
+    if polynomials is not None:
+        coefficients = polynomials[input_character]
+        assert len(coefficients) == 10 and all(type(c) is int for c in coefficients)
+        numerator = sum(c * q ** (9 - i) for i, c in enumerate(coefficients))
+        assert numerator % 4 == 0
+        return numerator // 4
     rank = sum(c * q ** (9 - i) for i, c in enumerate(POLY_GRAM)) // 4
     return rank - q ** 3 - q ** 2 if input_character == 'odd' else rank
 
@@ -53,6 +59,7 @@ def audit(unit):
     # counts: unranking (per-orbit stabiliser count), Burnside over the whole kept set, closed form
     ordinary = pk.ordinary
     burnside = 0
+    counted_polynomials = {character: [0] * 10 for character in ('even', 'odd')}
     for g in G:
         for H in pk.kept:
             if hact(g, H) != H:
@@ -69,8 +76,12 @@ def audit(unit):
                     j = g[j]
             chi = real_character(g) if unit.input_character == 'odd' else 1
             burnside += chi * q ** cycles
+            counted_polynomials['even'][9 - cycles] += 1
+            counted_polynomials['odd'][9 - cycles] += real_character(g)
     assert burnside % len(G) == 0 and burnside // len(G) == unit.rank, 'Burnside count mismatch'
-    assert closed_form_rank(q, unit.input_character) == unit.rank, 'closed-form rank mismatch'
+    if 'rank_polynomials' in d:
+        assert d['rank_polynomials'] == counted_polynomials, 'fixed-pattern polynomial mismatch'
+    assert closed_form_rank(q, unit.input_character, d.get('rank_polynomials')) == unit.rank, 'closed-form rank mismatch'
     unquotiented = sum(q ** ordinary[H].bit_count() for H in pk.kept)
     assert unquotiented == pk.rank
     return dict(q=q, rank=str(unit.rank), unquotiented_rank=str(unquotiented), support_rows=len(sup.rows), row_orbits=len(sup.orbs),
