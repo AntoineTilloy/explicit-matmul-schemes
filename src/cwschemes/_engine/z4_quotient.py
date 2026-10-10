@@ -587,9 +587,12 @@ def square(q, support, relations, n=None, input_character='even'):
 def units(engine):
     """All Z4 units reachable from a coefficient engine (MixedSquare packets and nested 'cw' recipes)."""
     from .general_square import MixedSquare, Ordinary
+    from .gauged_z4_square import GaugedZ4Square
     out = []
     def walk(x):
-        if isinstance(x, MixedSquare):
+        if isinstance(x, GaugedZ4Square):
+            out.append(x.unit)
+        elif isinstance(x, MixedSquare):
             out.extend(p for p in x.packets if isinstance(p, Z4QuotientUnit))
             walk(x.outer)
             walk(x.leaf)

@@ -1,0 +1,101 @@
+{
+  "coefficient_field": "Q",
+  "changes": [
+    {
+      "n": 1024,
+      "old_rank": 198683360,
+      "baseline_rank": 198683936,
+      "rank": 198683288,
+      "saving": 72,
+      "total_saving": 648,
+      "old_root_object": "2ed39a4647e3d38acde0082a4bcf15760c04fae4e887cc793322183ea4923dea",
+      "root_object": "eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3",
+      "deletion_proof_sha256": "3d632a0eb84f1a4fe9f915f25bb3a1be1164bf10b72f04cf3c4a707a565a311f"
+    }
+  ],
+  "independent_public_replay": {
+    "coefficient_field": "Q",
+    "candidate_sha256": "0a198a57ac7756b0dcc3ae80f538bc1905202c497afbe82fb68b11b3c17a1c4e",
+    "gates": [
+      {
+        "q": 8,
+        "n": 1024,
+        "rank": 198683288,
+        "zero_factor_replay": {
+          "exact": true,
+          "coefficient_field": "Q",
+          "deleted_terms": 72,
+          "distinct_normalized_factors": 3,
+          "unit_rank_unchanged": "198683360",
+          "proof_sha256": "0a198a57ac7756b0dcc3ae80f538bc1905202c497afbe82fb68b11b3c17a1c4e",
+          "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+        },
+        "outer": {
+          "coefficient_field": "Q",
+          "all_coefficients": 64,
+          "exact": true
+        }
+      },
+      {
+        "q": 2,
+        "n": 16,
+        "rank": 15848,
+        "zero_factor_replay": {
+          "exact": true,
+          "coefficient_field": "Q",
+          "deleted_terms": 6,
+          "distinct_normalized_factors": 3,
+          "unit_rank_unchanged": "15854",
+          "proof_sha256": "0a198a57ac7756b0dcc3ae80f538bc1905202c497afbe82fb68b11b3c17a1c4e",
+          "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+        },
+        "outer": {
+          "coefficient_field": "Q",
+          "all_coefficients": 64,
+          "exact": true
+        },
+        "public_scalar_vs_vectorized_accessor": {
+          "exact": true,
+          "samples": 84,
+          "prime": 1048573
+        },
+        "full_tensor": {
+          "exact": true,
+          "n": 16,
+          "rank": 15848,
+          "primes": [
+            1048573,
+            1048571,
+            1048559,
+            1048549,
+            1048517,
+            1048507,
+            1048447,
+            1048433
+          ],
+          "rigorous_factor_bounds": [
+            "729/128",
+            "5103/16",
+            "1183127513116313/4981616640"
+          ],
+          "log2_delta": 105.1,
+          "log2_bound": 148.7,
+          "log2_prime_product": 160.0,
+          "mismatches": {
+            "1048573": 0,
+            "1048571": 0,
+            "1048559": 0,
+            "1048549": 0,
+            "1048517": 0,
+            "1048507": 0,
+            "1048447": 0,
+            "1048433": 0
+          },
+          "seconds": 239.8908735280056
+        }
+      }
+    ]
+  },
+  "search_scope": "76,567 stabilizer-reduced actual label equality classes of 290 retained patterns; 5,040 outer assignments and all feasible unions of seven input spans",
+  "compute": "Atlas only; no paid compute for this cancellation search"
+}

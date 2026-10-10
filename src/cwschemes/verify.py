@@ -197,11 +197,12 @@ def verify(n,*,exact=False,threads=1):
     if z4_units(s._engine):
         z4=verify_z4(s._engine,exact,threads)
     rectangular=s._engine.audit() if read(path).get('format')=='exact-rectangular-recipe-v1' else None
+    gauged=s._engine.audit_deletions() if read(path).get('format')=='cw-z4-gauged-square-v1' else None
     queries=[]
     for factor in ('U','V','W'):
         for term,i,j in [(0,s.n-1,s.n-1),(s.rank-1,s.n-1,s.n-1)]:
             queries.append(str(s.coefficient(factor,term,i,j)))
     return dict(n=str(s.n),rank=str(s.rank),mode='exact reduction replay' if exact else 'integrity, support, count and coefficient checks',
                 dependencies=len(visited),new_support_audits=supports,reduction_proofs=proofs,coefficient_queries=queries,
-                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),**({'z4_quotient_checks':z4} if z4 else {}),**({'rectangular_composition_checks':rectangular} if rectangular else {}),seconds=time.monotonic()-start,
+                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),**({'z4_quotient_checks':z4} if z4 else {}),**({'rectangular_composition_checks':rectangular} if rectangular else {}),**({'gauged_square_zero_factor_checks':gauged} if gauged else {}),seconds=time.monotonic()-start,
                 proof_basis='Documented base identities and published primitive schemes; see docs/verification.md')

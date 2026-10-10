@@ -1,4 +1,5 @@
 """Draw the verified small-square improvements, keeping coefficient fields apart."""
+import argparse
 import csv
 import json
 from pathlib import Path
@@ -7,12 +8,15 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--field',choices=('Q','F2','all'),default='all')
+    args=parser.parse_args()
     rational=json.loads((ROOT/'checks/small1024_rectangular.json').read_text())['changes']
     rational=[dict(field='Q',n=p['n'],rank=p['rank'],baseline_rank=p['comparison_rank'],
                    construction=p['classification']) for p in rational]
-    twist=json.loads((ROOT/'checks/small1024_twist.json').read_text())['changes'][0]
-    rational.append(dict(field='Q',n=1024,rank=int(twist['rank']),
-                         baseline_rank=int(twist['old_rank']),construction='odd real CW character'))
+    gauge=json.loads((ROOT/'checks/small1024_gauge.json').read_text())['changes'][0]
+    rational.append(dict(field='Q',n=1024,rank=int(gauge['rank']),
+                         baseline_rank=int(gauge['baseline_rank']),construction='odd real CW character and square cancellation'))
     binary=[]
     for n in (61,243,969):
         root=ROOT/'characteristic2'
@@ -34,6 +38,7 @@ def main():
     for field,color,title,destination in (
             ('Q','#176c99','Square improvements over R and C',ROOT/'figures'/'small1024'),
             ('F2','#348568','Square improvements over F2',ROOT/'characteristic2'/'improvements')):
+        if args.field!='all' and args.field!=field:continue
         fig,ax=plt.subplots(figsize=(8.6,5.8))
         rows=[p for p in points if p['field']==field];x=list(range(len(rows)))
         ax.bar(x,[p['saving_percent'] for p in rows],color=color,width=.57,zorder=3)

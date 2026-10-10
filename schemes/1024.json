@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "1024",
-  "rank": "198683360",
+  "rank": "198683288",
   "field": "Q",
-  "root_object": "2ed39a4647e3d38acde0082a4bcf15760c04fae4e887cc793322183ea4923dea",
-  "effective_exponent": 2.7565895809085887,
+  "root_object": "eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3",
+  "effective_exponent": 2.75658952862738,
   "provenance": {
-    "construction": "Z4-quotient CW packet with the odd real character on both inputs and the even output character; power 9, seven free row orbits, q=8, fed to Strassen; generator-fixed input columns vanish exactly over Q"
+    "construction": "Z4-quotient CW packet with the odd real character, power 9 and q=8, with a permuted and signed Strassen embedding; 72 further square-only products have exactly zero input factors"
   },
-  "verification": "Exact rational relation witnesses and coefficient access included; all tensor coefficients checked at q=2 with a rigorous CRT bound, uniform character construction and orbit counts; see checks/small1024_twist.json and docs/verification.md."
+  "verification": "Exact rational packet witnesses and lazy coefficient access included; all 72 deleted factors replayed from public coefficient tables at q=8, all size-16 tensor coefficients checked with a rigorous CRT bound at q=2; see checks/small1024_gauge.json and docs/real_character.md."
 }

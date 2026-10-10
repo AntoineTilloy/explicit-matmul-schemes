@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "installed_module": "/home/antoine/matmul_oct10/small1024/gauge_wheel_site/cwschemes/__init__.py",
+  "cache": "/home/antoine/matmul_oct10/small1024/gauge_wheel_cold_cache/bb2050b11b7f7d03",
+  "n": 1024,
+  "rank": 198683288,
+  "zero_factor_replay": {
+    "exact": true,
+    "coefficient_field": "Q",
+    "deleted_terms": 72,
+    "distinct_normalized_factors": 3,
+    "unit_rank_unchanged": "198683360",
+    "proof_sha256": "3d632a0eb84f1a4fe9f915f25bb3a1be1164bf10b72f04cf3c4a707a565a311f",
+    "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+  },
+  "coefficient_samples": [
+    {
+      "mode": "U",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "0"
+    },
+    {
+      "mode": "U",
+      "term": 198683287,
+      "row": 1023,
+      "col": 1023,
+      "value": "-421875/512"
+    },
+    {
+      "mode": "V",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "59049/32768"
+    },
+    {
+      "mode": "V",
+      "term": 198683287,
+      "row": 1023,
+      "col": 1023,
+      "value": "295245/1048576"
+    },
+    {
+      "mode": "W",
+      "term": 0,
+      "row": 0,
+      "col": 0,
+      "value": "-3316388455349579/6061038520762368"
+    },
+    {
+      "mode": "W",
+      "term": 198683287,
+      "row": 1023,
+      "col": 1023,
+      "value": "-4543031007/18756927488"
+    }
+  ],
+  "exact_certificate_roundtrip": true,
+  "seconds": 109.83765283499815
+}

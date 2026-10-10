@@ -46,3 +46,16 @@ eight length-four representatives after the existing output Schur updates.
 
 The result is rational. Its denominators and the implication `U=-U => U=0`
 do not provide a characteristic-two scheme.
+
+## Further square-only cancellation
+
+At q=8, permuting the seven Strassen calls by `[1,0,5,2,3,4,6]` and applying input gauges
+`[1,1,-1,-1,-1,-1,-1]` and `[1,-1,-1,-1,-1,-1,-1]` removes another 72 products.
+The output gauges are the reciprocal input products, so the outer tensor remains exactly MM2.
+The square rank is **198,683,288**, a total saving of **648** against the earlier even-character entry.
+
+The cancellation occurs in three actual label classes. Pattern 1093 with all seven ordinary labels equal has a zero B factor (8 columns). Pattern 10087 with all seven ordinary labels equal has a zero A factor (8 columns); its equality partition `0000001`, with the label at physical coordinate 8 different from the other six ordinary labels, also has a zero A factor (56 columns). The bound uses all numerical columns in these classes, with original unit ordinals frozen in the certificate. The underlying direct-sum unit still has rank 198,683,360: these factors vanish only after the square embedding.
+
+`GaugedZ4Square.audit_deletions()` binds the proof to the exact outer permutation, gauges, original indices, patterns and numerical labels. It reconstructs the physical factor from the public packet tables in four outer blocks and six physical digit slots, and checks that every rational polynomial coefficient is zero. Simultaneous label relabeling reduces the 72 checks to three formal polynomials. This formal zero test is valid even when centered label functions have additional dependencies.
+
+The size-16 q=2 instance removes six further columns, leaving rank 15,848. An independent public check compares scalar coefficient queries to the vectorized factors and checks all 16⁶ tensor coefficients with a rigorous CRT bound. The wrong-gauge and wrong-deletion regression controls retain a valid outer MM2 identity but fail the actual zero-factor check. See [the public replay](../checks/small1024_gauge.json). No characteristic-two argument is used in this cancellation.

@@ -452,6 +452,14 @@
     "f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd": {
       "bytes": 17900,
       "compressed_bytes": 4331
+    },
+    "3d632a0eb84f1a4fe9f915f25bb3a1be1164bf10b72f04cf3c4a707a565a311f": {
+      "bytes": 24948,
+      "compressed_bytes": 1966
+    },
+    "eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3": {
+      "bytes": 1411,
+      "compressed_bytes": 602
     }
   },
   "paths": {
@@ -567,6 +575,8 @@
     "proofs/d188fa308f61135b63a69d615a8d5bf555386c6178b298e1d039b36a165c019c.json": "d188fa308f61135b63a69d615a8d5bf555386c6178b298e1d039b36a165c019c",
     "rectbases/c5b1c8161ac3d3c79c5c3492f325f2a1daab464635e2cf2c0e97017e69e2d2f9.npz": "c5b1c8161ac3d3c79c5c3492f325f2a1daab464635e2cf2c0e97017e69e2d2f9",
     "rectbases/f019ca869fadaedb93f5282ee50eb3f3b0246e658681571374a6cb215c746d84.npz": "f019ca869fadaedb93f5282ee50eb3f3b0246e658681571374a6cb215c746d84",
-    "proofs/f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd.json": "f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd"
+    "proofs/f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd.json": "f9d5ca9b5d16456b0bddf4c6c9cacae923356a4c68de5c510bccfa854d4a4edd",
+    "proofs/3d632a0eb84f1a4fe9f915f25bb3a1be1164bf10b72f04cf3c4a707a565a311f.json": "3d632a0eb84f1a4fe9f915f25bb3a1be1164bf10b72f04cf3c4a707a565a311f",
+    "proofs/eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3.json": "eda371c60355a8410e130986634940bca0a45f5b9b7d0b74b07ea547028eeab3"
   }
 }

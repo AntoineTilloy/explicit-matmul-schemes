@@ -200,6 +200,9 @@ def load_certificate(value):
     if data['format'] == 'exact-rectangular-recipe-v1':
         from .rectangular_square import load_certificate as load_rectangular
         return load_rectangular(data)
+    if data['format'] == 'cw-z4-gauged-square-v1':
+        from .gauged_z4_square import load_certificate as load_gauged
+        return load_gauged(data)
     if data['format'] in ('cw-z4-quotient-square-v1', 'cw-z4-real-character-square-v1'):
         from .z4_quotient import load_certificate as load_z4
         return load_z4(data)
