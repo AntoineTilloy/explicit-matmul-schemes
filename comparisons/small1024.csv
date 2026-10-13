@@ -1,6 +1,18 @@
 field,n,rank,baseline_rank,construction,saving,saving_percent
 Q,106,424690,431011,uneven rectangular Strassen composition,6321,1.4665518977473893
+Q,125,680814,681408,Asymmetric rectangular Strassen composition with recursive feedback,594,0.08717244294167371
 Q,146,1044715,1063741,uneven rectangular Strassen composition,19026,1.7885932759948144
+Q,154,1211453,1214333,Asymmetric rectangular Strassen composition with recursive feedback,2880,0.23716723501708345
+Q,162,1394733,1401348,Asymmetric rectangular Strassen composition with recursive feedback,6615,0.4720454876304815
+Q,171,1641699,1643187,Asymmetric rectangular Strassen composition with recursive feedback,1488,0.09055573102757021
+Q,178,1814857,1819017,Asymmetric rectangular Strassen composition with recursive feedback,4160,0.22869494897518824
+Q,186,2052507,2055249,Asymmetric rectangular Strassen composition with recursive feedback,2742,0.13341449138279596
+Q,187,2109033,2111184,Asymmetric rectangular Strassen composition with recursive feedback,2151,0.10188595593752131
+Q,194,2309010,2322311,Asymmetric rectangular Strassen composition with recursive feedback,13301,0.5727484389472384
+Q,195,2370114,2372355,Asymmetric rectangular Strassen composition with recursive feedback,2241,0.09446309679622147
+Q,218,3205147,3206454,Asymmetric rectangular Strassen composition with recursive feedback,1307,0.04076153907088641
+Q,234,3911301,3912786,Asymmetric rectangular Strassen composition with recursive feedback,1485,0.03795249727432065
+Q,242,4255382,4261876,Asymmetric rectangular Strassen composition with recursive feedback,6494,0.15237421267066428
 Q,432,19665128,19788629,routine current-upstream primitive refresh,123501,0.6241008409425434
 Q,1024,198679192,198683936,"rational CW recompression, odd real character and square cancellation",4744,0.002387711908425249
 F2,61,101501,103823,permuted restriction and exact pair merges,2322,2.236498656367086

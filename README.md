@@ -1,6 +1,6 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **47 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+A catalogue of **59 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the pinned LITA comparison: **1,593**, **2,236** and **14,196**. Current upstream LITA also attains these counts. Every coefficient is accessible as an exact rational number.
 
@@ -64,6 +64,13 @@ a routine refresh to the current published LITA primitives. All three have
 exact rational coefficients in the installed package; see the
 [rectangular construction and check scope](docs/rectangular.md).
 
+Applying unequal Strassen splits inside intermediate rectangles, then feeding
+the improved costs back into composition, adds **12 square schemes at sizes
+125–242**. The largest relative gain is at **194**, from **2,322,311** to
+**2,309,010** products (about **0.57%**). These comparisons use the full previous
+strengthened rational envelope. The size-1,024 count remains **198,679,192**.
+All new schemes are bilinear and can be substituted recursively on matrix blocks.
+
 ![Verified improvements over R and C through size 1,024](figures/small1024.svg)
 
 The first sub-2.7 size **in this catalogue** is now **528,108,169**, padded from a natural size-536,870,912 construction. Its rank R = 355,919,505,257,948,041,899,273 satisfies
@@ -121,7 +128,7 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, and the rectangular compositions as triangles. All 47 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
+The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, and the rectangular compositions as triangles. All 59 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
 - Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
 - At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.

@@ -19,4 +19,14 @@ published narrow rectangular coefficients are pinned to the
 [Perminov collection](https://github.com/dronperminov/FastMatrixMultiplication/tree/7e3ac35ca92cb30d568519ea63d7a1accad2c908),
 with original paths and hashes retained in each recipe node.
 
+The asymmetric rectangular update also includes `sources/lita_odd_current.py`
+from that same LITA revision, with the same upstream attribution and exclusion
+from this repository's MIT grant. Its size-31 coefficient object is checked
+separately by complete exact tensor verification; the receipt is included in
+`checks/asymmetric_strassen.json`.
+
+The installed copy at `src/cwschemes/_engine/sources/lita_current.py` is
+byte-identical to the pinned even generator and has the same upstream
+attribution and licensing scope.
+
 The mathematical coefficient data and provenance remain inspectable without executing discovery code. `imported_objects.json` lists exact object identifiers, so a downstream user can identify the primitive components of a construction.

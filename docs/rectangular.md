@@ -46,3 +46,71 @@ Evidence is in `checks/small1024_rectangular*.json`. Some historical research
 records contain the original staging paths; the current immutable hashes
 and catalogue entries identify the published objects. Huge target tensors
 are established compositionally and have not been expanded in full.
+
+## Independent rectangular splits and recursive feedback
+
+For a rectangle with dimensions `(p0+q0, p1+q1, p2+q2)`, with each
+`pi >= qi > 0`, the seven Strassen calls have dimensions
+
+```text
+(p0,p1,p2), (q0,p1,p2), (p0,p1,q2), (q0,q1,p2),
+(p0,q1,q2), (q0,p1,q2), (p0,q1,p2).
+```
+
+These are all corners except `(q0,q1,q2)`. Zero padding and cropping use
+the independent split on each matrix-index axis. Every multiplication has
+an A-linear form on the left and a B-linear form on the right; the identity
+therefore permits recursive substitution by matrix blocks. The recipe's
+`p` and `q` fields accept three-element vectors. Existing scalar fields keep
+their original meaning of equal splits on all three axes.
+
+The October 13 search iterates this rule within a rectangular table through
+dimension 128, together with padding, axis splits, exact-divisor tensor
+products and feedback from square improvements. Each changed cost receives
+a new immutable recipe version, so later padding cannot create a cycle.
+Square results are compared with the minimum of the previous full rectangular
+closure, the public dense closure and the catalogue at commit `e313024`.
+
+| Square size | Previous envelope | New products |
+|---:|---:|---:|
+| 125 | 681,408 | 680,814 |
+| 154 | 1,214,333 | 1,211,453 |
+| 162 | 1,401,348 | 1,394,733 |
+| 171 | 1,643,187 | 1,641,699 |
+| 178 | 1,819,017 | 1,814,857 |
+| 186 | 2,055,249 | 2,052,507 |
+| 187 | 2,111,184 | 2,109,033 |
+| 194 | 2,322,311 | 2,309,010 |
+| 195 | 2,372,355 | 2,370,114 |
+| 218 | 3,206,454 | 3,205,147 |
+| 234 | 3,912,786 | 3,911,301 |
+| 242 | 4,261,876 | 4,255,382 |
+
+A matched control with feedback and tensor products but without the new
+rectangular Strassen rule improves sizes 194 and 242. The new rule improves
+the control at eleven sizes and ties it at 242; the latter gain comes from
+the shared closure changes. There is no improvement at size 1024.
+
+All saved search nodes pass an independent integer recipe and dependency
+audit. The coefficient engine is tested by reconstructing every coefficient
+of MM(3,4,5), with splits `(2+1,3+1,3+2)`, under all six axis permutations.
+Primitive coefficient files and proof scope are recorded in
+`checks/asymmetric_strassen.json`. As above, the large final tensors are
+certified by composition and the stated primitive identities.
+
+Larger current-LITA leaves use indexed access to the pinned generator, avoiding
+expansion of hundreds of megabytes of primitive arrays. Each leaf binds the
+source hash, revision, dimensions and exact rank. Its accessor is compared
+coefficient-for-coefficient with the original serializer at small sizes and
+against frozen larger primitive data. These even-family identities retain
+the published construction theorem as their proof basis. The odd size-31
+leaf is frozen as sparse rational coefficients and separately passes a full
+exact tensor check of all 887,503,681 coefficients, using signed 128-bit
+accumulation with a verified overflow bound.
+
+To replay the complete size-31 primitive check from the packaged coefficients
+(requires a C++17 compiler):
+
+```bash
+PYTHONPATH=src python checks/replay_odd31.py
+```

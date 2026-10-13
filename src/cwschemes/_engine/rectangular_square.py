@@ -18,6 +18,11 @@ class Node:
             p=_resources.materialize(spec['file']);assert hashlib.sha256(p.read_bytes()).hexdigest()==spec['sha256']
             with np.load(p,allow_pickle=False) as z:self.arrays={k:z[k] for k in z.files}
             m=json.loads(self.arrays['metadata_json'].item());assert tuple(m['tensor'])==self.d and m['rank']==self.rank and m['coefficient_field']=='Q'
+        elif self.op=='lita_current':
+            from .current_lita import CurrentLITA
+            assert self.d==(self.d[0],)*3
+            self.lita=CurrentLITA(self.d[0],spec['source_sha256'])
+            assert spec['commit']=='472a79fbc8248423a97bebb3aacbc89e769b9b3e' and self.rank==self.lita.rank
         elif self.op=='classical':assert self.rank==np.prod(self.d)
         elif self.op=='product':
             a,b=self.children;assert self.d==tuple(x*y for x,y in zip(a.d,b.d)) and self.rank==a.rank*b.rank
@@ -29,7 +34,12 @@ class Node:
         elif self.op=='permute':
             a,=self.children;self.perm=spec['permutation'];assert sorted(self.perm)==[0,1,2] and self.d==tuple(a.d[j] for j in self.perm) and self.rank==a.rank
         elif self.op=='uneven_strassen':
-            self.outer=load(spec['outer']);pp,q=spec['p'],spec['q'];assert self.d==(pp+q,)*3 and pp>=q
+            self.outer=load(spec['outer'])
+            self.p=tuple([spec['p']]*3 if isinstance(spec['p'],int) else spec['p'])
+            self.q=tuple([spec['q']]*3 if isinstance(spec['q'],int) else spec['q'])
+            assert len(self.p)==len(self.q)==3
+            assert all(isinstance(p,int) and isinstance(q,int) and p>=q>0 for p,q in zip(self.p,self.q))
+            assert self.d==tuple(p+q for p,q in zip(self.p,self.q))
             self.prefix=[0]
             for t,c in enumerate(self.children):
                 forms=self.outer.term(t);need=[]
@@ -37,7 +47,7 @@ class Node:
                     maxima=[]
                     for mode,edge in enumerate(EDGES):
                         if vertex in edge:
-                            k=edge.index(vertex);maxima.append(max(pp if coordinate[k]==0 else q for coordinate in forms[mode]))
+                            k=edge.index(vertex);maxima.append(max(self.p[vertex] if coordinate[k]==0 else self.q[vertex] for coordinate in forms[mode]))
                     need.append(min(maxima))
                 assert c.d==tuple(need),(t,c.d,need);self.prefix.append(self.prefix[-1]+c.rank)
             assert len(self.children)==7 and self.outer.d==(2,)*3 and self.outer.rank==7 and self.prefix[-1]==self.rank
@@ -45,6 +55,7 @@ class Node:
 
     def term(self,t):
         assert 0<=t<self.rank
+        if self.op=='lita_current':return self.lita.term(t)
         if self.op=='qcsr':
             out=[]
             for axis,edge in zip('uvw',EDGES):
@@ -67,14 +78,15 @@ class Node:
                 old=(self.perm[edge[0]],self.perm[edge[1]]);mode=next(j for j,e in enumerate(EDGES) if set(e)==set(old));out.append(forms[mode] if old==EDGES[mode] else {(c,r):v for (r,c),v in forms[mode].items()})
             return out
         if self.op=='uneven_strassen':
-            ot=bisect_right(self.prefix,t)-1;forms=self.children[ot].term(t-self.prefix[ot]);outer=self.outer.term(ot);pp,q=self.s['p'],self.s['q'];out=[]
-            for mode in range(3):
+            ot=bisect_right(self.prefix,t)-1;forms=self.children[ot].term(t-self.prefix[ot]);outer=self.outer.term(ot);out=[]
+            for mode,(axis0,axis1) in enumerate(EDGES):
                 entries={}
                 for (br,bc),ov in outer[mode].items():
-                    nr,nc=(pp if br==0 else q),(pp if bc==0 else q)
+                    nr=self.p[axis0] if br==0 else self.q[axis0]
+                    nc=self.p[axis1] if bc==0 else self.q[axis1]
                     for (r,c),v in forms[mode].items():
                         if r<nr and c<nc:
-                            key=(r+br*pp,c+bc*pp);entries[key]=entries.get(key,F(0))+ov*v
+                            key=(r+br*self.p[axis0],c+bc*self.p[axis1]);entries[key]=entries.get(key,F(0))+ov*v
                 out.append({k:v for k,v in entries.items() if v})
             return out
         raise ValueError(self.op)
@@ -98,6 +110,7 @@ class Recipe:
 
     def audit(self):
         return dict(nodes=len(self.cache),primitive_objects=sum(x.op=='qcsr' for x in self.cache.values()),
+                    indexed_current_lita_objects=sum(x.op=='lita_current' for x in self.cache.values()),
                     exact_dimensions_and_counts=True,hash_checked_coefficients=True,
                     primitive_identity_basis=self.spec['primitive_identity_basis'])
 

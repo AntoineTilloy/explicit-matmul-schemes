@@ -1,0 +1,13 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "178",
+  "rank": "1814857",
+  "field": "Q",
+  "root_object": "efe79581bdeb172091dc5f135e106f201370004274747f9888b1393d161dc75f",
+  "effective_exponent": 2.781188580114665,
+  "provenance": {
+    "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+    "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+  },
+  "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+}

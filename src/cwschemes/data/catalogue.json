@@ -50,6 +50,19 @@
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
+    "n": "125",
+    "rank": "680814",
+    "field": "Q",
+    "root_object": "c04f88a60041658424fc376f35e7360a1cf6d54ecf31d84af5cf129624a10743",
+    "effective_exponent": 2.7817257019375927,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
     "n": "146",
     "rank": "1044715",
     "field": "Q",
@@ -60,6 +73,149 @@
       "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
     },
     "verification": "Exact rectangular recipe dimensions and ranks, frozen hash-checked rational coefficients, full small wiring and rectangular primitive tensor checks; LITA identities use the published construction theorem and exact coefficient regeneration. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "154",
+    "rank": "1211453",
+    "field": "Q",
+    "root_object": "2dad7fe7f5ed280df9e09ae1bfaf18033fd48f43a9cbcc39ecb1e9602557e7fc",
+    "effective_exponent": 2.7809138042894634,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "162",
+    "rank": "1394733",
+    "field": "Q",
+    "root_object": "e767913b8a428026427e0d290e146633a7580367b713e350ceeb50525a9c0a60",
+    "effective_exponent": 2.7809229791071846,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "171",
+    "rank": "1641699",
+    "field": "Q",
+    "root_object": "1d06e27e3b70b134964e3a505e7ae58bcad5ba51a508fb61fc171f77eb26b396",
+    "effective_exponent": 2.7833875324374953,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "178",
+    "rank": "1814857",
+    "field": "Q",
+    "root_object": "efe79581bdeb172091dc5f135e106f201370004274747f9888b1393d161dc75f",
+    "effective_exponent": 2.781188580114665,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "186",
+    "rank": "2052507",
+    "field": "Q",
+    "root_object": "783bc6562daeaa9de7232e2f19e99faa4c6cac6cac2438dd07475bbae9e5ea0d",
+    "effective_exponent": 2.7813389049052892,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "187",
+    "rank": "2109033",
+    "field": "Q",
+    "root_object": "d0fc3c49c5d25985a90287cf6c311d68e8faaf618f4c0978c04035592feb84ec",
+    "effective_exponent": 2.783681466610513,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "194",
+    "rank": "2309010",
+    "field": "Q",
+    "root_object": "2e0b9ca0dedf7642ca8cdbe13528b67111eb3f3abc86d5582cd94b3fbbbceeac",
+    "effective_exponent": 2.781458607422288,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "195",
+    "rank": "2370114",
+    "field": "Q",
+    "root_object": "1e8b00e307a039a7dd0eeed97d7dcb26d94bbd86a24a8687e3cd51c18daf1efc",
+    "effective_exponent": 2.7836999510802927,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "218",
+    "rank": "3205147",
+    "field": "Q",
+    "root_object": "19ef24847f0bc8ec3eb7a0b6244945cdf0351dcd1733f6deea5a192c92cb9590",
+    "effective_exponent": 2.782112034356696,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "234",
+    "rank": "3911301",
+    "field": "Q",
+    "root_object": "5bda96e868a3c7ddb02216541ddd67434b510ea8eb7f2c39562c9bf4d0ae5942",
+    "effective_exponent": 2.782490763093164,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "242",
+    "rank": "4255382",
+    "field": "Q",
+    "root_object": "e153c31abfb05b604fc0ef99b561df1624c40b371ad581bddc4082f7c18ce419",
+    "effective_exponent": 2.7808103961457586,
+    "provenance": {
+      "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
+      "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    },
+    "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",

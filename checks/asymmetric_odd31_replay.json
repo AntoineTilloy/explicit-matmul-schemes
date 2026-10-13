@@ -1,0 +1,13 @@
+{
+  "status": "EXACT_ODD31_FULL_TENSOR_PASS",
+  "exact": true,
+  "rank": 13433,
+  "tensor_coefficients": 887503681,
+  "cartesian_expansions": 970421136,
+  "integer_accumulation_bound": "4416205961095689117084908544",
+  "slice_bytes": 14776336,
+  "CSR_unique": true,
+  "native_128bit_bound_checked": true,
+  "primitive_sha256": "9effecdc238c8425993e7d73e3cefd45a40e67cd3cc08caf2825493f884e7955",
+  "native_source_sha256": "13f31468080ac1ae4f631aba4c5e6b5338a40c7c4bfdbe7a4e37840d7b50a6e9"
+}

@@ -14,6 +14,9 @@ def main():
     rational=json.loads((ROOT/'checks/small1024_rectangular.json').read_text())['changes']
     rational=[dict(field='Q',n=p['n'],rank=p['rank'],baseline_rank=p['comparison_rank'],
                    construction=p['classification']) for p in rational]
+    asymmetric=json.loads((ROOT/'checks/asymmetric_strassen.json').read_text())['changes']
+    rational.extend(dict(field='Q',n=p['n'],rank=p['rank'],baseline_rank=p['comparison_rank'],
+                         construction=p['classification']) for p in asymmetric)
     gauge=json.loads((ROOT/'checks/small1024_recompression.json').read_text())['changes'][0]
     rational.append(dict(field='Q',n=1024,rank=int(gauge['rank']),
                          baseline_rank=int(gauge['baseline_rank']),construction='rational CW recompression, odd real character and square cancellation'))
@@ -39,27 +42,27 @@ def main():
             ('Q','#176c99','Square improvements over R and C',ROOT/'figures'/'small1024'),
             ('F2','#348568','Square improvements over F2',ROOT/'characteristic2'/'improvements')):
         if args.field!='all' and args.field!=field:continue
-        fig,ax=plt.subplots(figsize=(8.6,5.8))
+        fig,ax=plt.subplots(figsize=(9.2,8.2 if field=='Q' else 5.8))
         rows=[p for p in points if p['field']==field];x=list(range(len(rows)))
-        ax.bar(x,[p['saving_percent'] for p in rows],color=color,width=.57,zorder=3)
+        ax.barh(x,[p['saving_percent'] for p in rows],color=color,height=.60,zorder=3)
         for j,p in enumerate(rows):
             percent=f"{p['saving_percent']:.6f}%" if p['n']==1024 else f"{p['saving_percent']:.2f}%"
-            ax.text(j,p['saving_percent']+.07,percent+'\n'+f"{p['rank']:,} products",
-                    ha='center',va='bottom',fontsize=9,color=color)
-        ax.set_xticks(x,[str(p['n'])+('\nLITA refresh' if p['n']==432 else '') for p in rows])
-        ax.set_xlabel('Square matrix size n',labelpad=9)
-        ax.set_ylim(0,3.0);ax.set_xlim(-.6,len(rows)-.4);ax.grid(axis='y',color='#edf0f3');ax.set_axisbelow(True)
-        ax.set_ylabel('Products saved against the stated reference (%)')
+            ax.text(p['saving_percent']+.035,j,percent+' · '+f"{p['rank']:,} products",
+                    ha='left',va='center',fontsize=8.5,color=color)
+        ax.set_yticks(x,[str(p['n'])+(' (LITA refresh)' if p['n']==432 else '') for p in rows])
+        ax.set_ylabel('Square matrix size n',labelpad=9)
+        ax.set_ylim(len(rows)-.4,-.6);ax.set_xlim(0,3.0);ax.grid(axis='x',color='#edf0f3');ax.set_axisbelow(True)
+        ax.set_xlabel('Products saved against the stated reference (%)')
         fig.suptitle(title,x=.10,y=.98,ha='left',fontsize=18,weight='bold')
         subtitle=('Exact rational coefficients • Square sizes ≤ 1,024' if field=='Q'
                   else 'Exact F2 coefficients • Separate from the R/C catalogue')
         fig.text(.10,.91,subtitle,color='#526171',fontsize=10.5)
-        footer=('References: strengthened composition / previous saved 432 and 1024.\n'
+        footer=('References: previous strengthened composition envelope / previous saved 432 and 1024.\n'
                 'The 432 change refreshes LITA primitives. Sub-2.7 at size 1,024 remains open.' if field=='Q'
                 else 'Reference: strengthened finite F2 composition closure.\n'
                 'These schemes do not establish corresponding counts over R or C.')
         fig.text(.10,.035,footer,fontsize=9,color='#526171')
-        fig.subplots_adjust(left=.10,right=.985,top=.80,bottom=.21)
+        fig.subplots_adjust(left=.22,right=.985,top=.83,bottom=.15)
         for suffix in ('svg','png','pdf'):
             fig.savefig(destination.with_suffix('.'+suffix),dpi=170,facecolor='white')
         plt.close(fig)

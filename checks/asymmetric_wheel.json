@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "installed_module": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/installed/cwschemes/__init__.py",
+  "schemes": [
+    {
+      "n": 125,
+      "rank": 680814,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 18,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 154,
+      "rank": 1211453,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 44,
+        "primitive_objects": 7,
+        "indexed_current_lita_objects": 3,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 162,
+      "rank": 1394733,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 32,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 3,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 171,
+      "rank": 1641699,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 28,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 3,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 178,
+      "rank": 1814857,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 43,
+        "primitive_objects": 5,
+        "indexed_current_lita_objects": 3,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 186,
+      "rank": 2052507,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 48,
+        "primitive_objects": 7,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 187,
+      "rank": 2109033,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 54,
+        "primitive_objects": 4,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 194,
+      "rank": 2309010,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 25,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 195,
+      "rank": 2370114,
+      "exact_coefficient_probes": 304,
+      "composition_audit": {
+        "nodes": 40,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 218,
+      "rank": 3205147,
+      "exact_coefficient_probes": 305,
+      "composition_audit": {
+        "nodes": 50,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 234,
+      "rank": 3911301,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 65,
+        "primitive_objects": 9,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    },
+    {
+      "n": 242,
+      "rank": 4255382,
+      "exact_coefficient_probes": 306,
+      "composition_audit": {
+        "nodes": 44,
+        "primitive_objects": 5,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with hash-bound indexed coefficients; odd LITA31 and other qcsr primitive identities checked by complete exact tensor replay. See checks/asymmetric_strassen.json."
+      },
+      "roundtrip": true
+    }
+  ],
+  "hash_verified_objects": 148,
+  "old_scalar_split_compatibility": true,
+  "seconds": 579.1422853689874
+}
