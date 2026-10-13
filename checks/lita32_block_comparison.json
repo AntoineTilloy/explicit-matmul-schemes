@@ -1,0 +1,104 @@
+{
+  "rank32": 14196,
+  "power32_squared": 201526416,
+  "rows": [
+    {
+      "n": 32,
+      "outer_size": 1,
+      "outer_rank": 1,
+      "blocked32": 14196,
+      "new_rank": 14196,
+      "exponent": 2.758639371812189
+    },
+    {
+      "n": 106,
+      "outer_size": 4,
+      "outer_rank": 48,
+      "blocked32": 681408,
+      "new_rank": 424690,
+      "exponent": 2.7788750980694674
+    },
+    {
+      "n": 125,
+      "outer_size": 4,
+      "outer_rank": 48,
+      "blocked32": 681408,
+      "new_rank": 680814,
+      "exponent": 2.7817257019375927
+    },
+    {
+      "n": 137,
+      "outer_size": 5,
+      "outer_rank": 93,
+      "blocked32": 1320228,
+      "new_rank": 861480,
+      "exponent": 2.7777357931643234
+    },
+    {
+      "n": 146,
+      "outer_size": 5,
+      "outer_rank": 93,
+      "blocked32": 1320228,
+      "new_rank": 1040656,
+      "exponent": 2.7801877020436923
+    },
+    {
+      "n": 194,
+      "outer_size": 7,
+      "outer_rank": 249,
+      "blocked32": 3534804,
+      "new_rank": 2286898,
+      "exponent": 2.7796319547642048
+    },
+    {
+      "n": 256,
+      "outer_size": 8,
+      "outer_rank": 336,
+      "blocked32": 4769856,
+      "new_rank": 4769856,
+      "exponent": 2.773189285229963
+    },
+    {
+      "n": 291,
+      "outer_size": 10,
+      "outer_rank": 651,
+      "blocked32": 9241596,
+      "new_rank": 7144555,
+      "exponent": 2.7817665842191968
+    },
+    {
+      "n": 292,
+      "outer_size": 10,
+      "outer_rank": 651,
+      "blocked32": 9241596,
+      "new_rank": 7176079,
+      "exponent": 2.7808610768483586
+    },
+    {
+      "n": 370,
+      "outer_size": 12,
+      "outer_rank": 1040,
+      "blocked32": 14763840,
+      "new_rank": 13757428,
+      "exponent": 2.7795858797604915
+    },
+    {
+      "n": 432,
+      "outer_size": 14,
+      "outer_rank": 1593,
+      "blocked32": 22614228,
+      "new_rank": 19665128,
+      "exponent": 2.7674982956679
+    },
+    {
+      "n": 1024,
+      "outer_size": 32,
+      "outer_rank": 14196,
+      "blocked32": 201526416,
+      "new_rank": 198679192,
+      "exponent": 2.7565865543763195
+    }
+  ],
+  "new48_not_strictly_better_than_uniform32": [],
+  "scope": "Uniform32-block padding with current best outer square count at ceil(n/32); fractional exponent extrapolation is not an explicit finite algorithm"
+}

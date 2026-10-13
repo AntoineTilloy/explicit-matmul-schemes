@@ -1,0 +1,5877 @@
+{
+  "field": "Q",
+  "status": "VALIDATED_EXTENDED_RECIPES_INTEGRATED",
+  "changes": [
+    {
+      "n": 137,
+      "rank": 861480,
+      "comparison_rank": 861481,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "7e82379da173173a980818c9d3e0279739bdcc791182aeb47f5e496ad081f394",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 145,
+      "rank": 1006608,
+      "comparison_rank": 1006609,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "192b054d77d54690e7395486dbf71545e625cb77148936ca54241bb7d9424967",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 146,
+      "rank": 1040656,
+      "comparison_rank": 1044715,
+      "saving": 4059,
+      "prior_catalogue_rank": 1044715,
+      "prior_root_object": "d188fa308f61135b63a69d615a8d5bf555386c6178b298e1d039b36a165c019c",
+      "root_object": "8456fdf2832a708d56bc1c540d2e418564de54b62b89ae2654a257eaf0bb844c",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 153,
+      "rank": 1167096,
+      "comparison_rank": 1167097,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "c5fd017d01e086e7d24b09f3bb371d187263c2fdb6a0104d5b2eca544994a0f4",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 154,
+      "rank": 1204996,
+      "comparison_rank": 1211453,
+      "saving": 6457,
+      "prior_catalogue_rank": 1211453,
+      "prior_root_object": "2dad7fe7f5ed280df9e09ae1bfaf18033fd48f43a9cbcc39ecb1e9602557e7fc",
+      "root_object": "ea83fed6ee7051e21d0ac9c3846a2b086afa4c0068e23e351d71651dede76ceb",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 161,
+      "rank": 1343712,
+      "comparison_rank": 1343713,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "47a7675773b5f9dcc04ff6f2ea89f2ebb803164e0dd946ee109d2731637162ad",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 162,
+      "rank": 1385624,
+      "comparison_rank": 1394733,
+      "saving": 9109,
+      "prior_catalogue_rank": 1394733,
+      "prior_root_object": "e767913b8a428026427e0d290e146633a7580367b713e350ceeb50525a9c0a60",
+      "root_object": "10fe49d9e7a39477af4d463ec5a801e50ec1e46e6efe949a14e2911ee4f254b1",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 169,
+      "rank": 1537224,
+      "comparison_rank": 1537225,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "444be37aed12cb83491f0c89c6db1c14de308eb161ad5a5025f9c0e11f3a5a1f",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 177,
+      "rank": 1748400,
+      "comparison_rank": 1748401,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "4d4b9e642e6e8b62d33cee9650896345a5d6b22c56e6cb2e35e44c363c2ab559",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 178,
+      "rank": 1798990,
+      "comparison_rank": 1814857,
+      "saving": 15867,
+      "prior_catalogue_rank": 1814857,
+      "prior_root_object": "efe79581bdeb172091dc5f135e106f201370004274747f9888b1393d161dc75f",
+      "root_object": "307e7cedf7401788a8b569a232a861d8bb797eb1b37eaf6a51b68377fbcba735",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 185,
+      "rank": 1978008,
+      "comparison_rank": 1978009,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "2dc819dd469f655fc80872e7a5b6967c2fd8a27117c4d77e694d111684378edf",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 186,
+      "rank": 2033284,
+      "comparison_rank": 2052507,
+      "saving": 19223,
+      "prior_catalogue_rank": 2052507,
+      "prior_root_object": "783bc6562daeaa9de7232e2f19e99faa4c6cac6cac2438dd07475bbae9e5ea0d",
+      "root_object": "36bf9c5a6631e3514c6b5214e27b97c288b259f92d637cbab9d60fac5ecce50c",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 187,
+      "rank": 2104959,
+      "comparison_rank": 2109033,
+      "saving": 4074,
+      "prior_catalogue_rank": 2109033,
+      "prior_root_object": "d0fc3c49c5d25985a90287cf6c311d68e8faaf618f4c0978c04035592feb84ec",
+      "root_object": "1bb95019df2487a7c2b421ae32518a740f3648a7326667b67706ec98be1962d6",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 193,
+      "rank": 2226816,
+      "comparison_rank": 2226817,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "7b0ab86e106307dba0b3f76b9b5b3ab80abb1d381a534fe107c10039f5a49886",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 194,
+      "rank": 2286898,
+      "comparison_rank": 2309010,
+      "saving": 22112,
+      "prior_catalogue_rank": 2309010,
+      "prior_root_object": "2e0b9ca0dedf7642ca8cdbe13528b67111eb3f3abc86d5582cd94b3fbbbceeac",
+      "root_object": "4890ee4e25712d5a9e05dc2c04fe35b03c5c775dad81fef876f79f20cadd6544",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 195,
+      "rank": 2364873,
+      "comparison_rank": 2370114,
+      "saving": 5241,
+      "prior_catalogue_rank": 2370114,
+      "prior_root_object": "1e8b00e307a039a7dd0eeed97d7dcb26d94bbd86a24a8687e3cd51c18daf1efc",
+      "root_object": "769ab2cacb3749234d5ef9779459c5f3c421c9092b9bc5747fcbbc60f428558c",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 201,
+      "rank": 2495592,
+      "comparison_rank": 2495593,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "58418aaee87451a4932fc8b2f5d3dff65503d6d8611e5427dee331f06c42b32e",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 202,
+      "rank": 2560780,
+      "comparison_rank": 2567799,
+      "saving": 7019,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "b92a14bd3bd03e415e58d334d40213d115219f5a02e620450fc7fa2dfe65e16f",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 209,
+      "rank": 2785104,
+      "comparison_rank": 2785105,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "5e3b6791b89a159abeec49805fafbdb172b9889151728f97cd251d0bbb0d3753",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 211,
+      "rank": 2946273,
+      "comparison_rank": 2946274,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "a549838fa8bbc0aa61246a58b5b9c9a4d6a0f19fc27a8b2c31de3cec9efcafe0",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 217,
+      "rank": 3096120,
+      "comparison_rank": 3096121,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "cb66621745d558e95c703accb0c63c888e564b6e089e0d5b01bd625887115fb3",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 218,
+      "rank": 3172036,
+      "comparison_rank": 3205147,
+      "saving": 33111,
+      "prior_catalogue_rank": 3205147,
+      "prior_root_object": "19ef24847f0bc8ec3eb7a0b6244945cdf0351dcd1733f6deea5a192c92cb9590",
+      "root_object": "062526726cc9ae807505f697b1bdde611049e62b3889c10c500f5075626a80e0",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 225,
+      "rank": 3429408,
+      "comparison_rank": 3429409,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "f8e9391b0559a2a3738296f20e68635a82bb9d3e2925485e72a608a141c8663c",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 233,
+      "rank": 3785736,
+      "comparison_rank": 3785737,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "4866cdb60a029d3bc853cc0186808942687e9652d16c979b5cfa88a64046aaf4",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 234,
+      "rank": 3873196,
+      "comparison_rank": 3911301,
+      "saving": 38105,
+      "prior_catalogue_rank": 3911301,
+      "prior_root_object": "5bda96e868a3c7ddb02216541ddd67434b510ea8eb7f2c39562c9bf4d0ae5942",
+      "root_object": "ee643e9856ce63c19e4ff8bd44c4dc4fc1323c5453e30a859cc7aa8c66329574",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 241,
+      "rank": 4165872,
+      "comparison_rank": 4165873,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "b6fa2356c48db9e02b5ca5080cd4fb4976cc707e311ea5cc085f996cc680a264",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 249,
+      "rank": 4570584,
+      "comparison_rank": 4570585,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "231b84037212994ac97ddbced623204d0f522b4b3b8212ba42e7e391048f474b",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 257,
+      "rank": 4967232,
+      "comparison_rank": 4967233,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "0353da723d0fa58222067f317bfe82932b64eb3145aedad486b2f0bb8388a7c6",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 258,
+      "rank": 5064264,
+      "comparison_rank": 5116608,
+      "saving": 52344,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "9573237b7c4b756f316e0541bb122a5677f7a5c5a907d074ecf47d99759ebc65",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 266,
+      "rank": 5598054,
+      "comparison_rank": 5639088,
+      "saving": 41034,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "28c3dd1339b28c167d5d2abc5d3eb8d60ee3786a3be293de85421ec9a108d4e4",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 267,
+      "rank": 5633862,
+      "comparison_rank": 5639088,
+      "saving": 5226,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "96e076a0544fe0a9763497d1c6b5627b6bf2d615089995e3ad00a748012952fd",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 273,
+      "rank": 5861856,
+      "comparison_rank": 5861857,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "55b913e15ef41f66b1cd4ed0eadce7a177870aa9bcfdf8d073448acf6b8bab53",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 282,
+      "rank": 6579849,
+      "comparison_rank": 6607776,
+      "saving": 27927,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "3a41dd7eaf3cebbe97011f62816762ca8d080aee6ea2895fdeab309a425fb941",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 289,
+      "rank": 6857472,
+      "comparison_rank": 6857473,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "2f4cdeb118128b49a006cba750e16d5e3beebb53886dc0c54d460bf81d0a9008",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 290,
+      "rank": 6991672,
+      "comparison_rank": 7020663,
+      "saving": 28991,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "c9cd05691dd2e72a2b84f91ddeb21dd0c62aa4ec44bd6ad19aeb31c254cdf89f",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 291,
+      "rank": 7144555,
+      "comparison_rank": 7273834,
+      "saving": 129279,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "05b8bd497918366829e3d1d9c024d6fa14faf2ea197940efb2b9999fe207e2dc",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 292,
+      "rank": 7176079,
+      "comparison_rank": 7294224,
+      "saving": 118145,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "5d75eddec531c0865b236407899fe89f8ccf0970c0a32bb58189b1075b9ee4c4",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 305,
+      "rank": 7959456,
+      "comparison_rank": 7959457,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "5399ee259ba4322ae006ce1d31e5c376a0b83f4432eae7a545bb0dbaed155e9d",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 306,
+      "rank": 8109172,
+      "comparison_rank": 8156538,
+      "saving": 47366,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "61c562cac2b2242795a33560df499cce093759ab6f8080dc319951c382a951b1",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 314,
+      "rank": 8857050,
+      "comparison_rank": 8865024,
+      "saving": 7974,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "d872f587cc07cba95435b6fc58f309d632997cecdc4524268e15de0286a1586c",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 321,
+      "rank": 9173184,
+      "comparison_rank": 9173185,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "a16867b050ef69d978a79afc58a77cd21355469223d3bf5a62f40c6df6668137",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 329,
+      "rank": 10076472,
+      "comparison_rank": 10138345,
+      "saving": 61873,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "0184889c9a42f9bd23c15d8542e616b49f36c907ed5866aa94651b8b2549fa78",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 330,
+      "rank": 10161330,
+      "comparison_rank": 10163757,
+      "saving": 2427,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "116c1fc260dd5f9af5d59a9850726417671f4e88dea4bba3af29e1e8262e2f3b",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 337,
+      "rank": 10504032,
+      "comparison_rank": 10504033,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "5bbc5389d8df43c7f4827edf4372577561af46f9bc4ad40f92d9aacd01b671e4",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 338,
+      "rank": 10664091,
+      "comparison_rank": 10760575,
+      "saving": 96484,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "56bbe8303f43855dd7d84d2c607927b76f17f80463164d02bdd86195694772f1",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 345,
+      "rank": 11485824,
+      "comparison_rank": 11495276,
+      "saving": 9452,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "f960a29b947f3d93521e4c070de2eee3fa8dc87f99bbf3f677db9c0394f6ddbd",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 369,
+      "rank": 13538592,
+      "comparison_rank": 13538593,
+      "saving": 1,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "ac30f877ce5a124fde9f46f46d1db94e1cb61230ee50713d6e978b4ad8dac164",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    },
+    {
+      "n": 370,
+      "rank": 13757428,
+      "comparison_rank": 13846063,
+      "saving": 88635,
+      "prior_catalogue_rank": null,
+      "prior_root_object": null,
+      "root_object": "f616a71b39fcfc6d1d94390347e0194e17a3f97d3a1d6894a11a436b445545c7",
+      "classification": "Extended asymmetric rectangular Strassen composition with recursive feedback"
+    }
+  ],
+  "comparison": "Complete certified rational square envelope including all twelve published asymmetric records at b647d9537f4de857164ced14bbefb16c9f65c784",
+  "comparison_commit": "b647d9537f4de857164ced14bbefb16c9f65c784",
+  "prior_catalogue_sha256": "a063a18285c6542f311c38d5ed9bf60788fb49c9141298bc9e2a904380dc2e47",
+  "prior_catalogue_points": 59,
+  "catalogue_points": 97,
+  "inherited_wiring_check": "checks/asymmetric_strassen.json",
+  "independent_integer_recipe_audit": {
+    "status": "FULL_INTEGER_RECIPE_SNAPSHOT_PASS",
+    "nodes": 5988636,
+    "recipe_bytes": 485758481,
+    "child_references": 11460687,
+    "canonical_rectangles": 2829056,
+    "wins": [
+      {
+        "n": 137,
+        "old": 861481,
+        "rank": 861480,
+        "root": 3626422
+      },
+      {
+        "n": 145,
+        "old": 1006609,
+        "rank": 1006608,
+        "root": 3626423
+      },
+      {
+        "n": 146,
+        "old": 1044715,
+        "rank": 1040656,
+        "root": 3626411
+      },
+      {
+        "n": 153,
+        "old": 1167097,
+        "rank": 1167096,
+        "root": 3626424
+      },
+      {
+        "n": 154,
+        "old": 1211453,
+        "rank": 1204996,
+        "root": 3626412
+      },
+      {
+        "n": 161,
+        "old": 1343713,
+        "rank": 1343712,
+        "root": 3626425
+      },
+      {
+        "n": 162,
+        "old": 1394733,
+        "rank": 1385624,
+        "root": 3626413
+      },
+      {
+        "n": 169,
+        "old": 1537225,
+        "rank": 1537224,
+        "root": 3626426
+      },
+      {
+        "n": 177,
+        "old": 1748401,
+        "rank": 1748400,
+        "root": 3626427
+      },
+      {
+        "n": 178,
+        "old": 1814857,
+        "rank": 1798990,
+        "root": 3626414
+      },
+      {
+        "n": 185,
+        "old": 1978009,
+        "rank": 1978008,
+        "root": 3626428
+      },
+      {
+        "n": 186,
+        "old": 2052507,
+        "rank": 2033284,
+        "root": 3626415
+      },
+      {
+        "n": 187,
+        "old": 2109033,
+        "rank": 2104959,
+        "root": 3626429
+      },
+      {
+        "n": 193,
+        "old": 2226817,
+        "rank": 2226816,
+        "root": 3626430
+      },
+      {
+        "n": 194,
+        "old": 2309010,
+        "rank": 2286898,
+        "root": 3626417
+      },
+      {
+        "n": 195,
+        "old": 2370114,
+        "rank": 2364873,
+        "root": 3626431
+      },
+      {
+        "n": 201,
+        "old": 2495593,
+        "rank": 2495592,
+        "root": 3626432
+      },
+      {
+        "n": 202,
+        "old": 2567799,
+        "rank": 2560780,
+        "root": 3626419
+      },
+      {
+        "n": 209,
+        "old": 2785105,
+        "rank": 2785104,
+        "root": 3626433
+      },
+      {
+        "n": 211,
+        "old": 2946274,
+        "rank": 2946273,
+        "root": 3626434
+      },
+      {
+        "n": 217,
+        "old": 3096121,
+        "rank": 3096120,
+        "root": 3626435
+      },
+      {
+        "n": 218,
+        "old": 3205147,
+        "rank": 3172036,
+        "root": 3626420
+      },
+      {
+        "n": 225,
+        "old": 3429409,
+        "rank": 3429408,
+        "root": 3626436
+      },
+      {
+        "n": 233,
+        "old": 3785737,
+        "rank": 3785736,
+        "root": 3626437
+      },
+      {
+        "n": 234,
+        "old": 3911301,
+        "rank": 3873196,
+        "root": 3626421
+      },
+      {
+        "n": 241,
+        "old": 4165873,
+        "rank": 4165872,
+        "root": 3626438
+      },
+      {
+        "n": 249,
+        "old": 4570585,
+        "rank": 4570584,
+        "root": 3626439
+      },
+      {
+        "n": 257,
+        "old": 4967233,
+        "rank": 4967232,
+        "root": 3626440
+      },
+      {
+        "n": 258,
+        "old": 5116608,
+        "rank": 5064264,
+        "root": 3626442
+      },
+      {
+        "n": 266,
+        "old": 5639088,
+        "rank": 5598054,
+        "root": 3626444
+      },
+      {
+        "n": 267,
+        "old": 5639088,
+        "rank": 5633862,
+        "root": 3626445
+      },
+      {
+        "n": 273,
+        "old": 5861857,
+        "rank": 5861856,
+        "root": 5988401
+      },
+      {
+        "n": 282,
+        "old": 6607776,
+        "rank": 6579849,
+        "root": 3626447
+      },
+      {
+        "n": 289,
+        "old": 6857473,
+        "rank": 6857472,
+        "root": 5988402
+      },
+      {
+        "n": 290,
+        "old": 7020663,
+        "rank": 6991672,
+        "root": 3626448
+      },
+      {
+        "n": 291,
+        "old": 7273834,
+        "rank": 7144555,
+        "root": 3626450
+      },
+      {
+        "n": 292,
+        "old": 7294224,
+        "rank": 7176079,
+        "root": 3626451
+      },
+      {
+        "n": 305,
+        "old": 7959457,
+        "rank": 7959456,
+        "root": 5988403
+      },
+      {
+        "n": 306,
+        "old": 8156538,
+        "rank": 8109172,
+        "root": 3626452
+      },
+      {
+        "n": 314,
+        "old": 8865024,
+        "rank": 8857050,
+        "root": 3626453
+      },
+      {
+        "n": 321,
+        "old": 9173185,
+        "rank": 9173184,
+        "root": 5988404
+      },
+      {
+        "n": 329,
+        "old": 10138345,
+        "rank": 10076472,
+        "root": 3626454
+      },
+      {
+        "n": 330,
+        "old": 10163757,
+        "rank": 10161330,
+        "root": 3626455
+      },
+      {
+        "n": 337,
+        "old": 10504033,
+        "rank": 10504032,
+        "root": 5988405
+      },
+      {
+        "n": 338,
+        "old": 10760575,
+        "rank": 10664091,
+        "root": 3626456
+      },
+      {
+        "n": 345,
+        "old": 11495276,
+        "rank": 11485824,
+        "root": 3626457
+      },
+      {
+        "n": 369,
+        "old": 13538593,
+        "rank": 13538592,
+        "root": 5988406
+      },
+      {
+        "n": 370,
+        "old": 13846063,
+        "rank": 13757428,
+        "root": 3626458
+      }
+    ],
+    "rank1024": 198679192,
+    "operations": {
+      "pad": 2166358,
+      "rect_square": 12,
+      "split": 3476462,
+      "square_feedback": 165,
+      "tensor": 15649,
+      "uneven": 329990
+    },
+    "passed": true,
+    "checkpoint_sha256": "3eac21de8aa3335cc3a3ef8111beb94f153bbfa685d1a2f1d0f82d29d522900e",
+    "checkpoint": {
+      "pass": 3,
+      "nodes": 5988636,
+      "recipe_bytes": 485758481,
+      "snapshot": "full256.p3",
+      "square_wins": 48,
+      "rank1024": 198679192
+    },
+    "prior_bindings": {
+      "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/asymmetric128.recipes": "28490a481196c9f844cff2b2b52e12c8fbab2120e0e80159ad41e1194cc06391",
+      "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/asymmetric128.costs.bin": "0cea722aba0ed01476e61cff06f66557170358e6dcf6935ce2df36d86c7ad8d9",
+      "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/asymmetric128.versions.bin": "75d98f5e7b05100212f8992f172fd54258763f62f0dba0988b3b4a6f85a22368",
+      "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/asymmetric128.square.bin": "83b80878005e51b7ba0acd866f1b74a6ffa03892a0f1ed2f6a8439bc3dbd35e0"
+    },
+    "hashes": {
+      "checkpoint": "3eac21de8aa3335cc3a3ef8111beb94f153bbfa685d1a2f1d0f82d29d522900e",
+      "recipe_prefix": "2510b004ad8799389c55d9b458d18dfa57709e319736302bb286ed66b9bcc8a2",
+      "comparison_square": "83b80878005e51b7ba0acd866f1b74a6ffa03892a0f1ed2f6a8439bc3dbd35e0",
+      "original_input128": "940c434a758b41ef5a9e98562d043afd701f097a93e94cc12af1d5e235930984",
+      "original_square": "b112eb0951e867134dcc609c777cac949f1aed131ae005b0a6235aa527db13ef",
+      "catalogue": "a063a18285c6542f311c38d5ed9bf60788fb49c9141298bc9e2a904380dc2e47",
+      "auditor": "66a5a9258c09fd220aca20cfe0024fc9a9b1e6789e868da122e0b6cb05fef1ad",
+      "native_source": "6d031cd372cd598cdf9a6b5b6cb51142dfa0211eefa37f24b660f70a07af1c99",
+      "offsets": "e468f930266d640be9e9344c78b6e4e0f98335863cffb7053e7746c9dd91daf4",
+      "snapshot_costs.bin": "0953a6202966abdf997fc391e632d2ffe62f0a25ab6b568f48dd45b7171dfd41",
+      "snapshot_square.bin": "fc64fde22833e03437e23aaca57eb28a91de0368596731052a095de7c1204c1b",
+      "snapshot_versions.bin": "d3a024e5e39e183924814def95fac63f5617343bb6c57291fe02da05253d5ca3"
+    },
+    "baseline": "Published b647d95 twelve records plus the complete prior certified square envelope; original negative leaves stay separate",
+    "compile_CPU_seconds": 0.6433364960000001,
+    "native_CPU_seconds": 1.6792757669999996,
+    "total_CPU_seconds": 3.1550397739999996,
+    "prior_failed_compile_CPU_seconds": 0.37,
+    "wall_seconds": 2.8219780990039,
+    "offsets_schema": "audit_offsets.bin: little-endian int64, nodes+1 entries; entry0 unused, entryID byte start in recipes",
+    "scientific_host": "Atlas",
+    "CPU_cap": 45
+  },
+  "coefficient_export": {
+    "status": "EXPORT_PENDING_PRIMITIVE_GATES",
+    "points": [
+      {
+        "n": 137,
+        "rank": 861480,
+        "baseline": 861481,
+        "gain": 1,
+        "descriptor": "Q_137.json",
+        "sha256": "41ebad3dc2b4e3f35d63e598da5da8f43daae0d8cb45ff93e18904d530b3b0d5",
+        "nodes": 11
+      },
+      {
+        "n": 145,
+        "rank": 1006608,
+        "baseline": 1006609,
+        "gain": 1,
+        "descriptor": "Q_145.json",
+        "sha256": "5e25f99af0e09bceaeb24b3d57dae41cd4b01869ef2f9e9e4c1fcc34290eaedc",
+        "nodes": 11
+      },
+      {
+        "n": 146,
+        "rank": 1040656,
+        "baseline": 1044715,
+        "gain": 4059,
+        "descriptor": "Q_146.json",
+        "sha256": "b5f60020aacbee2a7d98f50fc583fe0163d16b42efcb4e20d0b9209235913390",
+        "nodes": 87
+      },
+      {
+        "n": 153,
+        "rank": 1167096,
+        "baseline": 1167097,
+        "gain": 1,
+        "descriptor": "Q_153.json",
+        "sha256": "ed708124a10d95e7fcafcc7a48ca0ab85825c89782ef2a24180e8dcaeb1593bb",
+        "nodes": 11
+      },
+      {
+        "n": 154,
+        "rank": 1204996,
+        "baseline": 1211453,
+        "gain": 6457,
+        "descriptor": "Q_154.json",
+        "sha256": "02c9d562d649f046a1e6ba1f585b0325a01b2d89b9014a8b21b5448242a02a4f",
+        "nodes": 64
+      },
+      {
+        "n": 161,
+        "rank": 1343712,
+        "baseline": 1343713,
+        "gain": 1,
+        "descriptor": "Q_161.json",
+        "sha256": "da61d7694ca09716fffd0afb854deee51a108b59a51b564d2bbea0c3b37cbe5d",
+        "nodes": 11
+      },
+      {
+        "n": 162,
+        "rank": 1385624,
+        "baseline": 1394733,
+        "gain": 9109,
+        "descriptor": "Q_162.json",
+        "sha256": "479ecf54e79edfb22c6073505c201c2a9248b012ad84fbef1deb7f69b1a12edb",
+        "nodes": 97
+      },
+      {
+        "n": 169,
+        "rank": 1537224,
+        "baseline": 1537225,
+        "gain": 1,
+        "descriptor": "Q_169.json",
+        "sha256": "ae35d790ea25fa77cfd7851c6910a84273db7dbf663c7410954364f6719463b4",
+        "nodes": 11
+      },
+      {
+        "n": 177,
+        "rank": 1748400,
+        "baseline": 1748401,
+        "gain": 1,
+        "descriptor": "Q_177.json",
+        "sha256": "6dc2b03f2d9e88301406d1f4e5efc9d6374ad12a01b40cfcdc5a1cb4bfdacb30",
+        "nodes": 11
+      },
+      {
+        "n": 178,
+        "rank": 1798990,
+        "baseline": 1814857,
+        "gain": 15867,
+        "descriptor": "Q_178.json",
+        "sha256": "57ba7bcfd7195e6f7d1d9294e7b1934fd64617529482520c1e35f435b2d92577",
+        "nodes": 108
+      },
+      {
+        "n": 185,
+        "rank": 1978008,
+        "baseline": 1978009,
+        "gain": 1,
+        "descriptor": "Q_185.json",
+        "sha256": "63749a9ba2217339650de33004cd121f05752f944ff9e81f3a5538f04c55d0f6",
+        "nodes": 11
+      },
+      {
+        "n": 186,
+        "rank": 2033284,
+        "baseline": 2052507,
+        "gain": 19223,
+        "descriptor": "Q_186.json",
+        "sha256": "b1bbce770985ec1f310132116970b91cb0d885a9bed5c3f7959c1dfc22ac6920",
+        "nodes": 70
+      },
+      {
+        "n": 187,
+        "rank": 2104959,
+        "baseline": 2109033,
+        "gain": 4074,
+        "descriptor": "Q_187.json",
+        "sha256": "65690b3ebc169649d8959325cf58b3f1ef2e2597c1aeb41f54c5f5a2a2ad7aee",
+        "nodes": 99
+      },
+      {
+        "n": 193,
+        "rank": 2226816,
+        "baseline": 2226817,
+        "gain": 1,
+        "descriptor": "Q_193.json",
+        "sha256": "9f6b4606e24436a490fd3295a11a6e01cbdc77f8abd0bcfdbc009eba4b57f8f6",
+        "nodes": 11
+      },
+      {
+        "n": 194,
+        "rank": 2286898,
+        "baseline": 2309010,
+        "gain": 22112,
+        "descriptor": "Q_194.json",
+        "sha256": "2cf822cd22dc8b00b4553204e50fefdf813db85e5ef019cbaf07ed8feac8f05c",
+        "nodes": 100
+      },
+      {
+        "n": 195,
+        "rank": 2364873,
+        "baseline": 2370114,
+        "gain": 5241,
+        "descriptor": "Q_195.json",
+        "sha256": "32643aa650a78e40cb357df7d4350a9e9fdd64833e7fb3182cceaab4d6508886",
+        "nodes": 69
+      },
+      {
+        "n": 201,
+        "rank": 2495592,
+        "baseline": 2495593,
+        "gain": 1,
+        "descriptor": "Q_201.json",
+        "sha256": "858168b3388e74761ac7b3c6157c0964b93a186a3647c5bb894913549d27af77",
+        "nodes": 11
+      },
+      {
+        "n": 202,
+        "rank": 2560780,
+        "baseline": 2567799,
+        "gain": 7019,
+        "descriptor": "Q_202.json",
+        "sha256": "70af9c019b676bc1615f570ba6cf40e2505e4d90fcd119dd35de57f522c80fd1",
+        "nodes": 73
+      },
+      {
+        "n": 209,
+        "rank": 2785104,
+        "baseline": 2785105,
+        "gain": 1,
+        "descriptor": "Q_209.json",
+        "sha256": "fd0316b31e6a3a6640f4fc10e2c7ee3432bf8615a598b5e885db435c6960ffe2",
+        "nodes": 11
+      },
+      {
+        "n": 211,
+        "rank": 2946273,
+        "baseline": 2946274,
+        "gain": 1,
+        "descriptor": "Q_211.json",
+        "sha256": "e0306720f484c7d690d363bd0093434a53c77c29e27ee20cef21ea371f9c49e3",
+        "nodes": 11
+      },
+      {
+        "n": 217,
+        "rank": 3096120,
+        "baseline": 3096121,
+        "gain": 1,
+        "descriptor": "Q_217.json",
+        "sha256": "ddc2a9c1c49b9ff60f6e1b2784e7727e745eeb45baae63f3271298d047ccdb73",
+        "nodes": 11
+      },
+      {
+        "n": 218,
+        "rank": 3172036,
+        "baseline": 3205147,
+        "gain": 33111,
+        "descriptor": "Q_218.json",
+        "sha256": "dde0f1ea15054323d4da6c735efef14d338044b9b9d10ace8dee953bec3818db",
+        "nodes": 75
+      },
+      {
+        "n": 225,
+        "rank": 3429408,
+        "baseline": 3429409,
+        "gain": 1,
+        "descriptor": "Q_225.json",
+        "sha256": "cef6023372dc9005509f1ce8ad1eef025ab65f5f700ca878ef0286a25158b64e",
+        "nodes": 11
+      },
+      {
+        "n": 233,
+        "rank": 3785736,
+        "baseline": 3785737,
+        "gain": 1,
+        "descriptor": "Q_233.json",
+        "sha256": "2f6ef36020e3e1efc4b7241b26089d94cc2691711e1c1bb27500c83cb75bcbb9",
+        "nodes": 11
+      },
+      {
+        "n": 234,
+        "rank": 3873196,
+        "baseline": 3911301,
+        "gain": 38105,
+        "descriptor": "Q_234.json",
+        "sha256": "72ff4ed8354f0bc485b66847ccd7efa10e373e9baf0390c4f9c358b6c78507b9",
+        "nodes": 79
+      },
+      {
+        "n": 241,
+        "rank": 4165872,
+        "baseline": 4165873,
+        "gain": 1,
+        "descriptor": "Q_241.json",
+        "sha256": "1ef91a8a72ef319763fc603bdaf39e4dc3d17c3015ad34f98f5440c60d4de0bc",
+        "nodes": 11
+      },
+      {
+        "n": 249,
+        "rank": 4570584,
+        "baseline": 4570585,
+        "gain": 1,
+        "descriptor": "Q_249.json",
+        "sha256": "d1a359da0697f566209e7d1c2fe4f034ba5117700780c9d3f6d1e15c7cb04bd7",
+        "nodes": 11
+      },
+      {
+        "n": 257,
+        "rank": 4967232,
+        "baseline": 4967233,
+        "gain": 1,
+        "descriptor": "Q_257.json",
+        "sha256": "5733a5bbc7d61f50674e6b2a06f59aace4b7957f28f0080fc6f6d47c94812b30",
+        "nodes": 12
+      },
+      {
+        "n": 258,
+        "rank": 5064264,
+        "baseline": 5116608,
+        "gain": 52344,
+        "descriptor": "Q_258.json",
+        "sha256": "d7b25fd10ed30d94f6bb76d7c4bc7e9a5fbcc95cbbb51f22fcbc7fcbfc7745cc",
+        "nodes": 39
+      },
+      {
+        "n": 266,
+        "rank": 5598054,
+        "baseline": 5639088,
+        "gain": 41034,
+        "descriptor": "Q_266.json",
+        "sha256": "0c2861df01410b3fa7e7de2b9d300d731cd0606924a7dcba6f5f5921d2b7ff96",
+        "nodes": 58
+      },
+      {
+        "n": 267,
+        "rank": 5633862,
+        "baseline": 5639088,
+        "gain": 5226,
+        "descriptor": "Q_267.json",
+        "sha256": "0d594c42d4bbd798d3fe5374408a2670d466f34824c112c43c4c5cfde34b74cd",
+        "nodes": 60
+      },
+      {
+        "n": 273,
+        "rank": 5861856,
+        "baseline": 5861857,
+        "gain": 1,
+        "descriptor": "Q_273.json",
+        "sha256": "f187ee7722b8111c375f0d1e2826649a4b990d7b5933599f32b3590e1443d3e3",
+        "nodes": 19
+      },
+      {
+        "n": 282,
+        "rank": 6579849,
+        "baseline": 6607776,
+        "gain": 27927,
+        "descriptor": "Q_282.json",
+        "sha256": "0c1f24ed4b130cbf916ab953a2839cd5ae01051946d57c1500a46d9c4b4015b7",
+        "nodes": 36
+      },
+      {
+        "n": 289,
+        "rank": 6857472,
+        "baseline": 6857473,
+        "gain": 1,
+        "descriptor": "Q_289.json",
+        "sha256": "285b1f9d457b1d2279ab9e21f566cb5a0da72a2419bf82816bb0bf6db8dc9e66",
+        "nodes": 19
+      },
+      {
+        "n": 290,
+        "rank": 6991672,
+        "baseline": 7020663,
+        "gain": 28991,
+        "descriptor": "Q_290.json",
+        "sha256": "fc27e42fb6356c8ec84b61409c78105997dc1077cb545777339a473c42a502c5",
+        "nodes": 93
+      },
+      {
+        "n": 291,
+        "rank": 7144555,
+        "baseline": 7273834,
+        "gain": 129279,
+        "descriptor": "Q_291.json",
+        "sha256": "df50fca5796ba4ef9fd985b00bb7aa06e31a18869871dc06de642814d7f41be1",
+        "nodes": 69
+      },
+      {
+        "n": 292,
+        "rank": 7176079,
+        "baseline": 7294224,
+        "gain": 118145,
+        "descriptor": "Q_292.json",
+        "sha256": "d7a1ba683b3a2c84765484cdc7e8deecddd1df28f864f7566f5310eb4c3f065b",
+        "nodes": 26
+      },
+      {
+        "n": 305,
+        "rank": 7959456,
+        "baseline": 7959457,
+        "gain": 1,
+        "descriptor": "Q_305.json",
+        "sha256": "f0c25e25fb02aa545221113ce6bd2d9a512eeeac7aa9e6d6ddb716092815dcb1",
+        "nodes": 19
+      },
+      {
+        "n": 306,
+        "rank": 8109172,
+        "baseline": 8156538,
+        "gain": 47366,
+        "descriptor": "Q_306.json",
+        "sha256": "be511f991a577081afbbdfa4ecf3ae702af2b2172824f1c5178a4a04f0f00e27",
+        "nodes": 70
+      },
+      {
+        "n": 314,
+        "rank": 8857050,
+        "baseline": 8865024,
+        "gain": 7974,
+        "descriptor": "Q_314.json",
+        "sha256": "14082a0f2da83bf289909caf3173809eb7688963671a5c067bcdf180c2e6e75c",
+        "nodes": 93
+      },
+      {
+        "n": 321,
+        "rank": 9173184,
+        "baseline": 9173185,
+        "gain": 1,
+        "descriptor": "Q_321.json",
+        "sha256": "7bee0b0a9aeb8557d25262ace4885edffeda08e3e442ac925729b0e1329b6dcf",
+        "nodes": 19
+      },
+      {
+        "n": 329,
+        "rank": 10076472,
+        "baseline": 10138345,
+        "gain": 61873,
+        "descriptor": "Q_329.json",
+        "sha256": "a75a5ceac71ac5fc74369ac9fe3531c2b14af1cabc18c701ba2973a0688249a7",
+        "nodes": 29
+      },
+      {
+        "n": 330,
+        "rank": 10161330,
+        "baseline": 10163757,
+        "gain": 2427,
+        "descriptor": "Q_330.json",
+        "sha256": "1aec962114df47e6c9bfd605276bc18bf0dac1692b44ed8045ee38a8edce4515",
+        "nodes": 42
+      },
+      {
+        "n": 337,
+        "rank": 10504032,
+        "baseline": 10504033,
+        "gain": 1,
+        "descriptor": "Q_337.json",
+        "sha256": "3e2e2d41b04250b688aace4d5f89f75f6aea804a146352d0f17b50f936fcdd07",
+        "nodes": 19
+      },
+      {
+        "n": 338,
+        "rank": 10664091,
+        "baseline": 10760575,
+        "gain": 96484,
+        "descriptor": "Q_338.json",
+        "sha256": "bc1c6a8dc09207a91dbbc96218106ade9b68d51cc61c39bfc326dd1a5d4a9f65",
+        "nodes": 67
+      },
+      {
+        "n": 345,
+        "rank": 11485824,
+        "baseline": 11495276,
+        "gain": 9452,
+        "descriptor": "Q_345.json",
+        "sha256": "d7bd511d4ee243d7b62e6179b202f30377f55fa9e43ff1bb0fc8e3b2a0db0ade",
+        "nodes": 29
+      },
+      {
+        "n": 369,
+        "rank": 13538592,
+        "baseline": 13538593,
+        "gain": 1,
+        "descriptor": "Q_369.json",
+        "sha256": "e88b64821e742cec1a9a886ea42301988633ce60b7287f61a9d34d8549728266",
+        "nodes": 19
+      },
+      {
+        "n": 370,
+        "rank": 13757428,
+        "baseline": 13846063,
+        "gain": 88635,
+        "descriptor": "Q_370.json",
+        "sha256": "610bd8215a945c3a4dfd659dbed3eedb022bf659526ac39b35d1525d2e46d34f",
+        "nodes": 76
+      }
+    ],
+    "ancestry": {
+      "positive_nodes": 636,
+      "operations": {
+        "split": 521,
+        "uneven": 44,
+        "pad": 27,
+        "tensor": 4,
+        "square_feedback": 31,
+        "rect_square": 9
+      },
+      "negative_rectangles": [
+        {
+          "dims": [
+            1,
+            1,
+            136
+          ],
+          "rank": 136,
+          "ref": -66443
+        },
+        {
+          "dims": [
+            1,
+            1,
+            144
+          ],
+          "rank": 144,
+          "ref": -66451
+        },
+        {
+          "dims": [
+            1,
+            1,
+            152
+          ],
+          "rank": 152,
+          "ref": -66459
+        },
+        {
+          "dims": [
+            1,
+            1,
+            160
+          ],
+          "rank": 160,
+          "ref": -66467
+        },
+        {
+          "dims": [
+            1,
+            1,
+            168
+          ],
+          "rank": 168,
+          "ref": -66475
+        },
+        {
+          "dims": [
+            1,
+            1,
+            176
+          ],
+          "rank": 176,
+          "ref": -66483
+        },
+        {
+          "dims": [
+            1,
+            1,
+            184
+          ],
+          "rank": 184,
+          "ref": -66491
+        },
+        {
+          "dims": [
+            1,
+            1,
+            192
+          ],
+          "rank": 192,
+          "ref": -66499
+        },
+        {
+          "dims": [
+            1,
+            1,
+            200
+          ],
+          "rank": 200,
+          "ref": -66507
+        },
+        {
+          "dims": [
+            1,
+            1,
+            208
+          ],
+          "rank": 208,
+          "ref": -66515
+        },
+        {
+          "dims": [
+            1,
+            1,
+            210
+          ],
+          "rank": 210,
+          "ref": -66517
+        },
+        {
+          "dims": [
+            1,
+            1,
+            216
+          ],
+          "rank": 216,
+          "ref": -66523
+        },
+        {
+          "dims": [
+            1,
+            1,
+            224
+          ],
+          "rank": 224,
+          "ref": -66531
+        },
+        {
+          "dims": [
+            1,
+            1,
+            232
+          ],
+          "rank": 232,
+          "ref": -66539
+        },
+        {
+          "dims": [
+            1,
+            1,
+            240
+          ],
+          "rank": 240,
+          "ref": -66547
+        },
+        {
+          "dims": [
+            1,
+            1,
+            248
+          ],
+          "rank": 248,
+          "ref": -66555
+        },
+        {
+          "dims": [
+            1,
+            1,
+            256
+          ],
+          "rank": 256,
+          "ref": -66563
+        },
+        {
+          "dims": [
+            1,
+            136,
+            1
+          ],
+          "rank": 136,
+          "ref": -101003
+        },
+        {
+          "dims": [
+            1,
+            136,
+            136
+          ],
+          "rank": 18496,
+          "ref": -101138
+        },
+        {
+          "dims": [
+            1,
+            144,
+            1
+          ],
+          "rank": 144,
+          "ref": -103059
+        },
+        {
+          "dims": [
+            1,
+            144,
+            144
+          ],
+          "rank": 20736,
+          "ref": -103202
+        },
+        {
+          "dims": [
+            1,
+            152,
+            1
+          ],
+          "rank": 152,
+          "ref": -105115
+        },
+        {
+          "dims": [
+            1,
+            152,
+            152
+          ],
+          "rank": 23104,
+          "ref": -105266
+        },
+        {
+          "dims": [
+            1,
+            160,
+            1
+          ],
+          "rank": 160,
+          "ref": -107171
+        },
+        {
+          "dims": [
+            1,
+            160,
+            160
+          ],
+          "rank": 25600,
+          "ref": -107330
+        },
+        {
+          "dims": [
+            1,
+            161,
+            168
+          ],
+          "rank": 27048,
+          "ref": -107595
+        },
+        {
+          "dims": [
+            1,
+            168,
+            1
+          ],
+          "rank": 168,
+          "ref": -109227
+        },
+        {
+          "dims": [
+            1,
+            168,
+            168
+          ],
+          "rank": 28224,
+          "ref": -109394
+        },
+        {
+          "dims": [
+            1,
+            169,
+            176
+          ],
+          "rank": 29744,
+          "ref": -109659
+        },
+        {
+          "dims": [
+            1,
+            176,
+            1
+          ],
+          "rank": 176,
+          "ref": -111283
+        },
+        {
+          "dims": [
+            1,
+            176,
+            176
+          ],
+          "rank": 30976,
+          "ref": -111458
+        },
+        {
+          "dims": [
+            1,
+            184,
+            1
+          ],
+          "rank": 184,
+          "ref": -113339
+        },
+        {
+          "dims": [
+            1,
+            184,
+            184
+          ],
+          "rank": 33856,
+          "ref": -113522
+        },
+        {
+          "dims": [
+            1,
+            192,
+            1
+          ],
+          "rank": 192,
+          "ref": -115395
+        },
+        {
+          "dims": [
+            1,
+            192,
+            192
+          ],
+          "rank": 36864,
+          "ref": -115586
+        },
+        {
+          "dims": [
+            1,
+            200,
+            1
+          ],
+          "rank": 200,
+          "ref": -117451
+        },
+        {
+          "dims": [
+            1,
+            200,
+            200
+          ],
+          "rank": 40000,
+          "ref": -117650
+        },
+        {
+          "dims": [
+            1,
+            208,
+            1
+          ],
+          "rank": 208,
+          "ref": -119507
+        },
+        {
+          "dims": [
+            1,
+            208,
+            208
+          ],
+          "rank": 43264,
+          "ref": -119714
+        },
+        {
+          "dims": [
+            1,
+            210,
+            1
+          ],
+          "rank": 210,
+          "ref": -120021
+        },
+        {
+          "dims": [
+            1,
+            210,
+            210
+          ],
+          "rank": 44100,
+          "ref": -120230
+        },
+        {
+          "dims": [
+            1,
+            216,
+            1
+          ],
+          "rank": 216,
+          "ref": -121563
+        },
+        {
+          "dims": [
+            1,
+            216,
+            216
+          ],
+          "rank": 46656,
+          "ref": -121778
+        },
+        {
+          "dims": [
+            1,
+            224,
+            1
+          ],
+          "rank": 224,
+          "ref": -123619
+        },
+        {
+          "dims": [
+            1,
+            224,
+            224
+          ],
+          "rank": 50176,
+          "ref": -123842
+        },
+        {
+          "dims": [
+            1,
+            232,
+            1
+          ],
+          "rank": 232,
+          "ref": -125675
+        },
+        {
+          "dims": [
+            1,
+            232,
+            232
+          ],
+          "rank": 53824,
+          "ref": -125906
+        },
+        {
+          "dims": [
+            1,
+            240,
+            1
+          ],
+          "rank": 240,
+          "ref": -127731
+        },
+        {
+          "dims": [
+            1,
+            240,
+            240
+          ],
+          "rank": 57600,
+          "ref": -127970
+        },
+        {
+          "dims": [
+            1,
+            248,
+            1
+          ],
+          "rank": 248,
+          "ref": -129787
+        },
+        {
+          "dims": [
+            1,
+            248,
+            248
+          ],
+          "rank": 61504,
+          "ref": -130034
+        },
+        {
+          "dims": [
+            1,
+            256,
+            1
+          ],
+          "rank": 256,
+          "ref": -131843
+        },
+        {
+          "dims": [
+            1,
+            256,
+            256
+          ],
+          "rank": 65536,
+          "ref": -132098
+        },
+        {
+          "dims": [
+            2,
+            4,
+            4
+          ],
+          "rank": 26,
+          "ref": -133131
+        },
+        {
+          "dims": [
+            2,
+            4,
+            5
+          ],
+          "rank": 32,
+          "ref": -133132
+        },
+        {
+          "dims": [
+            2,
+            5,
+            5
+          ],
+          "rank": 40,
+          "ref": -133389
+        },
+        {
+          "dims": [
+            2,
+            12,
+            12
+          ],
+          "rank": 222,
+          "ref": -135195
+        },
+        {
+          "dims": [
+            2,
+            14,
+            14
+          ],
+          "rank": 301,
+          "ref": -135711
+        },
+        {
+          "dims": [
+            2,
+            14,
+            118
+          ],
+          "rank": 2537,
+          "ref": -135815
+        },
+        {
+          "dims": [
+            2,
+            14,
+            122
+          ],
+          "rank": 2623,
+          "ref": -135819
+        },
+        {
+          "dims": [
+            2,
+            15,
+            11
+          ],
+          "rank": 255,
+          "ref": -135965
+        },
+        {
+          "dims": [
+            2,
+            15,
+            13
+          ],
+          "rank": 300,
+          "ref": -135967
+        },
+        {
+          "dims": [
+            2,
+            15,
+            15
+          ],
+          "rank": 345,
+          "ref": -135969
+        },
+        {
+          "dims": [
+            2,
+            15,
+            16
+          ],
+          "rank": 368,
+          "ref": -135970
+        },
+        {
+          "dims": [
+            2,
+            15,
+            120
+          ],
+          "rank": 2760,
+          "ref": -136074
+        },
+        {
+          "dims": [
+            2,
+            15,
+            121
+          ],
+          "rank": 2783,
+          "ref": -136075
+        },
+        {
+          "dims": [
+            2,
+            15,
+            122
+          ],
+          "rank": 2806,
+          "ref": -136076
+        },
+        {
+          "dims": [
+            2,
+            15,
+            123
+          ],
+          "rank": 2829,
+          "ref": -136077
+        },
+        {
+          "dims": [
+            2,
+            15,
+            124
+          ],
+          "rank": 2852,
+          "ref": -136078
+        },
+        {
+          "dims": [
+            2,
+            15,
+            125
+          ],
+          "rank": 2875,
+          "ref": -136079
+        },
+        {
+          "dims": [
+            2,
+            15,
+            126
+          ],
+          "rank": 2898,
+          "ref": -136080
+        },
+        {
+          "dims": [
+            2,
+            15,
+            127
+          ],
+          "rank": 2921,
+          "ref": -136081
+        },
+        {
+          "dims": [
+            2,
+            15,
+            128
+          ],
+          "rank": 2944,
+          "ref": -136082
+        },
+        {
+          "dims": [
+            2,
+            16,
+            4
+          ],
+          "rank": 102,
+          "ref": -136215
+        },
+        {
+          "dims": [
+            2,
+            16,
+            8
+          ],
+          "rank": 200,
+          "ref": -136219
+        },
+        {
+          "dims": [
+            2,
+            16,
+            10
+          ],
+          "rank": 248,
+          "ref": -136221
+        },
+        {
+          "dims": [
+            2,
+            16,
+            13
+          ],
+          "rank": 320,
+          "ref": -136224
+        },
+        {
+          "dims": [
+            2,
+            16,
+            14
+          ],
+          "rank": 344,
+          "ref": -136225
+        },
+        {
+          "dims": [
+            2,
+            16,
+            16
+          ],
+          "rank": 392,
+          "ref": -136227
+        },
+        {
+          "dims": [
+            2,
+            16,
+            128
+          ],
+          "rank": 3136,
+          "ref": -136339
+        },
+        {
+          "dims": [
+            2,
+            21,
+            14
+          ],
+          "rank": 453,
+          "ref": -137510
+        },
+        {
+          "dims": [
+            2,
+            21,
+            120
+          ],
+          "rank": 3880,
+          "ref": -137616
+        },
+        {
+          "dims": [
+            2,
+            30,
+            14
+          ],
+          "rank": 645,
+          "ref": -139823
+        },
+        {
+          "dims": [
+            2,
+            32,
+            5
+          ],
+          "rank": 251,
+          "ref": -140328
+        },
+        {
+          "dims": [
+            2,
+            32,
+            6
+          ],
+          "rank": 299,
+          "ref": -140329
+        },
+        {
+          "dims": [
+            2,
+            32,
+            125
+          ],
+          "rank": 6128,
+          "ref": -140448
+        },
+        {
+          "dims": [
+            2,
+            32,
+            128
+          ],
+          "rank": 6272,
+          "ref": -140451
+        },
+        {
+          "dims": [
+            2,
+            48,
+            5
+          ],
+          "rank": 376,
+          "ref": -144440
+        },
+        {
+          "dims": [
+            2,
+            48,
+            6
+          ],
+          "rank": 448,
+          "ref": -144441
+        },
+        {
+          "dims": [
+            2,
+            48,
+            125
+          ],
+          "rank": 9192,
+          "ref": -144560
+        },
+        {
+          "dims": [
+            2,
+            48,
+            128
+          ],
+          "rank": 9408,
+          "ref": -144563
+        },
+        {
+          "dims": [
+            2,
+            60,
+            15
+          ],
+          "rank": 1380,
+          "ref": -147534
+        },
+        {
+          "dims": [
+            2,
+            60,
+            116
+          ],
+          "rank": 10677,
+          "ref": -147635
+        },
+        {
+          "dims": [
+            2,
+            86,
+            14
+          ],
+          "rank": 1849,
+          "ref": -154215
+        },
+        {
+          "dims": [
+            2,
+            86,
+            117
+          ],
+          "rank": 15438,
+          "ref": -154318
+        },
+        {
+          "dims": [
+            2,
+            102,
+            14
+          ],
+          "rank": 2193,
+          "ref": -158327
+        },
+        {
+          "dims": [
+            2,
+            102,
+            36
+          ],
+          "rank": 5646,
+          "ref": -158349
+        },
+        {
+          "dims": [
+            2,
+            102,
+            96
+          ],
+          "rank": 15008,
+          "ref": -158409
+        },
+        {
+          "dims": [
+            2,
+            118,
+            15
+          ],
+          "rank": 2715,
+          "ref": -162440
+        },
+        {
+          "dims": [
+            2,
+            118,
+            21
+          ],
+          "rank": 3816,
+          "ref": -162446
+        },
+        {
+          "dims": [
+            2,
+            118,
+            117
+          ],
+          "rank": 21176,
+          "ref": -162542
+        },
+        {
+          "dims": [
+            2,
+            118,
+            128
+          ],
+          "rank": 23147,
+          "ref": -162553
+        },
+        {
+          "dims": [
+            3,
+            3,
+            4
+          ],
+          "rank": 29,
+          "ref": -198923
+        },
+        {
+          "dims": [
+            3,
+            3,
+            6
+          ],
+          "rank": 40,
+          "ref": -198925
+        },
+        {
+          "dims": [
+            3,
+            3,
+            126
+          ],
+          "rank": 840,
+          "ref": -199045
+        },
+        {
+          "dims": [
+            3,
+            10,
+            16
+          ],
+          "rank": 355,
+          "ref": -200734
+        },
+        {
+          "dims": [
+            3,
+            10,
+            128
+          ],
+          "rank": 2840,
+          "ref": -200846
+        },
+        {
+          "dims": [
+            3,
+            16,
+            6
+          ],
+          "rank": 214,
+          "ref": -202266
+        },
+        {
+          "dims": [
+            3,
+            16,
+            10
+          ],
+          "rank": 355,
+          "ref": -202270
+        },
+        {
+          "dims": [
+            3,
+            16,
+            120
+          ],
+          "rank": 4260,
+          "ref": -202380
+        },
+        {
+          "dims": [
+            3,
+            16,
+            128
+          ],
+          "rank": 4545,
+          "ref": -202388
+        },
+        {
+          "dims": [
+            3,
+            20,
+            4
+          ],
+          "rank": 180,
+          "ref": -203292
+        },
+        {
+          "dims": [
+            3,
+            20,
+            128
+          ],
+          "rank": 5680,
+          "ref": -203416
+        },
+        {
+          "dims": [
+            3,
+            30,
+            3
+          ],
+          "rank": 200,
+          "ref": -205861
+        },
+        {
+          "dims": [
+            3,
+            36,
+            3
+          ],
+          "rank": 240,
+          "ref": -207403
+        },
+        {
+          "dims": [
+            3,
+            42,
+            3
+          ],
+          "rank": 280,
+          "ref": -208945
+        },
+        {
+          "dims": [
+            3,
+            48,
+            3
+          ],
+          "rank": 320,
+          "ref": -210487
+        },
+        {
+          "dims": [
+            3,
+            80,
+            10
+          ],
+          "rank": 1775,
+          "ref": -218718
+        },
+        {
+          "dims": [
+            3,
+            92,
+            42
+          ],
+          "rank": 8575,
+          "ref": -221834
+        },
+        {
+          "dims": [
+            3,
+            112,
+            10
+          ],
+          "rank": 2485,
+          "ref": -226942
+        },
+        {
+          "dims": [
+            3,
+            112,
+            122
+          ],
+          "rank": 30320,
+          "ref": -227054
+        },
+        {
+          "dims": [
+            4,
+            4,
+            4
+          ],
+          "rank": 48,
+          "ref": -265229
+        },
+        {
+          "dims": [
+            4,
+            4,
+            10
+          ],
+          "rank": 115,
+          "ref": -265235
+        },
+        {
+          "dims": [
+            4,
+            4,
+            120
+          ],
+          "rank": 1380,
+          "ref": -265345
+        },
+        {
+          "dims": [
+            4,
+            8,
+            8
+          ],
+          "rank": 180,
+          "ref": -266261
+        },
+        {
+          "dims": [
+            4,
+            8,
+            10
+          ],
+          "rank": 224,
+          "ref": -266263
+        },
+        {
+          "dims": [
+            4,
+            8,
+            22
+          ],
+          "rank": 490,
+          "ref": -266275
+        },
+        {
+          "dims": [
+            4,
+            8,
+            110
+          ],
+          "rank": 2450,
+          "ref": -266363
+        },
+        {
+          "dims": [
+            4,
+            30,
+            30
+          ],
+          "rank": 2209,
+          "ref": -271937
+        },
+        {
+          "dims": [
+            4,
+            40,
+            32
+          ],
+          "rank": 3200,
+          "ref": -274509
+        },
+        {
+          "dims": [
+            4,
+            42,
+            42
+          ],
+          "rank": 4256,
+          "ref": -275033
+        },
+        {
+          "dims": [
+            34,
+            34,
+            36
+          ],
+          "rank": 18567,
+          "ref": -2254441
+        },
+        {
+          "dims": [
+            34,
+            36,
+            36
+          ],
+          "rank": 19666,
+          "ref": -2254955
+        },
+        {
+          "dims": [
+            36,
+            34,
+            36
+          ],
+          "rank": 19666,
+          "ref": -2386539
+        },
+        {
+          "dims": [
+            36,
+            36,
+            36
+          ],
+          "rank": 19666,
+          "ref": -2387053
+        },
+        {
+          "dims": [
+            40,
+            40,
+            42
+          ],
+          "rank": 28845,
+          "ref": -2652283
+        },
+        {
+          "dims": [
+            40,
+            42,
+            42
+          ],
+          "rank": 30251,
+          "ref": -2652797
+        },
+        {
+          "dims": [
+            42,
+            40,
+            42
+          ],
+          "rank": 30251,
+          "ref": -2784381
+        },
+        {
+          "dims": [
+            42,
+            42,
+            42
+          ],
+          "rank": 30251,
+          "ref": -2784895
+        },
+        {
+          "dims": [
+            70,
+            70,
+            70
+          ],
+          "rank": 129469,
+          "ref": -4641491
+        },
+        {
+          "dims": [
+            80,
+            80,
+            84
+          ],
+          "rank": 200188,
+          "ref": -5304565
+        },
+        {
+          "dims": [
+            128,
+            128,
+            2
+          ],
+          "rank": 25088,
+          "ref": -8487171
+        },
+        {
+          "dims": [
+            128,
+            128,
+            128
+          ],
+          "rank": 681408,
+          "ref": -8487297
+        },
+        {
+          "dims": [
+            136,
+            1,
+            1
+          ],
+          "rank": 136,
+          "ref": -8982923
+        },
+        {
+          "dims": [
+            136,
+            1,
+            136
+          ],
+          "rank": 18496,
+          "ref": -8983058
+        },
+        {
+          "dims": [
+            136,
+            1,
+            137
+          ],
+          "rank": 18632,
+          "ref": -8983059
+        },
+        {
+          "dims": [
+            136,
+            136,
+            1
+          ],
+          "rank": 18496,
+          "ref": -9017618
+        },
+        {
+          "dims": [
+            144,
+            1,
+            1
+          ],
+          "rank": 144,
+          "ref": -9511315
+        },
+        {
+          "dims": [
+            144,
+            1,
+            144
+          ],
+          "rank": 20736,
+          "ref": -9511458
+        },
+        {
+          "dims": [
+            144,
+            1,
+            145
+          ],
+          "rank": 20880,
+          "ref": -9511459
+        },
+        {
+          "dims": [
+            144,
+            144,
+            1
+          ],
+          "rank": 20736,
+          "ref": -9548066
+        },
+        {
+          "dims": [
+            152,
+            1,
+            1
+          ],
+          "rank": 152,
+          "ref": -10039707
+        },
+        {
+          "dims": [
+            152,
+            1,
+            152
+          ],
+          "rank": 23104,
+          "ref": -10039858
+        },
+        {
+          "dims": [
+            152,
+            1,
+            153
+          ],
+          "rank": 23256,
+          "ref": -10039859
+        },
+        {
+          "dims": [
+            152,
+            152,
+            1
+          ],
+          "rank": 23104,
+          "ref": -10078514
+        },
+        {
+          "dims": [
+            160,
+            1,
+            1
+          ],
+          "rank": 160,
+          "ref": -10568099
+        },
+        {
+          "dims": [
+            160,
+            1,
+            160
+          ],
+          "rank": 25600,
+          "ref": -10568258
+        },
+        {
+          "dims": [
+            160,
+            1,
+            161
+          ],
+          "rank": 25760,
+          "ref": -10568259
+        },
+        {
+          "dims": [
+            160,
+            1,
+            168
+          ],
+          "rank": 26880,
+          "ref": -10568266
+        },
+        {
+          "dims": [
+            160,
+            160,
+            1
+          ],
+          "rank": 25600,
+          "ref": -10608962
+        },
+        {
+          "dims": [
+            168,
+            1,
+            1
+          ],
+          "rank": 168,
+          "ref": -11096491
+        },
+        {
+          "dims": [
+            168,
+            1,
+            168
+          ],
+          "rank": 28224,
+          "ref": -11096658
+        },
+        {
+          "dims": [
+            168,
+            1,
+            169
+          ],
+          "rank": 28392,
+          "ref": -11096659
+        },
+        {
+          "dims": [
+            168,
+            1,
+            176
+          ],
+          "rank": 29568,
+          "ref": -11096666
+        },
+        {
+          "dims": [
+            168,
+            168,
+            1
+          ],
+          "rank": 28224,
+          "ref": -11139410
+        },
+        {
+          "dims": [
+            176,
+            1,
+            1
+          ],
+          "rank": 176,
+          "ref": -11624883
+        },
+        {
+          "dims": [
+            176,
+            1,
+            176
+          ],
+          "rank": 30976,
+          "ref": -11625058
+        },
+        {
+          "dims": [
+            176,
+            176,
+            1
+          ],
+          "rank": 30976,
+          "ref": -11669858
+        },
+        {
+          "dims": [
+            184,
+            1,
+            1
+          ],
+          "rank": 184,
+          "ref": -12153275
+        },
+        {
+          "dims": [
+            184,
+            1,
+            184
+          ],
+          "rank": 33856,
+          "ref": -12153458
+        },
+        {
+          "dims": [
+            184,
+            1,
+            185
+          ],
+          "rank": 34040,
+          "ref": -12153459
+        },
+        {
+          "dims": [
+            184,
+            184,
+            1
+          ],
+          "rank": 33856,
+          "ref": -12200306
+        },
+        {
+          "dims": [
+            192,
+            1,
+            1
+          ],
+          "rank": 192,
+          "ref": -12681667
+        },
+        {
+          "dims": [
+            192,
+            1,
+            192
+          ],
+          "rank": 36864,
+          "ref": -12681858
+        },
+        {
+          "dims": [
+            192,
+            192,
+            1
+          ],
+          "rank": 36864,
+          "ref": -12730754
+        },
+        {
+          "dims": [
+            200,
+            1,
+            1
+          ],
+          "rank": 200,
+          "ref": -13210059
+        },
+        {
+          "dims": [
+            200,
+            1,
+            200
+          ],
+          "rank": 40000,
+          "ref": -13210258
+        },
+        {
+          "dims": [
+            200,
+            200,
+            1
+          ],
+          "rank": 40000,
+          "ref": -13261202
+        },
+        {
+          "dims": [
+            208,
+            1,
+            1
+          ],
+          "rank": 208,
+          "ref": -13738451
+        },
+        {
+          "dims": [
+            208,
+            1,
+            208
+          ],
+          "rank": 43264,
+          "ref": -13738658
+        },
+        {
+          "dims": [
+            208,
+            208,
+            1
+          ],
+          "rank": 43264,
+          "ref": -13791650
+        },
+        {
+          "dims": [
+            210,
+            1,
+            1
+          ],
+          "rank": 210,
+          "ref": -13870549
+        },
+        {
+          "dims": [
+            210,
+            1,
+            210
+          ],
+          "rank": 44100,
+          "ref": -13870758
+        },
+        {
+          "dims": [
+            210,
+            210,
+            1
+          ],
+          "rank": 44100,
+          "ref": -13924262
+        },
+        {
+          "dims": [
+            216,
+            1,
+            1
+          ],
+          "rank": 216,
+          "ref": -14266843
+        },
+        {
+          "dims": [
+            216,
+            1,
+            216
+          ],
+          "rank": 46656,
+          "ref": -14267058
+        },
+        {
+          "dims": [
+            216,
+            216,
+            1
+          ],
+          "rank": 46656,
+          "ref": -14322098
+        },
+        {
+          "dims": [
+            224,
+            1,
+            1
+          ],
+          "rank": 224,
+          "ref": -14795235
+        },
+        {
+          "dims": [
+            224,
+            1,
+            224
+          ],
+          "rank": 50176,
+          "ref": -14795458
+        },
+        {
+          "dims": [
+            224,
+            224,
+            1
+          ],
+          "rank": 50176,
+          "ref": -14852546
+        },
+        {
+          "dims": [
+            232,
+            1,
+            1
+          ],
+          "rank": 232,
+          "ref": -15323627
+        },
+        {
+          "dims": [
+            232,
+            1,
+            232
+          ],
+          "rank": 53824,
+          "ref": -15323858
+        },
+        {
+          "dims": [
+            232,
+            232,
+            1
+          ],
+          "rank": 53824,
+          "ref": -15382994
+        },
+        {
+          "dims": [
+            240,
+            1,
+            1
+          ],
+          "rank": 240,
+          "ref": -15852019
+        },
+        {
+          "dims": [
+            240,
+            1,
+            240
+          ],
+          "rank": 57600,
+          "ref": -15852258
+        },
+        {
+          "dims": [
+            240,
+            240,
+            1
+          ],
+          "rank": 57600,
+          "ref": -15913442
+        },
+        {
+          "dims": [
+            248,
+            1,
+            1
+          ],
+          "rank": 248,
+          "ref": -16380411
+        },
+        {
+          "dims": [
+            248,
+            1,
+            248
+          ],
+          "rank": 61504,
+          "ref": -16380658
+        },
+        {
+          "dims": [
+            248,
+            248,
+            1
+          ],
+          "rank": 61504,
+          "ref": -16443890
+        },
+        {
+          "dims": [
+            256,
+            1,
+            1
+          ],
+          "rank": 256,
+          "ref": -16908803
+        },
+        {
+          "dims": [
+            256,
+            1,
+            256
+          ],
+          "rank": 65536,
+          "ref": -16909058
+        },
+        {
+          "dims": [
+            256,
+            256,
+            1
+          ],
+          "rank": 65536,
+          "ref": -16974338
+        }
+      ],
+      "negative_squares": [
+        {
+          "dims": [
+            130,
+            130,
+            130
+          ],
+          "rank": 748743,
+          "ref": -16974724
+        },
+        {
+          "dims": [
+            132,
+            132,
+            132
+          ],
+          "rank": 765177,
+          "ref": -16974726
+        },
+        {
+          "dims": [
+            134,
+            134,
+            134
+          ],
+          "rank": 805584,
+          "ref": -16974728
+        },
+        {
+          "dims": [
+            135,
+            135,
+            135
+          ],
+          "rank": 805584,
+          "ref": -16974729
+        },
+        {
+          "dims": [
+            136,
+            136,
+            136
+          ],
+          "rank": 805584,
+          "ref": -16974730
+        },
+        {
+          "dims": [
+            142,
+            142,
+            142
+          ],
+          "rank": 943968,
+          "ref": -16974736
+        },
+        {
+          "dims": [
+            144,
+            144,
+            144
+          ],
+          "rank": 943968,
+          "ref": -16974738
+        },
+        {
+          "dims": [
+            147,
+            147,
+            147
+          ],
+          "rank": 1063741,
+          "ref": -16974741
+        },
+        {
+          "dims": [
+            148,
+            148,
+            148
+          ],
+          "rank": 1063741,
+          "ref": -16974742
+        },
+        {
+          "dims": [
+            152,
+            152,
+            152
+          ],
+          "rank": 1097328,
+          "ref": -16974746
+        },
+        {
+          "dims": [
+            160,
+            160,
+            160
+          ],
+          "rank": 1266432,
+          "ref": -16974754
+        },
+        {
+          "dims": [
+            168,
+            168,
+            168
+          ],
+          "rank": 1452048,
+          "ref": -16974762
+        },
+        {
+          "dims": [
+            170,
+            170,
+            170
+          ],
+          "rank": 1560819,
+          "ref": -16974764
+        },
+        {
+          "dims": [
+            176,
+            176,
+            176
+          ],
+          "rank": 1654944,
+          "ref": -16974770
+        },
+        {
+          "dims": [
+            184,
+            184,
+            184
+          ],
+          "rank": 1875888,
+          "ref": -16974778
+        },
+        {
+          "dims": [
+            192,
+            192,
+            192
+          ],
+          "rank": 2115648,
+          "ref": -16974786
+        },
+        {
+          "dims": [
+            200,
+            200,
+            200
+          ],
+          "rank": 2374992,
+          "ref": -16974794
+        },
+        {
+          "dims": [
+            208,
+            208,
+            208
+          ],
+          "rank": 2654688,
+          "ref": -16974802
+        },
+        {
+          "dims": [
+            210,
+            210,
+            210
+          ],
+          "rank": 2813343,
+          "ref": -16974804
+        },
+        {
+          "dims": [
+            216,
+            216,
+            216
+          ],
+          "rank": 2955504,
+          "ref": -16974810
+        },
+        {
+          "dims": [
+            224,
+            224,
+            224
+          ],
+          "rank": 3278208,
+          "ref": -16974818
+        },
+        {
+          "dims": [
+            232,
+            232,
+            232
+          ],
+          "rank": 3623568,
+          "ref": -16974826
+        },
+        {
+          "dims": [
+            240,
+            240,
+            240
+          ],
+          "rank": 3992352,
+          "ref": -16974834
+        },
+        {
+          "dims": [
+            248,
+            248,
+            248
+          ],
+          "rank": 4385328,
+          "ref": -16974842
+        },
+        {
+          "dims": [
+            256,
+            256,
+            256
+          ],
+          "rank": 4769856,
+          "ref": -16974850
+        }
+      ]
+    },
+    "required_primitives": [
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          11,
+          15
+        ],
+        "rank": 255
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          14,
+          14
+        ],
+        "rank": 301
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          14,
+          16
+        ],
+        "rank": 344
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          14
+        ],
+        "rank": 131
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          7,
+          14
+        ],
+        "rank": 152
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          5,
+          6
+        ],
+        "rank": 47
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          13,
+          16
+        ],
+        "rank": 320
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 38,
+        "rank": 22861,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          10,
+          16
+        ],
+        "rank": 248
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          8,
+          16
+        ],
+        "rank": 200
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 40,
+        "rank": 26384,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          4,
+          16
+        ],
+        "rank": 102
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          14,
+          16
+        ],
+        "rank": 344
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          12,
+          12
+        ],
+        "rank": 222
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 42,
+        "rank": 30251,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 44,
+        "rank": 34478,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          14,
+          16
+        ],
+        "rank": 344
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          13,
+          15
+        ],
+        "rank": 300
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          5,
+          6
+        ],
+        "rank": 47
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          5,
+          13
+        ],
+        "rank": 102
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 46,
+        "rank": 39081,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          6,
+          16
+        ],
+        "rank": 214
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          4
+        ],
+        "rank": 29
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 48,
+        "rank": 44076,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 50,
+        "rank": 49479,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 52,
+        "rank": 55306,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          5,
+          5,
+          5
+        ],
+        "rank": 93
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 54,
+        "rank": 61573,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 56,
+        "rank": 68296,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 58,
+        "rank": 75491,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 60,
+        "rank": 83174,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 62,
+        "rank": 91361,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          14,
+          16
+        ],
+        "rank": 344
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 66,
+        "rank": 109311,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          4,
+          6
+        ],
+        "rank": 54
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          4,
+          14
+        ],
+        "rank": 126
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          14,
+          14
+        ],
+        "rank": 301
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 70,
+        "rank": 129469,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "indexed_even_LITA",
+        "n": 74,
+        "rank": 151963,
+        "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+        "source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          4,
+          4,
+          10
+        ],
+        "rank": 115
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          4,
+          4,
+          10
+        ],
+        "rank": 115
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          12,
+          12
+        ],
+        "rank": 222
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          4,
+          11
+        ],
+        "rank": 70
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          4,
+          11
+        ],
+        "rank": 70
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          4,
+          8,
+          8
+        ],
+        "rank": 180
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          4,
+          8,
+          10
+        ],
+        "rank": 224
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          5,
+          5
+        ],
+        "rank": 40
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          5,
+          6
+        ],
+        "rank": 47
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          4,
+          5
+        ],
+        "rank": 32
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          4,
+          5
+        ],
+        "rank": 32
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          8,
+          8
+        ],
+        "rank": 100
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          13,
+          13
+        ],
+        "rank": 260
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          13,
+          14
+        ],
+        "rank": 280
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          12,
+          14
+        ],
+        "rank": 259
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          8,
+          8
+        ],
+        "rank": 100
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          10,
+          10
+        ],
+        "rank": 155
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          4,
+          4
+        ],
+        "rank": 26
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56
+      },
+      {
+        "kind": "external_or_cached",
+        "dims": [
+          2,
+          7,
+          7
+        ],
+        "rank": 76
+      }
+    ],
+    "primitive_sources": [
+      {
+        "file": "bases/4_403bb63ec86d023a_403bb63ec86d023a.npz",
+        "sha256": "403bb63ec86d023a615d117bfd3e4515dc18e202ddaf9ec9876ce38260a686de",
+        "tensor": [
+          4,
+          4,
+          4
+        ],
+        "rank": 48,
+        "provenance": {
+          "kind": "cached explicit small rational square",
+          "N": 4
+        }
+      },
+      {
+        "file": "bases/34_31cccbad7d4840aa.npz",
+        "sha256": "31cccbad7d4840aab2bfa188826b5ba8a4addecf42e0484b97b67edeba34df00",
+        "tensor": [
+          34,
+          34,
+          34
+        ],
+        "rank": 16783,
+        "provenance": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 34,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "file": "bases/2_93f7e9ad5997975b_93f7e9ad5997975b.npz",
+        "sha256": "93f7e9ad5997975bf9eab2005f9a2ed5cca29fa0ae92c70d713d1a5085755c5d",
+        "tensor": [
+          2,
+          2,
+          2
+        ],
+        "rank": 7,
+        "provenance": {
+          "kind": "cached explicit small rational square",
+          "N": 2
+        }
+      },
+      {
+        "file": "bases/36_0c224f02315a0426.npz",
+        "sha256": "0c224f02315a0426036ea3fdc2079c03605ad197b53906c99cb5508bfb6acced",
+        "tensor": [
+          36,
+          36,
+          36
+        ],
+        "rank": 19666,
+        "provenance": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 36,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "file": "bases/rect_2x11x15_255_ec38f1a82e5a2055.npz",
+        "sha256": "ec38f1a82e5a20559755d97cc4ff9bebd86404e4b9f382740684a31dd8b45939",
+        "tensor": [
+          2,
+          11,
+          15
+        ],
+        "rank": 255,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/matmulcatalog/2x11x15_m255_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/matmulcatalog/2x11x15_m255_Z.json",
+          "original_sha256": "9a9c66dc41f7c257b9fbc3ff26ffd742a89bdff620dad1244a28f6a5eba633a6",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_2x15x15_345_40e21d87c66ea718_40e21d87c66ea718.npz",
+        "sha256": "40e21d87c66ea7183916db3e2a37ccc56bb79d75798cef4695b7aad907cc4ed1",
+        "tensor": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x15x15_345_40e21d87c66ea718.npz",
+          "original_sha256": "40e21d87c66ea7183916db3e2a37ccc56bb79d75798cef4695b7aad907cc4ed1",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x14x14_301_9d0a292f55b31bd1_9d0a292f55b31bd1.npz",
+        "sha256": "9d0a292f55b31bd1fa52c85b12d0f87f2b70286dedcfac3dbb853b60e39983cb",
+        "tensor": [
+          2,
+          14,
+          14
+        ],
+        "rank": 301,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x14x14_301_9d0a292f55b31bd1.npz",
+          "original_sha256": "9d0a292f55b31bd1fa52c85b12d0f87f2b70286dedcfac3dbb853b60e39983cb",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x14x16_344_c8871c647f8c8b6d_c8871c647f8c8b6d.npz",
+        "sha256": "c8871c647f8c8b6dd1e6cc2c7b872ce734b2ca8ca1fd6020bde71300bed9432a",
+        "tensor": [
+          2,
+          14,
+          16
+        ],
+        "rank": 344,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x14x16_344_c8871c647f8c8b6d.npz",
+          "original_sha256": "c8871c647f8c8b6dd1e6cc2c7b872ce734b2ca8ca1fd6020bde71300bed9432a",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x6x6_56_093b57808d0807dd.npz",
+        "sha256": "093b57808d0807dd81873ffc89c7964316dd2b585875d7b07fdbc93133aa954f",
+        "tensor": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x6x6_56.npz",
+          "original_sha256": "093b57808d0807dd81873ffc89c7964316dd2b585875d7b07fdbc93133aa954f",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x6x14_131_0942f47db13013e0.npz",
+        "sha256": "0942f47db13013e0464a186ad4facc9bcbe8438da4c04bc2329d2ed52aecff97",
+        "tensor": [
+          2,
+          6,
+          14
+        ],
+        "rank": 131,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x6x14_131.npz",
+          "original_sha256": "0942f47db13013e0464a186ad4facc9bcbe8438da4c04bc2329d2ed52aecff97",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x16x16_392_40858de5162caeb1.npz",
+        "sha256": "40858de5162caeb19f4ba9af76b800cca3f0cd489cc6f896af5383b8cfe67639",
+        "tensor": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x16x16_392.npz",
+          "original_sha256": "40858de5162caeb19f4ba9af76b800cca3f0cd489cc6f896af5383b8cfe67639",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x7x14_152_93dd8ecee0de9117.npz",
+        "sha256": "93dd8ecee0de91179dcb4d2ef38326b089e9d478e5ee43c722ba0416c6c733f3",
+        "tensor": [
+          2,
+          7,
+          14
+        ],
+        "rank": 152,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/Z/2x7x14_m152_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/Z/2x7x14_m152_Z.json",
+          "original_sha256": "ae332ce38c1236e13643c67d5d1aa28de3d5c6219d6b826317f9513d82941176",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_2x5x6_47_2e940f40dc6a91d6.npz",
+        "sha256": "2e940f40dc6a91d6f4028c7b2d7e8529c66ab6885037e885d89d646a15a6168e",
+        "tensor": [
+          2,
+          5,
+          6
+        ],
+        "rank": 47,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/serendipitous_base/2x5x6_m47_5ec0a82ac73bd3bfcc87c60784674ec9d83c136c_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/serendipitous_base/2x5x6_m47_5ec0a82ac73bd3bfcc87c60784674ec9d83c136c_Z.json",
+          "original_sha256": "25b4224aaaf7ddad788cb3504c44e43b0caa8b91dde557a9d3a368676d074724",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_2x13x16_320_010fbc43954b6ff9.npz",
+        "sha256": "010fbc43954b6ff937c232b1d2953cfdbf97ff67d38d6b8e1ad881586e9f0768",
+        "tensor": [
+          2,
+          13,
+          16
+        ],
+        "rank": 320,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/Z/2x13x16_m320_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/Z/2x13x16_m320_Z.json",
+          "original_sha256": "ad54ac593fcf71ab280002165d0b8140027e7e7a6327d9e8acab00261037c293",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_2x15x16_368_73a44a9fcad21e61.npz",
+        "sha256": "73a44a9fcad21e615c600bdcdc0fa81074812845a2b3fa5dd7637ee420ef3e55",
+        "tensor": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x15x16_368.npz",
+          "original_sha256": "73a44a9fcad21e615c600bdcdc0fa81074812845a2b3fa5dd7637ee420ef3e55",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x10x16_248_7241cc64eb986e55.npz",
+        "sha256": "7241cc64eb986e55c905417575dabc1b6b9d1ab701041b6325ddd44f5dd695a4",
+        "tensor": [
+          2,
+          10,
+          16
+        ],
+        "rank": 248,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/matmulcatalog/2x10x16_m248_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/matmulcatalog/2x10x16_m248_Z.json",
+          "original_sha256": "16e76ee1309f9d65808ef974a0881fe4406f727289171de6846ac1782b12820d",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_2x8x16_200_2ec549563bbfe1d2.npz",
+        "sha256": "2ec549563bbfe1d2df026587572cfbe2c86138a76adc6ce0832e3fa9978b5676",
+        "tensor": [
+          2,
+          8,
+          16
+        ],
+        "rank": 200,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/2x8x16_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/2x8x16_tensor.mpl",
+          "original_sha256": "5aac2614834791bd291fca5718383c4c15e0260be1239d611a2a64e1bdcc5089",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_2x4x16_102_9221e8225cf63d30.npz",
+        "sha256": "9221e8225cf63d3050370337da27333299b483471a98baa7d49b17e2e47c4cdb",
+        "tensor": [
+          2,
+          4,
+          16
+        ],
+        "rank": 102,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/2x4x16_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/2x4x16_tensor.mpl",
+          "original_sha256": "f3b1014eea5b578410dcf62943a5fa4f2833ac8ef8444e9f8ef49340e5f19a18",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_2x12x12_222_d73aeb261981b9e5.npz",
+        "sha256": "d73aeb261981b9e5f0f09784acf72395d0655adb7eef85ac4c114f882b0d65d3",
+        "tensor": [
+          2,
+          12,
+          12
+        ],
+        "rank": 222,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/2x12x12_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/2x12x12_tensor.mpl",
+          "original_sha256": "6989117cc36abde027ab7a59e865a28719dc54f831228eefa26fa6825d4971f0",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_2x13x15_300_0e45b8afc9ebddc8.npz",
+        "sha256": "0e45b8afc9ebddc8190fe6a474ea36fa74e920e4249ad6149f1ba1ee038e1b76",
+        "tensor": [
+          2,
+          13,
+          15
+        ],
+        "rank": 300,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x13x15_300.npz",
+          "original_sha256": "0e45b8afc9ebddc8190fe6a474ea36fa74e920e4249ad6149f1ba1ee038e1b76",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x5x13_102_ff034cc9f4adc71c.npz",
+        "sha256": "ff034cc9f4adc71c5c4d77a439c9f29575bce905e26646c021d78b3616b08039",
+        "tensor": [
+          2,
+          5,
+          13
+        ],
+        "rank": 102,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/Z/2x5x13_m102_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/Z/2x5x13_m102_Z.json",
+          "original_sha256": "3539eac51c3a6eef22b9d5d83d1f75ab70e7a4d4d71f4cb095c9298961bd6ea6",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_3x6x16_214_e16c565b1e8e4747.npz",
+        "sha256": "e16c565b1e8e47473ba3dcb68f4b89994f183dea4700b89ba50e515ac3fc5b28",
+        "tensor": [
+          3,
+          6,
+          16
+        ],
+        "rank": 214,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_3x6x16_214.npz",
+          "original_sha256": "e16c565b1e8e47473ba3dcb68f4b89994f183dea4700b89ba50e515ac3fc5b28",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_3x10x16_355_9155b75eed84b0a7.npz",
+        "sha256": "9155b75eed84b0a70b6fd4e18bf9d25e9cb9cd9aaabcb100d269b94645219e4c",
+        "tensor": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_3x10x16_355.npz",
+          "original_sha256": "9155b75eed84b0a70b6fd4e18bf9d25e9cb9cd9aaabcb100d269b94645219e4c",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_3x3x6_40_2635e1fcbd32b278.npz",
+        "sha256": "2635e1fcbd32b27826d4c56125912615ff8d7658a9a26584a31fab5b3ad93b8e",
+        "tensor": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_3x3x6_40.npz",
+          "original_sha256": "2635e1fcbd32b27826d4c56125912615ff8d7658a9a26584a31fab5b3ad93b8e",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_3x3x4_29_4ff1d21dc7cc64a4.npz",
+        "sha256": "4ff1d21dc7cc64a498647d2dbd974a123511873e96d3cc72322526a2bbc4ebb8",
+        "tensor": [
+          3,
+          3,
+          4
+        ],
+        "rank": 29,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/results/q_tiny_uneven/bases/rect_3x3x4_29.npz",
+          "original_sha256": "4ff1d21dc7cc64a498647d2dbd974a123511873e96d3cc72322526a2bbc4ebb8",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_5x5x5_93_e94f60dbcdb253b3.npz",
+        "sha256": "e94f60dbcdb253b37a5e8ad7b51bbb08d104dbb65e5c9ca956fcccbc0ea186c8",
+        "tensor": [
+          5,
+          5,
+          5
+        ],
+        "rank": 93,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/fmm_add_reduction/Moosbauer-555-93-mod0.exp",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/fmm_add_reduction/Moosbauer-555-93-mod0.exp",
+          "original_sha256": "c832c094c7e5d5498dcec257ad205b54f5302defa692e99eaaeb6a7e24fe12a7",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/32_758d06d61c4f52c3.npz",
+        "sha256": "758d06d61c4f52c3ee32f3811a9188c2ed86cc2b3b26ef078ccd2e96a0170094",
+        "tensor": [
+          32,
+          32,
+          32
+        ],
+        "rank": 14196,
+        "provenance": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 32,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "file": "bases/26_4ebca583be252812.npz",
+        "sha256": "4ebca583be2528126d2e11fd24173d9763d78b59357c61aa59d113174847a289",
+        "tensor": [
+          26,
+          26,
+          26
+        ],
+        "rank": 8051,
+        "provenance": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 26,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "file": "bases/rect_3x4x6_54_cc1473a6ffd82250.npz",
+        "sha256": "cc1473a6ffd82250a1ac5b020737928a2be08db807e3816ab2e323c7a32c37eb",
+        "tensor": [
+          3,
+          4,
+          6
+        ],
+        "rank": 54,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/meta_flip_graph/346/k121761c9fceb6f0b.m",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/meta_flip_graph/346/k121761c9fceb6f0b.m",
+          "original_sha256": "58abf1d9d38ae64b88dc717033309773f33b972c47da9f6bc07c5f7730dd2f47",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_3x4x14_126_4be71853af3b107e.npz",
+        "sha256": "4be71853af3b107ef8b28f6880e10575e38d55ab55b3b2c8ba1d04b4241667aa",
+        "tensor": [
+          3,
+          4,
+          14
+        ],
+        "rank": 126,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/3x4x14_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/3x4x14_tensor.mpl",
+          "original_sha256": "a7f1147aeeba709edc3203476aadebcc32dae5fd1217e79926c8c33dc3d69436",
+          "original_ring": "Q"
+        }
+      },
+      {
+        "file": "bases/rect_4x4x10_115_92dc954133dfdda8.npz",
+        "sha256": "92dc954133dfdda81c6c36923da3d1509b4fdde2b93107bcc439be60867c5ed9",
+        "tensor": [
+          4,
+          4,
+          10
+        ],
+        "rank": 115,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/ZT/4x4x10_m115_ZT.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/ZT/4x4x10_m115_ZT.json",
+          "original_sha256": "39a5275415e34b51a665749921f02aa5176954855ee0b60703a9d15b44d3c0b3",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_2x4x11_70_1fd1fa5fb28c0f95.npz",
+        "sha256": "1fd1fa5fb28c0f95db9a50ce66dbaa45a060aa60213f516a0f25be93889da226",
+        "tensor": [
+          2,
+          4,
+          11
+        ],
+        "rank": 70,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/ZT/2x4x11_m70_ZT.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/ZT/2x4x11_m70_ZT.json",
+          "original_sha256": "5f34f0bc9b8af418c153825851a7898007a3e18ae704096edafe7c07d86ac1ec",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_4x8x8_180_004fbf8c2a44895d.npz",
+        "sha256": "004fbf8c2a44895d977694aee2bf902468be30836321378fd65b3c004bf58465",
+        "tensor": [
+          4,
+          8,
+          8
+        ],
+        "rank": 180,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/ZT/4x8x8_m180_ZT.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/ZT/4x8x8_m180_ZT.json",
+          "original_sha256": "5f858a39cee1e29172d8508ae5cdf8b0590f777312bf2e1e7668dc6e99abc7fe",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_4x8x10_224_0b7bd28144cd06c1.npz",
+        "sha256": "0b7bd28144cd06c13db71821740ab4158540e7d2842e68f19d3af433ea01a964",
+        "tensor": [
+          4,
+          8,
+          10
+        ],
+        "rank": 224,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/4x8x10_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/4x8x10_tensor.mpl",
+          "original_sha256": "6a8f46733a94e26d15df67242fc1f41d641016f0754f6f4d07a49e52259af326",
+          "original_ring": "Q"
+        }
+      },
+      {
+        "file": "bases/rect_2x5x5_40_cef167da0a1f69a1.npz",
+        "sha256": "cef167da0a1f69a16d4c1ff4b13c4a3c96aac9e0a3616e8c552b63eb62c6199f",
+        "tensor": [
+          2,
+          5,
+          5
+        ],
+        "rank": 40,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/fmm_add_reduction/Moosbauer-255-40-mod0.exp",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/fmm_add_reduction/Moosbauer-255-40-mod0.exp",
+          "original_sha256": "1ebf846a14f8116cecc08f6fdea438149d75df523a096eff4746047c9adb602a",
+          "original_ring": "Z"
+        }
+      },
+      {
+        "file": "bases/rect_2x4x5_32_8ab8ce6de850c36a.npz",
+        "sha256": "8ab8ce6de850c36ab19dd62210be8c4db8f42d1545beffa0543d1b2eb098257c",
+        "tensor": [
+          2,
+          4,
+          5
+        ],
+        "rank": 32,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/2x4x5_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/2x4x5_tensor.mpl",
+          "original_sha256": "e03c7743a60f53ae21a3413af4a5f019600a12befc8ed22ffdf2baa8b0f7dd4b",
+          "original_ring": "Q"
+        }
+      },
+      {
+        "file": "bases/rect_2x8x8_100_708827d0ebb7ddcd.npz",
+        "sha256": "708827d0ebb7ddcd1a7e759e24bcd62e947f52c7c131ccfe64a151852908cb8f",
+        "tensor": [
+          2,
+          8,
+          8
+        ],
+        "rank": 100,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/2x8x8_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/2x8x8_tensor.mpl",
+          "original_sha256": "dbb47ebcecb28849dea2feadb07f39a7f433154c2eba6c163fd52a4e4510884b",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_2x13x13_260_79a58d97854115b3_79a58d97854115b3.npz",
+        "sha256": "79a58d97854115b30acb0231a05dac23c9885368ddfa706acaa097715132a32b",
+        "tensor": [
+          2,
+          13,
+          13
+        ],
+        "rank": 260,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x13x13_260_79a58d97854115b3.npz",
+          "original_sha256": "79a58d97854115b30acb0231a05dac23c9885368ddfa706acaa097715132a32b",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x13x14_280_34e39de27e5cbc6a.npz",
+        "sha256": "34e39de27e5cbc6afd8a1df893cca6303bdf6cc7570f6b7a576441bab6fe12d9",
+        "tensor": [
+          2,
+          13,
+          14
+        ],
+        "rank": 280,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x13x14_280.npz",
+          "original_sha256": "34e39de27e5cbc6afd8a1df893cca6303bdf6cc7570f6b7a576441bab6fe12d9",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x12x14_259_7a700da52ea22d62_7a700da52ea22d62.npz",
+        "sha256": "7a700da52ea22d62d1ea162156b0ac21ea94f5477abf95c37c2b0b55ecb972f2",
+        "tensor": [
+          2,
+          12,
+          14
+        ],
+        "rank": 259,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/asymmetric_strassen_20261013_01/witnesses_compact/bases/rect_2x12x14_259_7a700da52ea22d62.npz",
+          "original_sha256": "7a700da52ea22d62d1ea162156b0ac21ea94f5477abf95c37c2b0b55ecb972f2",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x10x10_155_bb8134ebfc12bb73.npz",
+        "sha256": "bb8134ebfc12bb73ff4cefd98301feb323b6f01f258e98005bb8d5794c53543c",
+        "tensor": [
+          2,
+          10,
+          10
+        ],
+        "rank": 155,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/known/tensor/2x10x10_tensor.mpl",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/known/tensor/2x10x10_tensor.mpl",
+          "original_sha256": "077cdd35a029b667e319a6e7373617cbbabd14fc78d8550a30220b541185b017",
+          "original_ring": "ZT"
+        }
+      },
+      {
+        "file": "bases/rect_2x4x4_26_da9be9333430026c.npz",
+        "sha256": "da9be9333430026cd3c24984b7659ff2c2d3138e5853d63b5aa6389633c8c50e",
+        "tensor": [
+          2,
+          4,
+          4
+        ],
+        "rank": 26,
+        "provenance": {
+          "kind": "cached explicit rational primitive",
+          "original_file": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/results/q_tiny_uneven/bases/rect_2x4x4_26.npz",
+          "original_sha256": "da9be9333430026cd3c24984b7659ff2c2d3138e5853d63b5aa6389633c8c50e",
+          "identity_basis": "Independent exact tensor replay required before publication"
+        }
+      },
+      {
+        "file": "bases/rect_2x7x7_76_473b549122112d24.npz",
+        "sha256": "473b549122112d241112285aad5f1f1b13e5c25ce73701058ea53b5a72c7302f",
+        "tensor": [
+          2,
+          7,
+          7
+        ],
+        "rank": 76,
+        "provenance": {
+          "kind": "published exact rectangular coefficients",
+          "commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+          "path": "schemes/results/Z/2x7x7_m76_Z.json",
+          "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/7e3ac35ca92cb30d568519ea63d7a1accad2c908/schemes/results/Z/2x7x7_m76_Z.json",
+          "original_sha256": "a9ddab0b9feb228b31230e671d2ef4fcdda89dfb4f6e39cc40d391989afbc556",
+          "original_ring": "Z"
+        }
+      }
+    ],
+    "source_sha256": "146231e7ab7b74102a616b2ed0566494d58e98232665c4ccf1413b013dadfca0",
+    "inherited_exporter_sha256": "d58d3d759e9298d08ac782fc5627f81ecc323972b324336ed32b87304656f5bc",
+    "builder_sha256": "edcd2e579d03fb0fc2307e7ab9818803863c36fc553adf5beed1887895462db8",
+    "audit_sha256": "63b2677a4e3001c679a936c54e0758edf3fffe7d2c004c3f5d39ad44f3eaba36",
+    "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+    "odd_generator_sha256": "674f39fdfa4c39d07de53e42f720798ffc09d4ea4c44a0efd90f10eaf0567418",
+    "odd_generator_commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+    "status_sha256": "b9b86c506ef4826220e5479569c6a84eaa720b703f73b705c043a3c90b463311",
+    "even_LITA_commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+    "rectangular_primitive_commit": "7e3ac35ca92cb30d568519ea63d7a1accad2c908",
+    "CPU_seconds": 32.26434794,
+    "no_search": true
+  },
+  "exact_primitive_checks": {
+    "status": "EXACT_NON_LITA_PRIMITIVES_PASS",
+    "fully_checked": [
+      {
+        "tensor": [
+          4,
+          8,
+          8
+        ],
+        "rank": 180,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 28024,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.007020081975497305,
+        "sha256": "004fbf8c2a44895d977694aee2bf902468be30836321378fd65b3c004bf58465"
+      },
+      {
+        "tensor": [
+          2,
+          13,
+          16
+        ],
+        "rank": 320,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 22720,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0049976950394921005,
+        "sha256": "010fbc43954b6ff937c232b1d2953cfdbf97ff67d38d6b8e1ad881586e9f0768"
+      },
+      {
+        "tensor": [
+          2,
+          6,
+          6
+        ],
+        "rank": 56,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 12734,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0021991400280967355,
+        "sha256": "093b57808d0807dd81873ffc89c7964316dd2b585875d7b07fdbc93133aa954f"
+      },
+      {
+        "tensor": [
+          2,
+          6,
+          14
+        ],
+        "rank": 131,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 78018,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.008526029996573925,
+        "sha256": "0942f47db13013e0464a186ad4facc9bcbe8438da4c04bc2329d2ed52aecff97"
+      },
+      {
+        "tensor": [
+          4,
+          8,
+          10
+        ],
+        "rank": 224,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          2,
+          2,
+          2
+        ],
+        "expansions": 114688,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.01271745900157839,
+        "sha256": "0b7bd28144cd06c13db71821740ab4158540e7d2842e68f19d3af433ea01a964"
+      },
+      {
+        "tensor": [
+          2,
+          13,
+          15
+        ],
+        "rank": 300,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 16555,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.004268888966180384,
+        "sha256": "0e45b8afc9ebddc8190fe6a474ea36fa74e920e4249ad6149f1ba1ee038e1b76"
+      },
+      {
+        "tensor": [
+          2,
+          4,
+          11
+        ],
+        "rank": 70,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 2602,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0012281480012461543,
+        "sha256": "1fd1fa5fb28c0f95db9a50ce66dbaa45a060aa60213f516a0f25be93889da226"
+      },
+      {
+        "tensor": [
+          3,
+          3,
+          6
+        ],
+        "rank": 40,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          8,
+          8
+        ],
+        "expansions": 17376,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0023391859722323716,
+        "sha256": "2635e1fcbd32b27826d4c56125912615ff8d7658a9a26584a31fab5b3ad93b8e"
+      },
+      {
+        "tensor": [
+          2,
+          5,
+          6
+        ],
+        "rank": 47,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 9918,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0017096319934353232,
+        "sha256": "2e940f40dc6a91d6f4028c7b2d7e8529c66ab6885037e885d89d646a15a6168e"
+      },
+      {
+        "tensor": [
+          2,
+          8,
+          16
+        ],
+        "rank": 200,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 2936,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0017076589865610003,
+        "sha256": "2ec549563bbfe1d2df026587572cfbe2c86138a76adc6ce0832e3fa9978b5676"
+      },
+      {
+        "tensor": [
+          2,
+          13,
+          14
+        ],
+        "rank": 280,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 14492,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0037422539899125695,
+        "sha256": "34e39de27e5cbc6afd8a1df893cca6303bdf6cc7570f6b7a576441bab6fe12d9"
+      },
+      {
+        "tensor": [
+          4,
+          4,
+          4
+        ],
+        "rank": 48,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          8
+        ],
+        "expansions": 26624,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0028757149702869356,
+        "sha256": "403bb63ec86d023a615d117bfd3e4515dc18e202ddaf9ec9876ce38260a686de"
+      },
+      {
+        "tensor": [
+          2,
+          16,
+          16
+        ],
+        "rank": 392,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 6934,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.006062121014110744,
+        "sha256": "40858de5162caeb19f4ba9af76b800cca3f0cd489cc6f896af5383b8cfe67639"
+      },
+      {
+        "tensor": [
+          2,
+          15,
+          15
+        ],
+        "rank": 345,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 6090,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0043531390256248415,
+        "sha256": "40e21d87c66ea7183916db3e2a37ccc56bb79d75798cef4695b7aad907cc4ed1"
+      },
+      {
+        "tensor": [
+          2,
+          7,
+          7
+        ],
+        "rank": 76,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 100603,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.010960913030430675,
+        "sha256": "473b549122112d241112285aad5f1f1b13e5c25ce73701058ea53b5a72c7302f"
+      },
+      {
+        "tensor": [
+          3,
+          4,
+          14
+        ],
+        "rank": 126,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          2,
+          2,
+          2
+        ],
+        "expansions": 5754,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0018839220283553004,
+        "sha256": "4be71853af3b107ef8b28f6880e10575e38d55ab55b3b2c8ba1d04b4241667aa"
+      },
+      {
+        "tensor": [
+          3,
+          3,
+          4
+        ],
+        "rank": 29,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 348,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0007689290214329958,
+        "sha256": "4ff1d21dc7cc64a498647d2dbd974a123511873e96d3cc72322526a2bbc4ebb8"
+      },
+      {
+        "tensor": [
+          2,
+          8,
+          8
+        ],
+        "rank": 100,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 1468,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0011049479944631457,
+        "sha256": "708827d0ebb7ddcd1a7e759e24bcd62e947f52c7c131ccfe64a151852908cb8f"
+      },
+      {
+        "tensor": [
+          2,
+          10,
+          16
+        ],
+        "rank": 248,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 9956,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0028617740026675165,
+        "sha256": "7241cc64eb986e55c905417575dabc1b6b9d1ab701041b6325ddd44f5dd695a4"
+      },
+      {
+        "tensor": [
+          2,
+          15,
+          16
+        ],
+        "rank": 368,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 17406,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.004344065033365041,
+        "sha256": "73a44a9fcad21e615c600bdcdc0fa81074812845a2b3fa5dd7637ee420ef3e55"
+      },
+      {
+        "tensor": [
+          2,
+          13,
+          13
+        ],
+        "rank": 260,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 4444,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0020768209942616522,
+        "sha256": "79a58d97854115b30acb0231a05dac23c9885368ddfa706acaa097715132a32b"
+      },
+      {
+        "tensor": [
+          2,
+          12,
+          14
+        ],
+        "rank": 259,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 15084,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0035091449972242117,
+        "sha256": "7a700da52ea22d62d1ea162156b0ac21ea94f5477abf95c37c2b0b55ecb972f2"
+      },
+      {
+        "tensor": [
+          2,
+          4,
+          5
+        ],
+        "rank": 32,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          2,
+          2,
+          2
+        ],
+        "expansions": 3584,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.001062333001755178,
+        "sha256": "8ab8ce6de850c36ab19dd62210be8c4db8f42d1545beffa0543d1b2eb098257c"
+      },
+      {
+        "tensor": [
+          3,
+          10,
+          16
+        ],
+        "rank": 355,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 31252,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.005428881966508925,
+        "sha256": "9155b75eed84b0a70b6fd4e18bf9d25e9cb9cd9aaabcb100d269b94645219e4c"
+      },
+      {
+        "tensor": [
+          2,
+          4,
+          16
+        ],
+        "rank": 102,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 2304,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0012435319949872792,
+        "sha256": "9221e8225cf63d3050370337da27333299b483471a98baa7d49b17e2e47c4cdb"
+      },
+      {
+        "tensor": [
+          4,
+          4,
+          10
+        ],
+        "rank": 115,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 9190,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0020123710273765028,
+        "sha256": "92dc954133dfdda81c6c36923da3d1509b4fdde2b93107bcc439be60867c5ed9"
+      },
+      {
+        "tensor": [
+          2,
+          7,
+          14
+        ],
+        "rank": 152,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 201206,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.019193539978004992,
+        "sha256": "93dd8ecee0de91179dcb4d2ef38326b089e9d478e5ee43c722ba0416c6c733f3"
+      },
+      {
+        "tensor": [
+          2,
+          2,
+          2
+        ],
+        "rank": 7,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 32,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.000788338016718626,
+        "sha256": "93f7e9ad5997975bf9eab2005f9a2ed5cca29fa0ae92c70d713d1a5085755c5d"
+      },
+      {
+        "tensor": [
+          2,
+          14,
+          14
+        ],
+        "rank": 301,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 5112,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.002484199998434633,
+        "sha256": "9d0a292f55b31bd1fa52c85b12d0f87f2b70286dedcfac3dbb853b60e39983cb"
+      },
+      {
+        "tensor": [
+          2,
+          10,
+          10
+        ],
+        "rank": 155,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 2506,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0014070359757170081,
+        "sha256": "bb8134ebfc12bb73ff4cefd98301feb323b6f01f258e98005bb8d5794c53543c"
+      },
+      {
+        "tensor": [
+          2,
+          14,
+          16
+        ],
+        "rank": 344,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 20626,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.004677690041717142,
+        "sha256": "c8871c647f8c8b6dd1e6cc2c7b872ce734b2ca8ca1fd6020bde71300bed9432a"
+      },
+      {
+        "tensor": [
+          3,
+          4,
+          6
+        ],
+        "rank": 54,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 16277,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0021751619642600417,
+        "sha256": "cc1473a6ffd82250a1ac5b020737928a2be08db807e3816ab2e323c7a32c37eb"
+      },
+      {
+        "tensor": [
+          2,
+          5,
+          5
+        ],
+        "rank": 40,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 6278,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.001372662023641169,
+        "sha256": "cef167da0a1f69a16d4c1ff4b13c4a3c96aac9e0a3616e8c552b63eb62c6199f"
+      },
+      {
+        "tensor": [
+          2,
+          12,
+          12
+        ],
+        "rank": 222,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 3768,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0018343160045333207,
+        "sha256": "d73aeb261981b9e5f0f09784acf72395d0655adb7eef85ac4c114f882b0d65d3"
+      },
+      {
+        "tensor": [
+          2,
+          4,
+          4
+        ],
+        "rank": 26,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 2611,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0009653730085119605,
+        "sha256": "da9be9333430026cd3c24984b7659ff2c2d3138e5853d63b5aa6389633c8c50e"
+      },
+      {
+        "tensor": [
+          3,
+          6,
+          16
+        ],
+        "rank": 214,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          8,
+          8,
+          2
+        ],
+        "expansions": 72276,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.010453007998876274,
+        "sha256": "e16c565b1e8e47473ba3dcb68f4b89994f183dea4700b89ba50e515ac3fc5b28"
+      },
+      {
+        "tensor": [
+          5,
+          5,
+          5
+        ],
+        "rank": 93,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 6545,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.001793081988580525,
+        "sha256": "e94f60dbcdb253b37a5e8ad7b51bbb08d104dbb65e5c9ca956fcccbc0ea186c8"
+      },
+      {
+        "tensor": [
+          2,
+          11,
+          15
+        ],
+        "rank": 255,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 10123,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0028624149854294956,
+        "sha256": "ec38f1a82e5a20559755d97cc4ff9bebd86404e4b9f382740684a31dd8b45939"
+      },
+      {
+        "tensor": [
+          2,
+          5,
+          13
+        ],
+        "rank": 102,
+        "exact": true,
+        "method": "Full sparse tensor expansion with exact integer denominator scaling",
+        "denominator_scales": [
+          1,
+          1,
+          1
+        ],
+        "expansions": 14105,
+        "remaining_error_coefficients": 0,
+        "seconds": 0.0036669180262833834,
+        "sha256": "ff034cc9f4adc71c5c4d77a439c9f29575bce905e26646c021d78b3616b08039"
+      }
+    ],
+    "pinned_lita_theorem": [
+      {
+        "sha256": "0c224f02315a0426036ea3fdc2079c03605ad197b53906c99cb5508bfb6acced",
+        "tensor": [
+          36,
+          36,
+          36
+        ],
+        "rank": 19666,
+        "proof_basis": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 36,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "sha256": "31cccbad7d4840aab2bfa188826b5ba8a4addecf42e0484b97b67edeba34df00",
+        "tensor": [
+          34,
+          34,
+          34
+        ],
+        "rank": 16783,
+        "proof_basis": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 34,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "sha256": "4ebca583be2528126d2e11fd24173d9763d78b59357c61aa59d113174847a289",
+        "tensor": [
+          26,
+          26,
+          26
+        ],
+        "rank": 8051,
+        "proof_basis": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 26,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      },
+      {
+        "sha256": "758d06d61c4f52c3ee32f3811a9188c2ed86cc2b3b26ef078ccd2e96a0170094",
+        "tensor": [
+          32,
+          32,
+          32
+        ],
+        "rank": 14196,
+        "proof_basis": {
+          "kind": "pinned published LITA construction",
+          "commit": "472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+          "N": 32,
+          "generator": "sources/lita.py",
+          "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+          "identity_basis": "LITA construction theorem; full coefficient regeneration compared exactly",
+          "regeneration": "all stored arrays equal"
+        }
+      }
+    ],
+    "scope": "Every non-LITA primitive fully expanded exactly; LITA identities use the pinned published theorem and exact regeneration in export validation"
+  },
+  "input_hashes": {
+    "audit": "63b2677a4e3001c679a936c54e0758edf3fffe7d2c004c3f5d39ad44f3eaba36",
+    "validation": "a5594150dd5042eeb2a5f2b7e1e198e079df44e6d47fe0161e00dbe740d9747c",
+    "primitive_validation": "a3c59c9898cc1520e6367c0a68e739d52999efd0c5c27d2b61698619533883d9",
+    "integrator": "e458fba9e48f3032247b0ddd24e4b09d3518a06b07fddf81b05604820720b556",
+    "index_before": "48e670aa0e27df1f03aef33fa4331879ded0bff01599bb5f05ab2cc8226be797"
+  },
+  "indexed_lita_source_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+  "indexed_lita_dimensions": [
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    66,
+    70,
+    74
+  ],
+  "used_primitive_objects": 43,
+  "new_content_objects": 73,
+  "reused_content_objects": 18,
+  "rank1024_unchanged": 198679192
+}

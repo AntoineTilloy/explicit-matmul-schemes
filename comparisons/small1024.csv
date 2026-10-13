@@ -1,18 +1,56 @@
 field,n,rank,baseline_rank,construction,saving,saving_percent
 Q,106,424690,431011,uneven rectangular Strassen composition,6321,1.4665518977473893
 Q,125,680814,681408,Asymmetric rectangular Strassen composition with recursive feedback,594,0.08717244294167371
-Q,146,1044715,1063741,uneven rectangular Strassen composition,19026,1.7885932759948144
-Q,154,1211453,1214333,Asymmetric rectangular Strassen composition with recursive feedback,2880,0.23716723501708345
-Q,162,1394733,1401348,Asymmetric rectangular Strassen composition with recursive feedback,6615,0.4720454876304815
+Q,137,861480,861481,Extended asymmetric rectangular Strassen composition with recursive feedback,1,0.00011607917063754162
+Q,145,1006608,1006609,Extended asymmetric rectangular Strassen composition with recursive feedback,1,9.934343921025939e-05
+Q,146,1040656,1063741,Extended asymmetric rectangular Strassen composition with recursive feedback,23085,2.1701711224818823
+Q,153,1167096,1167097,Extended asymmetric rectangular Strassen composition with recursive feedback,1,8.568268104536298e-05
+Q,154,1204996,1214333,Extended asymmetric rectangular Strassen composition with recursive feedback,9337,0.7688994699147598
+Q,161,1343712,1343713,Extended asymmetric rectangular Strassen composition with recursive feedback,1,7.442065381521202e-05
+Q,162,1385624,1401348,Extended asymmetric rectangular Strassen composition with recursive feedback,15724,1.1220624712776555
+Q,169,1537224,1537225,Extended asymmetric rectangular Strassen composition with recursive feedback,1,6.505228577469141e-05
 Q,171,1641699,1643187,Asymmetric rectangular Strassen composition with recursive feedback,1488,0.09055573102757021
-Q,178,1814857,1819017,Asymmetric rectangular Strassen composition with recursive feedback,4160,0.22869494897518824
-Q,186,2052507,2055249,Asymmetric rectangular Strassen composition with recursive feedback,2742,0.13341449138279596
-Q,187,2109033,2111184,Asymmetric rectangular Strassen composition with recursive feedback,2151,0.10188595593752131
-Q,194,2309010,2322311,Asymmetric rectangular Strassen composition with recursive feedback,13301,0.5727484389472384
-Q,195,2370114,2372355,Asymmetric rectangular Strassen composition with recursive feedback,2241,0.09446309679622147
-Q,218,3205147,3206454,Asymmetric rectangular Strassen composition with recursive feedback,1307,0.04076153907088641
-Q,234,3911301,3912786,Asymmetric rectangular Strassen composition with recursive feedback,1485,0.03795249727432065
+Q,177,1748400,1748401,Extended asymmetric rectangular Strassen composition with recursive feedback,1,5.7195117138459655e-05
+Q,178,1798990,1819017,Extended asymmetric rectangular Strassen composition with recursive feedback,20027,1.100979265174542
+Q,185,1978008,1978009,Extended asymmetric rectangular Strassen composition with recursive feedback,1,5.055588725834918e-05
+Q,186,2033284,2055249,Extended asymmetric rectangular Strassen composition with recursive feedback,21965,1.0687269523060223
+Q,187,2104959,2111184,Extended asymmetric rectangular Strassen composition with recursive feedback,6225,0.2948582406839006
+Q,193,2226816,2226817,Extended asymmetric rectangular Strassen composition with recursive feedback,1,4.490714773598369e-05
+Q,194,2286898,2322311,Extended asymmetric rectangular Strassen composition with recursive feedback,35413,1.5249034259407979
+Q,195,2364873,2372355,Extended asymmetric rectangular Strassen composition with recursive feedback,7482,0.3153828158096069
+Q,201,2495592,2495593,Extended asymmetric rectangular Strassen composition with recursive feedback,1,4.0070636518054025e-05
+Q,202,2560780,2567799,Extended asymmetric rectangular Strassen composition with recursive feedback,7019,0.27334694031736906
+Q,209,2785104,2785105,Extended asymmetric rectangular Strassen composition with recursive feedback,1,3.590528902860036e-05
+Q,211,2946273,2946274,Extended asymmetric rectangular Strassen composition with recursive feedback,1,3.394117451397935e-05
+Q,217,3096120,3096121,Extended asymmetric rectangular Strassen composition with recursive feedback,1,3.229847929069956e-05
+Q,218,3172036,3206454,Extended asymmetric rectangular Strassen composition with recursive feedback,34418,1.0733975912331817
+Q,225,3429408,3429409,Extended asymmetric rectangular Strassen composition with recursive feedback,1,2.9159543233250978e-05
+Q,233,3785736,3785737,Extended asymmetric rectangular Strassen composition with recursive feedback,1,2.641493585000754e-05
+Q,234,3873196,3912786,Extended asymmetric rectangular Strassen composition with recursive feedback,39590,1.0118110216096663
+Q,241,4165872,4165873,Extended asymmetric rectangular Strassen composition with recursive feedback,1,2.4004572390949026e-05
 Q,242,4255382,4261876,Asymmetric rectangular Strassen composition with recursive feedback,6494,0.15237421267066428
+Q,249,4570584,4570585,Extended asymmetric rectangular Strassen composition with recursive feedback,1,2.1879037366113965e-05
+Q,257,4967232,4967233,Extended asymmetric rectangular Strassen composition with recursive feedback,1,2.013193260714768e-05
+Q,258,5064264,5116608,Extended asymmetric rectangular Strassen composition with recursive feedback,52344,1.023021501744906
+Q,266,5598054,5639088,Extended asymmetric rectangular Strassen composition with recursive feedback,41034,0.7276708574152416
+Q,267,5633862,5639088,Extended asymmetric rectangular Strassen composition with recursive feedback,5226,0.09267456014163993
+Q,273,5861856,5861857,Extended asymmetric rectangular Strassen composition with recursive feedback,1,1.7059440378705928e-05
+Q,282,6579849,6607776,Extended asymmetric rectangular Strassen composition with recursive feedback,27927,0.4226384187357441
+Q,289,6857472,6857473,Extended asymmetric rectangular Strassen composition with recursive feedback,1,1.4582631240400071e-05
+Q,290,6991672,7020663,Extended asymmetric rectangular Strassen composition with recursive feedback,28991,0.4129382082575392
+Q,291,7144555,7273834,Extended asymmetric rectangular Strassen composition with recursive feedback,129279,1.7773157869701177
+Q,292,7176079,7294224,Extended asymmetric rectangular Strassen composition with recursive feedback,118145,1.619706222347984
+Q,305,7959456,7959457,Extended asymmetric rectangular Strassen composition with recursive feedback,1,1.2563671114750667e-05
+Q,306,8109172,8156538,Extended asymmetric rectangular Strassen composition with recursive feedback,47366,0.5807120619066569
+Q,314,8857050,8865024,Extended asymmetric rectangular Strassen composition with recursive feedback,7974,0.0899489950619423
+Q,321,9173184,9173185,Extended asymmetric rectangular Strassen composition with recursive feedback,1,1.090133906598417e-05
+Q,329,10076472,10138345,Extended asymmetric rectangular Strassen composition with recursive feedback,61873,0.6102869847100291
+Q,330,10161330,10163757,Extended asymmetric rectangular Strassen composition with recursive feedback,2427,0.02387896522909786
+Q,337,10504032,10504033,Extended asymmetric rectangular Strassen composition with recursive feedback,1,9.520152878422983e-06
+Q,338,10664091,10760575,Extended asymmetric rectangular Strassen composition with recursive feedback,96484,0.896643534383618
+Q,345,11485824,11495276,Extended asymmetric rectangular Strassen composition with recursive feedback,9452,0.08222508098109171
+Q,369,13538592,13538593,Extended asymmetric rectangular Strassen composition with recursive feedback,1,7.386291913790451e-06
+Q,370,13757428,13846063,Extended asymmetric rectangular Strassen composition with recursive feedback,88635,0.6401458667348257
 Q,432,19665128,19788629,routine current-upstream primitive refresh,123501,0.6241008409425434
 Q,1024,198679192,198683936,"rational CW recompression, odd real character and square cancellation",4744,0.002387711908425249
 F2,61,101501,103823,permuted restriction and exact pair merges,2322,2.236498656367086

@@ -20,6 +20,15 @@ def main():
     gauge=json.loads((ROOT/'checks/small1024_recompression.json').read_text())['changes'][0]
     rational.append(dict(field='Q',n=1024,rank=int(gauge['rank']),
                          baseline_rank=int(gauge['baseline_rank']),construction='rational CW recompression, odd real character and square cancellation'))
+    # Preserve the earliest stated reference when later searches lower a size.
+    merged={p['n']:p for p in rational}
+    extended=json.loads((ROOT/'checks/extended_rectangular.json').read_text())['changes']
+    for p in extended:
+        previous=merged.get(p['n'])
+        merged[p['n']]=dict(field='Q',n=p['n'],rank=p['rank'],
+                           baseline_rank=previous['baseline_rank'] if previous else p['comparison_rank'],
+                           construction=p['classification'])
+    rational=list(merged.values())
     binary=[]
     for n in (61,243,969):
         root=ROOT/'characteristic2'
@@ -42,8 +51,13 @@ def main():
             ('Q','#176c99','Square improvements over R and C',ROOT/'figures'/'small1024'),
             ('F2','#348568','Square improvements over F2',ROOT/'characteristic2'/'improvements')):
         if args.field!='all' and args.field!=field:continue
-        fig,ax=plt.subplots(figsize=(9.2,8.2 if field=='Q' else 5.8))
-        rows=[p for p in points if p['field']==field];x=list(range(len(rows)))
+        fig,ax=plt.subplots(figsize=(9.2,8.7 if field=='Q' else 5.8))
+        rows=[p for p in points if p['field']==field];total_rows=len(rows)
+        if field=='Q':
+            selected={p['n'] for p in sorted(rows,key=lambda p:p['saving_percent'],reverse=True)[:16]}
+            selected.add(1024)
+            rows=[p for p in rows if p['n'] in selected]
+        x=list(range(len(rows)))
         ax.barh(x,[p['saving_percent'] for p in rows],color=color,height=.60,zorder=3)
         for j,p in enumerate(rows):
             percent=f"{p['saving_percent']:.6f}%" if p['n']==1024 else f"{p['saving_percent']:.2f}%"
@@ -54,10 +68,11 @@ def main():
         ax.set_ylim(len(rows)-.4,-.6);ax.set_xlim(0,3.0);ax.grid(axis='x',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Products saved against the stated reference (%)')
         fig.suptitle(title,x=.10,y=.98,ha='left',fontsize=18,weight='bold')
-        subtitle=('Exact rational coefficients • Square sizes ≤ 1,024' if field=='Q'
+        subtitle=('16 largest relative savings + size 1,024 • Exact rational coefficients' if field=='Q'
                   else 'Exact F2 coefficients • Separate from the R/C catalogue')
         fig.text(.10,.91,subtitle,color='#526171',fontsize=10.5)
-        footer=('References: previous strengthened composition envelope / previous saved 432 and 1024.\n'
+        footer=(f'All {total_rows} rational counts and references: comparisons/small1024.csv.\n'
+                'References: earliest stated envelope / previous saved 432 and 1024.\n'
                 'The 432 change refreshes LITA primitives. Sub-2.7 at size 1,024 remains open.' if field=='Q'
                 else 'Reference: strengthened finite F2 composition closure.\n'
                 'These schemes do not establish corresponding counts over R or C.')

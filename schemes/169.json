@@ -1,0 +1,14 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "169",
+  "rank": "1537224",
+  "field": "Q",
+  "root_object": "444be37aed12cb83491f0c89c6db1c14de308eb161ad5a5025f9c0e11f3a5a1f",
+  "effective_exponent": 2.7769532191566997,
+  "provenance": {
+    "construction": "Extended asymmetric rectangular Strassen composition with recursive feedback",
+    "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e",
+    "comparison_revision": "b647d9537f4de857164ced14bbefb16c9f65c784"
+  },
+  "verification": "Complete independent integer composition DAG and snapshot audit, hash-checked rational primitives, inherited exhaustive asymmetric wiring checks, and pinned LITA construction theorem. See checks/extended_rectangular.json and docs/rectangular.md."
+}

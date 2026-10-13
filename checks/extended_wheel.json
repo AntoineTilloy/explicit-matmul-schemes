@@ -1,0 +1,765 @@
+{
+  "passed": true,
+  "installed_module": "/home/antoine/matmul_oct10/composition_pilot/research_oct10/small1024/composition/extended_grid_20261013_01/installed/cwschemes/__init__.py",
+  "schemes": [
+    {
+      "n": 137,
+      "rank": 861480,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [
+        0,
+        306062,
+        478477,
+        501723,
+        527518,
+        544097,
+        574132,
+        721019,
+        785285,
+        861479
+      ],
+      "exact_coefficient_probes": 30
+    },
+    {
+      "n": 145,
+      "rank": 1006608,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 146,
+      "rank": 1040656,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 87,
+        "primitive_objects": 12,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 153,
+      "rank": 1167096,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 154,
+      "rank": 1204996,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 64,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 161,
+      "rank": 1343712,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 162,
+      "rank": 1385624,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 97,
+        "primitive_objects": 11,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 169,
+      "rank": 1537224,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 177,
+      "rank": 1748400,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 178,
+      "rank": 1798990,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 108,
+        "primitive_objects": 12,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 185,
+      "rank": 1978008,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 186,
+      "rank": 2033284,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 70,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 187,
+      "rank": 2104959,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 99,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 193,
+      "rank": 2226816,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 194,
+      "rank": 2286898,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 100,
+        "primitive_objects": 12,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 195,
+      "rank": 2364873,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 69,
+        "primitive_objects": 4,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 201,
+      "rank": 2495592,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 202,
+      "rank": 2560780,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 73,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 209,
+      "rank": 2785104,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 211,
+      "rank": 2946273,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 217,
+      "rank": 3096120,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 218,
+      "rank": 3172036,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 75,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 225,
+      "rank": 3429408,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 233,
+      "rank": 3785736,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 234,
+      "rank": 3873196,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 79,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 241,
+      "rank": 4165872,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 249,
+      "rank": 4570584,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 11,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 257,
+      "rank": 4967232,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 12,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 258,
+      "rank": 5064264,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 39,
+        "primitive_objects": 9,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 266,
+      "rank": 5598054,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 58,
+        "primitive_objects": 10,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 267,
+      "rank": 5633862,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 60,
+        "primitive_objects": 7,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 273,
+      "rank": 5861856,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 19,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 282,
+      "rank": 6579849,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 36,
+        "primitive_objects": 8,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 289,
+      "rank": 6857472,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 19,
+        "primitive_objects": 3,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 290,
+      "rank": 6991672,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 93,
+        "primitive_objects": 13,
+        "indexed_current_lita_objects": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 291,
+      "rank": 7144555,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 69,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [
+        0,
+        42747,
+        841880,
+        2377452,
+        3405125,
+        3846119,
+        5721744,
+        6672019,
+        6755091,
+        7144554
+      ],
+      "exact_coefficient_probes": 30
+    },
+    {
+      "n": 292,
+      "rank": 7176079,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 26,
+        "primitive_objects": 6,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 305,
+      "rank": 7959456,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 19,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 306,
+      "rank": 8109172,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 70,
+        "primitive_objects": 7,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 314,
+      "rank": 8857050,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 93,
+        "primitive_objects": 13,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 321,
+      "rank": 9173184,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 19,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 329,
+      "rank": 10076472,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 29,
+        "primitive_objects": 4,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 330,
+      "rank": 10161330,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 42,
+        "primitive_objects": 8,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 337,
+      "rank": 10504032,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 19,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 338,
+      "rank": 10664091,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 67,
+        "primitive_objects": 9,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 345,
+      "rank": 11485824,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 29,
+        "primitive_objects": 5,
+        "indexed_current_lita_objects": 2,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 369,
+      "rank": 13538592,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 19,
+        "primitive_objects": 2,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [],
+      "exact_coefficient_probes": 0
+    },
+    {
+      "n": 370,
+      "rank": 13757428,
+      "roundtrip": true,
+      "composition_audit": {
+        "nodes": 76,
+        "primitive_objects": 7,
+        "indexed_current_lita_objects": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "Pinned current LITA construction theorem with unchanged hash-bound indexed coefficients; all non-LITA qcsr primitives checked by complete exact tensor replay. See checks/extended_rectangular.json."
+      },
+      "sampled_terms": [
+        0,
+        435774,
+        614574,
+        3123672,
+        4105770,
+        7142996,
+        8609764,
+        12197441,
+        12960716,
+        13757427
+      ],
+      "exact_coefficient_probes": 30
+    }
+  ],
+  "all_packaged_objects_present": 221,
+  "new_object_hashes_checked": 73,
+  "inherited_object_metadata_unchanged": true,
+  "rank1024_unchanged": true,
+  "scope": "All48 construction graphs and certificate roundtrips; exact rational coefficient access sampled at137,291,370. Primitive identities and exhaustive small wiring checked separately.",
+  "seconds": 69.96942943101749
+}

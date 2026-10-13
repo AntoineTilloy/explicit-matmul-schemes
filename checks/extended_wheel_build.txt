@@ -1,0 +1,9 @@
+Processing /home/antoine/matmul_oct10/composition_pilot/release_extended
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: explicit-matmul-schemes
+  Building wheel for explicit-matmul-schemes (pyproject.toml): started
+  Building wheel for explicit-matmul-schemes (pyproject.toml): finished with status 'done'
+  Created wheel for explicit-matmul-schemes: filename=explicit_matmul_schemes-0.1.0-py3-none-any.whl size=57576236 sha256=a036452ca7fa13a7e550b2f6e3575e0e8f34d357a6a6cef5b6b71ab8bd554ba9
+  Stored in directory: /tmp/pip-ephem-wheel-cache-vkif4hr0/wheels/0c/0e/63/03c352e89476878b67bb89a5c54a3f7395bfada03ca3cd70d0
+Successfully built explicit-matmul-schemes

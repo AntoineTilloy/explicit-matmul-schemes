@@ -1,6 +1,6 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **59 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+A catalogue of **97 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the pinned LITA comparison: **1,593**, **2,236** and **14,196**. Current upstream LITA also attains these counts. Every coefficient is accessible as an exact rational number.
 
@@ -11,6 +11,15 @@ Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW pac
 The left panel shows our saved schemes through size 16,384; the right panel shows the same catalogue over the full size range. Both use a logarithmic size axis.
 
 The exponent of a finite scheme is **logₙ R**, where R counts bilinear scalar multiplications. Additions and multiplications by fixed constants are excluded. These are algebraic reference constructions; the counts do not establish a practical speedup over numerical matrix multiplication libraries.
+
+The dashed reference is the current size-32 LITA recursion exponent,
+**log₃₂(14,196) = 2.758639**. Pure recursion attains this value at powers of
+32, not at every finite size: blocking and padding must be charged explicitly.
+The new rectangular points improve counts at their own sizes while remaining
+above this exponent. At size 1,024, current LITA squared costs **201,526,416**;
+our existing **198,679,192** construction saves **1.41%**. The rectangular
+continuation does not improve that result. See the
+[same-size blocking comparison](docs/extended_rectangular.md#comparison-with-size-32-lita-blocking).
 
 ## Quick start
 
@@ -57,19 +66,26 @@ First use of a construction can take minutes to build exact intermediate tables.
 
 See [catalogue.json](catalogue.json) for all sizes, or run `cwschemes list`.
 
-New rectangular compositions at sizes **106** and **146** use **424,690**
-and **1,044,715** products, saving **1.47%** and **1.79%** against the strengthened
+Rectangular compositions at sizes **106** and **146** use **424,690**
+and **1,040,656** products, saving **1.47%** and **2.17%** against the strengthened
 rational composition reference. Size **432** now uses **19,665,128**, through
 a routine refresh to the current published LITA primitives. All three have
 exact rational coefficients in the installed package; see the
 [rectangular construction and check scope](docs/rectangular.md).
 
-Applying unequal Strassen splits inside intermediate rectangles, then feeding
-the improved costs back into composition, adds **12 square schemes at sizes
-125–242**. The largest relative gain is at **194**, from **2,322,311** to
+The first search applying unequal Strassen splits inside intermediate rectangles,
+then feeding the improved costs back into composition, added **12 square schemes
+at sizes 125–242**. At that stage the largest relative gain was at **194**, from **2,322,311** to
 **2,309,010** products (about **0.57%**). These comparisons use the full previous
 strengthened rational envelope. The size-1,024 count remains **198,679,192**.
 All new schemes are bilinear and can be substituted recursively on matrix blocks.
+
+Extending the intermediate rectangular table to dimension 256 improves **48
+square counts at sizes 137–370**, including ten previous catalogue entries.
+Size **291** falls from **7,273,834** to **7,144,555** products (**1.78%**).
+Some other gains are only one product; the full counts, comparison baselines,
+and exact verification scope are in [the extended search record](docs/extended_rectangular.md).
+The coefficient engine is unchanged, and size 1,024 remains at **198,679,192**.
 
 ![Verified improvements over R and C through size 1,024](figures/small1024.svg)
 
@@ -128,7 +144,7 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, and the rectangular compositions as triangles. All 59 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
+The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, and the rectangular compositions as triangles. All 97 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
 - Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
 - At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.

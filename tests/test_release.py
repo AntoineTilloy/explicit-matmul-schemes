@@ -9,7 +9,7 @@ from cwschemes import _resources
 
 def test_catalogue_and_exact_threshold():
     entries=cwschemes.catalogue()
-    assert len(entries)==59 and len({r['n'] for r in entries})==59
+    assert len(entries)==97 and len({r['n'] for r in entries})==97
     d=next(r for r in entries if r['n']=='528108169')
     n,r=int(d['n']),int(d['rank'])
     assert (n-1)**27<=r**10<n**27
@@ -173,7 +173,7 @@ def test_split_with_shared_child_full_tensor():
 
 
 def test_new_rectangular_catalogue_entries():
-    for n,rank in ((106,424690),(146,1044715),(432,19665128)):
+    for n,rank in ((106,424690),(146,1040656),(432,19665128)):
         s=cwschemes.load(n)
         assert s.rank==rank and s._engine.audit()['exact_dimensions_and_counts']
         assert isinstance(s.coefficient('W',rank-1,n-1,n-1),Fraction)

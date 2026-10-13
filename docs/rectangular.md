@@ -1,11 +1,15 @@
 # Small rational rectangular compositions
 
-The size-106 and size-146 schemes use **424,690** and **1,044,715** products.
+The initial size-106 and size-146 schemes used **424,690** and **1,044,715** products.
 They improve the strengthened rational composition reference counts 431,011
 and 1,063,741 by 1.47% and 1.79%. Size 432 now uses **19,665,128** products,
 through the routine product of the current published LITA size-18 and size-24
 schemes, with ranks 3,031 and 6,488. This refresh is distinct from the new
 uneven rectangular compositions.
+
+The subsequent [extended rectangular search](extended_rectangular.md) lowers
+size 146 to **1,040,656** products and updates several other entries below.
+The counts in this page document the earlier search stages.
 
 For a split `n = p + q`, `p >= q`, Strassen's identity can use different
 rectangular inner algorithms for its seven calls. Its cost is bounded by

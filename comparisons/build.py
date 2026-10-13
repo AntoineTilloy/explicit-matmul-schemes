@@ -88,12 +88,16 @@ def draw(points):
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False})
     fig,axes=plt.subplots(1,2,figsize=(14,6.3),gridspec_kw={'width_ratios':[1.1,1]})
     blue='#176c99';orange='#d9822b';purple='#7b4ea3'
+    rank32=next(p['rank'] for p in points if p['n']==32)
+    exponent32=math.log(rank32)/math.log(32)
     for ax,subset,title in [(axes[0],[p for p in points if p['n']<=16384],'Detail through 16,384'),(axes[1],points,'Wider range: all saved sizes')]:
         cw=[p for p in subset if p['n']>32 and not p['z4'] and not p['rectangular']];ex=[p for p in subset if p['n']<=32];z4=[p for p in subset if p['z4']];rect=[p for p in subset if p['rectangular']]
         ax.scatter([p['n'] for p in cw],[p['effective_exponent'] for p in cw],color=blue,s=30,zorder=4,label='CW-based constructions')
         ax.scatter([p['n'] for p in z4],[p['effective_exponent'] for p in z4],color=purple,marker='s',s=28,zorder=4,label='Z4-quotient CW constructions')
         ax.scatter([p['n'] for p in ex],[p['effective_exponent'] for p in ex],color=orange,marker='D',s=34,zorder=5,label='Explicit small rational schemes')
         ax.scatter([p['n'] for p in rect],[p['effective_exponent'] for p in rect],color='#348568',marker='^',s=38,zorder=5,label='Rectangular compositions / LITA refresh')
+        ax.axhline(exponent32,color='#89939e',ls='--',lw=1,zorder=2,
+                   label=f'32-LITA reference: {exponent32:.6f}')
         ax.set_xscale('log',base=2);ax.set_title(title,loc='left',pad=12);ax.grid(axis='y',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Square matrix size n (log scale)',labelpad=10)
     axes[0].set_ylabel(r'Effective exponent $\log_n R(n)$ — lower is better')
@@ -116,7 +120,8 @@ def draw(points):
     axes[1].annotate(f"{best_all['effective_exponent']:.6f} at n = {best_all['n']:,}",(best_all['n'],best_all['effective_exponent']),xytext=(-190,32),textcoords='offset points',fontsize=9,arrowprops={'arrowstyle':'-','color':'#a4adb5'})
     fig.suptitle('Explicit square matrix multiplication schemes',x=.075,y=.98,ha='left',fontsize=19,weight='bold')
     fig.text(.075,.916,f'Our {len(points)} saved schemes • Over R and C, with rational coefficients • One best saved scheme per size',color='#526171',fontsize=10.5)
-    fig.text(.075,.035,'Each point is an explicit saved construction; intermediate sizes are not interpolated.',fontsize=9,color='#526171')
+    fig.text(.075,.060,'Each point is an explicit saved construction; intermediate sizes are not interpolated.',fontsize=9,color='#526171')
+    fig.text(.075,.030,'32-LITA reference is attained at powers of 32; arbitrary finite sizes require blocking and padding costs.',fontsize=9,color='#526171')
     fig.subplots_adjust(left=.075,right=.98,top=.825,bottom=.19,wspace=.22)
     (ROOT/'figures').mkdir(exist_ok=True)
     for suffix in ('svg','png','pdf'):fig.savefig(ROOT/'figures'/f'exponents.{suffix}',dpi=170,facecolor='white')
