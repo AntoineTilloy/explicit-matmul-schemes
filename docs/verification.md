@@ -6,6 +6,14 @@ There are three distinct kinds of evidence in this release.
 2. **Mathematical certificate checks.** The retained CW sectors must form the required induced matching; local rational completions are checked exactly. With `--exact`, each reduction relation is reconstructed and checked against its pair Gram matrix. These checks use the documented base identities and the imported published primitive schemes.
 3. **Regression tests.** Exact coefficient queries, independently evaluated small multiplication examples and malformed-input tests check the software interface. They do not by themselves prove an enormous target tensor identity.
 
+The two graded CW entries additionally use complete integer grading checks,
+exact balanced-tuple counts, finite rational interpolation, and charged
+outer-call batching. Their public verifier replays that finite construction
+and the hash-bound outer metadata, without evaluating the enormous composed
+coefficient sums. `--exact` has the same scope for these entries. Independent
+capacity counting and small full tensor controls are recorded under
+[checks/graded](../checks/graded/); see [the construction and its limits](graded_cw.md).
+
 No target matrix with billions of rows is expanded. The full algorithm follows by induction through the explicit composition tree, using tensor products, disjoint batches and restriction by zero padding. Fixed-sector schemes additionally use the finite involution projection and the specified eigenspace decomposition. Their formulas and wiring are part of the reference implementation and construction argument; this is not a formal proof-assistant certificate.
 
 ## Reduction replay

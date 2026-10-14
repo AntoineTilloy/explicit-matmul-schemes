@@ -174,6 +174,14 @@ def verify(n,*,exact=False,threads=1):
     if not 1<=threads<=12:raise ValueError('threads must be between 1 and 12')
     start=time.monotonic();s=load(n)
     path=_resources.root()/f"proofs/{s.record['root_object']}.json"
+    if read(path).get('format')=='graded-cw-square-v1':
+        audit=s._engine.audit()
+        return dict(n=str(s.n),rank=str(s.rank),
+                    mode='Exact grading, balanced capacity, composition and threshold replay',
+                    graded_construction=audit,sub_2_65=s.rank**20<s.n**53,
+                    seconds=time.monotonic()-start,
+                    proof_basis='Rational local identity, complete structural grading, exact selection DP, and hash-bound previously certified outer schemes. See docs/graded_cw.md.',
+                    scope='Does not expand the enormous square tensor or evaluate its complete coefficient slot sums; --exact uses the same finite proof replay.')
     visited=set();supports=0;proofs=0
     def visit(p):
         nonlocal supports,proofs

@@ -1,0 +1,278 @@
+{
+  "status": "COMPLETE",
+  "source_sha256": "f5fea5c6dbd3c23c9adc7c5bdcd7402abc073f8c9b4d56316f45fbdb870b2f2c",
+  "generator_sha256": "7c4a122aa94b75c70ca736faa494b45bbf4bf51c2d56cc390632c06f56db8823",
+  "grading_sha256": "c2199f0c9b59129ac18eeb71b8da891d433a1a5852a9b3db2f02a7f8dd72fd0c",
+  "candidate_sha256": "0548ffa84ee20c7270f5635abfac7fa3e5f46b1368ac065cec11ffc60f7578be",
+  "catalogue_sha256": "36922b9293dba32191be65b09f2ba5dd23038f11c778aa33ca9c2c8d0a4df628",
+  "controls": [
+    {
+      "kind": "complete_sequence_unranking",
+      "frequency_count": 2,
+      "aggregate_count": 10,
+      "status": "PASS"
+    },
+    {
+      "kind": "full_balanced_complete_lexicographic_unranking",
+      "count": 45,
+      "enumerated_row_tuples": 729,
+      "status": "PASS"
+    },
+    {
+      "kind": "q2_full_packet",
+      "side": 2,
+      "products": 1,
+      "rank": 27,
+      "coefficients": 64,
+      "status": "PASS exact Q"
+    },
+    {
+      "kind": "q1_complete_multislot_interpolation_packet",
+      "side": 1,
+      "products": 2,
+      "rank": 448,
+      "coefficients": 8,
+      "status": "PASS exact Q"
+    },
+    {
+      "kind": "q1_complete_full_balanced_packet",
+      "side": 1,
+      "products": 2,
+      "rank": 448,
+      "coefficients": 8,
+      "status": "PASS exact Q"
+    },
+    {
+      "kind": "q1_complete_grade_zero_packet",
+      "side": 1,
+      "products": 1,
+      "rank": 64,
+      "coefficients": 1,
+      "status": "PASS exact Q"
+    },
+    {
+      "kind": "strassen_base",
+      "side": 2,
+      "rank": 7,
+      "coefficients": 64,
+      "status": "PASS exact Q direct-output convention"
+    },
+    {
+      "kind": "outer_tensor_product",
+      "side": 4,
+      "rank": 49,
+      "coefficients": 4096,
+      "status": "PASS exact Q direct-output convention"
+    },
+    {
+      "kind": "full_batched_square_composition",
+      "side": 2,
+      "rank": 1792,
+      "coefficients": 64,
+      "status": "PASS exact Q direct-output convention"
+    },
+    {
+      "kind": "full_zero_padding_crop",
+      "side": 1,
+      "rank": 1792,
+      "coefficients": 1,
+      "status": "PASS exact Q direct-output convention"
+    }
+  ],
+  "large_recipe": {
+    "status": "EXACT_RECIPE_BOUND",
+    "packet": {
+      "format": "graded-cw-packet-frequency-v1",
+      "rows": [
+        "2313133",
+        "1111221",
+        "2131122",
+        "2323112",
+        "2121322",
+        "1131231",
+        "1121333",
+        "1122323",
+        "2131312",
+        "1322223",
+        "2312112",
+        "1332213",
+        "1322311",
+        "2333213",
+        "1131313",
+        "2322132",
+        "2132333",
+        "2122113",
+        "1332133",
+        "1332321",
+        "2313223",
+        "1122231",
+        "2132123"
+      ],
+      "potentials": [
+        [
+          0,
+          -822,
+          -212,
+          24,
+          -181,
+          -773,
+          -621,
+          -213,
+          -197,
+          -155,
+          -20,
+          -165,
+          -219,
+          151,
+          -625,
+          42,
+          -93,
+          -175,
+          -180,
+          -212,
+          129,
+          -455,
+          -174
+        ],
+        [
+          0,
+          179,
+          -383,
+          -413,
+          -430,
+          192,
+          258,
+          -155,
+          -368,
+          -187,
+          -406,
+          -125,
+          -149,
+          -128,
+          262,
+          -449,
+          -267,
+          -269,
+          -101,
+          -109,
+          -150,
+          -176,
+          -269
+        ],
+        [
+          0,
+          643,
+          595,
+          389,
+          611,
+          581,
+          363,
+          368,
+          565,
+          342,
+          426,
+          290,
+          368,
+          -23,
+          363,
+          407,
+          360,
+          444,
+          281,
+          321,
+          21,
+          631,
+          443
+        ]
+      ],
+      "q": 6,
+      "family": "full_balanced_interpolation",
+      "selection": {
+        "kind": "all_balanced_three_orientations",
+        "t": 11,
+        "target_zero_count": 77,
+        "capacity": 4176630165208973813237488199002077527422154,
+        "orientation_order": "t copies each of orientations 0, 1, 2",
+        "suffix_state_counts": [
+          1,
+          36,
+          120,
+          253,
+          435,
+          666,
+          946,
+          1275,
+          1653,
+          2080,
+          2522,
+          2899,
+          3192,
+          3377,
+          3434,
+          3315,
+          3052,
+          2709,
+          2367,
+          2044,
+          1740,
+          1455,
+          1188,
+          985,
+          801,
+          636,
+          490,
+          363,
+          255,
+          166,
+          96,
+          45,
+          13,
+          1
+        ]
+      },
+      "t": 11,
+      "power": 231,
+      "inner_side": 827268102990819696904779987451100917723545245377785847873536,
+      "capacity": 4176630165208973813237488199002077527422154,
+      "rank": 57522474961448507197775480741509445731489075088074664072247434509580325287956584441663968549909412184696742561976601007673060620707837646481637970563759321308628226565877050103159268387426900713390807,
+      "interpolation_factor": 34849,
+      "grading_replay": {
+        "degree": 1056,
+        "structural_edges": 1775,
+        "mode_injective": true
+      }
+    },
+    "outer": {
+      "kind": "tensor_product",
+      "catalogue_bases": [
+        {
+          "n": 32,
+          "rank": 14196,
+          "copies": 3,
+          "root_object": "a7fb19d69d8e078fb0d6d614ade10417225a186f4fbf94a8d4292f3935995e05"
+        },
+        {
+          "n": 12310160190,
+          "rank": 1463616394485527559895695360,
+          "copies": 1,
+          "root_object": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf"
+        }
+      ],
+      "strassen2_copies": 3,
+      "side": 3227034632847360,
+      "rank": 1436214667181371313651585888357596429025280,
+      "dependency": "Hash-bound existing catalogue certificates; this control does not re-prove those bases"
+    },
+    "natural_n": 2669622819001311839729769204214462438187427982295276153690704844352871464960,
+    "padded_n": 2404754680872320604060639810246542738806289652166338813910501555010665545163,
+    "rank": 57522474961448507197775480741509445731489075088074664072247434509580325287956584441663968549909412184696742561976601007673060620707837646481637970563759321308628226565877050103159268387426900713390807,
+    "strict_sub265": "PASS integer twentieth/fifty-third powers",
+    "large_packet_coefficient_samples": [
+      "13966840134112247940203490132143450486972583018976136618838788865465984118541491146355381888654000029638253100305752427118355188849/684372514226029465146988901666992229076224949729952900951214794768336887871051896367613512122126815126166485053049143296",
+      "13966840134112247940203490132143450486972583018976136618838788865465984118541491146355381888654000029638253100305752427118355188849/684372514226029465146988901666992229076224949729952900951214794768336887871051896367613512122126815126166485053049143296",
+      "486730411833677728468151427615067106020507545628299385029912953172624080547052424959338703437703247032863482292555166332647559976198801/684372514226029465146988901666992229076224949729952900951214794768336887871051896367613512122126815126166485053049143296"
+    ],
+    "limits": "Large square tensor not expanded; large composed coefficients not evaluated; each is defined by a potentially enormous finite slot sum"
+  },
+  "CPU_seconds": 0.5029732
+}

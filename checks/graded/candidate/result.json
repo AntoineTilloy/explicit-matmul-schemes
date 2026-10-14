@@ -1,0 +1,2206 @@
+{
+  "status": "COMPLETE_BOUNDED_SCREEN",
+  "source_sha256": "4acc76b2f5e20f4195d62a871b017271ce02f4c155039e2ccdd6512ab3823c93",
+  "full_source_sha256": "32c7eea410bcd5f3d1e9f039066a8081f7404427a6889c846cc0f50964189a9e",
+  "helper_sha256": "f5b30a56c675c6698bf85ec0ff2abcbe7fba1f3e0bff94ea9d6bc9248066df92",
+  "cached_sha256": "0548ffa84ee20c7270f5635abfac7fa3e5f46b1368ac065cec11ffc60f7578be",
+  "grading_sha256": "c2199f0c9b59129ac18eeb71b8da891d433a1a5852a9b3db2f02a7f8dd72fd0c",
+  "catalogue_sha256": "36922b9293dba32191be65b09f2ba5dd23038f11c778aa33ca9c2c8d0a4df628",
+  "catalogue_bases": 97,
+  "max_t": 64,
+  "max_q": 64,
+  "max_batches": 64,
+  "scope": "Each single catalogue base power with LITA32/Strassen fillers; up to64 shared packets; exact positives; bounded heuristic pricing, no global minimum",
+  "limits": {
+    "case_bits": 128000000,
+    "total_bits": 2000000000,
+    "outer_candidates": 10000000
+  },
+  "cumulative_new_encoded_bits": 661128510,
+  "outer_candidates": 1103996,
+  "cases": [
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 1,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 7,
+        "stride": 13,
+        "extraction_offset_bits": 392,
+        "encoded_bit_bound": 1183
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 8,
+      "outer_choices": 4,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 1,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 10,
+        "stride": 16,
+        "extraction_offset_bits": 850,
+        "encoded_bit_bound": 2560
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 44,
+      "outer_choices": 6,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 1,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 12,
+        "stride": 19,
+        "extraction_offset_bits": 1440,
+        "encoded_bit_bound": 4332
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 191,
+      "outer_choices": 7,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 2,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 14,
+        "stride": 25,
+        "extraction_offset_bits": 2912,
+        "encoded_bit_bound": 8750
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 478,
+      "outer_choices": 8,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 1,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 632,
+      "outer_choices": 8,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 1,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 1967,
+      "outer_choices": 10,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 2,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 19,
+        "stride": 31,
+        "extraction_offset_bits": 6080,
+        "encoded_bit_bound": 18259
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 8950,
+      "outer_choices": 12,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 3,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 21,
+        "stride": 37,
+        "extraction_offset_bits": 9576,
+        "encoded_bit_bound": 28749
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 41840,
+      "outer_choices": 34,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 2,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 23,
+        "stride": 37,
+        "extraction_offset_bits": 10488,
+        "encoded_bit_bound": 31487
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 218131,
+      "outer_choices": 76,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 2,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 3831214,
+      "outer_choices": 153,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 3,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 28,
+        "stride": 46,
+        "extraction_offset_bits": 19740,
+        "encoded_bit_bound": 59248
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 2658230,
+      "outer_choices": 145,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 4,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 28,
+        "stride": 49,
+        "extraction_offset_bits": 22400,
+        "encoded_bit_bound": 67228
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 3974662,
+      "outer_choices": 154,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 2,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 43229197,
+      "outer_choices": 220,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 3,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 35,
+        "stride": 55,
+        "extraction_offset_bits": 35280,
+        "encoded_bit_bound": 105875
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 395303249,
+      "outer_choices": 292,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 5,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 35,
+        "stride": 61,
+        "extraction_offset_bits": 43400,
+        "encoded_bit_bound": 130235
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 400306058,
+      "outer_choices": 293,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 4,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 37,
+        "stride": 61,
+        "extraction_offset_bits": 45880,
+        "encoded_bit_bound": 137677
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 969710878,
+      "outer_choices": 320,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 3,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 31403704853,
+      "outer_choices": 438,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 6,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 42,
+        "stride": 73,
+        "extraction_offset_bits": 74592,
+        "encoded_bit_bound": 223818
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 41903798824,
+      "outer_choices": 447,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 4,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 46,
+        "stride": 73,
+        "extraction_offset_bits": 81696,
+        "encoded_bit_bound": 245134
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 819448168675,
+      "outer_choices": 596,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 5,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 46,
+        "stride": 76,
+        "extraction_offset_bits": 88550,
+        "encoded_bit_bound": 265696
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 390299395904,
+      "outer_choices": 552,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 3,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 1254855645068,
+      "outer_choices": 618,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 7,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 49,
+        "stride": 85,
+        "extraction_offset_bits": 117992,
+        "encoded_bit_bound": 354025
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 4505566769936,
+      "outer_choices": 689,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 4,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 288088750818250,
+      "outer_choices": 930,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 6,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 55,
+        "stride": 91,
+        "extraction_offset_bits": 151800,
+        "encoded_bit_bound": 455455
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 165427549450996,
+      "outer_choices": 893,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 5,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 58,
+        "stride": 91,
+        "extraction_offset_bits": 160080,
+        "encoded_bit_bound": 480298
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1806284554800581,
+      "outer_choices": 1037,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 8,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 56,
+        "stride": 97,
+        "extraction_offset_bits": 175616,
+        "encoded_bit_bound": 526904
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 494104186997758,
+      "outer_choices": 960,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 4,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 40656004736776165,
+      "outer_choices": 1226,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 7,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 64,
+        "stride": 106,
+        "extraction_offset_bits": 239680,
+        "encoded_bit_bound": 719104
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 72375021494268698,
+      "outer_choices": 1266,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 9,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 63,
+        "stride": 109,
+        "extraction_offset_bits": 249480,
+        "encoded_bit_bound": 748503
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 55013877174751820,
+      "outer_choices": 1247,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 5,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 2813008604109322022,
+      "outer_choices": 1536,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 6,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 69,
+        "stride": 109,
+        "extraction_offset_bits": 273240,
+        "encoded_bit_bound": 819789
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 4138771084932704281,
+      "outer_choices": 1570,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 10,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 70,
+        "stride": 121,
+        "extraction_offset_bits": 341600,
+        "encoded_bit_bound": 1024870
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 6199296132267751978,
+      "outer_choices": 1602,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 8,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 73,
+        "stride": 121,
+        "extraction_offset_bits": 356240,
+        "encoded_bit_bound": 1068793
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 32366496116901213838,
+      "outer_choices": 1741,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 5,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 1400742837392886172397,
+      "outer_choices": 2060,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 7,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 80,
+        "stride": 127,
+        "extraction_offset_bits": 430080,
+        "encoded_bit_bound": 1290320
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 9746337825619320969143,
+      "outer_choices": 2229,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 6,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 28581471639823505828251,
+      "outer_choices": 2319,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 11,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 77,
+        "stride": 133,
+        "extraction_offset_bits": 453992,
+        "encoded_bit_bound": 1362053
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 705419131163958922004,
+      "outer_choices": 1997,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 9,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 82,
+        "stride": 136,
+        "extraction_offset_bits": 505530,
+        "encoded_bit_bound": 1516672
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 14713053683644747719908,
+      "outer_choices": 2264,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 12,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 84,
+        "stride": 145,
+        "extraction_offset_bits": 588672,
+        "encoded_bit_bound": 1766100
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 80920497552437593364752,
+      "outer_choices": 2420,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 8,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 92,
+        "stride": 145,
+        "extraction_offset_bits": 644736,
+        "encoded_bit_bound": 1934300
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 23421603309236253395696755,
+      "outer_choices": 3004,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 6,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 50195768308612861454461018,
+      "outer_choices": 3082,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 7,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 298518407898194827125131036,
+      "outer_choices": 3292,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 10,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 91,
+        "stride": 151,
+        "extraction_offset_bits": 691600,
+        "encoded_bit_bound": 2074891
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 6774055527990479185936360,
+      "outer_choices": 2859,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 13,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 91,
+        "stride": 157,
+        "extraction_offset_bits": 747656,
+        "encoded_bit_bound": 2243059
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 9345899814108846404950178,
+      "outer_choices": 2893,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 9,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 103,
+        "stride": 163,
+        "extraction_offset_bits": 912168,
+        "encoded_bit_bound": 2736607
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 57167083693834308223746040901,
+      "outer_choices": 3908,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 11,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 100,
+        "stride": 166,
+        "extraction_offset_bits": 918500,
+        "encoded_bit_bound": 2755600
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 3151007937396700008725999660,
+      "outer_choices": 3558,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 14,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 98,
+        "stride": 169,
+        "extraction_offset_bits": 932960,
+        "encoded_bit_bound": 2798978
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1085680417880420873038648990,
+      "outer_choices": 3436,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 8,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 3181629170532803905900648269562,
+      "outer_choices": 4419,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 7,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 1848584923439672664398861512979,
+      "outer_choices": 4350,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 15,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 105,
+        "stride": 181,
+        "extraction_offset_bits": 1146600,
+        "encoded_bit_bound": 3439905
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 126752644587490525672431542090,
+      "outer_choices": 4003,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 12,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 109,
+        "stride": 181,
+        "extraction_offset_bits": 1190280,
+        "encoded_bit_bound": 3570949
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1478138601108357263425030098616,
+      "outer_choices": 4318,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 10,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 115,
+        "stride": 181,
+        "extraction_offset_bits": 1255800,
+        "encoded_bit_bound": 3767515
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 141257766984812128137383452106221,
+      "outer_choices": 4936,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 16,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 112,
+        "stride": 193,
+        "extraction_offset_bits": 1390592,
+        "encoded_bit_bound": 4171888
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 14863055161638773223943466445550,
+      "outer_choices": 4622,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 9,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 34439671351676133332304256262246582,
+      "outer_choices": 5734,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 13,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 118,
+        "stride": 196,
+        "extraction_offset_bits": 1510990,
+        "encoded_bit_bound": 4533088
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 698313374515034093249857765581140,
+      "outer_choices": 5162,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 8,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 69460184850080217738057491688521413,
+      "outer_choices": 5835,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 11,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 126,
+        "stride": 199,
+        "extraction_offset_bits": 1663200,
+        "encoded_bit_bound": 4989726
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 352533839510940205657267424553017681,
+      "outer_choices": 6092,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 17,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 119,
+        "stride": 205,
+        "extraction_offset_bits": 1666952,
+        "encoded_bit_bound": 5000975
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1749553575884706794565980717321624,
+      "outer_choices": 5296,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 14,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 127,
+        "stride": 211,
+        "extraction_offset_bits": 1884680,
+        "encoded_bit_bound": 5654167
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 331890326186825945591663065647386128,
+      "outer_choices": 6078,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 10,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 377387624652930565363234886764557852634,
+      "outer_choices": 7202,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 18,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 126,
+        "stride": 217,
+        "extraction_offset_bits": 1977696,
+        "encoded_bit_bound": 5933214
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 206645209618587559175272694331072736,
+      "outer_choices": 5998,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 12,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 138,
+        "stride": 217,
+        "extraction_offset_bits": 2166048,
+        "encoded_bit_bound": 6498282
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 887076658435360108484619077163899837737,
+      "outer_choices": 7342,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 9,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 2650444477177394747715772944801191239859,
+      "outer_choices": 7529,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 15,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 136,
+        "stride": 226,
+        "extraction_offset_bits": 2315400,
+        "encoded_bit_bound": 6946336
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 158556525429461219109514101056178552200,
+      "outer_choices": 7058,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 19,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 133,
+        "stride": 229,
+        "extraction_offset_bits": 2324840,
+        "encoded_bit_bound": 6974653
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 24481818534232927987175921780113322948,
+      "outer_choices": 6754,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 11,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 4176630165208973813237488199002077527422154,
+      "outer_choices": 8827,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 13,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 149,
+        "stride": 235,
+        "extraction_offset_bits": 2742792,
+        "encoded_bit_bound": 8228525
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 2247620494805440789393074432381196693089119,
+      "outer_choices": 8717,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 20,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 140,
+        "stride": 241,
+        "extraction_offset_bits": 2710400,
+        "encoded_bit_bound": 8131340
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 2908357501264203768573513788060828679802,
+      "outer_choices": 7539,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 16,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 145,
+        "stride": 241,
+        "extraction_offset_bits": 2807200,
+        "encoded_bit_bound": 8421745
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 76089814818430826194726386251559328645390,
+      "outer_choices": 8109,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 10,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 102373982396635338028602189497023175952831427,
+      "outer_choices": 9422,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 21,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 147,
+        "stride": 253,
+        "extraction_offset_bits": 3136392,
+        "encoded_bit_bound": 9409323
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 346356052810022761421780234800997594815796,
+      "outer_choices": 8381,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 14,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 160,
+        "stride": 253,
+        "extraction_offset_bits": 3413760,
+        "encoded_bit_bound": 10241440
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 5728521393735102147823777998596238973190923831,
+      "outer_choices": 10205,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 12,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 46604431227658881888755805193067532844790680363,
+      "outer_choices": 10625,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 17,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 154,
+        "stride": 256,
+        "extraction_offset_bits": 3364130,
+        "encoded_bit_bound": 10092544
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 36659215937274704290417145575877958410353472,
+      "outer_choices": 9232,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 22,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 154,
+        "stride": 265,
+        "extraction_offset_bits": 3604832,
+        "encoded_bit_bound": 10814650
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 41339924225384518577864927309551857911252044,
+      "outer_choices": 9250,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 11,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 3993444958962707766511279009978558956177518743991,
+      "outer_choices": 11536,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 18,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 163,
+        "stride": 271,
+        "extraction_offset_bits": 3990240,
+        "encoded_bit_bound": 11970883
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 17723795407636378454196000141589825778369258908,
+      "outer_choices": 10425,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 15,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 172,
+        "stride": 271,
+        "extraction_offset_bits": 4210560,
+        "encoded_bit_bound": 12631852
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 14674649680657740310264022909497494609316520171369,
+      "outer_choices": 11816,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 23,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 161,
+        "stride": 277,
+        "extraction_offset_bits": 4117736,
+        "encoded_bit_bound": 12353369
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 4944274985726504271385711471569942359639042810,
+      "outer_choices": 10177,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 13,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 523628289939380662067491300374468993506103226418336,
+      "outer_choices": 12587,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 19,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 172,
+        "stride": 286,
+        "extraction_offset_bits": 4689580,
+        "encoded_bit_bound": 14068912
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 8595717772688318762732847953288108983856056589822,
+      "outer_choices": 11697,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 24,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 168,
+        "stride": 289,
+        "extraction_offset_bits": 4677120,
+        "encoded_bit_bound": 14031528
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 592443097198736802815015002136490002317849094272,
+      "outer_choices": 11135,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 16,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 183,
+        "stride": 289,
+        "extraction_offset_bits": 5094720,
+        "encoded_bit_bound": 15284343
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 37758484979060412526805388443319443413478556029934259,
+      "outer_choices": 13543,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 12,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 157055028892879472219080979684106366315868680548400418,
+      "outer_choices": 13878,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 14,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 5917952446762963249214822751016596631559217967393385164,
+      "outer_choices": 14731,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 25,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 175,
+        "stride": 301,
+        "extraction_offset_bits": 5285000,
+        "encoded_bit_bound": 15855175
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 71110858888597358007708776861654492258696811106508,
+      "outer_choices": 12154,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 20,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 181,
+        "stride": 301,
+        "extraction_offset_bits": 5466200,
+        "encoded_bit_bound": 16398781
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 4180420540170561577339844460216051551363973176097208,
+      "outer_choices": 13051,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 17,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 195,
+        "stride": 307,
+        "extraction_offset_bits": 6126120,
+        "encoded_bit_bound": 18378555
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 97532762610007036543248540297001581575461547642234326661,
+      "outer_choices": 15414,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 26,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 182,
+        "stride": 313,
+        "extraction_offset_bits": 5943392,
+        "encoded_bit_bound": 17830358
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 8548941181557654086737918366569652639678228388132014,
+      "outer_choices": 13206,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 21,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 190,
+        "stride": 316,
+        "extraction_offset_bits": 6324150,
+        "encoded_bit_bound": 18972640
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 2038221122264166709306036232101033978384044480026895752,
+      "outer_choices": 14478,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 13,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 6219247374018165021280440390104867499743858584732944314120,
+      "outer_choices": 16444,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 15,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 67223535501424391214368246345688176807675659116981600276113,
+      "outer_choices": 17053,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 27,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 189,
+        "stride": 325,
+        "extraction_offset_bits": 6654312,
+        "encoded_bit_bound": 19963125
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1029258057657000871346803603515238244161526877971157614,
+      "outer_choices": 14315,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 18,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 206,
+        "stride": 325,
+        "extraction_offset_bits": 7252848,
+        "encoded_bit_bound": 21758750
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 252803430159112558784630291038534298708452490420310507124441,
+      "outer_choices": 17382,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 22,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 199,
+        "stride": 331,
+        "extraction_offset_bits": 7267480,
+        "encoded_bit_bound": 21802639
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 996033425917420987823648224537670511609736763049595434148,
+      "outer_choices": 15987,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 28,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 196,
+        "stride": 337,
+        "extraction_offset_bits": 7419776,
+        "encoded_bit_bound": 22259524
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 124086855694408100669374747018292158320151800650927363230,
+      "outer_choices": 15468,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 16,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 766989681153156490826665950056386589453435975498491543303683658,
+      "outer_choices": 19516,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 14,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 247722941798954108058361453411858542964923042679809777075788971,
+      "outer_choices": 19207,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 19,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 218,
+        "stride": 343,
+        "extraction_offset_bits": 8549088,
+        "encoded_bit_bound": 25647482
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 657279960434877270299340747363806521921918557908652140915750093,
+      "outer_choices": 19473,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 23,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 208,
+        "stride": 346,
+        "extraction_offset_bits": 8300240,
+        "encoded_bit_bound": 24900928
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 487752288676634123922307498896418567222468005629457653195078,
+      "outer_choices": 17558,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 29,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 203,
+        "stride": 349,
+        "extraction_offset_bits": 8241800,
+        "encoded_bit_bound": 24725603
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 14978753533794429334727439481227401305319759796582438953456,
+      "outer_choices": 16662,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 30,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 209,
+        "stride": 361,
+        "extraction_offset_bits": 9078960,
+        "encoded_bit_bound": 27237089
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1810243346762244269602229724826194150249971522572103950179424,
+      "outer_choices": 17886,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 17,
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "capacity_source": "hash-bound full-balanced prior result",
+      "capacity": 8785047872623856530868036000807884142303967348285763837652980563884,
+      "outer_choices": 22154,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 24,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 217,
+        "stride": 361,
+        "extraction_offset_bits": 9426480,
+        "encoded_bit_bound": 28279657
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 239304222185562731233968495906213817547763381643515496581944200,
+      "outer_choices": 19200,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        14,
+        6
+      ],
+      "t": 20,
+      "degree": 203,
+      "grading_replay": "PASS",
+      "structural_edges": 535,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 229,
+        "stride": 361,
+        "extraction_offset_bits": 9947760,
+        "encoded_bit_bound": 29843509
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 1713626382112258728883153694015319135942613957766564565054964089805,
+      "outer_choices": 21684,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "t": 15,
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 231,
+        "stride": 361,
+        "extraction_offset_bits": 10034640,
+        "encoded_bit_bound": 30104151
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 9917177995321505147642723320071002180758966973142817289181078388553,
+      "outer_choices": 22188,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        5,
+        4
+      ],
+      "t": 31,
+      "degree": 18,
+      "grading_replay": "PASS",
+      "structural_edges": 46,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 216,
+        "stride": 373,
+        "extraction_offset_bits": 10017216,
+        "encoded_bit_bound": 30051864
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 219016209222767874967923146971520142535755425068690754023510172,
+      "outer_choices": 19172,
+      "outer_family_complete": true
+    },
+    {
+      "puzzle": [
+        8,
+        5
+      ],
+      "t": 25,
+      "degree": 47,
+      "grading_replay": "PASS",
+      "structural_edges": 147,
+      "status": "COMPLETE_BOUNDED_SCREEN",
+      "encoding": {
+        "digit_bits": 226,
+        "stride": 376,
+        "extraction_offset_bits": 10650250,
+        "encoded_bit_bound": 31950976
+      },
+      "capacity_source": "exact carry-free Kronecker extraction",
+      "capacity": 117614101802143837699038025865966057039912432746788157117177301504,
+      "outer_choices": 20909,
+      "outer_family_complete": true
+    }
+  ],
+  "best_natural": {
+    "puzzle": [
+      23,
+      7
+    ],
+    "degree": 1056,
+    "t": 10,
+    "q": 6,
+    "base_copies": 30,
+    "power": 210,
+    "square_capacity": 377387624652930565363234886764557852634,
+    "batches": 4,
+    "inner_side": 2955204414547681244658707659790455381671329323051646976,
+    "outer": {
+      "side": 281474976710656,
+      "rank": 1483793653322039562007731134578404252736,
+      "public_base_copies": 2,
+      "public_root": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "public_base_n": 16777216,
+      "public_base_rank": 38520042228975289144,
+      "lita32_copies": 0,
+      "strassen2_copies": 0
+    },
+    "interpolation_factor": 31681,
+    "rank": 374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276,
+    "natural_n": 831816093760036377620756829334713144261054120811078790732663809376256,
+    "padded_n": 786394525415777912562924959695960473110997637822818876406180025577629,
+    "natural_exponent": 2.6490623172780827,
+    "exact_threshold": "PASS",
+    "construction": "Full balanced cyclic packet; ceil outer rank/capacity packets; arbitrary pinned catalogue-base power with LITA32/Strassen fillers"
+  },
+  "best_padded": {
+    "puzzle": [
+      23,
+      7
+    ],
+    "degree": 1056,
+    "t": 10,
+    "q": 6,
+    "base_copies": 30,
+    "power": 210,
+    "square_capacity": 377387624652930565363234886764557852634,
+    "batches": 4,
+    "inner_side": 2955204414547681244658707659790455381671329323051646976,
+    "outer": {
+      "side": 281474976710656,
+      "rank": 1483793653322039562007731134578404252736,
+      "public_base_copies": 2,
+      "public_root": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "public_base_n": 16777216,
+      "public_base_rank": 38520042228975289144,
+      "lita32_copies": 0,
+      "strassen2_copies": 0
+    },
+    "interpolation_factor": 31681,
+    "rank": 374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276,
+    "natural_n": 831816093760036377620756829334713144261054120811078790732663809376256,
+    "padded_n": 786394525415777912562924959695960473110997637822818876406180025577629,
+    "natural_exponent": 2.6490623172780827,
+    "exact_threshold": "PASS",
+    "construction": "Full balanced cyclic packet; ceil outer rank/capacity packets; arbitrary pinned catalogue-base power with LITA32/Strassen fillers"
+  },
+  "first_new_hit": {
+    "puzzle": [
+      23,
+      7
+    ],
+    "degree": 1056,
+    "t": 10,
+    "q": 6,
+    "base_copies": 30,
+    "power": 210,
+    "square_capacity": 377387624652930565363234886764557852634,
+    "batches": 4,
+    "inner_side": 2955204414547681244658707659790455381671329323051646976,
+    "outer": {
+      "side": 281474976710656,
+      "rank": 1483793653322039562007731134578404252736,
+      "public_base_copies": 2,
+      "public_root": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "public_base_n": 16777216,
+      "public_base_rank": 38520042228975289144,
+      "lita32_copies": 0,
+      "strassen2_copies": 0
+    },
+    "interpolation_factor": 31681,
+    "rank": 374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276,
+    "natural_n": 831816093760036377620756829334713144261054120811078790732663809376256,
+    "padded_n": 786394525415777912562924959695960473110997637822818876406180025577629,
+    "natural_exponent": 2.6490623172780827,
+    "exact_threshold": "PASS",
+    "construction": "Full balanced cyclic packet; ceil outer rank/capacity packets; arbitrary pinned catalogue-base power with LITA32/Strassen fillers"
+  },
+  "CPU_seconds": 2.3004198849999997,
+  "flint_version": "0.9.0",
+  "controls": [
+    "PASS: exact bounded-family enumeration, side deduplication, ceil batch grouping",
+    "PASS: all balanced cyclic triples exhaustively checked for four tiny cases",
+    "PASS: weighted profile DP, triple-capacity enumeration, exact integer roots"
+  ],
+  "queued_cases": 118
+}

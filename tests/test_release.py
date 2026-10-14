@@ -9,7 +9,7 @@ from cwschemes import _resources
 
 def test_catalogue_and_exact_threshold():
     entries=cwschemes.catalogue()
-    assert len(entries)==97 and len({r['n'] for r in entries})==97
+    assert len(entries)==99 and len({r['n'] for r in entries})==99
     d=next(r for r in entries if r['n']=='528108169')
     n,r=int(d['n']),int(d['rank'])
     assert (n-1)**27<=r**10<n**27

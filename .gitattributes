@@ -6,3 +6,5 @@ characteristic2/*.svg -text -whitespace
 characteristic2/*.npz binary
 characteristic2/bases/*.npz binary
 src/cwschemes/data/objects/*.gz binary
+# Preserve the hash-bound raw pytest traceback, including its whitespace.
+checks/graded/release/remaining.log -text -whitespace

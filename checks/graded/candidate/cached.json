@@ -1,0 +1,721 @@
+{
+  "status": "PARTIAL_GLOBAL_BUDGET",
+  "source_sha256": "32c7eea410bcd5f3d1e9f039066a8081f7404427a6889c846cc0f50964189a9e",
+  "helper_sha256": "f5b30a56c675c6698bf85ec0ff2abcbe7fba1f3e0bff94ea9d6bc9248066df92",
+  "aggregate_sha256": "c0fc8ad67d6929d3cba17400d22594ed47e291cb451fbd6d0c648dc1e0c7e7d8",
+  "grading_sha256": "c2199f0c9b59129ac18eeb71b8da891d433a1a5852a9b3db2f02a7f8dd72fd0c",
+  "catalogue_sha256": "36922b9293dba32191be65b09f2ba5dd23038f11c778aa33ca9c2c8d0a4df628",
+  "scope": "All balanced tuples in three globally cyclic blocks; bounded pricing, no global minimum claim",
+  "limits": {
+    "max_t": 64,
+    "max_q": 64,
+    "max_case_bits": 32000000,
+    "max_total_bits": 256000000
+  },
+  "cumulative_encoded_bit_bound": 240271040,
+  "first_new_hit": {
+    "puzzle": [
+      23,
+      7
+    ],
+    "degree": 1056,
+    "t": 11,
+    "q": 6,
+    "base_copies": 33,
+    "power": 231,
+    "square_capacity": 4176630165208973813237488199002077527422154,
+    "inner_side": 827268102990819696904779987451100917723545245377785847873536,
+    "outer": {
+      "side": 3227034632847360,
+      "rank": 1436214667181371313651585888357596429025280,
+      "public_base_copies": 1,
+      "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+      "lita32_copies": 3,
+      "strassen2_copies": 3
+    },
+    "interpolation_factor": 34849,
+    "rank": 57522474961448507197775480741509445731489075088074664072247434509580325287956584441663968549909412184696742561976601007673060620707837646481637970563759321308628226565877050103159268387426900713390807,
+    "natural_n": 2669622819001311839729769204214462438187427982295276153690704844352871464960,
+    "padded_n": 2404754680872320604060639810246542738806289652166338813910501555010665545163,
+    "natural_exponent": 2.6484056695369915,
+    "exact_threshold": "PASS",
+    "construction": "All balanced row tuples in three globally cyclic blocks; interpolation; pinned public-base/LITA32/Strassen outer family"
+  },
+  "best_natural": {
+    "puzzle": [
+      23,
+      7
+    ],
+    "degree": 1056,
+    "t": 11,
+    "q": 6,
+    "base_copies": 33,
+    "power": 231,
+    "square_capacity": 4176630165208973813237488199002077527422154,
+    "inner_side": 827268102990819696904779987451100917723545245377785847873536,
+    "outer": {
+      "side": 3227034632847360,
+      "rank": 1436214667181371313651585888357596429025280,
+      "public_base_copies": 1,
+      "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+      "lita32_copies": 3,
+      "strassen2_copies": 3
+    },
+    "interpolation_factor": 34849,
+    "rank": 57522474961448507197775480741509445731489075088074664072247434509580325287956584441663968549909412184696742561976601007673060620707837646481637970563759321308628226565877050103159268387426900713390807,
+    "natural_n": 2669622819001311839729769204214462438187427982295276153690704844352871464960,
+    "padded_n": 2404754680872320604060639810246542738806289652166338813910501555010665545163,
+    "natural_exponent": 2.6484056695369915,
+    "exact_threshold": "PASS",
+    "construction": "All balanced row tuples in three globally cyclic blocks; interpolation; pinned public-base/LITA32/Strassen outer family"
+  },
+  "best_padded": {
+    "puzzle": [
+      23,
+      7
+    ],
+    "degree": 1056,
+    "t": 11,
+    "q": 6,
+    "base_copies": 33,
+    "power": 231,
+    "square_capacity": 4176630165208973813237488199002077527422154,
+    "inner_side": 827268102990819696904779987451100917723545245377785847873536,
+    "outer": {
+      "side": 3227034632847360,
+      "rank": 1436214667181371313651585888357596429025280,
+      "public_base_copies": 1,
+      "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+      "lita32_copies": 3,
+      "strassen2_copies": 3
+    },
+    "interpolation_factor": 34849,
+    "rank": 57522474961448507197775480741509445731489075088074664072247434509580325287956584441663968549909412184696742561976601007673060620707837646481637970563759321308628226565877050103159268387426900713390807,
+    "natural_n": 2669622819001311839729769204214462438187427982295276153690704844352871464960,
+    "padded_n": 2404754680872320604060639810246542738806289652166338813910501555010665545163,
+    "natural_exponent": 2.6484056695369915,
+    "exact_threshold": "PASS",
+    "construction": "All balanced row tuples in three globally cyclic blocks; interpolation; pinned public-base/LITA32/Strassen outer family"
+  },
+  "puzzles": [
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "degree": 1056,
+      "grading_replay": "PASS",
+      "structural_edges": 1775,
+      "status": "UNKNOWN_REMAINDER_CASE_BIT_LIMIT",
+      "completed_t": 17,
+      "cases": [
+        {
+          "t": 1,
+          "capacity": 632,
+          "aggregate_lower": 137,
+          "encoding": {
+            "digit_bits": 14,
+            "stride": 22,
+            "extraction_offset_bits": 2254,
+            "encoded_bit_bound": 6776
+          },
+          "largest_outer": {
+            "side": 8,
+            "rank": 343,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 0,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 2,
+          "capacity": 3831214,
+          "aggregate_lower": 299107,
+          "encoding": {
+            "digit_bits": 28,
+            "stride": 43,
+            "extraction_offset_bits": 17248,
+            "encoded_bit_bound": 51772
+          },
+          "largest_outer": {
+            "side": 128,
+            "rank": 695604,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 1,
+            "strassen2_copies": 2
+          }
+        },
+        {
+          "t": 3,
+          "capacity": 31403704853,
+          "aggregate_lower": 1605775997,
+          "encoding": {
+            "digit_bits": 41,
+            "stride": 64,
+            "extraction_offset_bits": 55965,
+            "encoded_bit_bound": 167936
+          },
+          "largest_outer": {
+            "side": 4096,
+            "rank": 9874794384,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 2,
+            "strassen2_copies": 2
+          }
+        },
+        {
+          "t": 4,
+          "capacity": 288088750818250,
+          "aggregate_lower": 11129449407535,
+          "encoding": {
+            "digit_bits": 55,
+            "stride": 85,
+            "extraction_offset_bits": 132440,
+            "encoded_bit_bound": 397375
+          },
+          "largest_outer": {
+            "side": 131072,
+            "rank": 140182581075264,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 3,
+            "strassen2_copies": 2
+          }
+        },
+        {
+          "t": 5,
+          "capacity": 2813008604109322022,
+          "aggregate_lower": 87594176340649037,
+          "encoding": {
+            "digit_bits": 68,
+            "stride": 106,
+            "extraction_offset_bits": 254660,
+            "encoded_bit_bound": 764048
+          },
+          "largest_outer": {
+            "side": 4194304,
+            "rank": 1990031920944447744,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 4,
+            "strassen2_copies": 2
+          }
+        },
+        {
+          "t": 6,
+          "capacity": 28581471639823505828251,
+          "aggregate_lower": 745743402400396275289,
+          "encoding": {
+            "digit_bits": 82,
+            "stride": 127,
+            "extraction_offset_bits": 440832,
+            "encoded_bit_bound": 1322578
+          },
+          "largest_outer": {
+            "side": 134217728,
+            "rank": 28250493149727380173824,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 5,
+            "strassen2_copies": 2
+          }
+        },
+        {
+          "t": 7,
+          "capacity": 298518407898194827125131036,
+          "aggregate_lower": 6703176543791512028958851,
+          "encoding": {
+            "digit_bits": 95,
+            "stride": 148,
+            "extraction_offset_bits": 693595,
+            "encoded_bit_bound": 2080880
+          },
+          "largest_outer": {
+            "side": 2147483648,
+            "rank": 57292000107647126992515072,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 6,
+            "strassen2_copies": 1
+          }
+        },
+        {
+          "t": 8,
+          "capacity": 3181629170532803905900648269562,
+          "aggregate_lower": 62704788753442039853225377327,
+          "encoding": {
+            "digit_bits": 109,
+            "stride": 169,
+            "extraction_offset_bits": 1037680,
+            "encoded_bit_bound": 3113149
+          },
+          "largest_outer": {
+            "side": 98481281520,
+            "rank": 502020423308535953044223508480,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 0,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 9,
+          "capacity": 34439671351676133332304256262246582,
+          "aggregate_lower": 604790990788995827449585246195175,
+          "encoding": {
+            "digit_bits": 123,
+            "stride": 190,
+            "extraction_offset_bits": 1480059,
+            "encoded_bit_bound": 4440300
+          },
+          "largest_outer": {
+            "side": 3151401008640,
+            "rank": 7126681929287976389415796926382080,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 1,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 10,
+          "capacity": 377387624652930565363234886764557852634,
+          "aggregate_lower": 5976142180640711736326800676129391187,
+          "encoding": {
+            "digit_bits": 136,
+            "stride": 211,
+            "extraction_offset_bits": 2018240,
+            "encoded_bit_bound": 6054856
+          },
+          "largest_outer": {
+            "side": 100844832276480,
+            "rank": 101170376668172112824146653166920007680,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 2,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 11,
+          "capacity": 4176630165208973813237488199002077527422154,
+          "aggregate_lower": 60222884554011949154877114362666214473069,
+          "encoding": {
+            "digit_bits": 150,
+            "stride": 232,
+            "extraction_offset_bits": 2691150,
+            "encoded_bit_bound": 8073600
+          },
+          "largest_outer": {
+            "side": 3227034632847360,
+            "rank": 1436214667181371313651585888357596429025280,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 3,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 12,
+          "capacity": 46604431227658881888755805193067532844790680363,
+          "aggregate_lower": 616816567790529835511830864298137381238377681,
+          "encoding": {
+            "digit_bits": 163,
+            "stride": 253,
+            "extraction_offset_bits": 3477768,
+            "encoded_bit_bound": 10433467
+          },
+          "largest_outer": {
+            "side": 103265108251115520,
+            "rank": 20388503415306747168597913271124438906442874880,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 4,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 13,
+          "capacity": 523628289939380662067491300374468993506103226418336,
+          "aggregate_lower": 6404482499943900375829788073464527170704487899347,
+          "encoding": {
+            "digit_bits": 177,
+            "stride": 274,
+            "extraction_offset_bits": 4429425,
+            "encoded_bit_bound": 13288452
+          },
+          "largest_outer": {
+            "side": 3304483464035696640,
+            "rank": 289435194483694582805415976796882534715863051796480,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 5,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 14,
+          "capacity": 5917952446762963249214822751016596631559217967393385164,
+          "aggregate_lower": 67277944985832071948932940972196209755983937878166111,
+          "encoding": {
+            "digit_bits": 190,
+            "stride": 295,
+            "extraction_offset_bits": 5511520,
+            "encoded_bit_bound": 16534750
+          },
+          "largest_outer": {
+            "side": 151540043903460836100,
+            "rank": 2142172950206815429040050329269731725299122657925529600,
+            "public_base_copies": 2,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 0,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 15,
+          "capacity": 67223535501424391214368246345688176807675659116981600276113,
+          "aggregate_lower": 713885729341425496559513112490376163593134308245485271507,
+          "encoding": {
+            "digit_bits": 204,
+            "stride": 316,
+            "extraction_offset_bits": 6790140,
+            "encoded_bit_bound": 20370624
+          },
+          "largest_outer": {
+            "side": 4849281404910746755200,
+            "rank": 30410287201135951830652554474313111572346345251910818201600,
+            "public_base_copies": 2,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 1,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 16,
+          "capacity": 766989681153156490826665950056386589453435975498491543303683658,
+          "aggregate_lower": 7641736641795433571883964068157009293224039760205172644243999,
+          "encoding": {
+            "digit_bits": 218,
+            "stride": 337,
+            "extraction_offset_bits": 8252608,
+            "encoded_bit_bound": 24758042
+          },
+          "largest_outer": {
+            "side": 155177004957143896166400,
+            "rank": 431704437107325972187943663317348931881028717196125975189913600,
+            "public_base_copies": 2,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 2,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 17,
+          "capacity": 8785047872623856530868036000807884142303967348285763837652980563884,
+          "aggregate_lower": 82433573965879809509486783799410812985948059640851092502191266087,
+          "encoding": {
+            "digit_bits": 231,
+            "stride": 358,
+            "extraction_offset_bits": 9868551,
+            "encoded_bit_bound": 29605884
+          },
+          "largest_outer": {
+            "side": 4965664158628604677324800,
+            "rank": 6128476189175599501180048244453085436983083669316204343796013465600,
+            "public_base_copies": 2,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 3,
+            "strassen2_copies": 0
+          }
+        }
+      ]
+    },
+    {
+      "puzzle": [
+        35,
+        8
+      ],
+      "degree": 3413,
+      "grading_replay": "PASS",
+      "structural_edges": 4597,
+      "status": "UNKNOWN_REMAINDER_GLOBAL_BUDGET",
+      "completed_t": 14,
+      "cases": [
+        {
+          "t": 1,
+          "capacity": 1967,
+          "aggregate_lower": 353,
+          "encoding": {
+            "digit_bits": 16,
+            "stride": 25,
+            "extraction_offset_bits": 3328,
+            "encoded_bit_bound": 10000
+          },
+          "largest_outer": {
+            "side": 8,
+            "rank": 343,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 0,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 2,
+          "capacity": 43229197,
+          "aggregate_lower": 3021373,
+          "encoding": {
+            "digit_bits": 31,
+            "stride": 49,
+            "extraction_offset_bits": 24800,
+            "encoded_bit_bound": 74431
+          },
+          "largest_outer": {
+            "side": 512,
+            "rank": 34084596,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 1,
+            "strassen2_copies": 4
+          }
+        },
+        {
+          "t": 3,
+          "capacity": 1254855645068,
+          "aggregate_lower": 58072572551,
+          "encoding": {
+            "digit_bits": 47,
+            "stride": 73,
+            "extraction_offset_bits": 83472,
+            "encoded_bit_bound": 250463
+          },
+          "largest_outer": {
+            "side": 16384,
+            "rank": 483864924816,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 2,
+            "strassen2_copies": 4
+          }
+        },
+        {
+          "t": 4,
+          "capacity": 40656004736776165,
+          "aggregate_lower": 1433994332566273,
+          "encoding": {
+            "digit_bits": 62,
+            "stride": 97,
+            "extraction_offset_bits": 194432,
+            "encoded_bit_bound": 583358
+          },
+          "largest_outer": {
+            "side": 1048576,
+            "rank": 40612896345805056,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 4,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 5,
+          "capacity": 1400742837392886172397,
+          "aggregate_lower": 39995235204345974993,
+          "encoding": {
+            "digit_bits": 77,
+            "stride": 121,
+            "extraction_offset_bits": 375760,
+            "encoded_bit_bound": 1127357
+          },
+          "largest_outer": {
+            "side": 33554432,
+            "rank": 576540676525048574976,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 5,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 6,
+          "capacity": 50195768308612861454461018,
+          "aggregate_lower": 1204016547877611438718729,
+          "encoding": {
+            "digit_bits": 93,
+            "stride": 145,
+            "extraction_offset_bits": 651744,
+            "encoded_bit_bound": 1955325
+          },
+          "largest_outer": {
+            "side": 1073741824,
+            "rank": 8184571443949589570359296,
+            "public_base_copies": 0,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 6,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 7,
+          "capacity": 1848584923439672664398861512979,
+          "aggregate_lower": 38225056615235873096220288323,
+          "encoding": {
+            "digit_bits": 108,
+            "stride": 169,
+            "extraction_offset_bits": 1028160,
+            "encoded_bit_bound": 3084588
+          },
+          "largest_outer": {
+            "side": 98481281520,
+            "rank": 502020423308535953044223508480,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 0,
+            "strassen2_copies": 3
+          }
+        },
+        {
+          "t": 8,
+          "capacity": 69460184850080217738057491688521413,
+          "aggregate_lower": 1262150507395962014756719108751977,
+          "encoding": {
+            "digit_bits": 124,
+            "stride": 193,
+            "extraction_offset_bits": 1539584,
+            "encoded_bit_bound": 4618876
+          },
+          "largest_outer": {
+            "side": 6302802017280,
+            "rank": 49886773505015834725910578484674560,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 1,
+            "strassen2_copies": 4
+          }
+        },
+        {
+          "t": 9,
+          "capacity": 2650444477177394747715772944801191239859,
+          "aggregate_lower": 42951755315530035732580309717813270037,
+          "encoding": {
+            "digit_bits": 139,
+            "stride": 217,
+            "extraction_offset_bits": 2181744,
+            "encoded_bit_bound": 6545371
+          },
+          "largest_outer": {
+            "side": 201689664552960,
+            "rank": 708192636677204789769026572168440053760,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 2,
+            "strassen2_copies": 4
+          }
+        },
+        {
+          "t": 10,
+          "capacity": 102373982396635338028602189497023175952831427,
+          "aggregate_lower": 1497070323062321637875025095666525027537293,
+          "encoding": {
+            "digit_bits": 154,
+            "stride": 241,
+            "extraction_offset_bits": 2981440,
+            "encoded_bit_bound": 8944474
+          },
+          "largest_outer": {
+            "side": 12908138531389440,
+            "rank": 59441700919261653552763595542636848123740160,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 4,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 11,
+          "capacity": 3993444958962707766511279009978558956177518743991,
+          "aggregate_lower": 53204010689619737402980752162406822273320278189,
+          "encoding": {
+            "digit_bits": 170,
+            "stride": 265,
+            "extraction_offset_bits": 3979360,
+            "encoded_bit_bound": 11938250
+          },
+          "largest_outer": {
+            "side": 413060433004462080,
+            "rank": 843834386249838433835032002323272695964615311360,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 5,
+            "strassen2_copies": 0
+          }
+        },
+        {
+          "t": 12,
+          "capacity": 157055028892879472219080979684106366315868680548400418,
+          "aggregate_lower": 1921493551789734180330518595099503350949391235567837,
+          "encoding": {
+            "digit_bits": 185,
+            "stride": 289,
+            "extraction_offset_bits": 5150400,
+            "encoded_bit_bound": 15451385
+          },
+          "largest_outer": {
+            "side": 26435867712285573120,
+            "rank": 83853510630418944847054800134868254343395752720465920,
+            "public_base_copies": 1,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 6,
+            "strassen2_copies": 1
+          }
+        },
+        {
+          "t": 13,
+          "capacity": 6219247374018165021280440390104867499743858584732944314120,
+          "aggregate_lower": 70342983524050786425361449232876782306645302133979651811,
+          "encoding": {
+            "digit_bits": 201,
+            "stride": 313,
+            "extraction_offset_bits": 6563856,
+            "encoded_bit_bound": 19691769
+          },
+          "largest_outer": {
+            "side": 2424640702455373377600,
+            "rank": 5143357253446563845125160840576625872443193501679196569600,
+            "public_base_copies": 2,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 0,
+            "strassen2_copies": 4
+          }
+        },
+        {
+          "t": 14,
+          "capacity": 247722941798954108058361453411858542964923042679809777075788971,
+          "aggregate_lower": 2605119436613048354630935016293595918337696479090605342410427,
+          "encoding": {
+            "digit_bits": 216,
+            "stride": 337,
+            "extraction_offset_bits": 8176896,
+            "encoded_bit_bound": 24530904
+          },
+          "largest_outer": {
+            "side": 77588502478571948083200,
+            "rank": 73015099569927420345396783292825780885203574949837874502041600,
+            "public_base_copies": 2,
+            "public_root": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+            "lita32_copies": 1,
+            "strassen2_copies": 4
+          }
+        }
+      ]
+    }
+  ],
+  "CPU_seconds": 0.395691182,
+  "flint_version": "0.9.0",
+  "controls": "PASS: all balanced cyclic triples exhaustively checked for four tiny cases",
+  "helper_controls": "PASS: weighted profile DP, triple-capacity enumeration, exact integer roots"
+}

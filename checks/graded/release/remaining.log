@@ -1,0 +1,136 @@
+.....F..........                                                         [100%]
+=================================== FAILURES ===================================
+____________________ test_new_rectangular_catalogue_entries ____________________
+
+    def test_new_rectangular_catalogue_entries():
+        for n,rank in ((106,424690),(146,1040656),(432,19665128)):
+>           s=cwschemes.load(n)
+              ^^^^^^^^^^^^^^^^^
+
+tests/test_release.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/cwschemes/__init__.py:28: in load
+    engine=load_certificate(data)
+           ^^^^^^^^^^^^^^^^^^^^^^
+src/cwschemes/_engine/general_square.py:205: in load_certificate
+    return load_rectangular(data)
+           ^^^^^^^^^^^^^^^^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:118: in load_certificate
+    def load_certificate(value):return Recipe(value)
+                                       ^^^^^^^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:104: in __init__
+    self.root=load(self.spec['root']);self.n=self.root.d[0];self.rank=self.root.rank
+              ^^^^^^^^^^^^^^^^^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:102: in load
+    if key not in self.cache:self.cache[key]=Node(self.spec['nodes'][key],load,_resources.root())
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:16: in __init__
+    self.s=spec;self.d=tuple(spec['tensor']);self.rank=spec['rank'];self.op=spec['operation'];self.children=[load(x) for x in spec.get('children',[])];self.arrays=None
+                                                                                                             ^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:102: in load
+    if key not in self.cache:self.cache[key]=Node(self.spec['nodes'][key],load,_resources.root())
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:16: in __init__
+    self.s=spec;self.d=tuple(spec['tensor']);self.rank=spec['rank'];self.op=spec['operation'];self.children=[load(x) for x in spec.get('children',[])];self.arrays=None
+                                                                                                             ^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:102: in load
+    if key not in self.cache:self.cache[key]=Node(self.spec['nodes'][key],load,_resources.root())
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/cwschemes/_engine/rectangular_square.py:19: in __init__
+    with np.load(p,allow_pickle=False) as z:self.arrays={k:z[k] for k in z.files}
+                                                           ^^^^
+../../../../miniforge3/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py:254: in __getitem__
+    return format.read_array(bytes,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fp = <zipfile.ZipExtFile name='w_denominators.npy' mode='r' compress_type=deflate>
+allow_pickle = False, pickle_kwargs = {'encoding': 'ASCII', 'fix_imports': True}
+
+    def read_array(fp, allow_pickle=False, pickle_kwargs=None, *,
+                   max_header_size=_MAX_HEADER_SIZE):
+        """
+        Read an array from an NPY file.
+    
+        Parameters
+        ----------
+        fp : file_like object
+            If this is not a real file object, then this may take extra memory
+            and time.
+        allow_pickle : bool, optional
+            Whether to allow writing pickled data. Default: False
+        pickle_kwargs : dict
+            Additional keyword arguments to pass to pickle.load. These are only
+            useful when loading object arrays saved on Python 2 when using
+            Python 3.
+        max_header_size : int, optional
+            Maximum allowed size of the header.  Large headers may not be safe
+            to load securely and thus require explicitly passing a larger value.
+            See :py:func:`ast.literal_eval()` for details.
+            This option is ignored when `allow_pickle` is passed.  In that case
+            the file is by definition trusted and the limit is unnecessary.
+    
+        Returns
+        -------
+        array : ndarray
+            The array from the data on disk.
+    
+        Raises
+        ------
+        ValueError
+            If the data is invalid, or allow_pickle=False and the file contains
+            an object array.
+    
+        """
+        if allow_pickle:
+            # Effectively ignore max_header_size, since `allow_pickle` indicates
+            # that the input is fully trusted.
+            max_header_size = 2**64
+    
+        version = read_magic(fp)
+        _check_version(version)
+        shape, fortran_order, dtype = _read_array_header(
+                fp, version, max_header_size=max_header_size)
+        if len(shape) == 0:
+            count = 1
+        else:
+            count = numpy.multiply.reduce(shape, dtype=numpy.int64)
+    
+        # Now read the actual data.
+        if dtype.hasobject:
+            # The array contained Python objects. We need to unpickle the data.
+            if not allow_pickle:
+                raise ValueError("Object arrays cannot be loaded when "
+                                 "allow_pickle=False")
+            if pickle_kwargs is None:
+                pickle_kwargs = {}
+            try:
+                array = pickle.load(fp, **pickle_kwargs)
+            except UnicodeError as err:
+                # Friendlier error message
+                raise UnicodeError("Unpickling a python object failed: %r\n"
+                                   "You may need to pass the encoding= option "
+                                   "to numpy.load" % (err,)) from err
+        else:
+            if isfileobj(fp):
+                # We can use the fast fromfile() function.
+                array = numpy.fromfile(fp, dtype=dtype, count=count)
+            else:
+                # This is not a real file. We have to read it the
+                # memory-intensive way.
+                # crc32 module fails on reads greater than 2 ** 32 bytes,
+                # breaking large reads from gzip streams. Chunk reads to
+                # BUFFER_SIZE bytes to avoid issue and reduce memory overhead
+                # of the read. In non-chunked case count < max_read_count, so
+                # only one read is performed.
+    
+                # Use np.ndarray instead of np.empty since the latter does
+                # not correctly instantiate zero-width string dtypes; see
+                # https://github.com/numpy/numpy/pull/6430
+>               array = numpy.ndarray(count, dtype=dtype)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               numpy._core._exceptions._ArrayMemoryError: Unable to allocate 149. MiB for an array with shape (19468397,) and data type int64
+
+../../../../miniforge3/lib/python3.12/site-packages/numpy/lib/format.py:842: MemoryError
+=========================== short test summary info ============================
+FAILED tests/test_release.py::test_new_rectangular_catalogue_entries - numpy....
+1 failed, 15 passed in 29.15s

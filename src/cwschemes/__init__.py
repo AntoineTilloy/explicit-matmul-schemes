@@ -21,6 +21,8 @@ def load(n):
         from ._engine.legacy_square import load_certificate
     elif data['format']=='explicit-qcsr-square-v1':
         from ._engine.explicit_square import load_certificate
+    elif data['format']=='graded-cw-square-v1':
+        from ._engine.graded_square import load_certificate
     else:
         from ._engine.general_square import load_certificate
     engine=load_certificate(data)
@@ -32,13 +34,29 @@ class Scheme:
     def __init__(self,record,engine):
         self.record=record;self._engine=engine;self.n=engine.n;self.rank=engine.rank;self.field='Q'
 
-    def coefficient(self,factor,term,row,col):
+    def coefficient(self,factor,term,row,col,*,max_slot_terms=10000):
         """Return a Fraction in the direct-output U/V/W convention."""
         mode={'U':0,'V':1,'W':2}.get(factor,factor)
         if mode not in (0,1,2):raise ValueError('Factor must be U, V or W')
         if any(type(x) is not int for x in (term,row,col)):raise TypeError('Indices must be integers')
         if not (0<=term<self.rank and 0<=row<self.n and 0<=col<self.n):raise IndexError('Coefficient index out of range')
+        if getattr(self._engine,'finite_slot_sum',False):
+            return Fraction(self._engine.coefficient(mode,term,row,col,max_slot_terms=max_slot_terms))
         return Fraction(self._engine.factor_entry(mode,term,row,col))
+
+    def coefficient_summands(self,factor,term,row,col):
+        """Stream the finite slot sum for a graded construction.
+
+        Large schemes can have prohibitively many summands; this method does
+        not promise efficient evaluation or materialize that sum.
+        """
+        mode={'U':0,'V':1,'W':2}.get(factor,factor)
+        if mode not in (0,1,2):raise ValueError('Factor must be U, V or W')
+        if any(type(x) is not int for x in (term,row,col)):raise TypeError('Indices must be integers')
+        if not (0<=term<self.rank and 0<=row<self.n and 0<=col<self.n):raise IndexError('Coefficient index out of range')
+        if not hasattr(self._engine,'coefficient_summands'):
+            raise TypeError('This construction does not expose a slot sum')
+        return self._engine.coefficient_summands(mode,term,row,col)
 
     def coefficients(self,factor,queries,*,max_queries=1000):
         """Evaluate a bounded batch; never allocate an entire factor matrix."""

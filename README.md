@@ -1,14 +1,26 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **97 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+A catalogue of **99 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+
+A new finite graded CW construction reaches exponent **2.649062317** at
+**n = 2⁴⁸ · 6⁷⁰ ≈ 8.32 × 10⁶⁸**, using **4 · 31,681 · 7²¹⁰** products.
+Its companion cropped entry crosses 2.65 at approximately **7.86 × 10⁶⁸**.
+Both satisfy the strict integer check **R²⁰ < n⁵³** and work recursively on
+matrix blocks. These are enormous algebraic constructions; the size-1,024
+count remains **198,679,192**. See the [finite proof, coefficient definition,
+and verification limits](docs/graded_cw.md). This is the smallest crossing
+found in the bounded search, without a global minimality claim.
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the pinned LITA comparison: **1,593**, **2,236** and **14,196**. Current upstream LITA also attains these counts. Every coefficient is accessible as an exact rational number.
 
-Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best catalogue exponent is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
+Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best exponent in the earlier size range is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
-The left panel shows our saved schemes through size 16,384; the right panel shows the same catalogue over the full size range. Both use a logarithmic size axis.
+The three panels preserve detail through size 16,384, show the earlier range
+through 30 billion, and show the full range including the new graded schemes.
+All use logarithmic size axes. The main figure contains only rational schemes
+valid over R and C; characteristic-two results remain separate.
 
 The exponent of a finite scheme is **logₙ R**, where R counts bilinear scalar multiplications. Additions and multiplications by fixed constants are excluded. These are algebraic reference constructions; the counts do not establish a practical speedup over numerical matrix multiplication libraries.
 
@@ -40,7 +52,7 @@ u = s.coefficient("U", term=0, row=0, col=0)  # fractions.Fraction
 print(u)
 ```
 
-No search needs to be rerun. All required scheme data is included, compressed and hash-checked. Resources are unpacked on demand into `~/.cache/cwschemes`; set `CWSCHEMES_CACHE` to choose another directory. The full coefficient arrays are never allocated.
+No search needs to be rerun. All required scheme data is included, compressed and hash-checked. Resources are unpacked on demand into `~/.cache/cwschemes`; set `CWSCHEMES_CACHE` to choose another directory. The full coefficient arrays are never allocated. For the enormous graded entries, coefficients have an explicit finite slot-sum definition, whose evaluation is generally computationally prohibitive. Their default coefficient query guard prevents accidentally starting such a sum; see [coefficient access](docs/graded_cw.md#ordered-blocks-and-coefficient-access).
 
 First use of a construction can take minutes to build exact intermediate tables. Subsequent queries reuse those tables. See the [release checks](checks/summary.json) for measured verification results.
 
@@ -63,6 +75,8 @@ First use of a construction can take minutes to build exact intermediate tables.
 | [536,870,912](schemes/536870912.json) | 355,919,505,257,948,041,899,273 | 2.697789558 |
 | [12,310,160,190](schemes/12310160190.json) | 1,463,616,394,485,527,559,895,695,360 | 2.692241557 |
 | [13,468,840,704](schemes/13468840704.json) | 2,014,523,380,268,092,193,411,235,280 | 2.695555553 |
+| [≈ 8.32 × 10⁶⁸](docs/graded_cw.md) | 4 · 31,681 · 7²¹⁰ | 2.649062317 |
+| [≈ 7.86 × 10⁶⁸ (cropped)](docs/graded_cw.md) | 4 · 31,681 · 7²¹⁰ | < 2.65, exactly checked |
 
 See [catalogue.json](catalogue.json) for all sizes, or run `cwschemes list`.
 

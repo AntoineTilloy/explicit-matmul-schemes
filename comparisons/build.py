@@ -81,6 +81,14 @@ def main():
 
 
 def draw(points):
+    entries=json.loads((ROOT/'catalogue.json').read_text())
+    if any('graded' in r['provenance']['construction'].lower() for r in entries):
+        try:
+            from .graded_plot import draw_catalogue
+        except ImportError:
+            from graded_plot import draw_catalogue
+        draw_catalogue(ROOT/'catalogue.json',ROOT/'figures')
+        return
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt

@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "source_sha256": "f62a608f4b49f38dfbb4df69d0750f73ba5f1704ebd3d10ddfe32b48849c3900",
+  "input_hashes": {
+    "grading": "c2199f0c9b59129ac18eeb71b8da891d433a1a5852a9b3db2f02a7f8dd72fd0c",
+    "result": "8ccb38e927999662d242cd44b3e4f188fff4ab155806091a4564d283fa2cfa84",
+    "catalogue": "36922b9293dba32191be65b09f2ba5dd23038f11c778aa33ca9c2c8d0a4df628"
+  },
+  "scope": "Independent capacity, grading and finite-price replay; no coefficient-generator audit",
+  "limits": {
+    "CPU_seconds": 10,
+    "MiB": 512,
+    "pairs": 8000000
+  },
+  "pairs_used": 970225,
+  "cases": [
+    {
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 10,
+      "states": 985,
+      "pairs": 970225,
+      "capacity": 377387624652930565363234886764557852634,
+      "grading": {
+        "degree": 1056,
+        "wanted": 23,
+        "unwanted": 1752
+      },
+      "profile_table_sha256": "b37da137a6f9d0ea0036d16534dc98a18e1ab07c0d85312c6e8811d9c155c2f2"
+    }
+  ],
+  "items": [
+    {
+      "item": "first_new_hit",
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 10,
+      "q": 6,
+      "public_root": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "batches": 4,
+      "packet_rank": 93624019932724816901116808242756936458087706102753899702634160240171056147571570605501226525680672923732148028005804957012491357037274552907397103397123795692960746970193993190643569,
+      "exact_capacity": "PASS",
+      "exact_batch_count": "PASS",
+      "exact_price": "PASS",
+      "exact_crop": "PASS"
+    },
+    {
+      "item": "best_natural",
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 10,
+      "q": 6,
+      "public_root": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "batches": 4,
+      "packet_rank": 93624019932724816901116808242756936458087706102753899702634160240171056147571570605501226525680672923732148028005804957012491357037274552907397103397123795692960746970193993190643569,
+      "exact_capacity": "PASS",
+      "exact_batch_count": "PASS",
+      "exact_price": "PASS",
+      "exact_crop": "PASS"
+    },
+    {
+      "item": "best_padded",
+      "puzzle": [
+        23,
+        7
+      ],
+      "t": 10,
+      "q": 6,
+      "public_root": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "batches": 4,
+      "packet_rank": 93624019932724816901116808242756936458087706102753899702634160240171056147571570605501226525680672923732148028005804957012491357037274552907397103397123795692960746970193993190643569,
+      "exact_capacity": "PASS",
+      "exact_batch_count": "PASS",
+      "exact_price": "PASS",
+      "exact_crop": "PASS"
+    }
+  ],
+  "inherited_aggregate_items": [],
+  "CPU_seconds": 0.170992539,
+  "controls": {
+    "exhaustive_cyclic_cases": [
+      {
+        "width": 2,
+        "t": 1,
+        "direct_sequence_triples": 27,
+        "balanced": 9,
+        "both_cyclic_orientations": "PASS"
+      },
+      {
+        "width": 2,
+        "t": 2,
+        "direct_sequence_triples": 729,
+        "balanced": 129,
+        "both_cyclic_orientations": "PASS"
+      },
+      {
+        "width": 3,
+        "t": 1,
+        "direct_sequence_triples": 27,
+        "balanced": 3,
+        "both_cyclic_orientations": "PASS"
+      },
+      {
+        "width": 3,
+        "t": 2,
+        "direct_sequence_triples": 729,
+        "balanced": 45,
+        "both_cyclic_orientations": "PASS"
+      }
+    ],
+    "local_Q_identity": "PASS"
+  }
+}

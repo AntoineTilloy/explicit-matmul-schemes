@@ -1,0 +1,12 @@
+Processing /home/antoine/matmul_oct14/sub265/release_20261014_01/repo
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: explicit-matmul-schemes
+  Building wheel for explicit-matmul-schemes (pyproject.toml): started
+  Building wheel for explicit-matmul-schemes (pyproject.toml): finished with status 'done'
+  Created wheel for explicit-matmul-schemes: filename=explicit_matmul_schemes-0.1.0-py3-none-any.whl size=57590057 sha256=d7e41ef8bbc353ef9f4c2c34d1d0c6f2dc0aca06cf0854d74bbb1d7ae62158f0
+  Stored in directory: /tmp/pip-ephem-wheel-cache-gpaeuy12/wheels/ee/be/df/3312ecb13bd9f6c00171ee33e4acdfeccd8aed861ef567d79e
+Successfully built explicit-matmul-schemes
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: /home/antoine/matmul_oct14/sub265/venv/bin/python -m pip install --upgrade pip

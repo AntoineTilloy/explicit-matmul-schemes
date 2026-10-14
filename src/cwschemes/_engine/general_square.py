@@ -197,6 +197,9 @@ class MixedSquare:
 
 def load_certificate(value):
     data = json.loads(Path(value).read_text()) if isinstance(value, (str, Path)) else value
+    if data['format'] == 'graded-cw-square-v1':
+        from .graded_square import load_certificate as load_graded
+        return load_graded(data)
     if data['format'] == 'exact-rectangular-recipe-v1':
         from .rectangular_square import load_certificate as load_rectangular
         return load_rectangular(data)
