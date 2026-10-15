@@ -18,7 +18,7 @@ import sys
 
 LITA32_RANK = 14196
 LITA32_EXPONENT = math.log(LITA32_RANK)/math.log(32)
-HISTORICAL_LIMIT = 30000000000
+MEDIUM_LIMIT = 30000000000
 COLORS = dict(cw='#176c99', z4='#7b4ea3', small='#d9822b',
               rectangular='#348568', graded='#c53e55', reference='#7c8794')
 STYLES = {
@@ -26,7 +26,7 @@ STYLES = {
     'z4': ('CW quotient constructions', 's', 28),
     'small': ('Small rational schemes', 'D', 32),
     'rectangular': ('Rectangular compositions / LITA refresh', '^', 35),
-    'graded': ('New graded constructions', '*', 125),
+    'graded': ('Graded constructions', '*', 125),
 }
 
 
@@ -119,9 +119,9 @@ def draw_catalogue(catalogue_path, output_directory):
     old = [p for p in points if p['family'] != 'graded']
     graded = [p for p in points if p['family'] == 'graded']
     small = [p for p in points if p['n'] <= 16384]
-    historical = [p for p in points if p['n'] <= HISTORICAL_LIMIT]
-    if not small or not historical or not old:
-        raise ValueError('The historical and small panels require existing rational entries')
+    medium = [p for p in points if p['n'] <= MEDIUM_LIMIT]
+    if not small or not medium or not old:
+        raise ValueError('The small and medium panels require rational entries')
 
     import matplotlib
     matplotlib.use('Agg')
@@ -134,12 +134,12 @@ def draw_catalogue(catalogue_path, output_directory):
     fig, axes = plt.subplots(1, 3, figsize=(18, 7.4),
                              gridspec_kw={'width_ratios': [1.08, 1.0, 1.08]})
     full_max = max(p['x'] for p in points)
-    upper = max(math.log10(HISTORICAL_LIMIT), full_max+max(.5, .045*full_max))
-    views = [(small, 'Small sizes: through 16,384', (.95, math.log10(20000)),
+    upper = max(math.log10(MEDIUM_LIMIT), full_max+max(.5, .045*full_max))
+    views = [(small, 'Small sizes', (.95, math.log10(20000)),
               (2.715, 2.802), [1, 2, 3, 4]),
-             (historical, 'Historical range: through 30 billion', (.95, math.log10(HISTORICAL_LIMIT)),
+             (medium, 'Medium sizes', (.95, math.log10(MEDIUM_LIMIT)),
               (2.685, 2.802), [1, 3, 5, 7, 9]),
-             (points, 'Full range: all saved rational sizes', (.95, upper),
+             (points, 'Large sizes', (.95, upper),
               (min(2.635, min(p['exponent'] for p in points)-.012), 2.802), wide_ticks(upper))]
     for ax, (subset, title, xlim, ylim, ticks) in zip(axes, views):
         for family, (label, marker, size) in STYLES.items():
@@ -181,13 +181,13 @@ def draw_catalogue(catalogue_path, output_directory):
     best_small = min(small, key=lambda p: p['exponent'])
     annotate(axes[0], best_small,
              f"{best_small['exponent']:.6f} at n = {best_small['n']:,}", (.40, .09))
-    best_old = min((p for p in historical if p['family'] != 'graded'), key=lambda p: p['exponent'])
+    best_old = min((p for p in medium if p['family'] != 'graded'), key=lambda p: p['exponent'])
     annotate(axes[1], best_old,
-             f"Best earlier exponent: {best_old['exponent']:.6f}\nn = {best_old['n']:,}", (.19, .20))
+             f"Best exponent: {best_old['exponent']:.6f}\nn = {best_old['n']:,}", (.19, .20))
     if graded:
         best_graded = min(graded, key=lambda p: p['exponent'])
         annotate(axes[2], best_graded,
-                 f"New graded construction\n{exponent_label(best_graded)}\nn ≈ {approximate_size(best_graded['n'])}",
+                 f"Graded construction\n{exponent_label(best_graded)}\nn ≈ {approximate_size(best_graded['n'])}",
                  (.43, .30), COLORS['graded'])
 
     legend = [Line2D([], [], ls='none', marker=marker, markersize=8 if family == 'graded' else 6,

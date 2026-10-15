@@ -17,8 +17,8 @@ Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW pac
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
-The three panels preserve detail through size 16,384, show the earlier range
-through 30 billion, and show the full range including the new graded schemes.
+The panels show small sizes (through 16,384), medium sizes (through 30 billion),
+and large sizes (the full catalogue).
 All use logarithmic size axes. The main figure contains only rational schemes
 valid over R and C; characteristic-two results remain separate.
 
