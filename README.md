@@ -1,17 +1,10 @@
 # Explicit matrix multiplication schemes
 
-A catalogue of **99 explicit schemes for square matrix multiplication over R and C**, with rational coefficients, exact multiplication counts, compact coefficient descriptions, and finite proof witnesses.
+This is the result of an auto-research experiment with Opus 5.5 and GPT6 Astra, aimed at finding explicit fast matrix multiplication algorithms. The objective was to see if insights from the record asymptotic constructions, which use the Coppersmith-Winograd tensor but give galactic algorithms, could be brought down to explicit algorithms with decent exponents. In a nutshell, it is difficult to do much better than Strassen, but one can improve on the state of the art. Most remarkably, to get an exponent below $2.7, i.e. a matmul algo with $\leq n^{2.7}$ multiplications, requires "only" slightly more than $n\geq 5.10^8$, which is not yet completely galactic. I am still hopeful the exponent can be brought down with more grind.
 
-A new finite graded CW construction reaches exponent **2.649062317** at
-**n = 2⁴⁸ · 6⁷⁰ ≈ 8.32 × 10⁶⁸**, using **4 · 31,681 · 7²¹⁰** products.
-Its companion cropped entry crosses 2.65 at approximately **7.86 × 10⁶⁸**.
-Both satisfy the strict integer check **R²⁰ < n⁵³** and work recursively on
-matrix blocks. These are enormous algebraic constructions; the size-1,024
-count remains **198,679,192**. See the [finite proof, coefficient definition,
-and verification limits](docs/graded_cw.md). This is the smallest crossing
-found in the bounded search, without a global minimality claim.
+The auto-research loop ran for a few days, with fairly rare pointers from me. Everything in this repo, apart from the beginning of this README, has been written by Opus 5.5 and GPT6 Astra. Please fork and improve!
 
-Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Three small explicit schemes, at sizes 14, 16 and 32, use one product fewer than the pinned LITA comparison: **1,593**, **2,236** and **14,196**. Current upstream LITA also attains these counts. Every coefficient is accessible as an exact rational number.
+Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Every coefficient is accessible as an exact rational number.
 
 Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best exponent in the earlier size range is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
 
@@ -23,15 +16,6 @@ All use logarithmic size axes. The main figure contains only rational schemes
 valid over R and C; characteristic-two results remain separate.
 
 The exponent of a finite scheme is **logₙ R**, where R counts bilinear scalar multiplications. Additions and multiplications by fixed constants are excluded. These are algebraic reference constructions; the counts do not establish a practical speedup over numerical matrix multiplication libraries.
-
-The dashed reference is the current size-32 LITA recursion exponent,
-**log₃₂(14,196) = 2.758639**. Pure recursion attains this value at powers of
-32, not at every finite size: blocking and padding must be charged explicitly.
-The new rectangular points improve counts at their own sizes while remaining
-above this exponent. At size 1,024, current LITA squared costs **201,526,416**;
-our existing **198,679,192** construction saves **1.41%**. The rectangular
-continuation does not improve that result. See the
-[same-size blocking comparison](docs/extended_rectangular.md#comparison-with-size-32-lita-blocking).
 
 ## Quick start
 
