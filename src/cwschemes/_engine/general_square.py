@@ -7,6 +7,7 @@ from pathlib import Path
 import json
 from .scheme import CompactPacket
 from .square_scheme import base_factors
+from .strassen_packet import LOCAL_TENSOR, StrassenPacket
 ROOT = resource_root()
 
 @lru_cache(None)
@@ -121,7 +122,10 @@ class MixedSquare:
             if key in packet_cache:
                 p = packet_cache[key]
             else:
-                if spec.get('compression') == 'z4-quotient-v1':
+                if 'local_tensor' in spec:
+                    assert spec['local_tensor'] == LOCAL_TENSOR and not spec.get('compression'), 'unknown local tensor'
+                    p = StrassenPacket(spec['q'], spec['rows'], spec['m'])
+                elif spec.get('compression') == 'z4-quotient-v1':
                     from .z4_quotient import unit_from_spec
                     p = unit_from_spec(spec)
                 elif spec.get('compression') == 'tailored-completion-v1':
@@ -179,6 +183,14 @@ class MixedSquare:
         t = term - (self.ends[batch - 1] if batch else 0)
         p = self.packets[batch]
         value = F(0)
+        if isinstance(p, StrassenPacket):
+            # Local S_q factors are cheap and mostly zero: skip the outer call
+            # (for example, a current-LITA term) whenever the packet factor vanishes.
+            for h in range(self.used[batch]):
+                b = p.factor_entry(mode, t, p.matrix_variable(h, mode, ir, ic))
+                if b:
+                    value += self.outer.factor_entry(mode, self.starts[batch] + h, br, bc) * b
+            return value
         for h in range(self.used[batch]):
             a = self.outer.factor_entry(mode, self.starts[batch] + h, br, bc)
             if a:

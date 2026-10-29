@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "n": 36,
+  "rank": 19666,
+  "terms_compared": 19666,
+  "nonzero_entries": 13845849,
+  "generator_sha256": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed",
+  "script_sha256": "51063b9f95cd43c6d7cda68f1b138641ebf08a97d6e4e0b9e50a825e82259c03",
+  "seconds": 102.3431991757825
+}

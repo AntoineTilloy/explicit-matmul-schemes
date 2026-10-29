@@ -1147,14 +1147,15 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "8388608",
-    "rank": "6705816639014712292",
+    "rank": "6003785411879964840",
     "field": "Q",
-    "root_object": "d38785c9cee87552ad640b5139348e05a11fe20900c1b6ab3a1078f5e14d4fba",
-    "effective_exponent": 2.719135597530726,
+    "root_object": "f0177d4022a78010f9f40368804cc4be28154bf1f97e679c3ebb94036ddc4a3c",
+    "effective_exponent": 2.7121990487325647,
     "provenance": {
-      "construction": "Exact finite CW composition update (October 2026): packed rebuild"
+      "construction": "Strassen-tensor S_q packets (October 2026): explicit size-32 outer scheme (14,196 products) with 40 power-18 S_8 packets of 358 independent products",
+      "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class; witnesses in checks/sq/rs_sets.json"
     },
-    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+    "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",
@@ -1256,14 +1257,28 @@
   {
     "format": "cwschemes-catalogue-entry-v1",
     "n": "13468840704",
-    "rank": "2014523380268092193411235280",
+    "rank": "2000000000000000000000000000",
     "field": "Q",
-    "root_object": "4be0f59b2618795977eb5516a3ff32a20d3f5e0ab911195cf51de0ebc029ba89",
-    "effective_exponent": 2.695555552874949,
+    "root_object": "f960737e268dddd70854c3cf82e1248abdbb9393b869200c717af2583933c9b8",
+    "effective_exponent": 2.6952453333064614,
     "provenance": {
-      "construction": "Exact finite CW composition update (October 2026): envelope_missing_final"
+      "construction": "Padding of the size-13,947,137,604 Strassen-tensor S_q packet scheme (October 2026)",
+      "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class; witnesses in checks/sq/rs_sets.json"
     },
-    "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
+    "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
+  },
+  {
+    "format": "cwschemes-catalogue-entry-v1",
+    "n": "13947137604",
+    "rank": "2000000000000000000000000000",
+    "field": "Q",
+    "root_object": "012b50756f9de7e62b0509b579a7d950fabaf17c72bb872ad09046da0264704c",
+    "effective_exponent": 2.691218900217156,
+    "provenance": {
+      "construction": "Strassen-tensor S_q packets (October 2026): current LITA size-36 outer scheme (19,666 products) with 2 power-27 S_9 packets of 9,842 independent products",
+      "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class; witnesses in checks/sq/rs_sets.json"
+    },
+    "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
   },
   {
     "format": "cwschemes-catalogue-entry-v1",

@@ -110,3 +110,24 @@ deletions bind to the new unit rank 198,679,264, giving 198,679,192 at size
 1,024. See [c4_recompression.md](c4_recompression.md) and
 `checks/small1024_recompression*.json` for the current object versions and
 distinct check scopes. Historical evidence above retains its historical ranks.
+
+## Strassen-tensor (S_q) packets
+
+Packets with `"local_tensor": "strassen-completion-v1"` (sizes 8,388,608, 13,468,840,704 and 13,947,137,604) are checked by `cwschemes verify <n>` as follows; `--exact` adds nothing, since these packets have no relation proofs.
+
+- **Support audit**, at load and again from the root object. Every row partitions the N = 3m coordinates into masks of size m, uses only the letters its coordinate kinds allow, and has distinct blocks in each leg. A cross triple must have B_v on kind 0 equal to the complement of A_u there, so grouping rows by that part enumerates **every** triple (u,v,w) with A_u, B_v, C_w partitioning the coordinates. The audit requires exactly the M diagonal triples.
+- **Exact local identity.** From the generator's own local factors, all three kinds are rebuilt exactly at the packet's q and compared with Str_q plus Σₜ aₜbₜcₜ. This also checks that no local block has two zeros.
+- **Counts.** The packet rank (q+1)^N, the batch allocation and the square rank are recomputed at load; unused rows of the final packet receive zero input.
+- **Exact packet entries.** At sampled entries (a valid entry of a row, a changed contracted label and random block triples), Σ over all (q+1)^N terms of U·V·W is evaluated exactly. The term set is the product of local choices, so the sum factors coordinate-wise.
+
+The full composition then follows from the documented batching, as for the CW packets. The default coefficient queries at the last matrix entry are zero for these entries; nonzero rational probes are recorded separately.
+
+Release evidence for these entries is in `checks/sq/`:
+
+- `export.json`: input hashes of the study certificates, rows rebuilt from the RS witnesses, the package audit, a separate O(M²) cross-triple enumeration, the local identity and every count. `rs_sets.json` holds the RS witnesses.
+- `independent.json`: a separate support checker on both supports, an end-to-end exact evaluation of all 2²⁷ terms of the power-27 packet at q = 1 (every output block of the 9,842 rows), and rejection of four corrupted supports. It also records the earlier independent study checks, which were not repeated here: the full power-18 packet at q = 2 (3¹⁸ terms) and an exact CRT replay of the size-36 current-LITA tensor over Q.
+- `lita36_index.json`: the indexed current-LITA accessor used as the outer scheme agrees with the pinned serializer on all 19,666 terms.
+- `probes.json`: 24 nonzero coefficients through the published loader, each equal to a separate evaluation of the row wiring, local factors and outer coefficients.
+- `verify.jsonl` and `tests.txt`: the default verifier output and the new regression tests (complete tensors at N = 6 and N = 9, a complete size-8 composed square, negative controls).
+
+Exactness for every q follows from the uniform local identity together with the support audit, which does not depend on q. No target tensor of these sizes is expanded.

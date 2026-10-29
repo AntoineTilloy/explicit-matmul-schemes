@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "script_sha256": "f590c0d468d323490ef9a98235041ffe6fe1367d74adaa844f8375dc217d8aae",
+  "input_hashes": {
+    "n8388608/S_N18.txt": "505739507ccab290d9955c84e81a0ddb15fc1bed501b9637b48626b07a10f386",
+    "n8388608/rs_sets.json": "4a4de73f647a53f1fc632e27c8dd6f6fb0a41d2d5f18d26a47899418165d6c70",
+    "n8388608/params.json": "62acc78b218fbf7d11a73c747eecab0ab185eb48678e8e3fe3573da390b899f8",
+    "n13468840704/S_N27.txt": "818cbb8b589f797c6d90063f79c2c8eb565dd8f35dfacd64dd6237591535f50d",
+    "n13468840704/rs_sets.json": "c04869275bb1caaa87e64d3f080629ad6510564e7c7f6ebf128d95d1e981022b",
+    "n13468840704/params.json": "b05da0d1b9139a2b7db143f696d74e67e5a78ade7e07d91c5a7a88293bbd9a3a"
+  },
+  "previous_catalogue_sha256": "c83e294475ed326b5ce43ba2575288b0845a283b77a43a6ff47b7bd22e95e845",
+  "previous_index_sha256": "fdb532690b467c8077c3d7e3935a5038d1fb7ab3029cb598dcc666b616c356b9",
+  "supports": {
+    "18": {
+      "power": 18,
+      "products": 358,
+      "stored_row_order": "certificate order (defines the call assignment)",
+      "rows_sha256": "c5cba439af43dc93c4846739b54a920d78b577ad8606fbc1f9de6e17ecabf5ac",
+      "rs_sizes": {
+        "1": 1,
+        "6": 18,
+        "15": 90,
+        "20": 140
+      },
+      "rows_rebuilt_from_rs_sets": true,
+      "package_audit": {
+        "m": 6,
+        "k": 18,
+        "products": 358,
+        "partition_triples": 358,
+        "weight_classes": [
+          1,
+          18,
+          90,
+          140,
+          90,
+          18,
+          1
+        ]
+      },
+      "independent_cross_triple_enumeration": {
+        "diagonal": 358,
+        "off_diagonal": 0
+      },
+      "local_identity_coefficients": 1944
+    },
+    "27": {
+      "power": 27,
+      "products": 9842,
+      "stored_row_order": "certificate order (defines the call assignment)",
+      "rows_sha256": "72c153d008172328583768e23bac5e4c670c1a566de22fde937daa4c1012c030",
+      "rs_sizes": {
+        "1": 1,
+        "9": 36,
+        "36": 360,
+        "84": 1626,
+        "126": 2898
+      },
+      "rows_rebuilt_from_rs_sets": true,
+      "package_audit": {
+        "m": 9,
+        "k": 27,
+        "products": 9842,
+        "partition_triples": 9842,
+        "weight_classes": [
+          1,
+          36,
+          360,
+          1626,
+          2898,
+          2898,
+          1626,
+          360,
+          36,
+          1
+        ]
+      },
+      "independent_cross_triple_enumeration": {
+        "diagonal": 9842,
+        "off_diagonal": 0
+      },
+      "local_identity_coefficients": 2700
+    }
+  },
+  "changes": [
+    {
+      "n": "8388608",
+      "old_rank": "6705816639014712292",
+      "rank": "6003785411879964840",
+      "full_n": "8388608",
+      "outer": "size 32, 14196 products",
+      "packets": 40,
+      "packet_power": 18,
+      "q": 8,
+      "rows_per_packet": 358,
+      "packet_products_used": [
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        358,
+        234
+      ],
+      "unused_rows": 124,
+      "root_object": "f0177d4022a78010f9f40368804cc4be28154bf1f97e679c3ebb94036ddc4a3c",
+      "sub_2_7": false,
+      "effective_exponent": 2.7121990487325647
+    },
+    {
+      "n": "13947137604",
+      "old_rank": null,
+      "rank": "2000000000000000000000000000",
+      "full_n": "13947137604",
+      "outer": "size 36, 19666 products",
+      "packets": 2,
+      "packet_power": 27,
+      "q": 9,
+      "rows_per_packet": 9842,
+      "packet_products_used": [
+        9842,
+        9824
+      ],
+      "unused_rows": 18,
+      "root_object": "012b50756f9de7e62b0509b579a7d950fabaf17c72bb872ad09046da0264704c",
+      "sub_2_7": true,
+      "effective_exponent": 2.691218900217156
+    },
+    {
+      "n": "13468840704",
+      "old_rank": "2014523380268092193411235280",
+      "rank": "2000000000000000000000000000",
+      "full_n": "13947137604",
+      "outer": "size 36, 19666 products",
+      "packets": 2,
+      "packet_power": 27,
+      "q": 9,
+      "rows_per_packet": 9842,
+      "packet_products_used": [
+        9842,
+        9824
+      ],
+      "unused_rows": 18,
+      "root_object": "f960737e268dddd70854c3cf82e1248abdbb9393b869200c717af2583933c9b8",
+      "sub_2_7": true,
+      "effective_exponent": 2.6952453333064614
+    }
+  ],
+  "comparison_13947137604": {
+    "rank": "10405536123275202203849896247",
+    "exponent": 2.761822233901813,
+    "scope": "specific published construction: pinned LITA 36 times three closure recipes at 729"
+  },
+  "catalogue_entries_before": 99,
+  "catalogue_entries_after": 100,
+  "seconds": 2.975274885073304
+}

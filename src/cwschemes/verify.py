@@ -27,6 +27,15 @@ def proof_path(s):
 def audit_supports(value):
     from ._engine.restrictions import audit,verify_completion
     checked=0
+    if isinstance(value,dict) and 'local_tensor' in value:
+        # S_q packet spec: its own support condition and local identity, not the CW ones.
+        from ._engine.strassen_packet import LOCAL_TENSOR,audit as audit_strassen,verify_local
+        assert value['local_tensor']==LOCAL_TENSOR,'unknown local tensor'
+        key=('strassen',value['m'],tuple(map(tuple,value['rows'])))
+        if key not in _AUDITED:audit_strassen(value['rows'],value['m']);_AUDITED.add(key);checked+=1
+        key=('strassen-local',value['q'])
+        if key not in _AUDITED:verify_local(value['q']);_AUDITED.add(key)
+        return checked
     if isinstance(value,dict):
         if 'rows' in value and 'm' in value and isinstance(value['rows'],list) and value['rows']:
             rows=value['rows'];m=value['m']
@@ -154,6 +163,14 @@ def verify_z4(engine,exact,threads):
     return out
 
 
+def verify_strassen(engine):
+    """S_q packets: support audit at load, exact local identity, count and exact sampled packet entries."""
+    from ._engine.strassen_packet import packets,check
+    distinct={}
+    for p in packets(engine):distinct.setdefault((p.q,p.m,tuple(p.rows)),p)
+    return [check(p,samples=12,seed=p.q) for _,p in sorted(distinct.items(),key=lambda x:x[0][:2])]
+
+
 def exact_proof(path,threads=1):
     path=Path(path);digest=hashlib.sha256(path.read_bytes()).hexdigest()
     if digest in _EXACT:return
@@ -204,6 +221,8 @@ def verify(n,*,exact=False,threads=1):
     from ._engine.z4_quotient import units as z4_units
     if z4_units(s._engine):
         z4=verify_z4(s._engine,exact,threads)
+    from ._engine.strassen_packet import packets as strassen_packets
+    strassen=verify_strassen(s._engine) if strassen_packets(s._engine) else None
     rectangular=s._engine.audit() if read(path).get('format')=='exact-rectangular-recipe-v1' else None
     gauged=s._engine.audit_deletions() if read(path).get('format')=='cw-z4-gauged-square-v1' else None
     queries=[]
@@ -212,5 +231,5 @@ def verify(n,*,exact=False,threads=1):
             queries.append(str(s.coefficient(factor,term,i,j)))
     return dict(n=str(s.n),rank=str(s.rank),mode='exact reduction replay' if exact else 'integrity, support, count and coefficient checks',
                 dependencies=len(visited),new_support_audits=supports,reduction_proofs=proofs,coefficient_queries=queries,
-                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),**({'z4_quotient_checks':z4} if z4 else {}),**({'rectangular_composition_checks':rectangular} if rectangular else {}),**({'gauged_square_zero_factor_checks':gauged} if gauged else {}),seconds=time.monotonic()-start,
+                sub_2_7=s.rank**10<s.n**27,**({'explicit_checks':explicit} if explicit else {}),**({'z4_quotient_checks':z4} if z4 else {}),**({'strassen_packet_checks':strassen} if strassen else {}),**({'rectangular_composition_checks':rectangular} if rectangular else {}),**({'gauged_square_zero_factor_checks':gauged} if gauged else {}),seconds=time.monotonic()-start,
                 proof_basis='Documented base identities and published primitive schemes; see docs/verification.md')

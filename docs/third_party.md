@@ -4,7 +4,7 @@ This catalogue builds on published mathematical algorithms. The new CW restricti
 
 - **LITA:** Kirill Khoruzhii, Luzian Serafin, Patrick Gelß and Sebastian Pokutta, *Local Improvements to Trilinear Aggregation*, 2026, [repository](https://github.com/khoruzhii/lita). The internal `sources/lita_round6.py` is an extracted copy of the original even-size generator used by these certificates, with formula `n^3/3 + 3n^2 + 20n/3 + 7`. The included LITA coefficient objects retain those original ranks. This imported source is excluded from the repository's MIT grant; its upstream snapshot did not carry an explicit license declaration. Consult the upstream project for licensing of that implementation. The newer comparison-only revision and its hash are recorded separately in `comparisons/sources.json`.
 - **Lille catalogue:** [Collection of fast matrix multiplication algorithms](https://fmm.univ-lille.fr/), maintained by Alexandre Sedoglavic. Imported coefficient objects include the size-three rank-23 Laderman scheme, size-four rank-48 DPS scheme, size-five rank-93, size-six rank-153, size-seven rank-250, and rectangular 3×3×4 rank-29 and 3×4×4 rank-38 schemes. Original source labels and hashes are retained in the objects and in `imported_objects.json`. The rank-249 size-seven construction combines these published rectangular and size-four schemes. Imported coefficient data is identified separately from the new construction data; this repository does not impose an additional license on the upstream material.
-- **Strassen:** the seven-product size-two identity is used for composition and in the small executable example.
+- **Strassen:** the seven-product size-two identity is used for composition and in the small executable example. The S_q packets use the tensor Str_q of V. Strassen, *Relative bilinear complexity and matrix multiplication*, J. reine angew. Math. 375/376 (1987), where it is analysed asymptotically with the laser method and Salem–Spencer sets. Its exact finite packet form and the Ruzsa–Szemerédi supports in this catalogue are new to this project.
 - **Schwartz–Zwecher:** the comparison primitives include the recompression described in [arXiv:2508.01748](https://arxiv.org/abs/2508.01748), Claim 3.7 and Theorem 4.2. These are comparison constructions, not new discoveries in this catalogue.
 - **AlphaTensor:** the separate characteristic-two bundle uses the size-four rank-47 decomposition from Fawzi et al., *Discovering faster matrix multiplication algorithms with reinforcement learning*, Nature 610 (2022). Its frozen coefficient data and derived data retain Apache License 2.0, included in [characteristic2/AlphaTensor_LICENSE](../characteristic2/AlphaTensor_LICENSE). The exact source revision, coefficient match and changes are recorded in [characteristic2/README.md](../characteristic2/README.md) and `provenance.json`. This data is separate from the rational package catalogue.
 
@@ -24,6 +24,8 @@ from that same LITA revision, with the same upstream attribution and exclusion
 from this repository's MIT grant. Its size-31 coefficient object is checked
 separately by complete exact tensor verification; the receipt is included in
 `checks/asymmetric_strassen.json`.
+
+The S_q entry at size 13,947,137,604 and its padded size-13,468,840,704 entry use the size-36 scheme of the same pinned generator, through the indexed accessor, as their outer scheme.
 
 The installed copy at `src/cwschemes/_engine/sources/lita_current.py` is
 byte-identical to the pinned even generator and has the same upstream

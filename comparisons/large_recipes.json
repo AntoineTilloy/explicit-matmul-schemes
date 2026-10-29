@@ -523,6 +523,70 @@
       }
     }
   },
+  "13947137604": {
+    "kind": "product",
+    "n": 13947137604,
+    "left": {
+      "kind": "lita-even",
+      "n": 36
+    },
+    "right": {
+      "kind": "product",
+      "n": 387420489,
+      "left": {
+        "kind": "peel",
+        "n": 729,
+        "child": {
+          "kind": "product",
+          "n": 728,
+          "left": {
+            "kind": "lita-even",
+            "n": 26
+          },
+          "right": {
+            "kind": "lita-even",
+            "n": 28
+          }
+        }
+      },
+      "right": {
+        "kind": "product",
+        "n": 531441,
+        "left": {
+          "kind": "peel",
+          "n": 729,
+          "child": {
+            "kind": "product",
+            "n": 728,
+            "left": {
+              "kind": "lita-even",
+              "n": 26
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 28
+            }
+          }
+        },
+        "right": {
+          "kind": "peel",
+          "n": 729,
+          "child": {
+            "kind": "product",
+            "n": 728,
+            "left": {
+              "kind": "lita-even",
+              "n": 26
+            },
+            "right": {
+              "kind": "lita-even",
+              "n": 28
+            }
+          }
+        }
+      }
+    }
+  },
   "528108169": {
     "kind": "pad",
     "n": 528108169,

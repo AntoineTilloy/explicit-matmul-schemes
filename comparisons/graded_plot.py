@@ -20,12 +20,13 @@ LITA32_RANK = 14196
 LITA32_EXPONENT = math.log(LITA32_RANK)/math.log(32)
 MEDIUM_LIMIT = 30000000000
 COLORS = dict(cw='#176c99', z4='#7b4ea3', small='#d9822b',
-              rectangular='#348568', graded='#c53e55', reference='#7c8794')
+              rectangular='#348568', strassen='#0f8a8c', graded='#c53e55', reference='#7c8794')
 STYLES = {
     'cw': ('CW constructions', 'o', 27),
     'z4': ('CW quotient constructions', 's', 28),
     'small': ('Small rational schemes', 'D', 32),
     'rectangular': ('Rectangular compositions / LITA refresh', '^', 35),
+    'strassen': ('Strassen-tensor packet constructions', 'h', 40),
     'graded': ('Graded constructions', '*', 125),
 }
 
@@ -53,6 +54,8 @@ def classify(entry, n):
     provenance = json.dumps(entry.get('provenance', {}), sort_keys=True).lower()
     if 'graded' in provenance:
         return 'graded'
+    if 'strassen-tensor' in provenance:
+        return 'strassen'
     if n <= 32:
         return 'small'
     if 'z4-quotient' in provenance:
@@ -197,7 +200,7 @@ def draw_catalogue(catalogue_path, output_directory):
     legend.append(Line2D([], [], ls='--', lw=1, color=COLORS['reference'],
                          label=f'32-LITA reference: {LITA32_EXPONENT:.6f}'))
     fig.legend(handles=legend, loc='lower center', bbox_to_anchor=(.52, .135),
-               ncol=3, frameon=False, fontsize=9.3, columnspacing=2.0, handletextpad=.65)
+               ncol=4, frameon=False, fontsize=9.3, columnspacing=2.0, handletextpad=.65)
     fig.suptitle('Explicit square matrix multiplication schemes', x=.055, y=.965,
                  ha='left', fontsize=20, weight='bold')
     fig.text(.055, .905,

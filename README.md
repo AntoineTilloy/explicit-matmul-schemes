@@ -6,7 +6,9 @@ The auto-research loop ran for a few days, with fairly rare pointers from me. Ev
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Every coefficient is accessible as an exact rational number.
 
-Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best exponent in the earlier size range is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
+Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best CW exponent in the earlier size range is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
+
+A new exact packet family built on Strassen's tensor (S_q packets, late October 2026) improves two large counts. Size **8,388,608** now needs **40 · 9¹⁸ = 6,003,785,411,879,964,840** multiplications, 10.47% fewer than before (exponent 2.719136 → **2.712199**). Size **13,468,840,704** needs **2 · 10²⁷**, 0.72% fewer, by padding a natural size-**13,947,137,604** scheme whose exponent **2.691219** is now the best of the catalogue below 10⁶⁸. See [Strassen-tensor packets](#strassen-tensor-packets-sizes-8388608-to-13947137604).
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
@@ -55,10 +57,12 @@ First use of a construction can take minutes to build exact intermediate tables.
 | [9,826](schemes/9826.json) | 74,352,484,826 | 2.723013418 |
 | [16,384](schemes/16384.json) | 317,774,199,680 | 2.729229360 |
 | [65,536](schemes/65536.json) | 14,360,405,808,994 | 2.731697610 |
+| [8,388,608](schemes/8388608.json) | 6,003,785,411,879,964,840 | 2.712199049 |
 | [528,108,169](schemes/528108169.json) | 355,919,505,257,948,041,899,273 | < 2.7, exactly checked |
 | [536,870,912](schemes/536870912.json) | 355,919,505,257,948,041,899,273 | 2.697789558 |
 | [12,310,160,190](schemes/12310160190.json) | 1,463,616,394,485,527,559,895,695,360 | 2.692241557 |
-| [13,468,840,704](schemes/13468840704.json) | 2,014,523,380,268,092,193,411,235,280 | 2.695555553 |
+| [13,468,840,704](schemes/13468840704.json) | 2,000,000,000,000,000,000,000,000,000 | 2.695245333 |
+| [13,947,137,604](schemes/13947137604.json) | 2,000,000,000,000,000,000,000,000,000 | 2.691218900 |
 | [≈ 8.32 × 10⁶⁸](docs/graded_cw.md) | 4 · 31,681 · 7²¹⁰ | 2.649062317 |
 | [≈ 7.86 × 10⁶⁸ (cropped)](docs/graded_cw.md) | 4 · 31,681 · 7²¹⁰ | < 2.65, exactly checked |
 
@@ -94,6 +98,17 @@ The first sub-2.7 size **in this catalogue** is now **528,108,169**, padded from
 ```
 
 This is the strict threshold for this particular scheme. It is **91.01% smaller** than the previous catalogue threshold of 5,873,299,070. The natural construction uses an outer size-32 scheme with 14,196 calls, 9 power-18 packets of 1,569 independent products each, and 75 explicitly specified recursive remainders. The best exponent and the threshold are different catalogue points. A sub-2.7 construction at size 1,024 remains open.
+
+## Strassen-tensor packets (sizes 8,388,608 to 13,947,137,604)
+
+These entries (`cw-mixed-square-v1` packets with `"local_tensor": "strassen-completion-v1"`) replace the CW local tensor by Strassen's tensor Str_q = Σₜ (x₀yₜzₜ + xₜy₀zₜ), t = 1, …, q.
+
+- **Local completion.** S(a,b,c) = Σₜ (a₀+aₜ)(b₀+bₜ)cₜ − a₀b₀ Σₜ cₜ has rank q+1 and integer coefficients. It equals Str_q + Σₜ aₜbₜcₜ, so its only error lies on the all-positive block.
+- **Packet.** Coordinate i of a power-N packet (N = 3m) carries S(x,y,z), S(y,z,x) or S(z,x,y) for i // m = 0, 1, 2. Each row is a zero-mask partition (A,B,C) with m coordinates per letter and only the two letters its kind allows. Every local block has at most one zero index, so a surviving block triple must partition the coordinates; the stored rows admit no such cross triple. The packet is exactly a direct sum of ⟨q^m⟩ products, with **no corrections**, in **(q+1)^N** multiplications.
+- **Supports.** The support condition is a tripartite Ruzsa–Szemerédi (RS) condition in each weight class, so the row count is Σₜ RS(C(m,t)). The power-18 support has 358 rows (classes 1, 18, 90, 140, 90, 18, 1); the power-27 support has 9,842.
+- **Sizes.** The explicit size-32 scheme (14,196 calls) fills 40 power-18 S₈ packets (124 spare rows get zero input): R(8,388,608) ≤ 40 · 9¹⁸. Current LITA at size 36 (19,666 calls) fills 2 power-27 S₉ packets (18 spare rows): R(36 · 9⁹) ≤ 2 · 10²⁷, also used at 13,468,840,704 by padding.
+
+The construction is the finite, exact form of the tensor that Strassen analysed asymptotically with the laser method and Salem–Spencer sets (*J. reine angew. Math.* 375/376, 1987). The packet form and these RS supports come from this project's study of 29 October 2026. `cwschemes verify <n>` audits the support, replays the exact local identity and checks sampled exact packet entries; see [the construction](docs/construction.md#strassen-tensor-s_q-packets) and [verification scope](docs/verification.md#strassen-tensor-s_q-packets).
 
 ## Z4-quotient schemes (sizes 1,024 to 65,536)
 
@@ -132,6 +147,9 @@ cwschemes verify --all
 cwschemes verify 432 --exact --threads 1
 cwschemes verify 9826 --exact
 
+# S_q packet entries: support audit, local identity, sampled exact packet entries:
+cwschemes verify 13947137604
+
 # Verify the new threshold and its compressed recursive leaf:
 cwschemes verify 528108169 --exact
 ```
@@ -142,7 +160,7 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, and the rectangular compositions as triangles. All 97 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
+The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, the rectangular compositions as triangles and the Strassen-tensor packet schemes as hexagons. All 100 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
 - Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
 - At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.

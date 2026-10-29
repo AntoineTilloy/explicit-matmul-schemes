@@ -1,0 +1,99 @@
+{
+  "scope": "Checks independent of the package code: a separate support checker, a full end-to-end evaluation of the packet algorithm at q = 1 and 2, and an exact CRT replay of the size-36 LITA tensor. Scripts live in the study directory oai_math/verify_sq/independent/ and are identified by SHA-256; they are not part of the package.",
+  "scripts": {
+    "local.py": "15e6ebc3b7b443602c925b67614dad8d606f089b9f3219a866c60f3de737ae73",
+    "support.py": "11023b6f5094644abb5c78eb5770d39b46f3f9a51d50a952cebba80d0d8c04e4",
+    "e2e.py": "25ab1eb60b4419e21b05703f428c335e0f7891f62b829bf8fb05b32f674a4775",
+    "negctl.py": "450eaadb52cdbf6232fb325242c390c2f1e7366bb9917c5b1433ab0e86f70030",
+    "lita_exact.py": "96d6f7741060f13d6f78df49861a3ae49f844633ab7352a0f768d81e9ac0e71a",
+    "lita_copy.py": "8037cafed732c5564c94fd2f39cc2fb161f5befa4f9b24ee9ea570ddbd2116ed"
+  },
+  "lita_copy_equals_pinned_generator": true,
+  "run_for_this_release": [
+    {
+      "check": "support.py S_N18.txt 8",
+      "result": "PASS /home/antoine/Projects/experimental_fast_matmul/oai_math/study2_P/certificates/n8388608/S_N18.txt: N=18, M=358, restricted tensor = direct sum of 358 copies of <8^6> = <262144>, rank <= 9^18 = 150094635296999121"
+    },
+    {
+      "check": "support.py S_N27.txt 9",
+      "result": "PASS /home/antoine/Projects/experimental_fast_matmul/oai_math/study2_P/certificates/n13468840704/S_N27.txt: N=27, M=9842, restricted tensor = direct sum of 9842 copies of <9^9> = <387420489>, rank <= 10^27 = 1000000000000000000000000000"
+    },
+    {
+      "check": "e2e.py S_N27.txt 1 (exact evaluation of all 2^27 terms mod 268435399, every output block of 9842 rows)",
+      "result": [
+        "N=27 M=9842 q=1: x size 262144, y size 262144, z size 262144, terms (q+1)^N = 134217728",
+        "  leg 0: 9842 input entries in the union of 9842 blocks (expected 9842)",
+        "  leg 1: 9842 input entries in the union of 9842 blocks (expected 9842)",
+        "  algorithm evaluated in 64.8s",
+        "  rows with mismatching output block: 0 / 9842   (65.2s)",
+        "PASS"
+      ]
+    },
+    {
+      "check": "package audit on the four negative-control supports",
+      "results": [
+        {
+          "control": "neg1.txt",
+          "sha256": "f9269c1468745f2595f880739b868a5d7bf48e9b9bb4bec6620b762b73a5d350",
+          "package_audit": "rejected: cross triple (1, 10, 358)"
+        },
+        {
+          "control": "neg2.txt",
+          "sha256": "08ff070314f6508f768b2e16fa3d0793ed8a7c72bc585cdd3912cbb3cee62a44",
+          "package_audit": "rejected"
+        },
+        {
+          "control": "neg3.txt",
+          "sha256": "4760a85d1a13ef7ca164ca4f4a22e2a5fafaddffc002dd63c739e9609df0e9bc",
+          "package_audit": "rejected"
+        },
+        {
+          "control": "neg4.txt",
+          "sha256": "6c2538fd32913466f883f5844f181f6e2c007b286f981ff1c5a6e1255a460388",
+          "package_audit": "rejected: letter not allowed by the coordinate kind"
+        }
+      ]
+    },
+    {
+      "check": "indexed current LITA 36 against the pinned serializer, every term",
+      "record": "lita36_index.json"
+    },
+    {
+      "check": "nonzero coefficient probes through the published loader",
+      "record": "probes.json"
+    }
+  ],
+  "earlier_independent_runs": {
+    "date": "2026-10-29",
+    "note": "Run by the independent verification of the study before integration; not repeated for this release.",
+    "e2e_N18_q2": [
+      "N=18 M=358 q=2: x size 34012224, y size 34012224, z size 34012224, terms (q+1)^N = 387420489",
+      "  leg 0: 1466368 input entries in the union of 358 blocks (expected 1466368)",
+      "  leg 1: 1466368 input entries in the union of 358 blocks (expected 1466368)",
+      "  algorithm evaluated in 180.8s",
+      "  rows with mismatching output block: 0 / 358   (184.9s)",
+      "PASS"
+    ],
+    "e2e_N27_q1": [
+      "N=27 M=9842 q=1: x size 262144, y size 262144, z size 262144, terms (q+1)^N = 134217728",
+      "  leg 0: 9842 input entries in the union of 9842 blocks (expected 9842)",
+      "  leg 1: 9842 input entries in the union of 9842 blocks (expected 9842)",
+      "  algorithm evaluated in 33.1s",
+      "  rows with mismatching output block: 0 / 9842   (33.6s)",
+      "PASS"
+    ],
+    "lita36_exact": [
+      "N=36 R=19666: Lden bits 40, S = 1.296e+05, need prod p > 2 Lden (S+1) < 2^58",
+      "  primes: 3 below 1353524 (prod bits 62)",
+      "  prime 1353487: coefficient slices with mismatch: 0/1296  (593.2s)",
+      "  prime 1353479: coefficient slices with mismatch: 0/1296  (824.9s)",
+      "  prime 1353463: coefficient slices with mismatch: 0/1296  (1080.7s)",
+      "PASS: LITA <36> with 19666 products is exactly <36,36,36> over Q"
+    ],
+    "logs_sha256": {
+      "e2e_N18_q2.log": "8931b69d9ebc1e84c636e6ff3977ac460b2157329bbe83404cbac75a099e7fc8",
+      "e2e_N27_q1.log": "566cc79a9a5de8691f7c973c6ac93c401678412c6383713de04b8cc0d5d67198",
+      "lita36_exact.log": "76c903aef1e43cf7e65de9834dafbe39a5d3ac4759e605c1ce7226958983a8c0"
+    }
+  }
+}

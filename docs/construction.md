@@ -74,3 +74,38 @@ R(536870912) = 9*P(16) + 75*R(16^6) = 355919505257948041899273.
 The constrained second support forbids one coordinate in the output zero mask. This removes every pure correction subset containing that coordinate; its missing outer calls are supplied explicitly. The counts and recursive trees are stored in the immutable catalogue objects.
 
 Repeated identical packets share an immutable coefficient table in the loader while retaining their separate batch positions. This changes memory use, not ranks or wiring. No asymptotic limit, tensor degeneration or numerical approximation is used.
+
+## Strassen-tensor (S_q) packets
+
+Strassen's tensor keeps two of the three little-CW legs:
+
+```
+Str_q = sum_{t=1..q} (x_0 y_t z_t + x_t y_0 z_t).
+```
+
+It has an exact integer completion of rank q+1, with no constant to absorb:
+
+```
+S(a,b,c) = sum_{t=1..q} (a_0 + a_t)(b_0 + b_t) c_t - a_0 b_0 sum_{t=1..q} c_t
+         = Str_q(a,b,c) + sum_{t=1..q} a_t b_t c_t.
+```
+
+The c argument has no index 0. Every nonzero local block has at most one zero index: the two Strassen blocks have one, and the error block has none.
+
+A power-N packet, N = 3m, puts S(x,y,z) on coordinates 0..m-1, S(y,z,x) on m..2m-1 and S(z,x,y) on 2m..3m-1 (kinds 0, 1, 2). A row is a triple of zero masks (A,B,C) partitioning the N coordinates, with |A| = |B| = |C| = m. Letter A at coordinate i means that the X leg is the scalar block there, and likewise B for Y and C for Z. Kind 0 allows only A or B, kind 1 only B or C, and kind 2 only C or A. The row's matrix indices are x on B ∪ C, y on C ∪ A and z on A ∪ B, wired exactly as in the CW packets, so each row is a ⟨q^m, q^m, q^m⟩ product.
+
+Restrict ⊗ᵢ S^(kind i) to the blocks used by the rows. A block triple (X_u, Y_v, Z_w) has |A_u| + |B_v| + |C_w| = N zero indices. Because every local block has at most one zero, it can be nonzero only if each coordinate has exactly one zero, so the error block never occurs and A_u, B_v, C_w partition the coordinates. The stored rows admit no such triple unless u = v = w. The restricted tensor is therefore exactly the direct sum of the rows. Unlike the CW packets, there are no corrections and no pure-subset counting: the packet rank is exactly (q+1)^N.
+
+Write row u through its labels: S0 = A ∩ kind 0, S1 = B ∩ kind 1, S2 = C ∩ kind 2, all of size t. A cross triple exists exactly when S0_u = S0_v, S1_v = S1_w and S2_w = S2_u, which is a triangle in a tripartite label graph. Valid supports are therefore tripartite Ruzsa–Szemerédi (RS) sets on the t-subsets of each kind, one per weight class t, and the row count is Σₜ RS(C(m,t)). The stored RS witnesses are in [checks/sq/rs_sets.json](../checks/sq/rs_sets.json). The rows themselves are the proof object; the checker does not need the RS sets.
+
+The square construction is the ordinary batching of this document: outer calls are assigned to packet rows in order, unused rows of the final packet receive zero input, and padding restricts the result. The catalogue entries use
+
+```text
+R(8,388,608)      = R(32 * 8^6)  <= 40 * 9^18 = 6003785411879964840
+                    (explicit size-32 scheme, 14,196 calls; 40 packets of 358 rows; 124 spare rows)
+R(13,947,137,604) = R(36 * 9^9)  <= 2 * 10^27
+                    (current LITA size 36, 19,666 calls; 2 packets of 9,842 rows; 18 spare rows)
+R(13,468,840,704) <= R(13,947,137,604)   (padding)
+```
+
+The asymptotic ancestor is Strassen's laser-method analysis of this tensor with Salem–Spencer sets (V. Strassen, *Relative bilinear complexity and matrix multiplication*, J. reine angew. Math. 375/376, 1987). The exact finite packet form, its RS reduction and the supports used here come from this project's study of 29 October 2026.
