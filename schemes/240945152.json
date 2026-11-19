@@ -1,0 +1,12 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "240945152",
+  "rank": "42618086121773987519250",
+  "field": "Q",
+  "root_object": "0306e2b84b39cb171b45795df50f1732c8bc35e1e7782a2aff9f08f284a048a8",
+  "effective_exponent": 2.6998108813824415,
+  "provenance": {
+    "construction": "Natural strict sub-2.7 CW composition: explicit size-32 outer (rank 14,196) with 9 power-18 CW packets (q=14, 1,569 rows) and 75 recursive size-7,529,536 leaves built over Pair-Schur m=4,5 packets and coordinate-8 refined Z4(14) units"
+  },
+  "verification": "Exact support audits, Pair-Schur packet counts, Z4 unit checks and strict integer sub-2.7 check verified by cwschemes verify."
+}

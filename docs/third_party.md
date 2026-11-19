@@ -29,6 +29,11 @@ The S_q entry at size 13,947,137,604 and its padded size-13,468,840,704 entry us
 
 The installed copy at `src/cwschemes/_engine/sources/lita_current.py` is
 byte-identical to the pinned even generator and has the same upstream
-attribution and licensing scope.
+attribution and licensing scope. Likewise,
+`src/cwschemes/_engine/sources/lita_odd_current.py` is byte-identical to
+`sources/lita_odd_current.py` from the same upstream LITA revision (`472a79f`)
+and carries the same attribution and exclusion from this repository's MIT grant.
+The power-36 Strassen-tensor supports use the classical 112-point cap set in
+AG(6, 3) due to R. Hill (*Caps and codes*, Discrete Math. 22, 1978).
 
 The mathematical coefficient data and provenance remain inspectable without executing discovery code. `imported_objects.json` lists exact object identifiers, so a downstream user can identify the primitive components of a construction.

@@ -1,14 +1,13 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "291",
-  "rank": "7144555",
+  "rank": "7121634",
   "field": "Q",
-  "root_object": "05b8bd497918366829e3d1d9c024d6fa14faf2ea197940efb2b9999fe207e2dc",
-  "effective_exponent": 2.7817665842191968,
+  "root_object": "5adadb81ee77bee89f5b1df7f79c4f9ad98c92d589bf681488b7283a921ef659",
+  "effective_exponent": 2.7812001905026325,
   "provenance": {
-    "construction": "Extended asymmetric rectangular Strassen composition with recursive feedback",
-    "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e",
-    "comparison_revision": "b647d9537f4de857164ced14bbefb16c9f65c784"
+    "construction": "L=1024 rational rectangular, generalized uneven, and serendipitous block closure (root: rect_sq)",
+    "primitive_revision": "LITA even 472a79fbc8248423a97bebb3aacbc89e769b9b3e + unbounded LITA odd + CRT-certified exact Q corpus"
   },
-  "verification": "Complete independent integer composition DAG and snapshot audit, hash-checked rational primitives, inherited exhaustive asymmetric wiring checks, and pinned LITA construction theorem. See checks/extended_rectangular.json and docs/rectangular.md."
+  "verification": "100% C++ multi-prime CRT leaf proof, complete 641M-node DAG audit, and end-to-end mod-(2^31-1) matmul evaluation. See checks/nov16_below1024.json."
 }

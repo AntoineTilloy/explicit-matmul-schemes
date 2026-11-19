@@ -1,0 +1,13 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "903",
+  "rank": "146622190",
+  "field": "Q",
+  "root_object": "5854a413dac874f3bb53c00a6f45055db85ecaadb2d7f73dfce54ca3fb15fe81",
+  "effective_exponent": 2.7628763224822004,
+  "provenance": {
+    "construction": "L=1024 rational rectangular, generalized uneven, and serendipitous block closure (root: rect_sq)",
+    "primitive_revision": "LITA even 472a79fbc8248423a97bebb3aacbc89e769b9b3e + unbounded LITA odd + CRT-certified exact Q corpus"
+  },
+  "verification": "100% C++ multi-prime CRT leaf proof, complete 641M-node DAG audit, and end-to-end mod-(2^31-1) matmul evaluation. See checks/nov16_below1024.json."
+}

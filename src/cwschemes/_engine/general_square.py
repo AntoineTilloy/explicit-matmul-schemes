@@ -123,8 +123,8 @@ class MixedSquare:
                 p = packet_cache[key]
             else:
                 if 'local_tensor' in spec:
-                    assert spec['local_tensor'] == LOCAL_TENSOR and not spec.get('compression'), 'unknown local tensor'
-                    p = StrassenPacket(spec['q'], spec['rows'], spec['m'])
+                    assert spec['local_tensor'] == LOCAL_TENSOR, 'unknown local tensor'
+                    p = StrassenPacket(spec['q'], spec['rows'], spec['m'], spec.get('compression'))
                 elif spec.get('compression') == 'z4-quotient-v1':
                     from .z4_quotient import unit_from_spec
                     p = unit_from_spec(spec)
@@ -200,7 +200,7 @@ class MixedSquare:
 
     def certificate(self):
         def packet_spec(p):
-            if hasattr(p, 'spec'):
+            if callable(getattr(p, 'spec', None)):
                 return p.spec()
             return dict(q=p.q, m=p.m, rows=p.rows, patched=p.patched, rank=p.rank,
                         **({'compression': p.compression} if hasattr(p, 'compression') else {}),

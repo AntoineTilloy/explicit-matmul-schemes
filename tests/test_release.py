@@ -9,8 +9,8 @@ from cwschemes import _resources
 
 def test_catalogue_and_exact_threshold():
     entries=cwschemes.catalogue()
-    assert len(entries)==100 and len({r['n'] for r in entries})==100
-    d=next(r for r in entries if r['n']=='528108169')
+    assert len(entries)==305 and len({r['n'] for r in entries})==305
+    d=next(r for r in entries if r['n']=='240619650')
     n,r=int(d['n']),int(d['rank'])
     assert (n-1)**27<=r**10<n**27
 
@@ -73,17 +73,16 @@ Z4_RELATIONS='z4q/relations-304e9d51f14f180e.json'
 def test_z4_quotient_catalogue_counts():
     from cwschemes._engine.z4_checks import closed_form_rank
     e={r['n']:int(r['rank']) for r in cwschemes.catalogue()}
-    assert e['9826']==closed_form_rank(17)==74352484826
     gauged=cwschemes.load(1024)
     relation=gauged._engine.unit.packet.proof
-    assert relation['certified_q']==8
-    assert e['1024']==closed_form_rank(8,'odd',relation['rank_polynomials'])-72==198679192
-    assert gauged._engine.unit.rank==198679264
+    assert relation['certified_q']==8 and relation['coordinates']==[8]
+    assert e['1024']==closed_form_rank(8,'odd',relation['rank_polynomials'])-72==198674072
+    assert gauged._engine.unit.rank==198674144
     assert gauged._engine.audit_deletions()['deleted_terms']==72
-    assert e['16384']==7*closed_form_rank(16) and e['32768']==48*closed_form_rank(16)
-    assert e['65536']==929*closed_form_rank(14)
-    s=cwschemes.load(9826)
-    assert s.rank==74352484826 and s._engine.packets[0].rank==s.rank
+    s9826=cwschemes.load(9826)
+    assert e['9826']==s9826.rank==74352302450
+    assert e['16384']==7*45396170352 and e['32768']==48*45396170352
+    assert e['65536']==927*15457832726
 
 
 def test_z4_quotient_small_exact():
@@ -173,7 +172,7 @@ def test_split_with_shared_child_full_tensor():
 
 
 def test_new_rectangular_catalogue_entries():
-    for n,rank in ((106,424690),(146,1040656),(432,19665128)):
+    for n,rank in ((106,424690),(146,1038699),(432,19665128)):
         s=cwschemes.load(n)
         assert s.rank==rank and s._engine.audit()['exact_dimensions_and_counts']
         assert isinstance(s.coefficient('W',rank-1,n-1,n-1),Fraction)

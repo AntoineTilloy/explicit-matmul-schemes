@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "4000",
-  "rank": "7375060000",
+  "rank": "7373878600",
   "field": "Q",
-  "root_object": "b181c1a3e0cb4544a22963c7b034c4ebe181c3974d89ff73a76d3fecc6108ec9",
-  "effective_exponent": 2.739478404478529,
+  "root_object": "d69dcb3ffd672ec58754c724e45b5f776a4e397785a24a4ade9cc2f421ef43be",
+  "effective_exponent": 2.7394590892627075,
   "provenance": {
-    "construction": "CW finite exact restriction and rational composition"
+    "construction": "CW finite exact restriction and coordinate-refined rational composition (power 9, 24 rows, coordinates [6, 7, 8] at q=10)"
   },
   "verification": "Exact witnesses included; see docs/verification.md for check levels."
 }

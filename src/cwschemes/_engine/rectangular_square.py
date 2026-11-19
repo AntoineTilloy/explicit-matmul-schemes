@@ -23,6 +23,11 @@ class Node:
             assert self.d==(self.d[0],)*3
             self.lita=CurrentLITA(self.d[0],spec['source_sha256'])
             assert spec['commit']=='472a79fbc8248423a97bebb3aacbc89e769b9b3e' and self.rank==self.lita.rank
+        elif self.op=='lita_odd_current':
+            from .current_odd_lita import CurrentOddLITA
+            assert self.d==(self.d[0],)*3
+            self.lita=CurrentOddLITA(self.d[0],spec['source_sha256'])
+            assert self.rank==self.lita.rank
         elif self.op=='classical':assert self.rank==np.prod(self.d)
         elif self.op=='product':
             a,b=self.children;assert self.d==tuple(x*y for x,y in zip(a.d,b.d)) and self.rank==a.rank*b.rank
@@ -51,11 +56,57 @@ class Node:
                     need.append(min(maxima))
                 assert c.d==tuple(need),(t,c.d,need);self.prefix.append(self.prefix[-1]+c.rank)
             assert len(self.children)==7 and self.outer.d==(2,)*3 and self.outer.rank==7 and self.prefix[-1]==self.rank
+        elif self.op=='general_uneven':
+            self.outer=load(spec['outer'])
+            self.blocks=[tuple(int(x) for x in row) for row in spec['blocks']]
+            assert len(self.blocks)==3 and tuple(len(b) for b in self.blocks)==self.outer.d
+            assert all(x>0 for row in self.blocks for x in row)
+            assert self.d==tuple(sum(b) for b in self.blocks)
+            self.offsets=[tuple([0]+[int(x) for x in np.cumsum(b)]) for b in self.blocks]
+            self.prefix=[0]
+            for t,c in enumerate(self.children):
+                forms=self.outer.term(t);need=[]
+                for vertex in range(3):
+                    maxima=[]
+                    for mode,edge in enumerate(EDGES):
+                        if vertex in edge:
+                            k=edge.index(vertex);maxima.append(max(self.blocks[vertex][coordinate[k]] for coordinate in forms[mode]))
+                    need.append(min(maxima))
+                assert c.d==tuple(need),(t,c.d,need);self.prefix.append(self.prefix[-1]+c.rank)
+            assert len(self.children)==self.outer.rank and self.prefix[-1]==self.rank
+        elif self.op=='serendipitous':
+            A0,A1,A2=self.base_dims=tuple(int(x) for x in spec['base_dims'])
+            p0,p1,p2=self.inner_dims=tuple(int(x) for x in spec['inner_dims'])
+            assert self.d==(A0*p0,A1*p1,A2*p2) and len(self.children)==len(spec['buds'])
+            self.buds=[];self.prefix=[0];tsum={}
+            for bspec,c in zip(spec['buds'],self.children):
+                Nb,Mb,Pb=sh=tuple(int(x) for x in bspec['shape'])
+                assert c.d==(Nb*p0,Mb*p1,Pb*p2)
+                maps=[]
+                for entries_raw,(B0,B1),(X0,X1) in ((bspec['u'],(Nb,Mb),(A0,A1)),(bspec['v'],(Mb,Pb),(A1,A2)),(bspec['w'],(Nb,Pb),(A0,A2))):
+                    md={}
+                    for bi,bj,x,y,num,den in entries_raw:
+                        assert 0<=bi<B0 and 0<=bj<B1 and 0<=x<X0 and 0<=y<X1
+                        val=F(int(num),int(den))
+                        if val:md.setdefault((bi,bj),[]).append((x,y,val))
+                    maps.append(md)
+                u_d,v_d,w_d=maps
+                for bi in range(Nb):
+                    for bj in range(Mb):
+                        for bk in range(Pb):
+                            for x0,y0,vu in u_d.get((bi,bj),()):
+                                for y1,z1,vv in v_d.get((bj,bk),()):
+                                    for x2,z2,vw in w_d.get((bi,bk),()):
+                                        k6=(x0,y0,y1,z1,x2,z2);tsum[k6]=tsum.get(k6,F(0))+vu*vv*vw
+                self.buds.append((sh,u_d,v_d,w_d));self.prefix.append(self.prefix[-1]+c.rank)
+            nz={k6:val for k6,val in tsum.items() if val}
+            want={(i,k,k,j,i,j):F(1) for i in range(A0) for k in range(A1) for j in range(A2)}
+            assert nz==want and self.prefix[-1]==self.rank
         else:raise ValueError(self.op)
 
     def term(self,t):
         assert 0<=t<self.rank
-        if self.op=='lita_current':return self.lita.term(t)
+        if self.op in ('lita_current','lita_odd_current'):return self.lita.term(t)
         if self.op=='qcsr':
             out=[]
             for axis,edge in zip('uvw',EDGES):
@@ -89,20 +140,44 @@ class Node:
                             key=(r+br*self.p[axis0],c+bc*self.p[axis1]);entries[key]=entries.get(key,F(0))+ov*v
                 out.append({k:v for k,v in entries.items() if v})
             return out
+        if self.op=='general_uneven':
+            ot=bisect_right(self.prefix,t)-1;forms=self.children[ot].term(t-self.prefix[ot]);outer=self.outer.term(ot);out=[]
+            for mode,(axis0,axis1) in enumerate(EDGES):
+                entries={}
+                for (br,bc),ov in outer[mode].items():
+                    nr=self.blocks[axis0][br];nc=self.blocks[axis1][bc]
+                    for (r,c),v in forms[mode].items():
+                        if r<nr and c<nc:
+                            key=(self.offsets[axis0][br]+r,self.offsets[axis1][bc]+c);entries[key]=entries.get(key,F(0))+ov*v
+                out.append({k:v for k,v in entries.items() if v})
+            return out
+        if self.op=='serendipitous':
+            bt=bisect_right(self.prefix,t)-1;forms=self.children[bt].term(t-self.prefix[bt])
+            _,u_d,v_d,w_d=self.buds[bt];p0,p1,p2=self.inner_dims;out=[]
+            for mode,(b_map,(pr,pc)) in enumerate(((u_d,(p0,p1)),(v_d,(p1,p2)),(w_d,(p0,p2)))):
+                entries={}
+                for (r,c),v in forms[mode].items():
+                    bi,ir=divmod(r,pr);bc,ic=divmod(c,pc)
+                    for x,y,wv in b_map.get((bi,bc),()):
+                        key=(x*pr+ir,y*pc+ic);entries[key]=entries.get(key,F(0))+wv*v
+                out.append({k:v for k,v in entries.items() if v})
+            return out
         raise ValueError(self.op)
 
     def coefficient(self,mode,t,row,col):return self.term(t)[mode].get((row,col),F(0))
 
 
 class Recipe:
-    def __init__(self,value):
+    def __init__(self,value,*,allow_rectangular=False):
         self.spec=json.loads(Path(value).read_text()) if isinstance(value,(str,Path)) else value
         assert self.spec['format']=='exact-rectangular-recipe-v1' and self.spec['coefficient_field']=='Q';self.cache={}
         def load(key):
             if key not in self.cache:self.cache[key]=Node(self.spec['nodes'][key],load,_resources.root())
             return self.cache[key]
         self.root=load(self.spec['root']);self.n=self.root.d[0];self.rank=self.root.rank
-        assert self.root.d==(self.n,)*3==tuple(self.spec['tensor']) and self.rank==self.spec['rank']
+        assert self.root.d==tuple(self.spec['tensor']) and self.rank==self.spec['rank']
+        if not allow_rectangular:
+            assert self.root.d==(self.n,)*3
 
     def factor_entry(self,mode,t,row,col):return self.root.coefficient(mode,t,row,col)
 
@@ -111,6 +186,9 @@ class Recipe:
     def audit(self):
         return dict(nodes=len(self.cache),primitive_objects=sum(x.op=='qcsr' for x in self.cache.values()),
                     indexed_current_lita_objects=sum(x.op=='lita_current' for x in self.cache.values()),
+                    indexed_current_odd_lita_objects=sum(x.op=='lita_odd_current' for x in self.cache.values()),
+                    general_uneven_nodes=sum(x.op=='general_uneven' for x in self.cache.values()),
+                    serendipitous_nodes=sum(x.op=='serendipitous' for x in self.cache.values()),
                     exact_dimensions_and_counts=True,hash_checked_coefficients=True,
                     primitive_identity_basis=self.spec['primitive_identity_basis'])
 

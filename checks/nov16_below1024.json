@@ -1,0 +1,2691 @@
+{
+  "campaign": "nov16_below1024",
+  "coefficient_field": "Q",
+  "baseline_definition": {
+    "description": "Full rational closure under tensor product R(ab) <= R(a)R(b), padding R(n) <= R(n+1), and border peeling R(n) <= R(n-1) + 3n^2 - 3n + 1, combined with the existing L=256 extended rectangular baseline (full256.p3.square.bin), seeded from all 100 catalogue.json entries, comparisons/primitives.json, upstream lita_current.py (even n >= 8), and unbounded upstream lita_odd_current.py (all odd n >= 9 with constant -11/2).",
+    "lita_even_formula": "n^3/3 + 3*n^2 + 37*n/6 + 4 (even n >= 8)",
+    "lita_odd_formula": "n^3/3 + 7*n^2/2 + 14*n/3 - 11/2 (all odd n >= 9)"
+  },
+  "summary": {
+    "total_improved_squares": 217,
+    "substantive_improvements_gt_1": 166,
+    "corner_savings_eq_1": 51,
+    "improvements_n_le_64": 0,
+    "smallest_improved_n": 81,
+    "largest_improved_n": 1010,
+    "improvements_n_gt_370": 150,
+    "substantive_improvements_n_gt_370": 105,
+    "saved_catalogue_entries_beaten": 17,
+    "zero_regressions_1_to_1024": true,
+    "max_absolute_saving": {
+      "n": 844,
+      "new_rank": 122067978,
+      "old_env_rank": 125566678,
+      "old_full256_rank": 125566678,
+      "old_catalogue_rank": null,
+      "saving_vs_env": 3498700,
+      "saving_vs_catalogue": null,
+      "saving_percent_vs_env": 2.786328,
+      "old_effective_exponent": 2.767575755,
+      "new_effective_exponent": 2.7633819,
+      "exponent_drop": 0.004193854,
+      "is_substantive": true,
+      "root_operation": "rect_sq",
+      "root_object_sha256": "b09431f01cfbb3d57530e4a73470baf4f25874565513477f0fe05e2de3ff2a05",
+      "scheme_path": "schemes/844.json"
+    },
+    "max_percent_saving": {
+      "n": 488,
+      "new_rank": 28101649,
+      "old_env_rank": 29249283,
+      "old_full256_rank": 29249283,
+      "old_catalogue_rank": null,
+      "saving_vs_env": 1147634,
+      "saving_vs_catalogue": null,
+      "saving_percent_vs_env": 3.923631,
+      "old_effective_exponent": 2.777138884,
+      "new_effective_exponent": 2.770672848,
+      "exponent_drop": 0.006466036,
+      "is_substantive": true,
+      "root_operation": "rect_sq",
+      "root_object_sha256": "f3952eade77f3d1495f8e48df8083c040bd7cf3d19a00ff5af72e76f3ff0f5bf",
+      "scheme_path": "schemes/488.json"
+    },
+    "root_operation_breakdown": {
+      "rect_sq": 120,
+      "uneven_gen": 35,
+      "uneven2": 4,
+      "uneven_strassen_sq": 55,
+      "pad": 2,
+      "fq686": 1
+    },
+    "packaged_catalogue_total_entries": 300,
+    "newly_certified_rect_primitives_beating_full256": 0
+  },
+  "verification": {
+    "layer1_crt_leaves": "100% C++ __int128 multi-prime CRT exact-Q verification (modulus > 2*Delta*S) on all 441 local exact-Q schemes and all 158 reachable non-LITA qcsr leaves.",
+    "layer2_dag_audit": "Independent C++ streaming DAG audit across all 641,243,628 search nodes + Python specialized op audit + cwschemes load-time exact-Q Brent verification of all serendipitous bud decompositions.",
+    "layer3_end_to_end_matmul": {
+      "status": "ALL_217_PACKAGED_CWSCHEMES_CERTIFICATES_EXACT_MODP_MATMUL_PASS",
+      "prime": 2147483647,
+      "non_fq686_squares_verified": 215,
+      "fq686_replacement_recipes_verified": 4,
+      "total_improved_squares_covered": 217,
+      "unique_dag_nodes_verified": 12654,
+      "flattened_oriented_nodes": 21500,
+      "serialized_megabytes": 48415.73,
+      "cpp_eval_seconds": 1570.96,
+      "total_seconds": 2260.865
+    },
+    "layer4_cwschemes_cli_verify": {
+      "checked_sizes": [
+        14,
+        32,
+        81,
+        93,
+        125,
+        291,
+        330,
+        488,
+        685,
+        686,
+        732,
+        844,
+        963,
+        1024
+      ],
+      "all_passed": true
+    }
+  },
+  "improved_rectangular_primitives": [],
+  "changes": [
+    {
+      "n": 81,
+      "rank": 200124,
+      "comparison_rank": 200483,
+      "previous_catalogue_rank": null,
+      "saving": 359,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "9f3f08fa8daccda15676b37cb339479f599c4e0d7aead4ed0450fc9cf727b57d"
+    },
+    {
+      "n": 85,
+      "rank": 228721,
+      "comparison_rank": 230387,
+      "previous_catalogue_rank": null,
+      "saving": 1666,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "61a3c87d812931158f3dfb748bb9ff08cd7fd4cc3958d3d09df015b16f7727ae"
+    },
+    {
+      "n": 89,
+      "rank": 259910,
+      "comparison_rank": 263123,
+      "previous_catalogue_rank": null,
+      "saving": 3213,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "1260d324b6617f45f6fbb4c6de7e71a5d74b496717943f7269401a37cb801214"
+    },
+    {
+      "n": 93,
+      "rank": 293803,
+      "comparison_rank": 297744,
+      "previous_catalogue_rank": null,
+      "saving": 3941,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "c98d70b0095d643c41ad37219a769b39a23f559734c202a759f0ff019f79c33d"
+    },
+    {
+      "n": 97,
+      "rank": 330512,
+      "comparison_rank": 334815,
+      "previous_catalogue_rank": null,
+      "saving": 4303,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "d571f886e1c91592f87def1de915687732e8ae9f1fbbad0025912461d4cef6f5"
+    },
+    {
+      "n": 101,
+      "rank": 370149,
+      "comparison_rank": 374830,
+      "previous_catalogue_rank": null,
+      "saving": 4681,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "c469bca4c157182c0def1901e43ab09709b89f0f351bb1e3920dcfff2d2402ea"
+    },
+    {
+      "n": 105,
+      "rank": 412826,
+      "comparison_rank": 417893,
+      "previous_catalogue_rank": null,
+      "saving": 5067,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "3075d39d365e105fc6a4fe848fd122e1f6db7a9c0d59011a2894c04ad95903c3"
+    },
+    {
+      "n": 109,
+      "rank": 458655,
+      "comparison_rank": 464079,
+      "previous_catalogue_rank": null,
+      "saving": 5424,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "b98cf7648d3cb7ba2eb7891d09416e01a0320b31e708b9c767bf82524145e92e"
+    },
+    {
+      "n": 113,
+      "rank": 507748,
+      "comparison_rank": 510576,
+      "previous_catalogue_rank": null,
+      "saving": 2828,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "db22b0ff8b6316807967bacb0393fc28e6e069a9e004e58bf713e044c021f240"
+    },
+    {
+      "n": 117,
+      "rank": 560217,
+      "comparison_rank": 566391,
+      "previous_catalogue_rank": null,
+      "saving": 6174,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "98a3378234a23331a4a15c4ab6656a43be271f4ebd7ad24073767b3ff27546ee"
+    },
+    {
+      "n": 125,
+      "rank": 675304,
+      "comparison_rank": 680814,
+      "previous_catalogue_rank": 680814,
+      "saving": 5510,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "699ac6fcb72283ae4e49ea3b0268771b1a42f9d2a3d4cc8724e28177f69da56b"
+    },
+    {
+      "n": 133,
+      "rank": 798832,
+      "comparison_rank": 805584,
+      "previous_catalogue_rank": null,
+      "saving": 6752,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "28637707e4b33e90cb77282cb636b0906a30d6bcf18138465e757dd17acc22af"
+    },
+    {
+      "n": 141,
+      "rank": 936536,
+      "comparison_rank": 943968,
+      "previous_catalogue_rank": null,
+      "saving": 7432,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "aa92ed40250bccb4f1eed012f176589f28386e0f88ee1a1b617eb7efc25f0fad"
+    },
+    {
+      "n": 146,
+      "rank": 1038699,
+      "comparison_rank": 1040613,
+      "previous_catalogue_rank": 1040656,
+      "saving": 1914,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "ff871b232ad87f4fc9d917a8e237261120858055fc712c094294bd7326e92d24"
+    },
+    {
+      "n": 149,
+      "rank": 1089184,
+      "comparison_rank": 1097328,
+      "previous_catalogue_rank": null,
+      "saving": 8144,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "40ee19c9df2acdef26e8df391168042014b442aad1cc39b09fda451c8cfaf55e"
+    },
+    {
+      "n": 154,
+      "rank": 1203382,
+      "comparison_rank": 1204996,
+      "previous_catalogue_rank": 1204996,
+      "saving": 1614,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "bcbf4086c3ba0ee53a05e5ba38b4e62455f9c6b84444f09ea49b1f3e85f7a8a4"
+    },
+    {
+      "n": 157,
+      "rank": 1257544,
+      "comparison_rank": 1266432,
+      "previous_catalogue_rank": null,
+      "saving": 8888,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "7cbab55b648750d5c38940c7579fdbbc3eebeb2eaabd7abab61f90d2adc162e2"
+    },
+    {
+      "n": 162,
+      "rank": 1384573,
+      "comparison_rank": 1385624,
+      "previous_catalogue_rank": 1385624,
+      "saving": 1051,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "8369b91a379d2f5968c7f0b722ae0cfa58e72cc0b0eb6972b1124748f3e17a0d"
+    },
+    {
+      "n": 165,
+      "rank": 1442384,
+      "comparison_rank": 1452048,
+      "previous_catalogue_rank": null,
+      "saving": 9664,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "eb70e49b8cb2a62607d2cbe224c377e933f1c2243daac1ae99f54741b406574e"
+    },
+    {
+      "n": 173,
+      "rank": 1644472,
+      "comparison_rank": 1654944,
+      "previous_catalogue_rank": null,
+      "saving": 10472,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "7545095823c772ec80b039fb321f4f8fa2bbdc999f682402aca25e2b6b6da04d"
+    },
+    {
+      "n": 181,
+      "rank": 1864576,
+      "comparison_rank": 1875888,
+      "previous_catalogue_rank": null,
+      "saving": 11312,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "0ecd3f7c056f3287668e4950111986d3c1dba26427022280a865024d2980db1d"
+    },
+    {
+      "n": 189,
+      "rank": 2103464,
+      "comparison_rank": 2115648,
+      "previous_catalogue_rank": null,
+      "saving": 12184,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "1e0d5a42fc694d88d38ea8714ccc3899e158a0a79557c0595a76a1bf08a0f056"
+    },
+    {
+      "n": 197,
+      "rank": 2361904,
+      "comparison_rank": 2374992,
+      "previous_catalogue_rank": null,
+      "saving": 13088,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "bc2be7a4615572539620d89fce9695014b8cfe00ff72939a974ad15a9c8f5353"
+    },
+    {
+      "n": 205,
+      "rank": 2640664,
+      "comparison_rank": 2654688,
+      "previous_catalogue_rank": null,
+      "saving": 14024,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "79d171ec7fc77ea830cdcc471261f89fb863d6e0fbc7adfd939234cada1155ab"
+    },
+    {
+      "n": 213,
+      "rank": 2940512,
+      "comparison_rank": 2955504,
+      "previous_catalogue_rank": null,
+      "saving": 14992,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "9ead6930774784511b22a27a65ed28997d23f24bb39d5414d74caaa40d4409e8"
+    },
+    {
+      "n": 221,
+      "rank": 3262216,
+      "comparison_rank": 3278208,
+      "previous_catalogue_rank": null,
+      "saving": 15992,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "b9eac4c9867f9916223478d9c84532dea55828631f488c791cc1bd84800f107e"
+    },
+    {
+      "n": 226,
+      "rank": 3490607,
+      "comparison_rank": 3497733,
+      "previous_catalogue_rank": null,
+      "saving": 7126,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven2)",
+      "root_object": "059340868f79c72ae2db4c10b80a3ed8a31123a59c337ceb87aabadb1677e557"
+    },
+    {
+      "n": 229,
+      "rank": 3606544,
+      "comparison_rank": 3623568,
+      "previous_catalogue_rank": null,
+      "saving": 17024,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "c0685e15d36aa6e9577c7fbaf2dfcb5bd19c971ee5a4bc935c73e8a4a27b41a7"
+    },
+    {
+      "n": 237,
+      "rank": 3974264,
+      "comparison_rank": 3992352,
+      "previous_catalogue_rank": null,
+      "saving": 18088,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "ed8a8556c2af39daa0cdc7ad10f42a67196892684aed0a472bcec419d88abc0c"
+    },
+    {
+      "n": 242,
+      "rank": 4246597,
+      "comparison_rank": 4255382,
+      "previous_catalogue_rank": 4255382,
+      "saving": 8785,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e9d32c544889fe80c216189198122e95e3b82d780c2d6aa9eb9717e9086ff705"
+    },
+    {
+      "n": 245,
+      "rank": 4366144,
+      "comparison_rank": 4385328,
+      "previous_catalogue_rank": null,
+      "saving": 19184,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "3c2b82f78ab0d81325da8cb7141b5e4b730d82962cd9e8fe84acf8fc8ee7e3b4"
+    },
+    {
+      "n": 253,
+      "rank": 4755112,
+      "comparison_rank": 4769856,
+      "previous_catalogue_rank": null,
+      "saving": 14744,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "54b4b9b073ec0fa16ab7012bd108d9450f8fe12d08664d7659d2502bf9030abe"
+    },
+    {
+      "n": 258,
+      "rank": 5061910,
+      "comparison_rank": 5064264,
+      "previous_catalogue_rank": 5064264,
+      "saving": 2354,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "b8e13d3fdf13c619310aae8bc0d3283a656e3e259c31462c60ca686b3e7b4c40"
+    },
+    {
+      "n": 261,
+      "rank": 5225456,
+      "comparison_rank": 5246928,
+      "previous_catalogue_rank": null,
+      "saving": 21472,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "54b4abb2b9df0dfc2cb345dcc208a2262f898b0b04e2e3ac0f61b176ff1554a1"
+    },
+    {
+      "n": 265,
+      "rank": 5456808,
+      "comparison_rank": 5456809,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "5bb3f224320f769300f2a82b04a1d5ec71b53cd0c2560564ccaabf0f9554339d"
+    },
+    {
+      "n": 266,
+      "rank": 5561936,
+      "comparison_rank": 5581104,
+      "previous_catalogue_rank": 5598054,
+      "saving": 19168,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "395fc2edaeab69028e3946c797202b0d02d2d0cba9279395eebe21442a3ac53a"
+    },
+    {
+      "n": 269,
+      "rank": 5629424,
+      "comparison_rank": 5639088,
+      "previous_catalogue_rank": null,
+      "saving": 9664,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "e4a8bd0f8fb558063283cd6e744708c679927f4ef3628ed9b3e6a0cc4aa0f2dc"
+    },
+    {
+      "n": 274,
+      "rank": 5969495,
+      "comparison_rank": 5979393,
+      "previous_catalogue_rank": null,
+      "saving": 9898,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven2)",
+      "root_object": "01997bccde5dd574aa4b77191500753c2fec3c48aa6cddea30019c07c4340e06"
+    },
+    {
+      "n": 277,
+      "rank": 6190605,
+      "comparison_rank": 6208750,
+      "previous_catalogue_rank": null,
+      "saving": 18145,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven2)",
+      "root_object": "0c808fca35cae906b045081b479b425bcbfd0d86040d9f6df4fa3444bd822f03"
+    },
+    {
+      "n": 281,
+      "rank": 6450552,
+      "comparison_rank": 6450553,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "5ddb3b1190c276ed7002f837497304007e22122295f4ec24433fb9923278cb05"
+    },
+    {
+      "n": 285,
+      "rank": 6604664,
+      "comparison_rank": 6607776,
+      "previous_catalogue_rank": null,
+      "saving": 3112,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "718964250bba9449a8ced179d51982031825397ec9d9b3d22baf5db580719940"
+    },
+    {
+      "n": 290,
+      "rank": 6989715,
+      "comparison_rank": 6991672,
+      "previous_catalogue_rank": 6991672,
+      "saving": 1957,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "93f1e1b0854aed0c6ac1d0ad63c0e279dcde8783221ec4bf09d182bd1a9fb783"
+    },
+    {
+      "n": 291,
+      "rank": 7121634,
+      "comparison_rank": 7135632,
+      "previous_catalogue_rank": 7144555,
+      "saving": 13998,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "5adadb81ee77bee89f5b1df7f79c4f9ad98c92d589bf681488b7283a921ef659"
+    },
+    {
+      "n": 293,
+      "rank": 7267792,
+      "comparison_rank": 7294224,
+      "previous_catalogue_rank": null,
+      "saving": 26432,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "e05038849aea780413abd79b62bf2bba131bcad2740a46245799054e7e09e10e"
+    },
+    {
+      "n": 297,
+      "rank": 7552291,
+      "comparison_rank": 7557961,
+      "previous_catalogue_rank": null,
+      "saving": 5670,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "667309aafc02eb9f6fe4e2d624a74d955a37aa25351ca90159847cc08e6fa043"
+    },
+    {
+      "n": 298,
+      "rank": 7558835,
+      "comparison_rank": 7570287,
+      "previous_catalogue_rank": null,
+      "saving": 11452,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven2)",
+      "root_object": "d3ff37914f26ed82a57e9bece1747eefeec2233d6af01415705d6b93b88107da"
+    },
+    {
+      "n": 306,
+      "rank": 8107558,
+      "comparison_rank": 8109172,
+      "previous_catalogue_rank": 8109172,
+      "saving": 1614,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "d88560ea607e2dbbbd715cf44fed59aa977be481e5e73be6abb30867a522acb6"
+    },
+    {
+      "n": 313,
+      "rank": 8666008,
+      "comparison_rank": 8666009,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "c73b2cfff64402b4c5014e2db674de923b1afa61876502b642e888ac38baac7b"
+    },
+    {
+      "n": 314,
+      "rank": 8792400,
+      "comparison_rank": 8857050,
+      "previous_catalogue_rank": 8857050,
+      "saving": 64650,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "32a314f6d3e8b2330013ab36e35ef30ace5906985e9f23665ab7b6f5a57375fb"
+    },
+    {
+      "n": 315,
+      "rank": 8848521,
+      "comparison_rank": 8865024,
+      "previous_catalogue_rank": null,
+      "saving": 16503,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "6e2175309f560662b07c2e81eac296dd0d3d025d038b04d442a464962f1efe99"
+    },
+    {
+      "n": 316,
+      "rank": 8848992,
+      "comparison_rank": 8865024,
+      "previous_catalogue_rank": null,
+      "saving": 16032,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "7223019cba6077f69fc8908ff19b3212dd2e2363128aec096f0e9f24670aafff"
+    },
+    {
+      "n": 325,
+      "rank": 9502861,
+      "comparison_rank": 9502862,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "4c992a50d605c251f3c45b943bada3d886c7bd151c198f12804371c21ea3966a"
+    },
+    {
+      "n": 326,
+      "rank": 9672506,
+      "comparison_rank": 9758448,
+      "previous_catalogue_rank": null,
+      "saving": 85942,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "eb4c41419585977d9f82c988df1c3c4c11fed6730ae49e5cf0ca0f9bf0e20b64"
+    },
+    {
+      "n": 329,
+      "rank": 10010139,
+      "comparison_rank": 10076472,
+      "previous_catalogue_rank": 10076472,
+      "saving": 66333,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (pad)",
+      "root_object": "e2d7bedeb6a71900eadbfc49dcf9eb1eb238e5a0483b5cece93cde948e45c47b"
+    },
+    {
+      "n": 330,
+      "rank": 10010139,
+      "comparison_rank": 10143441,
+      "previous_catalogue_rank": 10161330,
+      "saving": 133302,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "91ca861e7c31b9f2dd733dfc32dac25f6ba1d5043e7fce7d8fb3f83f914d64af"
+    },
+    {
+      "n": 331,
+      "rank": 10147102,
+      "comparison_rank": 10164336,
+      "previous_catalogue_rank": null,
+      "saving": 17234,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "44a66388831269571ac05fa1959b8f9fbf9c8f3d226ba7f44d14d36cfd4b9c74"
+    },
+    {
+      "n": 332,
+      "rank": 10147596,
+      "comparison_rank": 10164336,
+      "previous_catalogue_rank": null,
+      "saving": 16740,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "30b1d1d6437ab74832d596ae33aa5d3da4f2fad8274d311c1aac59e2dcd3bbc6"
+    },
+    {
+      "n": 339,
+      "rank": 10859514,
+      "comparison_rank": 10875662,
+      "previous_catalogue_rank": null,
+      "saving": 16148,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "65060a7f35dfc0c837391ebfbe8cb593dfb6d73248ab9552dff06e748d1c6f13"
+    },
+    {
+      "n": 345,
+      "rank": 11442976,
+      "comparison_rank": 11485824,
+      "previous_catalogue_rank": 11485824,
+      "saving": 42848,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "9b4ad693710aa59c9cc91057c0a3a264d06c1f6a582586bd7a7b58d442b1bebf"
+    },
+    {
+      "n": 346,
+      "rank": 11493186,
+      "comparison_rank": 11495276,
+      "previous_catalogue_rank": null,
+      "saving": 2090,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "59cdabc7c67fa483d785c2ce3f15516429b3002e28419fa2998a408c2016e3db"
+    },
+    {
+      "n": 347,
+      "rank": 11494748,
+      "comparison_rank": 11495276,
+      "previous_catalogue_rank": null,
+      "saving": 528,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "7a9b83776e23ee113756df0b27cca86fcbf1804fb129a48d3fd6d259d129e61a"
+    },
+    {
+      "n": 348,
+      "rank": 11494748,
+      "comparison_rank": 11495276,
+      "previous_catalogue_rank": null,
+      "saving": 528,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "6097d41318014d0c7d79d9054e52ca8fd382eb7b364f421b4df5013c777c807c"
+    },
+    {
+      "n": 353,
+      "rank": 11868044,
+      "comparison_rank": 11868045,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "5038441649025a0745d7b31ad73274e64b72c26903bcb89434641864efc5502a"
+    },
+    {
+      "n": 354,
+      "rank": 12067962,
+      "comparison_rank": 12105814,
+      "previous_catalogue_rank": null,
+      "saving": 37852,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "522b61b627658f0a706ad8ad5529eac19970461c0c28d89ff4fe217a337f772b"
+    },
+    {
+      "n": 361,
+      "rank": 12495694,
+      "comparison_rank": 12495695,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "dfe68095f9073b5044d2e18c137ef69289c69bc2a5feafa768ac679cea42d906"
+    },
+    {
+      "n": 362,
+      "rank": 12704882,
+      "comparison_rank": 12825243,
+      "previous_catalogue_rank": null,
+      "saving": 120361,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e567265617c362da02e364d154d40a09342eb61a8a40e7ff21617f558cbf49f8"
+    },
+    {
+      "n": 370,
+      "rank": 13756983,
+      "comparison_rank": 13757428,
+      "previous_catalogue_rank": 13757428,
+      "saving": 445,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "c260c4788f26dd9e9b445a1ce6d06b131a028e636475aa018c5de861bc1fca1d"
+    },
+    {
+      "n": 371,
+      "rank": 13962126,
+      "comparison_rank": 13970320,
+      "previous_catalogue_rank": null,
+      "saving": 8194,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "0f420f7d77cc28e3bea056f2e82de88f28311f2eaddc98b822c470179d3ffefe"
+    },
+    {
+      "n": 379,
+      "rank": 14506569,
+      "comparison_rank": 14507168,
+      "previous_catalogue_rank": null,
+      "saving": 599,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "1fc51f81342e772a2d05a916643d3c4bb485e28c4801d064827965cac2f82768"
+    },
+    {
+      "n": 380,
+      "rank": 14506569,
+      "comparison_rank": 14507168,
+      "previous_catalogue_rank": null,
+      "saving": 599,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "7effe3f3e95af8b2d8b9f74255ec95647e186048dee82099d1bde3b406327c86"
+    },
+    {
+      "n": 385,
+      "rank": 14950688,
+      "comparison_rank": 14950689,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "ca2cd7e66cb6599d20f7abf25ade881b6f40c3ffc336fe01a33bf0aa2d5551f8"
+    },
+    {
+      "n": 386,
+      "rank": 15188366,
+      "comparison_rank": 15396520,
+      "previous_catalogue_rank": null,
+      "saving": 208154,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "61d4ba0b04c18eef2747a50dea8695e23484fecf0660e98a786f6cb1f3825deb"
+    },
+    {
+      "n": 387,
+      "rank": 15473003,
+      "comparison_rank": 15582371,
+      "previous_catalogue_rank": null,
+      "saving": 109368,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "444d829b386b02874d6acb1e2832e774643081a2905b5fa8c6995eb1a15fb22d"
+    },
+    {
+      "n": 388,
+      "rank": 15563025,
+      "comparison_rank": 15582371,
+      "previous_catalogue_rank": null,
+      "saving": 19346,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "ccd76e5a5eeabb7b1e6b601e7e0413ee3c86fd7d8e7eea51ec3e441dbcb04c61"
+    },
+    {
+      "n": 401,
+      "rank": 16433236,
+      "comparison_rank": 16433237,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "03e027f44893998d20e3b221260f7afbe5f15acb8a21503f85bfcc322f9d7389"
+    },
+    {
+      "n": 402,
+      "rank": 16691018,
+      "comparison_rank": 16916844,
+      "previous_catalogue_rank": null,
+      "saving": 225826,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "cb5434494d92a0badff0adcaef824f858d1de40dc6a4aac523d3d1a08ea7f7e4"
+    },
+    {
+      "n": 403,
+      "rank": 17000536,
+      "comparison_rank": 17402863,
+      "previous_catalogue_rank": null,
+      "saving": 402327,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f66ad7ae2168bee25420b7269de684559508e9f586128abe1b161f8e719111f7"
+    },
+    {
+      "n": 404,
+      "rank": 17096549,
+      "comparison_rank": 17454320,
+      "previous_catalogue_rank": null,
+      "saving": 357771,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "82da7a1d301cf05df6f688636944de8dc4f7a0ff8caf977f6fef2f906b12308a"
+    },
+    {
+      "n": 405,
+      "rank": 17442322,
+      "comparison_rank": 17454320,
+      "previous_catalogue_rank": null,
+      "saving": 11998,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "4d51d687cb7d8369ba52742246deb41ebd9b5c5d2556a3c03c48cba16b591f8c"
+    },
+    {
+      "n": 409,
+      "rank": 17954936,
+      "comparison_rank": 17954937,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "badde407122708211082b73fe749a34450abbd99d41b0a99eb2e20ab285eaddb"
+    },
+    {
+      "n": 410,
+      "rank": 17999316,
+      "comparison_rank": 18002036,
+      "previous_catalogue_rank": null,
+      "saving": 2720,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "63b4c887a8e95e42519e804f534f63c4ae20a6d30427b58b87bdd25308f87389"
+    },
+    {
+      "n": 411,
+      "rank": 18001361,
+      "comparison_rank": 18002036,
+      "previous_catalogue_rank": null,
+      "saving": 675,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "873d87c5bcbb4edc72f24dca7dae4d0a0b14cb7fe3f9c975c4533fc8f81a89ed"
+    },
+    {
+      "n": 412,
+      "rank": 18001361,
+      "comparison_rank": 18002036,
+      "previous_catalogue_rank": null,
+      "saving": 675,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_gen)",
+      "root_object": "1859f9e159894b0130043acbed0e2ee97ea487fd29e75135e62b51b70c126d3e"
+    },
+    {
+      "n": 417,
+      "rank": 18522452,
+      "comparison_rank": 18522453,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "922ee08eefad51307c932ae845a6270c1bb39accfe47e965c78036553b5ef238"
+    },
+    {
+      "n": 421,
+      "rank": 19394122,
+      "comparison_rank": 19394123,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "7b54530b6997e16eb700336e922008b5df686f47779d2d1a327221ca7b17ff8e"
+    },
+    {
+      "n": 433,
+      "rank": 20226296,
+      "comparison_rank": 20226297,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "c064aa4597ad842ee286608f67b0498e71f776eae4fa7f2ac09a1e42dd22cb83"
+    },
+    {
+      "n": 434,
+      "rank": 20526734,
+      "comparison_rank": 20533154,
+      "previous_catalogue_rank": null,
+      "saving": 6420,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "a6a07c9f087409533d1314e42936931d10a279f1b5a0e8cfde2ede193ed846ff"
+    },
+    {
+      "n": 441,
+      "rank": 21115274,
+      "comparison_rank": 21115275,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "682aaa4f70297eed0a5225bda2ed4c2f7b76a4c791d44a2cb59549453b4b9c56"
+    },
+    {
+      "n": 442,
+      "rank": 21427062,
+      "comparison_rank": 21700042,
+      "previous_catalogue_rank": null,
+      "saving": 272980,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "8524ff06c75dc29012e428ad966cdf588c498a9a19af0cba8d6eb268552061a3"
+    },
+    {
+      "n": 443,
+      "rank": 21799011,
+      "comparison_rank": 22015656,
+      "previous_catalogue_rank": null,
+      "saving": 216645,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "a00ca5f7a7f81742f06ed06d5b89cf120fa338ea59b48d24e0f0c03860168bf0"
+    },
+    {
+      "n": 444,
+      "rank": 21919848,
+      "comparison_rank": 22015656,
+      "previous_catalogue_rank": null,
+      "saving": 95808,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "acbdcc7d666c84a6eb0512fee1921eb2fa96c9d9ec84c7c38f447d9376adc3cf"
+    },
+    {
+      "n": 449,
+      "rank": 22619112,
+      "comparison_rank": 22619113,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "fec1787003d4a2c248273a37505e4ef9b016b0943f13ef9c0f41f7570ac454e5"
+    },
+    {
+      "n": 451,
+      "rank": 23327989,
+      "comparison_rank": 23362568,
+      "previous_catalogue_rank": null,
+      "saving": 34579,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "979c6c10184cbee0fdef36cdb57ec9b9f8d5d0dcebd83611612a4112c982c2d2"
+    },
+    {
+      "n": 452,
+      "rank": 23445345,
+      "comparison_rank": 23570904,
+      "previous_catalogue_rank": null,
+      "saving": 125559,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "3b4dbed6934dc37c9297898d2a0cb645d2bf10dfe302af5fbf50b696326fdd8c"
+    },
+    {
+      "n": 469,
+      "rank": 25061057,
+      "comparison_rank": 25061058,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "2f4256755245ba829aa3ad36ec9a752dcdba6ff144154b5291d4f2e0067115cf"
+    },
+    {
+      "n": 470,
+      "rank": 25413510,
+      "comparison_rank": 25722349,
+      "previous_catalogue_rank": null,
+      "saving": 308839,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e17741a48db38859f972474b4d010e01058cd86a53d3ad13239c258e7fbc7b52"
+    },
+    {
+      "n": 471,
+      "rank": 25835112,
+      "comparison_rank": 25913072,
+      "previous_catalogue_rank": null,
+      "saving": 77960,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "3e8f0fa7789a5d3f99bb40623992110e02bfa722217e9bde31c3884df5048a28"
+    },
+    {
+      "n": 485,
+      "rank": 27134101,
+      "comparison_rank": 27134102,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "c3a5832047199b8107e44ac8c4edbffa9805623a938d5f098c98bf6671944bf2"
+    },
+    {
+      "n": 486,
+      "rank": 27510947,
+      "comparison_rank": 27841233,
+      "previous_catalogue_rank": null,
+      "saving": 330286,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "2e79a834e2ac1427acc2ae131b3fe1c152d3304dcd4e0c30dc9995f1a0ed82b1"
+    },
+    {
+      "n": 487,
+      "rank": 27960949,
+      "comparison_rank": 28551280,
+      "previous_catalogue_rank": null,
+      "saving": 590331,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "37da5df14b2959165dd4d254529b85372636ad96aaa6aa94f4ea9cf8a9cf23b1"
+    },
+    {
+      "n": 488,
+      "rank": 28101649,
+      "comparison_rank": 29249283,
+      "previous_catalogue_rank": null,
+      "saving": 1147634,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "f3952eade77f3d1495f8e48df8083c040bd7cf3d19a00ff5af72e76f3ff0f5bf"
+    },
+    {
+      "n": 489,
+      "rank": 28601166,
+      "comparison_rank": 29249283,
+      "previous_catalogue_rank": null,
+      "saving": 648117,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "3818e0870281412526093872fa4cffaa931c18bd8d9f2a89a39139245a8dc58b"
+    },
+    {
+      "n": 490,
+      "rank": 28839930,
+      "comparison_rank": 29249283,
+      "previous_catalogue_rank": null,
+      "saving": 409353,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "cdce374e6cbc01b912bfa97314adac85d0b1ba3e1c264e2db36198934e973313"
+    },
+    {
+      "n": 491,
+      "rank": 29108287,
+      "comparison_rank": 29249283,
+      "previous_catalogue_rank": null,
+      "saving": 140996,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "94600ad7a9d9d5d83b914677f8559a2ffae09504abcd8597ab9441f7173534b4"
+    },
+    {
+      "n": 492,
+      "rank": 29123928,
+      "comparison_rank": 29249283,
+      "previous_catalogue_rank": null,
+      "saving": 125355,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "ac8118ab307987deda55884b063e75d0a05ff28a66f769478068a961a739fdc0"
+    },
+    {
+      "n": 505,
+      "rank": 30606786,
+      "comparison_rank": 30606787,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "c3f046dd18cb0222cb490fbae73fb604d673877023408e5b251738db46d0f057"
+    },
+    {
+      "n": 507,
+      "rank": 31501932,
+      "comparison_rank": 31661896,
+      "previous_catalogue_rank": null,
+      "saving": 159964,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "1397c1a4c219afc0af30617fd0b614e056c4c65931d92d512f0f4de5de468af2"
+    },
+    {
+      "n": 508,
+      "rank": 31656034,
+      "comparison_rank": 31742256,
+      "previous_catalogue_rank": null,
+      "saving": 86222,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "ca406122a2ada51a6f1ea24e1d5cedc55b0b4f8afd7622efef35a02e22d098fb"
+    },
+    {
+      "n": 521,
+      "rank": 32968454,
+      "comparison_rank": 32968455,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "74f0ac90f71b8cf9861554abceaa16a6d7331a6ae6342987040a9a9b36892a02"
+    },
+    {
+      "n": 529,
+      "rank": 34192744,
+      "comparison_rank": 34192745,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "02d97534005ec14b10ab32741dcd97d53ed195576638cc44eacdf0e03ac9beeb"
+    },
+    {
+      "n": 530,
+      "rank": 34640734,
+      "comparison_rank": 35033856,
+      "previous_catalogue_rank": null,
+      "saving": 393122,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "bcbb353793eb2c09eca48812d685885b67069779542b55145b08b3e0b57158a9"
+    },
+    {
+      "n": 531,
+      "rank": 35176165,
+      "comparison_rank": 35770518,
+      "previous_catalogue_rank": null,
+      "saving": 594353,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "87faeff27cbb2a4e6ff38b22a9c7423d437eab9f5979ba22c7ef4dd945aeaba7"
+    },
+    {
+      "n": 532,
+      "rank": 35340116,
+      "comparison_rank": 35770518,
+      "previous_catalogue_rank": null,
+      "saving": 430402,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e6f8e36e0d5f300f2e8dcbf486f38a4fc780ebd1be644c7f1a6efc618cb89da0"
+    },
+    {
+      "n": 533,
+      "rank": 35928557,
+      "comparison_rank": 36035559,
+      "previous_catalogue_rank": null,
+      "saving": 107002,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e40908ca16b4925382218b4238a0295d41cf1620b19f53298e3a701d09dd2945"
+    },
+    {
+      "n": 541,
+      "rank": 36911979,
+      "comparison_rank": 36911980,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "208c59d107d57359200d81a832d029407be9892e0ac190e8c7df77d6fdf8c85a"
+    },
+    {
+      "n": 542,
+      "rank": 37380355,
+      "comparison_rank": 37526788,
+      "previous_catalogue_rank": null,
+      "saving": 146433,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "f813b99de0d43b4774168b2df7c5f26798280e81867b8eab261fe76b9f85e669"
+    },
+    {
+      "n": 561,
+      "rank": 40267404,
+      "comparison_rank": 40267405,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "05b977fa38c7b85bead957cfcded6a1caf6d4c44a6ffa8c511735b00c5e87c20"
+    },
+    {
+      "n": 562,
+      "rank": 40771107,
+      "comparison_rank": 41213252,
+      "previous_catalogue_rank": null,
+      "saving": 442145,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "cc208b9c5dbff2d85e65859b678a65311e66f03818f194e04ad5a1a745ab8b23"
+    },
+    {
+      "n": 563,
+      "rank": 41371383,
+      "comparison_rank": 41390191,
+      "previous_catalogue_rank": null,
+      "saving": 18808,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "7d10aa57c298850e45b2a652cc6bb5cfa55aad736a6e9d88a06477642c902538"
+    },
+    {
+      "n": 577,
+      "rank": 43091200,
+      "comparison_rank": 43091201,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f9dc7f57ef86a668ac4ca6bbc43044089aeabac31a727247e7dfdbce975f7adc"
+    },
+    {
+      "n": 578,
+      "rank": 43623982,
+      "comparison_rank": 44091720,
+      "previous_catalogue_rank": null,
+      "saving": 467738,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "f14f83070a067abcd794e7b9c3da8b442ce9db20559677cf73211621ebe85024"
+    },
+    {
+      "n": 579,
+      "rank": 44258434,
+      "comparison_rank": 44744782,
+      "previous_catalogue_rank": null,
+      "saving": 486348,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "13fc70216745bf8311f37fd242c9a68dbcc328ef0787ea195bc6d7fad81efd86"
+    },
+    {
+      "n": 580,
+      "rank": 44458082,
+      "comparison_rank": 44744782,
+      "previous_catalogue_rank": null,
+      "saving": 286700,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "1ea2fd088fba3fa3d1c87c4fa1a9e9a2746f87bf15ce270f007171d5579a1f9f"
+    },
+    {
+      "n": 581,
+      "rank": 45149996,
+      "comparison_rank": 45755723,
+      "previous_catalogue_rank": null,
+      "saving": 605727,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "70da9cf7050147542ec920a69cee93c2bc9fdb936621a5123a73e7c4d3ecb638"
+    },
+    {
+      "n": 582,
+      "rank": 45494845,
+      "comparison_rank": 46502658,
+      "previous_catalogue_rank": null,
+      "saving": 1007813,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "b20dbbb927d5b2774a7093da384aaafc5b94b748e74b368d78dee21ecf7e12e4"
+    },
+    {
+      "n": 583,
+      "rank": 45838822,
+      "comparison_rank": 46502658,
+      "previous_catalogue_rank": null,
+      "saving": 663836,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "a94f230f78de95876a5881b1f68ff28e9cd652171478faad69a846c60424f684"
+    },
+    {
+      "n": 584,
+      "rank": 45851653,
+      "comparison_rank": 46502658,
+      "previous_catalogue_rank": null,
+      "saving": 651005,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "512009ddd1977500d34e32e51e9dcaa37bf5dc39201d664535ba235ea367e144"
+    },
+    {
+      "n": 601,
+      "rank": 48566466,
+      "comparison_rank": 48566467,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "234a8ff60c30182b6116677f2aae083f67c18556361295f28cdac85ef8705748"
+    },
+    {
+      "n": 602,
+      "rank": 49144654,
+      "comparison_rank": 49651874,
+      "previous_catalogue_rank": null,
+      "saving": 507220,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "7625b8e822c50c1ffb33f765fcf26fa85adfab50a6de6afac506207ababd2dbd"
+    },
+    {
+      "n": 603,
+      "rank": 49833447,
+      "comparison_rank": 50618286,
+      "previous_catalogue_rank": null,
+      "saving": 784839,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "146f8459c69a71cdb696b3f30097c955ec50a5cdd7991512d21951f9a1c62d65"
+    },
+    {
+      "n": 604,
+      "rank": 50050091,
+      "comparison_rank": 50618286,
+      "previous_catalogue_rank": null,
+      "saving": 568195,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "4297becd85971c9171c6ba6be50b85acfdd4ca4580d6c8bf34598418bc0d4ece"
+    },
+    {
+      "n": 617,
+      "rank": 51758502,
+      "comparison_rank": 51758503,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "72198a6e8e49f3421a85fc301a76a42fa1edd17b20a5e787b4cb53a7e47446de"
+    },
+    {
+      "n": 625,
+      "rank": 53404888,
+      "comparison_rank": 53404889,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f4eba06e215be62040f1a9fecc5cf6e5c86d6ef95906a66b0f665d733a245d5b"
+    },
+    {
+      "n": 626,
+      "rank": 54029806,
+      "comparison_rank": 54578640,
+      "previous_catalogue_rank": null,
+      "saving": 548834,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "45b36e1ad062164ac031edbb8a7836ac1f8de5ebe9807527ac673d2446dcec33"
+    },
+    {
+      "n": 627,
+      "rank": 54773648,
+      "comparison_rank": 55756147,
+      "previous_catalogue_rank": null,
+      "saving": 982499,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "8d00da073efc1c3334baceb551db814bb20b7fa9f12da6fbd0a2589162a26082"
+    },
+    {
+      "n": 628,
+      "rank": 55005308,
+      "comparison_rank": 56151747,
+      "previous_catalogue_rank": null,
+      "saving": 1146439,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "7e2b53453edd0fae6045a2f0bea41ca31f92e3a58b202b53c323ff40d18bd6d2"
+    },
+    {
+      "n": 629,
+      "rank": 55810411,
+      "comparison_rank": 56151747,
+      "previous_catalogue_rank": null,
+      "saving": 341336,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "908d628188640b18ad4e28ade909c7dbc53efd19545e28e2a4a495c2831f4e71"
+    },
+    {
+      "n": 631,
+      "rank": 56639988,
+      "comparison_rank": 56698824,
+      "previous_catalogue_rank": null,
+      "saving": 58836,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "ea976fd4f9a48e7bc286932c55b80fd3bd5a6e08110b0427d670f1b2fe54db97"
+    },
+    {
+      "n": 632,
+      "rank": 56650639,
+      "comparison_rank": 56698824,
+      "previous_catalogue_rank": null,
+      "saving": 48185,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "0e2d6c442bc46cd629b022958b1426f738bb2c5228d1f8f0a8b37c4f18da3bec"
+    },
+    {
+      "n": 641,
+      "rank": 57929544,
+      "comparison_rank": 57929545,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "24574d5bde7f42b23c8f7db0b4be957f8cd54aa883eb71b675d1c217e7c0ad14"
+    },
+    {
+      "n": 642,
+      "rank": 58586806,
+      "comparison_rank": 59164112,
+      "previous_catalogue_rank": null,
+      "saving": 577306,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "92e8d4293ef690115078bd3d7f495babc047acc06af32a5934f6925de3f04f22"
+    },
+    {
+      "n": 661,
+      "rank": 62430129,
+      "comparison_rank": 62430130,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "b1aa4e8c339a3597d11fad9ebe7c1c8e4bf13e153a30b0af216c48c26f059342"
+    },
+    {
+      "n": 662,
+      "rank": 63129142,
+      "comparison_rank": 63742877,
+      "previous_catalogue_rank": null,
+      "saving": 613735,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "6a718fddf2c530a13ae5d79d6e7105197143f14dbde008df0ce604a9912e5aa9"
+    },
+    {
+      "n": 677,
+      "rank": 66191557,
+      "comparison_rank": 66191558,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "8074226885b4997570ffab2ab247ecfa6d693e186d82e79ad477c3dfd34ea6a4"
+    },
+    {
+      "n": 678,
+      "rank": 66924755,
+      "comparison_rank": 67031302,
+      "previous_catalogue_rank": null,
+      "saving": 106547,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "43c8e3011a6fa4a2f8d207fa8143bd2119559151cd1d47f0e79c2dc5ec49c212"
+    },
+    {
+      "n": 681,
+      "rank": 68420542,
+      "comparison_rank": 68420543,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "06a9fbd767a8dc2cf27cca01465f3025e97416c0a9fe4675048f12d784753be2"
+    },
+    {
+      "n": 685,
+      "rank": 70079906,
+      "comparison_rank": 70153048,
+      "previous_catalogue_rank": 70153048,
+      "saving": 73142,
+      "substantive": true,
+      "classification": "CW fixed-quotient remainder re-closure",
+      "root_object": "ff62fa1b1e29cfc91d1ebe8d11d00ffcc2da9a62b7d260e89ebb1cfa3a17bb66"
+    },
+    {
+      "n": 686,
+      "rank": 70079906,
+      "comparison_rank": 70153048,
+      "previous_catalogue_rank": 70153048,
+      "saving": 73142,
+      "substantive": true,
+      "classification": "CW fixed-quotient remainder re-closure",
+      "root_object": "7bc95ef0da537e876917354b92592ee43ba82bd25463bdbb4c4bd9ab8c93fbd3"
+    },
+    {
+      "n": 705,
+      "rank": 74470596,
+      "comparison_rank": 74470597,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f9b98423f65b6b0f42869833d8bcd931ef7a672f1dc6e203893f62738853a6f7"
+    },
+    {
+      "n": 706,
+      "rank": 75265395,
+      "comparison_rank": 75963788,
+      "previous_catalogue_rank": null,
+      "saving": 698393,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "c1a8719dc55c9ce91f97da647188ab6984cde45e2765676918515f5a05c3a9c0"
+    },
+    {
+      "n": 707,
+      "rank": 76212879,
+      "comparison_rank": 77135832,
+      "previous_catalogue_rank": null,
+      "saving": 922953,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "939f0a14796eb633c670d843ba5aec1f83d507ae1e214e4b308a8977fd08b97c"
+    },
+    {
+      "n": 708,
+      "rank": 76497013,
+      "comparison_rank": 77135832,
+      "previous_catalogue_rank": null,
+      "saving": 638819,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "7de1e316b22a19118d19ba1ebb400d5adc52f87bdc4781ee40a821e37f542f82"
+    },
+    {
+      "n": 721,
+      "rank": 78693192,
+      "comparison_rank": 78693193,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "49f21da945ccb3902341ed9a6874f33e38b8307b9399ca6213be31006492fe26"
+    },
+    {
+      "n": 729,
+      "rank": 80862282,
+      "comparison_rank": 80862283,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "9e1957912637907fd04d09aae855fcbe682b07a93f2f0956d8cd071c996709d3"
+    },
+    {
+      "n": 730,
+      "rank": 81712342,
+      "comparison_rank": 82458794,
+      "previous_catalogue_rank": null,
+      "saving": 746452,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "b796bf351402ed7da37eb68e6f429da9d41a94e26798487367ff790f7e234ea9"
+    },
+    {
+      "n": 731,
+      "rank": 82725628,
+      "comparison_rank": 84059685,
+      "previous_catalogue_rank": null,
+      "saving": 1334057,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e3bb2a0dcdf5bc0540e9b34518375dfdc5063540de96ae16b1cd9fd6ed8cbbea"
+    },
+    {
+      "n": 732,
+      "rank": 83038886,
+      "comparison_rank": 85303764,
+      "previous_catalogue_rank": null,
+      "saving": 2264878,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "c894f24f02a07ab7df4c158a1e31e527c045016f3ddc3f35c2afae764f269f98"
+    },
+    {
+      "n": 733,
+      "rank": 84130635,
+      "comparison_rank": 85303764,
+      "previous_catalogue_rank": null,
+      "saving": 1173129,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "8a5b904133b7607423dd898cf1e19f994f5b3d7c06ca85d046fb5fe8affea999"
+    },
+    {
+      "n": 734,
+      "rank": 84673715,
+      "comparison_rank": 85303764,
+      "previous_catalogue_rank": null,
+      "saving": 630049,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "27d565bbdb42dd798a00e46766740b8067735c771e86c12e5915e0dea62d7dd9"
+    },
+    {
+      "n": 735,
+      "rank": 85223653,
+      "comparison_rank": 85303764,
+      "previous_catalogue_rank": null,
+      "saving": 80111,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "f2b55ae883fe0efde19fa3b5d620dba111a5eff1ddfd47ecf323b6e7e7d672fe"
+    },
+    {
+      "n": 736,
+      "rank": 85248714,
+      "comparison_rank": 85303764,
+      "previous_catalogue_rank": null,
+      "saving": 55050,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "6e12d852e362ab0ffaec373c4a6d402374d996cc5c0055a6b4a40b8f3117db4d"
+    },
+    {
+      "n": 749,
+      "rank": 87962159,
+      "comparison_rank": 87962160,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "cc64a789ea88be1b1cbe2173617d676ffbbe32d3b169216637a4917b0efed5b0"
+    },
+    {
+      "n": 750,
+      "rank": 88858911,
+      "comparison_rank": 89250723,
+      "previous_catalogue_rank": null,
+      "saving": 391812,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "9682452e9f24fba669d071f8b09d5eca0040988d6ff665a718710b528d5edaea"
+    },
+    {
+      "n": 751,
+      "rank": 89927908,
+      "comparison_rank": 90195353,
+      "previous_catalogue_rank": null,
+      "saving": 267445,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "ebaabebd6d8fa35fa91a0e2a2c40feb87ae2ffec7ccd31efaa965a4c1d3053de"
+    },
+    {
+      "n": 769,
+      "rank": 93875424,
+      "comparison_rank": 93875425,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "644663daab90c70183e43ceae2207b7f60fab3b4adae0d68da53ba34a47ebc70"
+    },
+    {
+      "n": 770,
+      "rank": 94820814,
+      "comparison_rank": 95651816,
+      "previous_catalogue_rank": null,
+      "saving": 831002,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "98142964ab28d48cc2986129bce6e44d4659d0eddbf03623289920a34e544a72"
+    },
+    {
+      "n": 785,
+      "rank": 98790036,
+      "comparison_rank": 98790037,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f6c6858903873194afd9a7720e45ab63abb9a6a7635ef4ff9234aa4aa9651ace"
+    },
+    {
+      "n": 786,
+      "rank": 99775114,
+      "comparison_rank": 100641068,
+      "previous_catalogue_rank": null,
+      "saving": 865954,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "71515a865e731f061a94407d3a5330085f62403fcd43450df826db25e222964e"
+    },
+    {
+      "n": 787,
+      "rank": 100949680,
+      "comparison_rank": 101102906,
+      "previous_catalogue_rank": null,
+      "saving": 153226,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "add2237b0653cc1a23320b3a7625a7dfaedb3991b4ade93ac7f23586b5d41ba8"
+    },
+    {
+      "n": 793,
+      "rank": 102987074,
+      "comparison_rank": 102987075,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "6c4a39ed86c7a240d13e2d86c479788bb82ce06b5df3478553af14513d2eebc2"
+    },
+    {
+      "n": 794,
+      "rank": 103992654,
+      "comparison_rank": 104876002,
+      "previous_catalogue_rank": null,
+      "saving": 883348,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "fc36de3870fe819c6b8da9f5b2b75f4a75745d9d42c64deffe8d28207cf80099"
+    },
+    {
+      "n": 795,
+      "rank": 105190457,
+      "comparison_rank": 105377696,
+      "previous_catalogue_rank": null,
+      "saving": 187239,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "109429e59145acfbbb46f62ac806876d8796ea0b2d2c68f886c5273615d06798"
+    },
+    {
+      "n": 801,
+      "rank": 107300096,
+      "comparison_rank": 107300097,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "79f81029932998196aea86486323489688ab67d9cadaf921dbad40bffe80b1f7"
+    },
+    {
+      "n": 817,
+      "rank": 110888120,
+      "comparison_rank": 110888121,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "32c686d2a329b1f810a3afc17a1232c94b6f187ea2e31d453a63f4e3ebbc293e"
+    },
+    {
+      "n": 818,
+      "rank": 111955022,
+      "comparison_rank": 112893040,
+      "previous_catalogue_rank": null,
+      "saving": 938018,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "08f3ae11b12ded75ad388721559335e809fa2231aaff868864d619babd756e3f"
+    },
+    {
+      "n": 819,
+      "rank": 113224777,
+      "comparison_rank": 114291996,
+      "previous_catalogue_rank": null,
+      "saving": 1067219,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "90008cd1366dfe31aa8c6292ad98faa80142a4550ab4fe7e3e4ec4ac90fe4947"
+    },
+    {
+      "n": 820,
+      "rank": 113615250,
+      "comparison_rank": 114291996,
+      "previous_catalogue_rank": null,
+      "saving": 676746,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "3cab20ded3d1578eb5481cf72072ac14ee2a342798fa563337aac5894755e3c5"
+    },
+    {
+      "n": 833,
+      "rank": 116371164,
+      "comparison_rank": 116371165,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "327cccd012e96dcd1c066d962e82ab3928d5474fa7284d860a455317fbb335ab"
+    },
+    {
+      "n": 841,
+      "rank": 119178414,
+      "comparison_rank": 119178415,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "0cf4227d277ef99279ef6efe94b50d4d37dfaafeccaa79b8cc1c2095aabfe3a5"
+    },
+    {
+      "n": 842,
+      "rank": 120309202,
+      "comparison_rank": 121302782,
+      "previous_catalogue_rank": null,
+      "saving": 993580,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "6c74e98444bda5de1b8f0a2ed972e5c9f0ee02f252c5cb9297a9018dd44be033"
+    },
+    {
+      "n": 843,
+      "rank": 121655759,
+      "comparison_rank": 123432201,
+      "previous_catalogue_rank": null,
+      "saving": 1776442,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "ea8c2aa826b935e1c64b77ae48efff40c1588d26a2a968326e0f723f174954ec"
+    },
+    {
+      "n": 844,
+      "rank": 122067978,
+      "comparison_rank": 125566678,
+      "previous_catalogue_rank": null,
+      "saving": 3498700,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "b09431f01cfbb3d57530e4a73470baf4f25874565513477f0fe05e2de3ff2a05"
+    },
+    {
+      "n": 845,
+      "rank": 123535841,
+      "comparison_rank": 125989981,
+      "previous_catalogue_rank": null,
+      "saving": 2454140,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "f4b84d977ac8ba94ae9a07c14e5f61bb3929cdb2b34e813ffdd7872c4035d98f"
+    },
+    {
+      "n": 846,
+      "rank": 124233023,
+      "comparison_rank": 125989981,
+      "previous_catalogue_rank": null,
+      "saving": 1756958,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "151b914d80a6c64acfc95b6b85bd66fac9a6b3fbf5d3f550604be09d955e2adc"
+    },
+    {
+      "n": 847,
+      "rank": 124969649,
+      "comparison_rank": 125989981,
+      "previous_catalogue_rank": null,
+      "saving": 1020332,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "d4b6625baa0b4f464aecbf2db3c413eb3031d7044a247598db78bd2df7b6d199"
+    },
+    {
+      "n": 848,
+      "rank": 124989468,
+      "comparison_rank": 125989981,
+      "previous_catalogue_rank": null,
+      "saving": 1000513,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "582b22ab6cf1ce3fe9ef17e201518d68960651c1e993e7a8e64d36ba628ea876"
+    },
+    {
+      "n": 865,
+      "rank": 129835088,
+      "comparison_rank": 129835089,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "45414deb6d556665bd3d73ad5148b011101eeec7efe1f5817367bc97e02396b1"
+    },
+    {
+      "n": 866,
+      "rank": 131030846,
+      "comparison_rank": 132082360,
+      "previous_catalogue_rank": null,
+      "saving": 1051514,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "4138d5e8592b77cfc15308596a5ce92459095ff12ac56e0bce542bc1e578166a"
+    },
+    {
+      "n": 885,
+      "rank": 137466953,
+      "comparison_rank": 137466954,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "dd0b2bfeddb3bc2c0f29f7bd0cddb0afa4ce30f757dfb7e133a88e7ff70a5d3e"
+    },
+    {
+      "n": 886,
+      "rank": 138718800,
+      "comparison_rank": 139773816,
+      "previous_catalogue_rank": null,
+      "saving": 1055016,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "2ec1ea28e459effff5815ae2d60ceaec485af67205427a88e520093f3ff846aa"
+    },
+    {
+      "n": 901,
+      "rank": 143781021,
+      "comparison_rank": 143781022,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "5a73a98c22b1b21c1827a36b4d59c0d5fbf184c4caf264257bb1a7ad53553b6f"
+    },
+    {
+      "n": 902,
+      "rank": 145078474,
+      "comparison_rank": 146219129,
+      "previous_catalogue_rank": null,
+      "saving": 1140655,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "7f55b714538cf2e52b4a5b69b494819a700b13be04105b18eb8048820b6232d5"
+    },
+    {
+      "n": 903,
+      "rank": 146622190,
+      "comparison_rank": 148322168,
+      "previous_catalogue_rank": null,
+      "saving": 1699978,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "5854a413dac874f3bb53c00a6f45055db85ecaadb2d7f73dfce54ca3fb15fe81"
+    },
+    {
+      "n": 904,
+      "rank": 147091219,
+      "comparison_rank": 148322168,
+      "previous_catalogue_rank": null,
+      "saving": 1230949,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "53bfffdbae888120d59f6a32a35641410bffda42a2ddb97c41c7d124a53f0d90"
+    },
+    {
+      "n": 913,
+      "rank": 150820136,
+      "comparison_rank": 150820137,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "4a02886500314820c454e5591a3374ab748da48f0624ae9a7aef2cbc636cd90b"
+    },
+    {
+      "n": 914,
+      "rank": 152152094,
+      "comparison_rank": 153323584,
+      "previous_catalogue_rank": null,
+      "saving": 1171490,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "8787c202164e21102c2c56682a1e6c52f638ae38f320016c34563c47b13ab55d"
+    },
+    {
+      "n": 915,
+      "rank": 153737583,
+      "comparison_rank": 154957439,
+      "previous_catalogue_rank": null,
+      "saving": 1219856,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e3d673c0f5ccfae3101b81ebcee01c4f08fe5b5d18a0e47da9696be58802437a"
+    },
+    {
+      "n": 916,
+      "rank": 154216915,
+      "comparison_rank": 154957439,
+      "previous_catalogue_rank": null,
+      "saving": 740524,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "0c07424186be1c213aac537117f5d5d3f2c1a9e350b8d07e854627a41042eb8b"
+    },
+    {
+      "n": 925,
+      "rank": 158084491,
+      "comparison_rank": 158084492,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f643cde8de554cdb047734a2fe5147485d022a310a442ff33379e5bafbf81f66"
+    },
+    {
+      "n": 937,
+      "rank": 160962062,
+      "comparison_rank": 160962063,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f0ae61e61d50e14ee413f16085e9d04a281f7d0068642bd756bdc69a88f7785c"
+    },
+    {
+      "n": 938,
+      "rank": 162365298,
+      "comparison_rank": 163598782,
+      "previous_catalogue_rank": null,
+      "saving": 1233484,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "dd292eb0759393d3a6d4aaa3028eff32ae3eb0c261206878dcd0cbe856d535cd"
+    },
+    {
+      "n": 939,
+      "rank": 164033121,
+      "comparison_rank": 165245418,
+      "previous_catalogue_rank": null,
+      "saving": 1212297,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "6034fd66323ad503d1e2c6fbcc1f719d5b9f07e62019af5256d692a212cb7950"
+    },
+    {
+      "n": 940,
+      "rank": 164543908,
+      "comparison_rank": 165245418,
+      "previous_catalogue_rank": null,
+      "saving": 701510,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "cb5bf0ab36a9d5683ac664841f7ee1a5e96ecb5e82c4fe858f8f70017d1671b4"
+    },
+    {
+      "n": 953,
+      "rank": 167967186,
+      "comparison_rank": 167967187,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "95f5eb393a227745980a5141ee9cbec1c185ec12a17e388ab6b1bd83bc471d2c"
+    },
+    {
+      "n": 961,
+      "rank": 171543924,
+      "comparison_rank": 171543925,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "5a56edd82f9eb98ccec7800199d33804a526428a64f89e26b2ac9cb61ea943a1"
+    },
+    {
+      "n": 962,
+      "rank": 173019426,
+      "comparison_rank": 174317372,
+      "previous_catalogue_rank": null,
+      "saving": 1297946,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "e713216246aa28c5aba8172e05f5547fc705bb8b43ebed93664896e720be9aa7"
+    },
+    {
+      "n": 963,
+      "rank": 174773075,
+      "comparison_rank": 177096591,
+      "previous_catalogue_rank": null,
+      "saving": 2323516,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "fc9d3f17d63bef4965f1823c14a2f08b2bc17cb32ba6c19eb574c531295f92f1"
+    },
+    {
+      "n": 964,
+      "rank": 175298509,
+      "comparison_rank": 177251398,
+      "previous_catalogue_rank": null,
+      "saving": 1952889,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "76fe955b6bd9cbcfe950ea92e9cc1ceac163378457b28941719b7d8ef6732b86"
+    },
+    {
+      "n": 965,
+      "rank": 177207286,
+      "comparison_rank": 177251398,
+      "previous_catalogue_rank": null,
+      "saving": 44112,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "2999f124749fec2a4015979925dfa14fb85228dbb93e99cb531e659c999b246a"
+    },
+    {
+      "n": 969,
+      "rank": 180065374,
+      "comparison_rank": 180065375,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "f8397ac9e9581c0f8dd0fa58ff2b2c6c8efa399392da91c26040e7bb15b4c926"
+    },
+    {
+      "n": 970,
+      "rank": 181565954,
+      "comparison_rank": 181576178,
+      "previous_catalogue_rank": null,
+      "saving": 10224,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "141227c428cc78a111c1491fa5a034b42e8ae9b5af3104346ad730235d8a21a0"
+    },
+    {
+      "n": 989,
+      "rank": 186985307,
+      "comparison_rank": 186985308,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "01e881e6667fb01636b9ed92773609da53fc66da0936a823b3c515448ccd9112"
+    },
+    {
+      "n": 990,
+      "rank": 188547699,
+      "comparison_rank": 189498771,
+      "previous_catalogue_rank": null,
+      "saving": 951072,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "0ca999c1418773604c05f9871855a280b5e7bd57987f7002047b2c412d4da309"
+    },
+    {
+      "n": 991,
+      "rank": 190406190,
+      "comparison_rank": 190694868,
+      "previous_catalogue_rank": null,
+      "saving": 288678,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "82c0b43754bb251717f814e5b29d10c7e169359515a168e6a98b5b49329666c1"
+    },
+    {
+      "n": 993,
+      "rank": 192983798,
+      "comparison_rank": 193631436,
+      "previous_catalogue_rank": null,
+      "saving": 647638,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "dbaacbd5a5cd7f730cc30353976be636dbdf42eab292cf7004e0bb55bf4ff124"
+    },
+    {
+      "n": 1009,
+      "rank": 196682652,
+      "comparison_rank": 196682653,
+      "previous_catalogue_rank": null,
+      "saving": 1,
+      "substantive": false,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (uneven_strassen_sq)",
+      "root_object": "16a62ac76ae580025d0221a2c8c34de2875a0c7f9c737f3e7a662f39500daf7f"
+    },
+    {
+      "n": 1010,
+      "rank": 198309042,
+      "comparison_rank": 198679192,
+      "previous_catalogue_rank": null,
+      "saving": 370150,
+      "substantive": true,
+      "classification": "L=1024 rectangular, generalized uneven & serendipitous closure (rect_sq)",
+      "root_object": "1a1584f2ff1b28e7b023e426a9c875482fcf05610118b410774dcf14d488db71"
+    }
+  ],
+  "cli_verify_samples": [
+    {
+      "n": "14",
+      "rank": "1593",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "865/32",
+        "0",
+        "319/100",
+        "-101/100",
+        "87/40"
+      ],
+      "sub_2_7": false,
+      "explicit_checks": {
+        "random_evaluation_mod_2_31_minus_1": true
+      },
+      "seconds": 0.19203862998983823,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "32",
+      "rank": "14196",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "14084/13",
+        "0",
+        "12365/5096",
+        "-785/784",
+        "14523/10192"
+      ],
+      "sub_2_7": false,
+      "explicit_checks": {
+        "random_evaluation_mod_2_31_minus_1": true
+      },
+      "seconds": 2.3650966199929826,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "81",
+      "rank": "200124",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 11,
+        "primitive_objects": 1,
+        "indexed_current_lita_objects": 1,
+        "indexed_current_odd_lita_objects": 1,
+        "general_uneven_nodes": 0,
+        "serendipitous_nodes": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 0.3743342509842478,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "93",
+      "rank": "293803",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 11,
+        "primitive_objects": 1,
+        "indexed_current_lita_objects": 1,
+        "indexed_current_odd_lita_objects": 1,
+        "general_uneven_nodes": 0,
+        "serendipitous_nodes": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 0.4890097389870789,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "125",
+      "rank": "675304",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "53/112"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 7,
+        "primitive_objects": 1,
+        "indexed_current_lita_objects": 1,
+        "indexed_current_odd_lita_objects": 1,
+        "general_uneven_nodes": 1,
+        "serendipitous_nodes": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 0.8630393389903475,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "291",
+      "rank": "7121634",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 117,
+        "primitive_objects": 18,
+        "indexed_current_lita_objects": 1,
+        "indexed_current_odd_lita_objects": 1,
+        "general_uneven_nodes": 4,
+        "serendipitous_nodes": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 1.4805984520062339,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "330",
+      "rank": "10010139",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 7,
+        "primitive_objects": 1,
+        "indexed_current_lita_objects": 2,
+        "indexed_current_odd_lita_objects": 0,
+        "general_uneven_nodes": 0,
+        "serendipitous_nodes": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 10.86232893099077,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "488",
+      "rank": "28101649",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "3690241/20736",
+        "0",
+        "81/256",
+        "0",
+        "121/9"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 165,
+        "primitive_objects": 21,
+        "indexed_current_lita_objects": 1,
+        "indexed_current_odd_lita_objects": 0,
+        "general_uneven_nodes": 0,
+        "serendipitous_nodes": 5,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 0.7958458759821951,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "685",
+      "rank": "70079906",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 8,
+      "new_support_audits": 1,
+      "reduction_proofs": 4,
+      "coefficient_queries": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sub_2_7": false,
+      "seconds": 5.905503496993333,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "686",
+      "rank": "70079906",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 8,
+      "new_support_audits": 1,
+      "reduction_proofs": 4,
+      "coefficient_queries": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "sub_2_7": false,
+      "seconds": 5.907334638002794,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "732",
+      "rank": "83038886",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "16115617/58080",
+        "0",
+        "3/10",
+        "0",
+        "615/44"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 238,
+        "primitive_objects": 34,
+        "indexed_current_lita_objects": 2,
+        "indexed_current_odd_lita_objects": 0,
+        "general_uneven_nodes": 0,
+        "serendipitous_nodes": 10,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 2.2658751100243535,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "844",
+      "rank": "122067978",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "26661025/82368",
+        "0",
+        "13/44",
+        "0",
+        "735/52"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 108,
+        "primitive_objects": 12,
+        "indexed_current_lita_objects": 2,
+        "indexed_current_odd_lita_objects": 0,
+        "general_uneven_nodes": 0,
+        "serendipitous_nodes": 1,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 2.329694037005538,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "963",
+      "rank": "174773075",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 1,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "0",
+        "14137275/37856",
+        "0",
+        "7/24",
+        "0",
+        "371/26"
+      ],
+      "sub_2_7": false,
+      "rectangular_composition_checks": {
+        "nodes": 661,
+        "primitive_objects": 16,
+        "indexed_current_lita_objects": 2,
+        "indexed_current_odd_lita_objects": 0,
+        "general_uneven_nodes": 2,
+        "serendipitous_nodes": 0,
+        "exact_dimensions_and_counts": true,
+        "hash_checked_coefficients": true,
+        "primitive_identity_basis": "100% C++ multi-prime CRT verified rational primitives, self-verifying bud identities, and pinned LITA even/odd theorems."
+      },
+      "seconds": 2.8169058769999538,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    },
+    {
+      "n": "1024",
+      "rank": "198679192",
+      "mode": "integrity, support, count and coefficient checks",
+      "dependencies": 2,
+      "new_support_audits": 0,
+      "reduction_proofs": 0,
+      "coefficient_queries": [
+        "1/589824",
+        "-421875/512",
+        "0",
+        "295245/1048576",
+        "7586852119888463/1192652481830584320",
+        "-61903708540811119/170297013030617088"
+      ],
+      "sub_2_7": false,
+      "z4_quotient_checks": [
+        {
+          "q": 8,
+          "input_character": "odd",
+          "unit_rank": "198679264",
+          "audit": {
+            "q": 8,
+            "rank": "198679264",
+            "unquotiented_rank": "794673152",
+            "support_rows": 28,
+            "row_orbits": 7,
+            "kernel_profile": [
+              0,
+              8,
+              24,
+              4
+            ],
+            "kept_patterns": 1148,
+            "relation_object": "f4d30d0e65a290d99da9e4c5f8cdf2a6d3b7659b97b28d74c10965f039f4174c",
+            "input_character": "odd",
+            "counts": "orbit unranking = character-weighted Burnside = closed form"
+          },
+          "exact_packet_entries": {
+            "samples": 4,
+            "targets_one": 1,
+            "mismatches": 0,
+            "passed": true,
+            "exact": true,
+            "seconds": 25.40516261200537
+          },
+          "orbit_lemma": {
+            "checks": 4,
+            "passed": true
+          }
+        }
+      ],
+      "gauged_square_zero_factor_checks": {
+        "exact": true,
+        "coefficient_field": "Q",
+        "deleted_terms": 72,
+        "distinct_normalized_factors": 3,
+        "unit_rank_unchanged": "198679264",
+        "proof_sha256": "630767d1c44c8c25b5f0829c02c7146f2ccfe341618900b1977eb88df79feb62",
+        "method": "Exact centered-basis physical polynomials; simultaneous label relabeling"
+      },
+      "seconds": 169.54390069301007,
+      "proof_basis": "Documented base identities and published primitive schemes; see docs/verification.md"
+    }
+  ]
+}

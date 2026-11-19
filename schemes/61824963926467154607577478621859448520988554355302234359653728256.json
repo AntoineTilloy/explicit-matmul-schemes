@@ -1,0 +1,13 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "61824963926467154607577478621859448520988554355302234359653728256",
+  "rank": "4291488768477930188119997595867713358415626323641259113571383993655225059698523903278879399177106477773277785507677161528544284181796738426159799199459802292779854449224900",
+  "field": "Q",
+  "root_object": "bb748b3a87e2ddf68687e1b86722a48b7bcead8d5d0011490ea9081ff44cd27c",
+  "effective_exponent": 2.6490125770898625,
+  "provenance": {
+    "construction": "Explicit finite positively graded CW tensor power with all balanced row tuples, optimal degree-203 grading on the (14,6) puzzle, rational interpolation, and a single zero-trimmed power-36 S_9 outer scheme",
+    "selection": "best_natural"
+  },
+  "verification": "Exact grading/capacity/rank/crop replay and small end-to-end rational tensor controls in checks/graded. Large coefficients are explicit finite slot sums, generally computationally prohibitive; the large square tensor was not expanded."
+}

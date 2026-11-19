@@ -18,7 +18,7 @@ import sys
 
 LITA32_RANK = 14196
 LITA32_EXPONENT = math.log(LITA32_RANK)/math.log(32)
-MEDIUM_LIMIT = 30000000000
+MEDIUM_LIMIT = 100000000000000
 COLORS = dict(cw='#176c99', z4='#7b4ea3', small='#d9822b',
               rectangular='#348568', strassen='#0f8a8c', graded='#c53e55', reference='#7c8794')
 STYLES = {
@@ -141,7 +141,7 @@ def draw_catalogue(catalogue_path, output_directory):
     views = [(small, 'Small sizes', (.95, math.log10(20000)),
               (2.715, 2.802), [1, 2, 3, 4]),
              (medium, 'Medium sizes', (.95, math.log10(MEDIUM_LIMIT)),
-              (2.685, 2.802), [1, 3, 5, 7, 9]),
+              (2.672, 2.802), [1, 4, 7, 10, 13]),
              (points, 'Large sizes', (.95, upper),
               (min(2.635, min(p['exponent'] for p in points)-.012), 2.802), wide_ticks(upper))]
     for ax, (subset, title, xlim, ylim, ticks) in zip(axes, views):
@@ -186,7 +186,7 @@ def draw_catalogue(catalogue_path, output_directory):
              f"{best_small['exponent']:.6f} at n = {best_small['n']:,}", (.40, .09))
     best_old = min((p for p in medium if p['family'] != 'graded'), key=lambda p: p['exponent'])
     annotate(axes[1], best_old,
-             f"Best exponent: {best_old['exponent']:.6f}\nn = {best_old['n']:,}", (.19, .20))
+             f"Best exponent: {best_old['exponent']:.6f}\nn = {best_old['n']:,}", (.16, .16))
     if graded:
         best_graded = min(graded, key=lambda p: p['exponent'])
         annotate(axes[2], best_graded,

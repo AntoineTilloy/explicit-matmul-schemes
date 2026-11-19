@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "10976",
-  "rank": "108205425902",
+  "rank": "108204827612",
   "field": "Q",
-  "root_object": "2716381042cdb0572052e983f0d5a3016520504211722ce1e167127a77fd3635",
-  "effective_exponent": 2.730949561521638,
+  "root_object": "3ca54aafa7007f73eb77d5f72d2bb3e104651ed0e6ee65a31b39fb59067abdb1",
+  "effective_exponent": 2.7309489672033225,
   "provenance": {
-    "construction": "7 Z4-quotient units (q = 14, 7 independent <2744> products each) inside Strassen squared <4;49>"
+    "construction": "Z4-quotient product composition: Strassen <2;7> tensored with the coordinate-8 refined, odd-character, Strassen-gauged size-5,488 Z4 scheme (q=14)"
   },
-  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  "verification": "Exact rational relations, square-only zero-factor replay on the child Z4 square, and exact product coefficient access verified by cwschemes verify."
 }

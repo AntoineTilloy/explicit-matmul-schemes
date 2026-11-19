@@ -58,7 +58,10 @@ def replay_orbit(d,threads):
     from ._engine.rational_arrays import qm,from_qm,Q
     from ._engine.tailored_completion import make_state
     if d['format']=='cw-refined-orbit-relations-v1':
-        state=replay_orbit(read(proof_path(d['base_proof'])),threads) if 'base_proof' in d else make_state(d['q'],d['rows'],d['m'],exact=True)
+        if d.get('joint'):
+            state=ExactState(d['q'],d['rows'],d['m'])
+        else:
+            state=replay_orbit(read(proof_path(d['base_proof'])),threads) if 'base_proof' in d else make_state(d['q'],d['rows'],d['m'],exact=True)
         for coordinate in d['coordinates']:state=ExactMultiSplitState.split(state,coordinate)
     else:state=ExactState(d['q'],d['rows'],d['m'])
     for step in d['steps']:
@@ -167,7 +170,7 @@ def verify_strassen(engine):
     """S_q packets: support audit at load, exact local identity, count and exact sampled packet entries."""
     from ._engine.strassen_packet import packets,check
     distinct={}
-    for p in packets(engine):distinct.setdefault((p.q,p.m,tuple(p.rows)),p)
+    for p in packets(engine):distinct.setdefault((p.q,p.m,p.compression,tuple(p.rows)),p)
     return [check(p,samples=12,seed=p.q) for _,p in sorted(distinct.items(),key=lambda x:x[0][:2])]
 
 
@@ -224,7 +227,16 @@ def verify(n,*,exact=False,threads=1):
     from ._engine.strassen_packet import packets as strassen_packets
     strassen=verify_strassen(s._engine) if strassen_packets(s._engine) else None
     rectangular=s._engine.audit() if read(path).get('format')=='exact-rectangular-recipe-v1' else None
-    gauged=s._engine.audit_deletions() if read(path).get('format')=='cw-z4-gauged-square-v1' else None
+    from ._engine.gauged_z4_square import gauged_squares
+    gsqs=gauged_squares(s._engine)
+    if read(path).get('format')=='cw-z4-gauged-square-v1':
+        gauged=s._engine.audit_deletions()
+    elif gsqs:
+        seen_g={}
+        for g in gsqs:seen_g.setdefault((g.n,g.rank),g)
+        gauged=[g.audit_deletions() for _,g in sorted(seen_g.items())]
+    else:
+        gauged=None
     queries=[]
     for factor in ('U','V','W'):
         for term,i,j in [(0,s.n-1,s.n-1),(s.rank-1,s.n-1,s.n-1)]:

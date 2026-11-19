@@ -6,18 +6,14 @@
   sum_{all columns} u(x) v(y) w(z) at sampled entries, compared with the 28 copies of <q^3>.
 * ``orbit_lemma``: input factors on a column orbit obey the chosen matching character (exact).
 * ``tensor_entries``: full square tensor entries T[a,b,c] through the Strassen wiring, modulo primes.
-* ``full_exact_check``: every n^6 coefficient of a small square (q = 2), modulo primes whose product exceeds a
+* ``full_exact_check``: every n^6 coefficient of a small square (q = 2 or 3), modulo primes whose product exceeds a
   rigorous bound, hence exact over Q.
-Packet-tensor evaluation factorises the label sums coordinate-wise: packet mode 0 (never modified by a relation
-step, asserted) has the closed product form e0 / L_l = e0 + e_l + s/q / L* = e0 + 3s/(2q); packet modes 1 and 2 use
-the generator's own coefficient tables.
 """
 from fractions import Fraction as F
 import math
 import random
 import time
 from .z4_quotient import K9, hdig, hact, lact, real_character, relations_object, Z4QuotientUnit
-from .triangular_full_compression import allowed
 
 POLY_GRAM = (1, 17, 122, 392, 493, 131, 2, 2, 0, 0)  # 4 R(q) = q^9 + 17 q^8 + ... + 2 q^2  (docs/construction.md)
 
@@ -37,11 +33,11 @@ def audit(unit):
     sup, pk, q = unit.sup, unit.packet, unit.q
     d, _, digest = relations_object(unit.relations_path)
     G = sup.G
-    inv = lambda S: all(hact(g, H) in S for g in G for H in S)
-    rows = [tuple(r) for r in d['rows']]
-    initial = set(allowed(rows, 9, (0, 1)))
+    coords = set(pk.coordinates)
+    assert coords <= set(sup.fix)
+    inv = lambda S: all(hact(g, H, pk.digits, pk.code_map) in S for g in G for H in S)
     assert d['initial_pair'] == [0, 1]
-    current = initial
+    current = set(pk.initial_kept)
     free_c = d['perm'].index(2)
     for s in d['steps']:
         kept, deleted, zeros = set(s['kept']), set(s['deleted']), set(s['zero_patterns'])
@@ -62,27 +58,37 @@ def audit(unit):
     counted_polynomials = {character: [0] * 10 for character in ('even', 'odd')}
     for g in G:
         for H in pk.kept:
-            if hact(g, H) != H:
+            if hact(g, H, pk.digits, pk.code_map) != H:
                 continue
             ones = [t for t in range(K9) if ordinary[H] >> t & 1]
-            seen, cycles = set(), 0
+            seen, cycles_unsplit, split_cnt, ways = set(), 0, 0, 1
             for i in ones:
                 if i in seen:
                     continue
-                cycles += 1
-                j = i
-                while j not in seen:
-                    seen.add(j)
-                    j = g[j]
+                if i in coords:
+                    split_cnt += 1
+                    seen.add(i)
+                    ways *= q - 1
+                else:
+                    cycles_unsplit += 1
+                    j = i
+                    while j not in seen:
+                        seen.add(j)
+                        j = g[j]
+                    ways *= q
             chi = real_character(g) if unit.input_character == 'odd' else 1
-            burnside += chi * q ** cycles
-            counted_polynomials['even'][9 - cycles] += 1
-            counted_polynomials['odd'][9 - cycles] += real_character(g)
+            burnside += chi * ways
+            # Expand q^cycles_unsplit * (q - 1)^split_cnt into polynomial coefficients:
+            for k in range(split_cnt + 1):
+                binom_sign = math.comb(split_cnt, k) * ((-1) ** (split_cnt - k))
+                deg = cycles_unsplit + k
+                counted_polynomials['even'][9 - deg] += binom_sign
+                counted_polynomials['odd'][9 - deg] += chi * binom_sign
     assert burnside % len(G) == 0 and burnside // len(G) == unit.rank, 'Burnside count mismatch'
     if 'rank_polynomials' in d:
         assert d['rank_polynomials'] == counted_polynomials, 'fixed-pattern polynomial mismatch'
     assert closed_form_rank(q, unit.input_character, d.get('rank_polynomials')) == unit.rank, 'closed-form rank mismatch'
-    unquotiented = sum(q ** ordinary[H].bit_count() for H in pk.kept)
+    unquotiented = sum(math.prod(pk.qs[i] for i in range(K9) if ordinary[H] >> i & 1) for H in pk.kept)
     assert unquotiented == pk.rank
     return dict(q=q, rank=str(unit.rank), unquotiented_rank=str(unquotiented), support_rows=len(sup.rows), row_orbits=len(sup.orbs),
                 kernel_profile=sup.kernel_profile, kept_patterns=len(pk.kept), relation_object=digest,
@@ -94,14 +100,21 @@ def _zero(v):
     return sum(1 << t for t in range(K9) if v[t] == 0)
 
 
-def _label_sums(q, v0, v1, v2, one, qi):
+def _label_sums(q, v0, v1, v2, one, qi, coords=(), q_minus_1_inv=None):
     S = []
+    coords_set = set(coords)
     for t in range(K9):
         s = [[0, 0], [0, 0]]
-        for l in range(1, q + 1):
+        if t in coords_set:
+            start_l = 2
+            c_inv = q_minus_1_inv
+        else:
+            start_l = 1
+            c_inv = qi
+        for l in range(start_l, q + 1):
             u = one if v0[t] == 0 else (one if v0[t] == l else 0) + qi
-            d1 = (one if v1[t] == l else 0) - qi
-            d2 = (one if v2[t] == l else 0) - qi
+            d1 = (one if v1[t] == l else 0) - c_inv
+            d2 = (one if v2[t] == l else 0) - c_inv
             s[0][0] += u
             s[1][0] += u * d1
             s[0][1] += u * d2
@@ -116,16 +129,20 @@ def tdec_exact(unit, v0, v1, v2, perturb=None):
     z1, z2 = _zero(v1), _zero(v2)
     if z1 not in pk.families[1] or z2 not in pk.families[2]:
         return F(0)
-    T1, T2 = pk.table(1, z1), pk.table(2, z2)
+    coords = pk.coordinates
+    e1 = sum((v1[i] == 1) << i for i in coords)
+    e2 = sum((v2[i] == 1) << i for i in coords)
+    T1, T2 = pk.table(1, z1, e1), pk.table(2, z2, e2)
     qi = F(1, q)
-    S = _label_sums(q, v0, v1, v2, F(1), qi)
+    q1i = F(1, q - 1) if coords else None
+    S = _label_sums(q, v0, v1, v2, F(1), qi, coords, q1i)
     total = F(0)
     special = F(3, 2 * q)
     for H, tab1 in T1.items():
         tab2 = T2.get(H)
         if not tab1 or not tab2:
             continue
-        d = hdig(H)
+        d = pk.digits[H]
         base = F(1)
         for t in range(K9):
             if d[t] == 0 and v0[t] != 0:
@@ -133,6 +150,8 @@ def tdec_exact(unit, v0, v1, v2, perturb=None):
                 break
             if d[t] == 2 and v0[t] != 0:
                 base *= special
+            elif d[t] == 3 and v0[t] != 0:
+                base *= (F(1) if v0[t] == 1 else F(0)) + qi
         if not base:
             continue
         ords = [t for t in range(K9) if d[t] == 1]
@@ -218,7 +237,7 @@ def orbit_lemma(unit, samples=6, seed=1):
             h, i1, i2 = rng.randrange(7), rng.randrange(s), rng.randrange(s)
             base = unit.factor_entry(mode, term, unit.matrix_variable(h, mode, i1, i2))
             for g in sup.G:
-                H2, lab2 = hact(g, H), lact(g, lab)
+                H2, lab2 = hact(g, H, pk.digits, pk.code_map), lact(g, lab)
                 value = sum((unit.row_character(rho) * pk.entry(mode, H2, lab2, sup.local_var(rho, mode, i1, i2, q))
                              for rho in sup.orbs[h]), F(0))
                 chi = real_character(g) if unit.input_character == 'odd' else 1
@@ -239,27 +258,33 @@ def tdec_mod(unit, v0, v1, v2, p, cache, perturb=0):
     z1, z2 = _zero(v1), _zero(v2)
     if z1 not in pk.families[1] or z2 not in pk.families[2]:
         return 0
-    def tab(j, z):
-        if (j, z) not in cache:
-            cache[(j, z)] = {H: (np.array(list(d.keys()), dtype=np.int64), np.array([_fm(v, p) for v in d.values()], dtype=np.int64))
-                             for H, d in pk.table(j, z).items() if d}
-        return cache[(j, z)]
-    T1, T2 = tab(1, z1), tab(2, z2)
+    coords = pk.coordinates
+    e1 = sum((v1[i] == 1) << i for i in coords)
+    e2 = sum((v2[i] == 1) << i for i in coords)
+    def tab(j, z, e):
+        if (j, z, e) not in cache:
+            cache[(j, z, e)] = {H: (np.array(list(d.keys()), dtype=np.int64), np.array([_fm(v, p) for v in d.values()], dtype=np.int64))
+                                 for H, d in pk.table(j, z, e).items() if d}
+        return cache[(j, z, e)]
+    T1, T2 = tab(1, z1, e1), tab(2, z2, e2)
     qi = pow(q, -1, p)
+    q1i = pow(q - 1, -1, p) if coords else None
     inv2q = pow(2 * q, -1, p)
-    S = [np.array([[x % p for x in r] for r in s], dtype=np.int64) for s in _label_sums(q, v0, v1, v2, 1, qi)]
+    S = [np.array([[x % p for x in r] for r in s], dtype=np.int64) for s in _label_sums(q, v0, v1, v2, 1, qi, coords, q1i)]
     total = 0
     for H, (I1, B1) in T1.items():
         if H not in T2:
             continue
         I2, B2 = T2[H]
-        d = hdig(H)
+        d = pk.digits[H]
         base = 1
         for t in range(K9):
             if d[t] == 0:
                 base = base * (1 if v0[t] == 0 else 0) % p
             elif d[t] == 2:
                 base = base * (1 if v0[t] == 0 else 3 * inv2q % p) % p
+            elif d[t] == 3:
+                base = base * (1 if v0[t] == 0 else ((1 if v0[t] == 1 else 0) + qi) % p) % p
         if not base:
             continue
         M = (B1[:, None] * B2[None, :]) % p
@@ -385,37 +410,48 @@ def _primes_below(start, avoid):
 
 
 def factor_matrices(square, unit, p=None):
-    """Dense factor matrices (rank x n^2, row-major) of a single-unit Strassen square, modulo p or in float64.
-
-    Vectorised per (outer product, row, pattern-orbit representative): P(H, lab; x) = sum_I b_I prod_{i in I}
-    ([lab_i = x_i] - 1/q) from the generator's tables; output factors sum over the column orbit (sum over the
-    group divided by the column stabiliser)."""
+    """Dense factor matrices (rank x n^2, row-major) of a single-unit Strassen square, modulo p or in float64."""
     import numpy as np
     sup, q, pk = unit.sup, unit.q, unit.packet
     n, s, R = square.full_n, q ** 3, unit.rank
     dt = np.int64 if p else np.float64
     conv = (lambda v: _fm(v, p)) if p else float
-    qi = pow(q, -1, p) if p else 1.0 / q
+    qis = [pow(qs_i, -1, p) if p else 1.0 / qs_i for qs_i in pk.qs]
     terms = [unit.orbits.unrank(t) for t in range(R)]
     byH = {}
     for t, (H, lab) in enumerate(terms):
         byH.setdefault(H, []).append(t)
     out = [np.zeros((R, n * n), dtype=dt) for _ in range(3)]
     G = sup.G
+    coords = pk.coordinates
+
     def pvals(j, zero, Hs, labs, X):
-        """P for columns with patterns Hs (array per column) and labels labs (cols x 9) at variables X (v x 9)."""
-        tabs = pk.table(j, zero)
         res = np.zeros((len(labs), len(X)), dtype=dt)
-        for H in set(Hs.tolist()):
-            sel = np.nonzero(Hs == H)[0]
-            for I, val in tabs.get(H, {}).items():
-                m = np.full((len(sel), len(X)), conv(val), dtype=dt)
-                for i in range(K9):
-                    if I >> i & 1:
-                        f = (labs[sel, i][:, None] == X[None, :, i]).astype(dt) - qi
-                        m = (m * (f % p)) % p if p else m * f
-                res[sel] = (res[sel] + m) % p if p else res[sel] + m
+        if not coords:
+            excs = [(0, slice(None))]
+        else:
+            e_vec = np.zeros(len(X), dtype=np.int64)
+            for c in coords:
+                e_vec |= (X[:, c] == 1).astype(np.int64) << c
+            excs = [(int(ev), np.flatnonzero(e_vec == ev)) for ev in np.unique(e_vec)]
+        for exc, x_sel in excs:
+            tabs = pk.table(j, zero, exc)
+            X_sub = X[x_sel]
+            for H in set(Hs.tolist()):
+                sel = np.nonzero(Hs == H)[0]
+                for I, val in tabs.get(H, {}).items():
+                    m = np.full((len(sel), len(X_sub)), conv(val), dtype=dt)
+                    for i in range(K9):
+                        if I >> i & 1:
+                            f = (labs[sel, i][:, None] == X_sub[None, :, i]).astype(dt) - qis[i]
+                            m = (m * (f % p)) % p if p else m * f
+                    if isinstance(x_sel, slice):
+                        res[sel] = (res[sel] + m) % p if p else res[sel] + m
+                    else:
+                        idx = np.ix_(sel, x_sel)
+                        res[idx] = (res[idx] + m) % p if p else res[idx] + m
         return res
+
     for mode in range(3):
         j = pk.perm.index(mode)
         for h in range(7):
@@ -437,7 +473,7 @@ def factor_matrices(square, unit, p=None):
                         vals = np.zeros((len(ts), len(X)), dtype=dt)
                         stab = np.zeros(len(ts), dtype=np.int64)
                         for g in G:
-                            H2 = hact(g, H)
+                            H2 = hact(g, H, pk.digits, pk.code_map)
                             labs2 = np.zeros_like(labs)
                             for t in range(K9):
                                 labs2[:, g[t]] = labs[:, t]
@@ -461,33 +497,38 @@ def factor_matrices(square, unit, p=None):
 
 
 def full_exact_check(square, unit, extra_primes=0, perturb=False):
-    """All n^6 coefficients of a single-unit Strassen square modulo primes p ~ 2^20 with prod p > 2 Delta (S+1):
-    Delta = D_0 D_1 D_2 clears all denominators (D_h = lcm of table denominators times q^9) and
-    B_h bounds every factor entry from exact coefficient tables. Every coefficient of
-    Delta (sum_t U_t V_t W_t - T) is an integer of absolute value at most
-    Delta (R B_0 B_1 B_2 + 1): zero modulo the primes means zero. Feasible for q = 2."""
+    """All n^6 coefficients of a single-unit Strassen square modulo primes p ~ 2^20 with prod p > 2 Delta (S+1)."""
     import numpy as np
     t0 = time.monotonic()
     n, R, q = square.full_n, unit.rank, unit.q
     n2 = n * n
-    D = [unit.packet.denominator(h) for h in range(3)]
+    pk = unit.packet
+    D = [pk.denominator(h) for h in range(3)]
     Delta = D[0] * D[1] * D[2]
-    # Exact table bounds avoid relying on an inflated floating-point estimate.
-    # Every centered factor has magnitude at most (q-1)/q for q >= 2.
     assert q >= 2
     centered = F(q - 1, q)
     B = []
+    split_mask = sum(1 << i for i in pk.coordinates)
     for mode in range(3):
-        j = unit.packet.perm.index(mode)
-        totals = {H: F(0) for H in unit.packet.kept}
+        j = pk.perm.index(mode)
+        totals = {H: F(0) for H in pk.kept}
         rows = unit.sup.rowlist if mode < 2 else unit.sup.reps
         for rho in rows:
-            for H, table in unit.packet.table(j, rho[mode]).items():
-                totals[H] += sum((abs(v) * centered ** I.bit_count() for I, v in table.items()), F(0))
+            excs = [0]
+            if pk.coordinates and not (rho[mode] & split_mask):
+                for c in pk.coordinates:
+                    if not (rho[mode] >> c & 1):
+                        excs = [e | b for e in excs for b in (0, 1 << c)]
+            for H in pk.kept:
+                best_e = max(
+                    sum((abs(v) * centered ** I.bit_count() for I, v in pk.table(j, rho[mode], e).get(H, {}).items()), F(0))
+                    for e in excs
+                )
+                totals[H] += best_e
         B.append(max(totals.values()) * (4 if mode == 2 else 1))
     need = 2 * Delta * (R * math.prod(B) + 1)
     primes, prod = [], 1
-    gen = _primes_below(1 << 20, [6 * q] + D)
+    gen = _primes_below(1 << 20, [6 * q * max(1, q - 1)] + D)
     while prod <= need or len(primes) < extra_primes:
         primes.append(next(gen))
         prod *= primes[-1]
@@ -515,5 +556,5 @@ def full_exact_check(square, unit, extra_primes=0, perturb=False):
         mismatches[str(p)] = bad
     exact = all(v == 0 for v in mismatches.values())
     return dict(exact=exact, n=n, rank=R, primes=primes, rigorous_factor_bounds=list(map(str, B)),
-                log2_delta=round(math.log2(Delta), 1), log2_bound=round(math.log2(need), 1),
+                log2_delta=round(math.log2(Delta), 1), log2_bound=round(math.log2(math.ceil(need)), 1),
                 log2_prime_product=round(math.log2(prod), 1), mismatches=mismatches, seconds=time.monotonic() - t0)

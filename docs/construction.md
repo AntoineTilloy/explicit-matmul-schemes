@@ -98,14 +98,18 @@ Restrict ⊗ᵢ S^(kind i) to the blocks used by the rows. A block triple (X_u, 
 
 Write row u through its labels: S0 = A ∩ kind 0, S1 = B ∩ kind 1, S2 = C ∩ kind 2, all of size t. A cross triple exists exactly when S0_u = S0_v, S1_v = S1_w and S2_w = S2_u, which is a triangle in a tripartite label graph. Valid supports are therefore tripartite Ruzsa–Szemerédi (RS) sets on the t-subsets of each kind, one per weight class t, and the row count is Σₜ RS(C(m,t)). The stored RS witnesses are in [checks/sq/rs_sets.json](../checks/sq/rs_sets.json). The rows themselves are the proof object; the checker does not need the RS sets.
 
-The square construction is the ordinary batching of this document: outer calls are assigned to packet rows in order, unused rows of the final packet receive zero input, and padding restricts the result. The catalogue entries use
+The square construction is the ordinary batching of this document: outer calls are assigned to packet rows in order, unused rows of the final packet receive zero input, and padding restricts the result. With `"compression": "zero-trimmed-v1"`, any local-choice vector `(s_0, ..., s_{3m-1})` whose special-choice masks `(Q_0, Q_1, Q_2)` (coordinates where `s_i = q`) fail `(Q_0 ∪ Q_2) ⊆ A_u` for all rows `u`, `(Q_0 ∪ Q_1) ⊆ B_v` for all `v`, or `(Q_1 ∪ Q_2) ⊆ C_w` for all `w` has an identically zero factor on the packet over Q and is omitted via exact downset unranking. When an outer scheme requires `r < M` rows, retaining middle-weight classes `t ≈ m/2` prunes extreme corners of the three downsets and removes substantially more zero terms. Rebuilt RS supports (`M(18) = 364`, `M(27) = 10,172`, and `M(36) = 329,690` via Hill's 112-cap in F_3^6) give
 
 ```text
-R(8,388,608)      = R(32 * 8^6)  <= 40 * 9^18 = 6003785411879964840
-                    (explicit size-32 scheme, 14,196 calls; 40 packets of 358 rows; 124 spare rows)
-R(13,947,137,604) = R(36 * 9^9)  <= 2 * 10^27
-                    (current LITA size 36, 19,666 calls; 2 packets of 9,842 rows; 18 spare rows)
-R(13,468,840,704) <= R(13,947,137,604)   (padding)
+R(8,388,608)          = R(32 * 8^6)  <= 39 * P_trim(18, 8) = 5840735512742068224
+                        (explicit size-32 outer, 14,196 = 39 * 364 calls; zero spare rows)
+R(10,847,773,692)     = R(28 * 9^9)  <= 999890642088501413992105581
+                        (current LITA size 28, 9,846 calls in 1 pruned power-27 S_9 packet)
+R(13,947,137,604)     = R(36 * 9^9)  <= 1999777625038419124331158713
+                        (current LITA size 36, 19,666 calls in 2 zero-trimmed power-27 S_9 packets)
+R(6,597,069,766,656)  = R(96 * 8^12) <= 22527768312183649740712054999744512   (exponent 2.679755)
+R(27,113,235,502,176) = R(96 * 9^12) <= 999989287389515119218241063598638155  (exponent 2.679931)
+                        (current LITA size 96, 323,156 calls in 1 pruned power-36 S_8 / S_9 packet)
 ```
 
-The asymptotic ancestor is Strassen's laser-method analysis of this tensor with Salem–Spencer sets (V. Strassen, *Relative bilinear complexity and matrix multiplication*, J. reine angew. Math. 375/376, 1987). The exact finite packet form, its RS reduction and the supports used here come from this project's study of 29 October 2026.
+The asymptotic ancestor is Strassen's laser-method analysis of this tensor with Salem–Spencer sets (V. Strassen, *Relative bilinear complexity and matrix multiplication*, J. reine angew. Math. 375/376, 1987). The exact finite packet form, its RS reduction, zero trimming and the supports used here come from this project's October–November 2026 studies.

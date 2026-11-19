@@ -1,0 +1,12 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "240619650",
+  "rank": "42618086121773987519250",
+  "field": "Q",
+  "root_object": "102423c389e292cff17bfe0f572ce6835bc18832d5ba255b082f6b505f90eb6f",
+  "effective_exponent": 2.6999999997212156,
+  "provenance": {
+    "construction": "Padding of the size-240,945,152 strict sub-2.7 CW composition (exact threshold (n-1)^27 <= R^10 < n^27): explicit size-32 outer (rank 14,196) with 9 power-18 CW packets (q=14, 1,569 rows) and 75 recursive size-7,529,536 leaves built over Pair-Schur m=4,5 packets and coordinate-8 refined Z4(14) units"
+  },
+  "verification": "Exact support audits, Pair-Schur packet counts, Z4 unit checks and strict integer sub-2.7 check verified by cwschemes verify."
+}

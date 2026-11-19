@@ -160,9 +160,11 @@ class GaugedZ4Square:
             raise ValueError('Deletion proof hash mismatch')
         return json.loads(raw)
 
-    @staticmethod
-    def _normalized_labels(labels):
-        names = {}; normalized = []
+    def _normalized_labels(self, labels):
+        # When split coordinates exist, label 1 is distinguished on split coordinates,
+        # so keep 1 -> 1 fixed and normalize {2, ..., q} in order of appearance.
+        names = {1: 1} if getattr(self.unit.packet, 'coordinates', ()) else {}
+        normalized = []
         for label in labels:
             if label:
                 names.setdefault(label, len(names) + 1)
@@ -172,14 +174,19 @@ class GaugedZ4Square:
         return tuple(normalized)
 
     def _zero_factor_polynomial(self, mode, H, labels):
-        """Rebuild the full physical factor in the centered label basis.
+        """Rebuild the full physical factor in the S_q centered label basis on {1..q}^6.
 
         A key records one of four outer blocks and all six physical digit
         slots. Coefficient cancellation in this formal basis proves zero at
-        every matrix entry. Label normalization is a simultaneous S_q
-        relabeling, not independent relabeling of different coordinates.
+        every matrix entry. When Z4-fixed coordinates are refined (e.g. [8]),
+        each split-coordinate piece is expanded identically into the same
+        {1} u {[y = l] - 1/q} centered basis on {1..q}:
+            [y = 1]                       = 1/q + psi_1(y),
+            [y != 1]                      = (q - 1)/q - psi_1(y),
+            [y != 1]([y = l] - 1/(q - 1)) = psi_l(y) + 1/(q - 1) psi_1(y)  (l >= 2).
         """
-        sup, pk = self.unit.sup, self.unit.packet
+        sup, pk, q = self.unit.sup, self.unit.packet, self.unit.q
+        coords = getattr(pk, 'coordinates', ())
         polynomial = {}
         if mode in (0, 1):
             selected = [(rho, H, labels, self.unit.row_character(rho))
@@ -189,24 +196,69 @@ class GaugedZ4Square:
                         for H2, lab2 in self.unit.orbits.members(H, labels)]
         else:
             raise ValueError('Invalid zero-factor mode')
+
+        def accumulate_term(monomial, total_weight):
+            if not total_weight:
+                return
+            for block in range(4):
+                weight = self.outer.factors[mode][block][h]
+                if weight:
+                    key = (block, tuple(monomial))
+                    polynomial[key] = polynomial.get(key, F(0)) + total_weight * weight
+
         for rho, pattern, lab, character in selected:
             h, g = sup.rowinfo[rho]
             a, b, c = sup.reps[h]
             first, second = ((bits(b), bits(c)), (bits(c), bits(a)), (bits(b), bits(a)))[mode]
-            positions = {g[t]:j for j,t in enumerate(first + second)}
-            table = pk.table(pk.perm.index(mode), rho[mode]).get(pattern, {})
-            for I, coefficient in table.items():
-                monomial = [0] * 6
-                for t in bits(I):
-                    monomial[positions[t]] = lab[t]
-                for block in range(4):
-                    weight = self.outer.factors[mode][block][h]
-                    if weight:
-                        key = (block, tuple(monomial))
-                        polynomial[key] = polynomial.get(key, F(0)) + character * weight * coefficient
-        # A formal zero is valid even when the normalized q-th centered
-        # function is dependent (notably the two-label q=2 replay).
-        return {key:value for key,value in polynomial.items() if value}
+            positions = {g[t]: j for j, t in enumerate(first + second)}
+            j_mode = pk.perm.index(mode)
+            if not coords:
+                table = pk.table(j_mode, rho[mode]).get(pattern, {})
+                for I, coefficient in table.items():
+                    monomial = [0] * 6
+                    for t in bits(I):
+                        monomial[positions[t]] = lab[t]
+                    accumulate_term(monomial, character * coefficient)
+                continue
+            active_split = [cs for cs in coords if not (rho[mode] >> cs & 1)]
+            excs = [0]
+            for cs in active_split:
+                excs = [e | b for e in excs for b in (0, 1 << cs)]
+            for exc in excs:
+                table = pk.table(j_mode, rho[mode], exc).get(pattern, {})
+                for I, coefficient in table.items():
+                    base_mon = [0] * 6
+                    for t in bits(I):
+                        if t not in coords:
+                            base_mon[positions[t]] = lab[t]
+                    terms = [(base_mon, character * coefficient)]
+                    for cs in active_split:
+                        pos_cs = positions[cs]
+                        new_terms = []
+                        if exc >> cs & 1:
+                            # [y = 1] = 1/q + psi_1(y)
+                            for mon, w in terms:
+                                new_terms.append((mon, w * F(1, q)))
+                                m1 = mon.copy(); m1[pos_cs] = 1
+                                new_terms.append((m1, w))
+                        elif I >> cs & 1:
+                            # [y != 1]([y = lab[cs]] - 1/(q-1)) = psi_{lab[cs]}(y) + 1/(q-1) psi_1(y)
+                            assert lab[cs] >= 2
+                            for mon, w in terms:
+                                ml = mon.copy(); ml[pos_cs] = lab[cs]
+                                new_terms.append((ml, w))
+                                m1 = mon.copy(); m1[pos_cs] = 1
+                                new_terms.append((m1, w * F(1, q - 1)))
+                        else:
+                            # [y != 1] = (q - 1)/q - psi_1(y)
+                            for mon, w in terms:
+                                new_terms.append((mon, w * F(q - 1, q)))
+                                m1 = mon.copy(); m1[pos_cs] = 1
+                                new_terms.append((m1, -w))
+                        terms = new_terms
+                    for mon, w in terms:
+                        accumulate_term(mon, w)
+        return {key: value for key, value in polynomial.items() if value}
 
     def audit_deletions(self):
         """Exactly replay every square-only zero factor from public tables."""
@@ -271,3 +323,21 @@ class GaugedZ4Square:
 
 def load_certificate(data):
     return GaugedZ4Square(data)
+
+
+def gauged_squares(engine):
+    """All GaugedZ4Square instances reachable from a coefficient engine."""
+    from .general_square import MixedSquare, Ordinary
+    out = []
+    def walk(x):
+        if isinstance(x, GaugedZ4Square):
+            out.append(x)
+        elif isinstance(x, MixedSquare):
+            walk(x.outer)
+            walk(x.leaf)
+        elif isinstance(x, Ordinary):
+            for name in ('child', 'left', 'right'):
+                if hasattr(x, name):
+                    walk(getattr(x, name))
+    walk(engine)
+    return out

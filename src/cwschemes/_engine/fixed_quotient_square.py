@@ -50,8 +50,16 @@ class RectOrdinary:
 
     def __init__(self, dims, leaf, recipe=None, allow_split=True):
         self.square = None
+        self.rect_recipe = None
         self.dims = tuple(dims)
         self.leaf = leaf
+        if recipe and recipe.get('format') == 'exact-rectangular-recipe-v1':
+            from .rectangular_square import Recipe
+            self.kind = 'rectangular_recipe'
+            self.rect_recipe = Recipe(recipe, allow_rectangular=True)
+            assert self.rect_recipe.root.d == self.dims
+            self.rank = self.rect_recipe.rank
+            return
         self.h = leaf.n
         assert all((x % self.h == 0 for x in dims))
         self.small = tuple((x // self.h for x in dims))
@@ -85,6 +93,8 @@ class RectOrdinary:
         raise ValueError('An explicit rectangular recipe is required')
 
     def certificate(self):
+        if self.kind == 'rectangular_recipe':
+            return self.rect_recipe.certificate()
         out = dict(dims=self.dims, kind=self.kind, square_recipe=self.square.recipe if self.square else None, outer_cube_recipe=self.outer_cube.recipe if self.outer_cube else None, leaf_recipe=self.leaf.recipe, rank=self.rank)
         if self.kind == 'split':
             out['pieces'] = [dict(offset=offset, dims=c.dims, recipe=c.certificate()) for offset, c in self.pieces]
@@ -94,6 +104,8 @@ class RectOrdinary:
         a, b = AXES[mode]
         if not (0 <= row < self.dims[a] and 0 <= col < self.dims[b]):
             return F(0)
+        if self.kind == 'rectangular_recipe':
+            return self.rect_recipe.factor_entry(mode, t, row, col)
         if self.kind == 'split':
             which = bisect_right(self.piece_ends, t)
             offset, child = self.pieces[which]

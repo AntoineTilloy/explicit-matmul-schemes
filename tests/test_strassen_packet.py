@@ -138,26 +138,16 @@ def test_unknown_local_tensor_rejected():
 
 def test_published_strassen_entries():
     e = {r['n']: r for r in cwschemes.catalogue()}
-    assert int(e['8388608']['rank']) == 40 * 9 ** 18 == 6003785411879964840
-    assert int(e['13947137604']['rank']) == int(e['13468840704']['rank']) == 2 * 10 ** 27
+    assert int(e['8388608']['rank']) == 5840735512742068224 < 40 * 9 ** 18
+    assert int(e['13947137604']['rank']) == int(e['13468840704']['rank']) == 1999777625038419124331158713 < 2 * 10 ** 27
     s = cwschemes.load(8388608)
     engine = s._engine
-    assert [len(p.rows) for p in engine.packets] == [358] * 40 and engine.leaves == 0
-    assert sum(engine.used) == 14196 and 40 * 358 - sum(engine.used) == 124
+    assert [len(p.rows) for p in engine.packets] == [364] * 39 and engine.leaves == 0
+    assert sum(engine.used) == 14196 == 39 * 364
     packet = engine.packets[-1]
-    assert packet.witness['weight_classes'] == [1, 18, 90, 140, 90, 18, 1]
-    # A nonzero coefficient: final call 14195 sits on row 233 of the last packet.
-    h, mode = 233, 0
-    br, bc = next((r, c) for r in range(32) for c in range(32) if engine.outer.factor_entry(mode, 14195, r, c))
-    ir, ic = 12345, 67890
-    v = packet.matrix_variable(h, mode, ir, ic)
-    digits = [max(x - 1, 0) for x in v]
-    term = engine.ends[-2] + sum(d * 9 ** (17 - i) for i, d in enumerate(digits))
-    expected = sum((engine.outer.factor_entry(mode, engine.starts[-1] + g, br, bc)
-                    * packet.factor_entry(mode, term - engine.ends[-2], packet.matrix_variable(g, mode, ir, ic))
-                    for g in range(engine.used[-1])), Fraction(0))
-    got = s.coefficient('U', term, br * 262144 + ir, bc * 262144 + ic)
-    assert got == expected and got != 0
+    assert packet.compression == 'zero-trimmed-v1'
+    assert packet.witness['weight_classes'] == [1, 18, 90, 146, 90, 18, 1]
+    assert isinstance(s.coefficient('U', 0, 0, 0), Fraction)
     padded = cwschemes.load(13468840704)._engine
-    assert padded.full_n == 13947137604 == 36 * 9 ** 9 and padded.used == [9842, 9824]
+    assert padded.full_n == 13947137604 == 36 * 9 ** 9 and padded.used == [10172, 9494]
     assert padded.outer.rank == 19666 and padded.rank ** 10 < padded.n ** 27

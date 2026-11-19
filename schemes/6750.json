@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "6750",
-  "rank": "26925869925",
+  "rank": "26925758085",
   "field": "Q",
-  "root_object": "358129441d0c733daa1d79b7e20565e3aa7ed0e6443b1968e0ff03957d00ed10",
-  "effective_exponent": 2.7237770524891407,
+  "root_object": "bc7085a239e77ec2e5171eac0b08ef83b4f790dcd1251dd855f27efcd79c4026",
+  "effective_exponent": 2.723776581411156,
   "provenance": {
-    "construction": "Z4-quotient CW packet (power 9, 28 rows = 7 free Z4-orbits, joint zero-pattern removal and Z4-invariant Gram compression; q = 15) computing 7 independent <3375> products, fed to Strassen <2;7>"
+    "construction": "Z4-quotient CW packet, power 9 at q=15, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 240 exact square-only cancellations after a permuted signed Strassen embedding"
   },
-  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  "verification": "Exact finite-q coordinate-8 refined rational relations, lazy coefficient access, outer MM2 identity and all 240 physical zero-factor polynomials replayed by cwschemes verify."
 }

@@ -5,7 +5,8 @@ Construction (see docs/construction.md).  A 28-row CW support at power N = 9 (m 
 coordinate permutation group Z4 and splits into 7 free Z4-orbits of rows.  The packet tensor
     T_pkt = G_q^{(x)9}|supp + sum_K beta_K (-D)^{(x)K} (x) G_q^{(x)(9-K)}|supp  (= 28 copies of <q^3>)
 is written in the joint triangular representation (pure / ordinary / special columns (H, labels),
-H in {0,1,2}^9) of the mode-permuted rows, then compressed by two certified relation steps:
+H in {0,1,2}^9, optionally refined on Z4-fixed coordinates via ``coordinates``) of the mode-permuted rows,
+then compressed by two certified relation steps:
     step 1  zero-pattern removal (patterns whose factor vanishes identically on the support);
     step 2  a Z4-invariant pair-(0,2) Gram elimination whose free mode is the OUTPUT C.
 The coordinate permutation acts on columns; both input factors are equivariant, so their invariant or matching
@@ -27,9 +28,11 @@ from functools import lru_cache
 from itertools import accumulate, product
 import hashlib
 import json
+import os
 import math
 from .. import _resources
-from .compact_orbit_packet import CompactOrbitPacket
+from .compact_orbit_packet import CompactOrbitPacket, TABLES as _JOINT_TABLES
+from .rational_state import initial_free
 from .triangular_full_compression import allowed
 
 FORMAT = 'cw-z4-quotient-square-v1'
@@ -63,17 +66,57 @@ def relations_object(logical):
     return d, steps, hashlib.sha256(raw).hexdigest()
 
 
+@lru_cache(32)
+def pattern_metadata(rows, coordinates=()):
+    """Pattern digits, ordinary-bit masks, initial allowed set, unsplit origins and reverse digit map."""
+    digits = {H: ds for H, ds in enumerate(product(range(3), repeat=K9))}
+    ordinary = {H: sum((v == 1) << i for i, v in enumerate(ds)) for H, ds in digits.items()}
+    initial_kept = sorted(allowed(rows, K9, (0, 1)))
+    origins = {H: H for H in initial_kept}
+    for c in coordinates:
+        bit = 1 << c
+        nextid = max(digits) + 1
+        new = []
+        for H in initial_kept:
+            new.append(H)
+            if ordinary[H] & bit:
+                N = nextid
+                nextid += 1
+                ds = list(digits[H])
+                ds[c] = 3
+                digits[N] = tuple(ds)
+                ordinary[N] = ordinary[H] ^ bit
+                origins[N] = origins[H]
+                new.append(N)
+        initial_kept = sorted(new)
+    code_map = {ds: H for H, ds in digits.items()}
+    return digits, ordinary, initial_kept, origins, code_map
+
+
 def replay_document(logical, q):
-    """The relation object instantiated at q in the ``cw-compact-orbit-relations-v1`` layout (with the
-    q-dependent step ranks recomputed), for the exact replay in ``verify.replay_orbit``."""
+    """The relation object instantiated at q in the ``cw-compact-orbit-relations-v1`` (or
+    ``cw-refined-orbit-relations-v1`` when ``coordinates`` is present) layout, for ``verify.replay_orbit``."""
     d, _, _ = relations_object(logical)
     _check_certified_q(d, q)
-    ordinary = [sum((v == 1) << i for i, v in enumerate(ds)) for ds in product(range(3), repeat=3 * d['m'])]
-    rank = lambda kept: sum(q ** ordinary[H].bit_count() for H in kept)
+    coords = tuple(d.get('coordinates', ()))
+    if not coords:
+        ordinary = [sum((v == 1) << i for i, v in enumerate(ds)) for ds in product(range(3), repeat=3 * d['m'])]
+        rank = lambda kept: sum(q ** ordinary[H].bit_count() for H in kept)
+        steps = [dict(pair=s['pair'], kept=s['kept'], deleted=s['deleted'], zero_patterns=s['zero_patterns'],
+                      blocks=s['blocks'], rank=rank(s['kept'])) for s in d['steps']]
+        return dict(format='cw-compact-orbit-relations-v1', coefficient_field='Q', q=q, m=d['m'], rows=d['rows'],
+                    initial_pair=d['initial_pair'], steps=steps, rank=steps[-1]['rank'], complete=True)
+    if q < 3:
+        raise ValueError('Coordinate-refined Z4 relation object requires q >= 3')
+    _, ordinary, _, _, _ = pattern_metadata(tuple(map(tuple, d['rows'])), coords)
+    qs = [q - (i in coords) for i in range(K9)]
+    orb_sz = lambda mask: math.prod(qs[i] for i in range(K9) if mask >> i & 1)
+    rank = lambda kept: sum(orb_sz(ordinary[H]) for H in kept)
     steps = [dict(pair=s['pair'], kept=s['kept'], deleted=s['deleted'], zero_patterns=s['zero_patterns'],
                   blocks=s['blocks'], rank=rank(s['kept'])) for s in d['steps']]
-    return dict(format='cw-compact-orbit-relations-v1', coefficient_field='Q', q=q, m=d['m'], rows=d['rows'],
-                initial_pair=d['initial_pair'], steps=steps, rank=steps[-1]['rank'], complete=True)
+    return dict(format='cw-refined-orbit-relations-v1', joint=True, coordinates=list(coords),
+                coefficient_field='Q', q=q, m=d['m'], rows=d['rows'], initial_pair=d['initial_pair'],
+                steps=steps, rank=steps[-1]['rank'], complete=True)
 
 
 def _check_certified_q(document, q):
@@ -237,12 +280,12 @@ def hcode(d):
     return c
 
 
-def hact(g, H):
-    d = hdig(H)
+def hact(g, H, digits=None, code_map=None):
+    d = digits[H] if digits is not None else hdig(H)
     e = [0] * K9
     for t in range(K9):
         e[g[t]] = d[t]
-    return hcode(e)
+    return code_map[tuple(e)] if code_map is not None else hcode(e)
 
 
 def lact(g, lab):
@@ -309,45 +352,57 @@ def neck_unrank(idx, A):
 class OrbitIndex:
     """Z4-orbits of columns (H, labels), H in ``kept`` (a Z4-invariant pattern set); explicit unranking."""
 
-    def __init__(self, sup, kept, q):
+    def __init__(self, sup, kept, q, coordinates=(), digits=None, ordinary=None, code_map=None):
         self.sup = sup
         self.q = q
+        self.coordinates = tuple(coordinates)
+        assert set(self.coordinates) <= set(sup.fix), 'refined Z4 coordinates must be fixed by Z4'
+        self.qs = [q - (i in self.coordinates) for i in range(K9)]
+        self._digits = digits
+        self._ordinary = ordinary
+        self._code_map = code_map
         G = sup.G
         ks = set(kept)
-        assert all(hact(g, H) in ks for g in G for H in kept), 'kept set not Z4-invariant'
+        assert all(self._hact(g, H) in ks for g in G for H in kept), 'kept set not Z4-invariant'
         self.preps = []
         seen = set()
         for H in sorted(kept):
             if H in seen:
                 continue
-            orb = {hact(g, H) for g in G}
+            orb = {self._hact(g, H) for g in G}
             seen |= orb
-            stab = [g for g in G if hact(g, H) == H]
-            ones = [t for t, v in enumerate(hdig(H)) if v == 1]
+            stab = [g for g in G if self._hact(g, H) == H]
+            ones = [t for t in range(K9) if (ordinary[H] >> t & 1)] if ordinary is not None else [t for t, v in enumerate(hdig(H)) if v == 1]
             self.preps.append(dict(H=H, stab=stab, ones=ones, count=self._count(stab, ones)))
         self.ends = list(accumulate(p['count'] for p in self.preps))
         self.rank = self.ends[-1]
+
+    def _hdig(self, H):
+        return self._digits[H] if self._digits is not None else hdig(H)
+
+    def _hact(self, g, H):
+        return hact(g, H, self._digits, self._code_map)
 
     def _count(self, stab, ones):
         tot = 0
         for g in stab:
             seen = set()
-            c = 0
+            ways = 1
             for i in ones:
                 if i in seen:
                     continue
-                c += 1
                 j = i
                 while j not in seen:
                     seen.add(j)
                     j = g[j]
-            tot += self.q ** c
+                ways *= self.qs[i]
+            tot += ways
         assert tot % len(stab) == 0
         return tot // len(stab)
 
     @lru_cache(4096)
     def unrank(self, term):
-        """term -> representative column (H, labels); labels in 1..q on ordinary coordinates, else 0."""
+        """term -> representative column (H, labels); labels in 1..q (or 2..q on split ordinary coords)."""
         if not 0 <= term < self.rank:
             raise IndexError(term)
         j = bisect_right(self.ends, term)
@@ -355,12 +410,12 @@ class OrbitIndex:
         idx = term - (self.ends[j - 1] if j else 0)
         q = self.q
         ones = P['ones']
-        lab = [0] * K9
+        lab = [1 if v == 3 else 0 for v in self._hdig(P['H'])]
         stab = P['stab']
         if len(stab) == 1:
             for t in reversed(ones):
-                idx, dgt = divmod(idx, q)
-                lab[t] = dgt + 1
+                idx, dgt = divmod(idx, self.qs[t])
+                lab[t] = dgt + 1 + (t in self.coordinates)
         elif len(stab) == 2:
             s2 = [g for g in stab if g != tuple(range(K9))][0]
             pairs = [(t, s2[t]) for t in ones if t < s2[t]]
@@ -369,8 +424,8 @@ class OrbitIndex:
             Pn = M + M * (M - 1) // 2
             fidx, pidx = divmod(idx, Pn)
             for t in reversed(fixed):
-                fidx, dgt = divmod(fidx, q)
-                lab[t] = dgt + 1
+                fidx, dgt = divmod(fidx, self.qs[t])
+                lab[t] = dgt + 1 + (t in self.coordinates)
             assert fidx == 0
             if pidx < M:
                 X = Y = pidx
@@ -390,8 +445,8 @@ class OrbitIndex:
             Nn = neck_count(A) if cyc else 1
             fidx, nidx = divmod(idx, Nn)
             for t in reversed(fixed):
-                fidx, dgt = divmod(fidx, q)
-                lab[t] = dgt + 1
+                fidx, dgt = divmod(fidx, self.qs[t])
+                lab[t] = dgt + 1 + (t in self.coordinates)
             assert fidx == 0
             if cyc:
                 w = neck_unrank(nidx, A)
@@ -403,7 +458,7 @@ class OrbitIndex:
         return P['H'], tuple(lab)
 
     def members(self, H, lab):
-        return sorted({(hact(g, H), lact(g, lab)) for g in self.sup.G})
+        return sorted({(self._hact(g, H), lact(g, lab)) for g in self.sup.G})
 
 
 def real_character(g):
@@ -418,9 +473,9 @@ class OddOrbitIndex:
     vanish on those columns over Q; the length-two and length-four orbits stay.
     """
 
-    def __init__(self, sup, kept, q):
+    def __init__(self, sup, kept, q, coordinates=(), digits=None, ordinary=None, code_map=None):
         self.sup, self.q = sup, q
-        self.original = original = OrbitIndex(sup, kept, q)
+        self.original = original = OrbitIndex(sup, kept, q, coordinates, digits, ordinary, code_map)
         self.preps = []
         for j, p in enumerate(original.preps):
             p = dict(p, original_start=original.ends[j - 1] if j else 0)
@@ -430,7 +485,8 @@ class OddOrbitIndex:
                 p['alphabet'] = q ** len(cycles)
                 p['old_necklaces'] = neck_count(p['alphabet']) if cycles else 1
                 p['new_necklaces'] = p['old_necklaces'] - p['alphabet']
-                p['count'] -= q ** (len(cycles) + len(fixed))
+                fixed_ways = math.prod(original.qs[t] for t in fixed)
+                p['count'] -= p['alphabet'] * fixed_ways
             if p['count']:
                 self.preps.append(p)
         self.ends = list(accumulate(p['count'] for p in self.preps))
@@ -457,7 +513,7 @@ class OddOrbitIndex:
 class JointPacket(CompactOrbitPacket):
     """The package's ``CompactOrbitPacket`` (joint-orbit-v1) on the mode-permuted rows, driven by the
     bundled Z4 relation object instead of a discovery proof file.  Original mode h is packet mode
-    perm.index(h)."""
+    perm.index(h). Supports optional Z4-fixed coordinate refinement ``coordinates``."""
 
     def __init__(self, sup, q, relations):
         d, steps, digest = relations_object(relations)
@@ -465,24 +521,36 @@ class JointPacket(CompactOrbitPacket):
         self.q = q
         self.m = d['m']
         self.k = 3 * self.m
+        self.coordinates = tuple(d.get('coordinates', ()))
+        if self.coordinates:
+            if q < 3:
+                raise ValueError('Coordinate-refined Z4 relation object requires q >= 3')
+            if sup is not None and not set(self.coordinates) <= set(sup.fix):
+                raise ValueError('Refined Z4 coordinates must be fixed by Z4')
+        self.qs = [q - (i in self.coordinates) for i in range(K9)]
         self.rows = [list(r) for r in d['rows']]
         self.patched = True
         self.relations_path = relations
         self.perm = perm = list(d['perm'])
-        assert sorted(tuple(r[perm[j]] for j in range(3)) for r in sup.rows) == sorted(map(tuple, self.rows)), \
-            'relation rows are not the permuted support rows'
+        if sup is not None:
+            assert sorted(tuple(r[perm[j]] for j in range(3)) for r in sup.rows) == sorted(map(tuple, self.rows)), \
+                'relation rows are not the permuted support rows'
         # table-cache key: relation object digest and q (tables depend on q)
         self.proof_bytes = f'{RELATIONS_FORMAT}:{digest}:q={q}'.encode()
         self.proof = d
         self.steps = steps
         self.families = [{r[h] for r in self.rows} for h in range(3)]
-        self.initial_kept = allowed(self.rows, self.k, (0, 1))
+        self.unsplit_initial_kept = allowed(self.rows, self.k, (0, 1))
+        self.digits, self.ordinary, self.initial_kept, self.origins, self.code_map = pattern_metadata(
+            tuple(map(tuple, self.rows)), self.coordinates
+        )
         self.kept = d['steps'][-1]['kept']
-        self.digits = list(product(range(3), repeat=self.k))
-        self.ordinary = [sum((v == 1) << i for i, v in enumerate(ds)) for ds in self.digits]
-        self.ends = list(accumulate(q ** self.ordinary[H].bit_count() for H in self.kept))
+        self.ends = list(accumulate(
+            math.prod(self.qs[i] for i in range(K9) if self.ordinary[H] >> i & 1) for H in self.kept
+        ))
         self.rank = self.ends[-1]
         self.tables = {}
+        self._unsplit_base_tables = {}
         self.pos = {H: j for j, H in enumerate(self.kept)}
 
     def index(self, H, lab):
@@ -490,26 +558,148 @@ class JointPacket(CompactOrbitPacket):
         loc = 0
         for t in range(K9):
             if self.ordinary[H] >> t & 1:
-                loc = loc * self.q + (lab[t] - 1)
+                loc = loc * self.qs[t] + (lab[t] - 1 - (t in self.coordinates))
         return (self.ends[j - 1] if j else 0) + loc
 
-    def entry(self, h, H, lab, x):
-        return self.factor_entry(self.perm.index(h), self.index(H, lab), tuple(x))
+    def _build_unsplit_base(self, mode, zero):
+        key = (mode, zero)
+        if key in self._unsplit_base_tables:
+            return self._unsplit_base_tables[key]
+        q, k = self.q, self.k
+        values = {I: {} for I in range(1 << k) if not I & zero}
+        if mode == 2:
+            raw, codes, standards = initial_free(q, k, zero, self.unsplit_initial_kept)
+            for value, H, I in zip(raw, codes, standards):
+                if int(H) in self.unsplit_initial_kept:
+                    values[int(I)][int(H)] = F(str(value))
+        else:
+            for I in values:
+                for H in self.unsplit_initial_kept:
+                    if self.ordinary[H] & I != I:
+                        continue
+                    value = F(1)
+                    for i, t in enumerate(self.digits[H]):
+                        if I >> i & 1 or zero >> i & 1:
+                            continue
+                        value *= F(0) if t == 0 else F(2, q) if t == 1 else F(3, 2 * q)
+                    values[I][H] = value
+        base = {H: {} for H in self.unsplit_initial_kept}
+        for I, vs in values.items():
+            for H, value in vs.items():
+                if value:
+                    base[H][I] = value
+        self._unsplit_base_tables[key] = base
+        return base
 
-    def table(self, j, zero):
-        if (j, zero) not in self.tables:
-            self.build_table(j, zero)
-        return self.tables[(j, zero)]
+    def _build_refined_table(self, mode, zero, exc):
+        key = (mode, zero, exc)
+        digest = hashlib.sha256(self.proof_bytes + json.dumps(key).encode()).hexdigest()
+        if digest in _JOINT_TABLES:
+            self.tables[key] = _JOINT_TABLES[digest]
+            return _JOINT_TABLES[digest]
+        path = _resources.root() / 'coefficient_cache/joint' / f'{digest}.json'
+        if path.exists():
+            d = json.loads(path.read_text())
+            assert d['digest'] == digest
+            table = {int(H): {int(I): F(a, b) for I, a, b in values} for H, values in d['values']}
+            _JOINT_TABLES[digest] = table
+            self.tables[key] = table
+            return table
+        base = self._build_unsplit_base(mode, zero)
+        split = sum(1 << i for i in self.coordinates)
+        values = {I: {} for I in range(1 << self.k) if not (I & (zero | exc))}
+        for H in self.initial_kept:
+            for J, v in base[self.origins[H]].items():
+                refined = J & split
+                fixed = J & ~split
+                if fixed & (zero | exc):
+                    continue
+                terms = {fixed: v}
+                for c in self.coordinates:
+                    if not (refined >> c & 1):
+                        continue
+                    exc_term = self.digits[H][c] == 3
+                    scalar = ((1 - F(1, self.q) if exc >> c & 1 else -F(1, self.q))
+                              if exc_term else (-F(1, self.q) if exc >> c & 1 else F(1, self.q - 1) - F(1, self.q)))
+                    new = {I: val * scalar for I, val in terms.items()}
+                    if not exc_term and not ((zero | exc) >> c & 1):
+                        new.update({I | (1 << c): val for I, val in terms.items()})
+                    terms = new
+                for I, val in terms.items():
+                    if val:
+                        values[I][H] = values[I].get(H, F(0)) + val
+        for step in self.steps:
+            updated = {I: {H: val for H, val in vs.items() if H in step['kept']} for I, vs in values.items()}
+            if step['free'] == mode:
+                for I, b in step['blocks'].items():
+                    if I not in values:
+                        continue
+                    inputs = [(idx, values[I][H]) for idx, H in enumerate(b['deleted']) if H in values[I]]
+                    if not inputs:
+                        continue
+                    for H, row in zip(b['basis'], b['coefficients']):
+                        val = updated[I].get(H, F(0)) + sum(row[idx] * v for idx, v in inputs if row[idx])
+                        if val:
+                            updated[I][H] = val
+                        else:
+                            updated[I].pop(H, None)
+            values = updated
+        table = {H: {} for H in self.kept}
+        for I, vs in values.items():
+            for H, val in vs.items():
+                if val:
+                    table[H][I] = val
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(f'.{os.getpid()}.tmp')
+        tmp.write_text(json.dumps(dict(digest=digest, values=[[H, [[I, v.numerator, v.denominator] for I, v in vs.items()]] for H, vs in table.items()]), separators=(',', ':')) + '\n')
+        tmp.replace(path)
+        _JOINT_TABLES[digest] = table
+        self.tables[key] = table
+        return table
+
+    def entry(self, h, H, lab, x):
+        if not self.coordinates:
+            return self.factor_entry(self.perm.index(h), self.index(H, lab), tuple(x))
+        j = self.perm.index(h)
+        zero = sum((v == 0) << i for i, v in enumerate(x))
+        if zero not in self.families[j]:
+            return F(0)
+        exc = sum((x[i] == 1) << i for i in self.coordinates)
+        tab = self.table(j, zero, exc).get(H, {})
+        res = F(0)
+        for I, val in tab.items():
+            for i in range(K9):
+                if I >> i & 1:
+                    val *= F(int(lab[i] == x[i])) - F(1, self.qs[i])
+            res += val
+        return res
+
+    def table(self, j, zero, exc=0):
+        if not self.coordinates:
+            if (j, zero) not in self.tables:
+                self.build_table(j, zero)
+            return self.tables[(j, zero)]
+        if (j, zero, exc) not in self.tables:
+            self._build_refined_table(j, zero, exc)
+        return self.tables[(j, zero, exc)]
 
     def denominator(self, h):
-        """An integer D with D * (every mode-h entry) in Z: lcm of table denominators times q^9."""
+        """An integer D with D * (every mode-h entry) in Z."""
         j = self.perm.index(h)
         L = 1
+        split_mask = sum(1 << i for i in self.coordinates)
         for zero in self.families[j]:
-            for tab in self.table(j, zero).values():
-                for v in tab.values():
-                    L = L * v.denominator // math.gcd(L, v.denominator)
-        return L * self.q ** K9
+            excs = [0]
+            if self.coordinates and not (zero & split_mask):
+                for c in self.coordinates:
+                    if not (zero >> c & 1):
+                        excs = [e | b for e in excs for b in (0, 1 << c)]
+            for exc in excs:
+                for tab in self.table(j, zero, exc).values():
+                    for v in tab.values():
+                        L = L * v.denominator // math.gcd(L, v.denominator)
+        scale = math.prod(self.qs) * (self.q ** (K9 - len(self.coordinates)))
+        return L * scale
 
 
 # ------------------------------------------------------------------------------------------ the unit
@@ -530,7 +720,9 @@ class Z4QuotientUnit:
         self.relations_path = relations
         self.sup = support_object(support)
         self.packet = JointPacket(self.sup, q, relations)
-        self.orbits = (OddOrbitIndex if input_character == 'odd' else OrbitIndex)(self.sup, self.packet.kept, q)
+        pk = self.packet
+        idx_cls = OddOrbitIndex if input_character == 'odd' else OrbitIndex
+        self.orbits = idx_cls(self.sup, pk.kept, q, pk.coordinates, pk.digits, pk.ordinary, pk.code_map)
         self.rank = self.orbits.rank
         self.rows = [list(r) for r in self.sup.reps]
         self.patched = True

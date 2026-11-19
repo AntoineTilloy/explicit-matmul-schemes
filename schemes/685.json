@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "685",
-  "rank": "70153048",
+  "rank": "70079906",
   "field": "Q",
-  "root_object": "b3d7333e17bc1b69a9b429e0e37d1cc707413a33a3f031ffa4777ff32f706ae8",
-  "effective_exponent": 2.766890937896641,
+  "root_object": "ff62fa1b1e29cfc91d1ebe8d11d00ffcc2da9a62b7d260e89ebb1cfa3a17bb66",
+  "effective_exponent": 2.7667311763500324,
   "provenance": {
-    "construction": "CW finite exact restriction and rational composition"
+    "construction": "CW finite exact restriction and compressed fixed-sector quotient with L=1024 uneven/serendipitous remainder closure"
   },
-  "verification": "Exact witnesses included; see docs/verification.md for check levels."
+  "verification": "Exact compressed quotient witnesses plus hash-checked remainder DAG; see checks/nov16_below1024.json."
 }

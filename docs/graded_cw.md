@@ -130,28 +130,24 @@ a global lower bound on the size of a sub-2.65 algorithm.
 
 ## Saved crossing
 
-The final bounded pricing search selected the 23-row, width-seven puzzle,
-with certified grading degree 1,056, t=10, and q=6. Its exact balanced
-capacity per packet is
+Solving exact integer linear programs over the Aronov–Landsberg puzzles lowers
+the certified positive grading degrees on width-6 `(14, 6)` (`204 -> 203`),
+width-7 `(23, 7)` (`1,056 -> 436`, and `411` on a 22-row subset), width-8
+`(36, 8)` (`950`), and width-9 `(55, 9)` (`1,874`). Pairing the 14-row,
+width-six puzzle (`d = 203`, `t = 11`, `q = 6`, interpolation factor
+`3 * 11 * 203 + 1 = 6,700`) with the new single-packet Strassen-tensor outer
+at `n = 27,113,235,502,176 = 96 * 9^12` (exponent `2.679931`) requires three
+packets and gives
 
 ```
-377387624652930565363234886764557852634.
+n = 96 * 9^12 * 6^66
+R = 3 * 6700 * 7^198
+log_n(R) = 2.6490125772706076.
 ```
 
-The outer algorithm is the tensor square of the existing size-16,777,216
-catalogue entry, whose cost is 38,520,042,228,975,289,144. It requires four
-packets, giving
-
-```
-n = 2^48 * 6^70
-R = 4 * 31681 * 7^210
-log_n(R) = 2.6490623172780827.
-```
-
-The natural side is approximately 8.32 × 10⁶⁸; cropping gives approximately
-7.86 × 10⁶⁸ with the same rank ceiling. Complete decimal integers are in
-`catalogue.json` and the two hash-checked proof objects. The search tried
-each of the 97 earlier rational catalogue bases, its tensor powers with
-LITA32/Strassen fillers, and up to 64 packets. It completed its bounded
-candidate family; mixed powers of different catalogue bases and other
-tensor constructions remain open ways to reduce the size further.
+The natural side is approximately `6.18 × 10⁶⁴` (65 decimal digits); cropping
+gives approximately `5.85 × 10⁶⁴` (`13,446.8×` smaller than the preceding
+`7.86 × 10⁶⁸` crossing) under the same strict integer check `R^20 < n^53` and
+minimality check `(n - 1)^53 <= R^20`. Complete decimal integers and SHA-256
+proof hashes are in `catalogue.json` and
+[checks/nov16_above1024.json](../checks/nov16_above1024.json).

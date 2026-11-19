@@ -1,13 +1,13 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "8388608",
-  "rank": "6003785411879964840",
+  "rank": "5840735512742068224",
   "field": "Q",
-  "root_object": "f0177d4022a78010f9f40368804cc4be28154bf1f97e679c3ebb94036ddc4a3c",
-  "effective_exponent": 2.7121990487325647,
+  "root_object": "fba1f62dac1b36e9cc8dcd24d3ca2bf20afb9223dba24f304ca15e5c283e4c85",
+  "effective_exponent": 2.710471989755097,
   "provenance": {
-    "construction": "Strassen-tensor S_q packets (October 2026): explicit size-32 outer scheme (14,196 products) with 40 power-18 S_8 packets of 358 independent products",
-    "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class; witnesses in checks/sq/rs_sets.json"
+    "construction": "Strassen-tensor S_q packets: explicit size-32 outer scheme (14,196 products) covered with zero waste by 39 zero-trimmed power-18 S_8 packets of 364 independent products (RS(20)=146)",
+    "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class with exact zero-factor trimming (zero-trimmed-v1)"
   },
   "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
 }

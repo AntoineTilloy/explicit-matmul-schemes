@@ -28,6 +28,16 @@ def main():
         merged[p['n']]=dict(field='Q',n=p['n'],rank=p['rank'],
                            baseline_rank=previous['baseline_rank'] if previous else p['comparison_rank'],
                            construction=p['classification'])
+    nov16_below=json.loads((ROOT/'checks/nov16_below1024.json').read_text())['changes']
+    for p in nov16_below:
+        previous=merged.get(p['n'])
+        merged[p['n']]=dict(field='Q',n=p['n'],rank=p['rank'],
+                           baseline_rank=previous['baseline_rank'] if previous else p['comparison_rank'],
+                           construction=p['classification'])
+    nov16_1024=json.loads((ROOT/'checks/nov16_above1024.json').read_text())['headline_records']['n_1024']
+    merged[1024]=dict(field='Q',n=1024,rank=int(nov16_1024['new_rank']),
+                      baseline_rank=merged[1024]['baseline_rank'],
+                      construction='coordinate-8 refined odd Z4 compression and gauged square cancellation')
     rational=list(merged.values())
     binary=[]
     for n in (61,243,969):
@@ -65,7 +75,7 @@ def main():
                     ha='left',va='center',fontsize=8.5,color=color)
         ax.set_yticks(x,[str(p['n'])+(' (LITA refresh)' if p['n']==432 else '') for p in rows])
         ax.set_ylabel('Square matrix size n',labelpad=9)
-        ax.set_ylim(len(rows)-.4,-.6);ax.set_xlim(0,3.0);ax.grid(axis='x',color='#edf0f3');ax.set_axisbelow(True)
+        ax.set_ylim(len(rows)-.4,-.6);ax.set_xlim(0,5.5 if field=='Q' else 3.0);ax.grid(axis='x',color='#edf0f3');ax.set_axisbelow(True)
         ax.set_xlabel('Products saved against the stated reference (%)')
         fig.suptitle(title,x=.10,y=.98,ha='left',fontsize=18,weight='bold')
         subtitle=('16 largest relative savings + size 1,024 • Exact rational coefficients' if field=='Q'

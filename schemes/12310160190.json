@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "12310160190",
-  "rank": "1463616394485527559895695360",
+  "rank": "1459677509200058173953355584",
   "field": "Q",
-  "root_object": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
-  "effective_exponent": 2.6922415569545044,
+  "root_object": "b28ed2b19af502cbe6fe42bffb92ead056df27eb89253b9c9065c3ce9a6dcb88",
+  "effective_exponent": 2.692125568995815,
   "provenance": {
-    "construction": "Exact finite CW composition update (October 2026): envelope_full_final"
+    "construction": "Exact finite CW composition: current LITA size-30 outer (rank 11,889) with 2 power-21 packets (q=17, 5,865 rows) and 159 improved size-410,338,673 leaves"
   },
   "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
 }

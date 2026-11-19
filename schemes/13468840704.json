@@ -1,13 +1,13 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "13468840704",
-  "rank": "2000000000000000000000000000",
+  "rank": "1999777625038419124331158713",
   "field": "Q",
-  "root_object": "f960737e268dddd70854c3cf82e1248abdbb9393b869200c717af2583933c9b8",
-  "effective_exponent": 2.6952453333064614,
+  "root_object": "a6a22436b4cd1f5dee435911dad8ab67b83d49092bc447b51ade7b5c23bc7579",
+  "effective_exponent": 2.695240565884229,
   "provenance": {
-    "construction": "Padding of the size-13,947,137,604 Strassen-tensor S_q packet scheme (October 2026)",
-    "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class; witnesses in checks/sq/rs_sets.json"
+    "construction": "Padding of the size-13,947,137,604 Strassen-tensor S_q packets: current LITA size-36 outer scheme (rank 19,666) with 1 full (10,172-product) and 1 boundary-pruned (9,494-product) zero-trimmed power-27 S_9 packets",
+    "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class with exact zero-factor trimming (zero-trimmed-v1)"
   },
   "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
 }

@@ -6,13 +6,13 @@ The auto-research loop ran for a few days, with fairly rare pointers from me. Ev
 
 Most schemes use Coppersmith–Winograd (CW) tensor restrictions, rational compression and composition with published algorithms. Every coefficient is accessible as an exact rational number.
 
-Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Size **9,826** needs **74,352,484,826** multiplications (effective exponent **2.723013**), and size **1,024** now needs **198,679,192**. A new rational compression saves **4,096** products against the preceding entry; together with the odd input character and square cancellations, the saving against the original even-character entry is **4,744**. This is 1.43% fewer than 14,197² = 201,554,809 obtained by squaring the pinned LITA size-32 scheme. The best CW exponent in the earlier size range is **2.692242** at size **12,310,160,190**, following the power-21 support and recursive composition improvements of October 2026.
+Between sizes 1,024 and 65,536, the best entries come from a Z4-symmetric CW packet quotiented to 7 products and fed to Strassen's algorithm. Splitting ordinary labels on the Z4-fixed coordinate 8, using the odd input character across all q, and retaining the q² + q gauged Strassen cancellations lowers every Z4 entry: size **9,826** needs **74,352,302,450** multiplications (effective exponent **2.723013**), size **65,536** needs **14,329,410,937,002** (saving **3.10 × 10¹⁰** products with the current size-24 LITA outer), and size **1,024** now needs **198,674,072** (**5,120** fewer than the preceding 198,679,192 entry, and **9,864** fewer than the original even-character entry — 1.43% below 14,197² = 201,554,809). Coordinate-refined 24-row packets also lower sizes **2,916**, **4,000** and **6,912**, while Pair-Schur recursive CW leaves lower all medium-large CW towers through **12,310,160,190** (exponent **2.692126**).
 
-A new exact packet family built on Strassen's tensor (S_q packets, late October 2026) improves two large counts. Size **8,388,608** now needs **40 · 9¹⁸ = 6,003,785,411,879,964,840** multiplications, 10.47% fewer than before (exponent 2.719136 → **2.712199**). Size **13,468,840,704** needs **2 · 10²⁷**, 0.72% fewer, by padding a natural size-**13,947,137,604** scheme whose exponent **2.691219** is now the best of the catalogue below 10⁶⁸. See [Strassen-tensor packets](#strassen-tensor-packets-sizes-8388608-to-13947137604).
+Strassen-tensor packets (`S_q` packets) with stronger tripartite Ruzsa–Szemerédi supports, exact zero-factor trimming (`zero-trimmed-v1`) and middle-weight boundary pruning further improve the large regime. Size **8,388,608** now needs **5,840,735,512,742,068,224** multiplications (39 zero-trimmed power-18 S₈ packets of 364 rows with zero spare slots, 2.72% fewer than 40 · 9¹⁸; exponent **2.710472**). Size **10,847,773,692** (28 · 9⁹) reaches **2.690487** in a single power-27 S₉ packet, size **13,947,137,604** (and padded **13,468,840,704**) falls to **1,999,777,625,038,419,124,331,158,713**, and a single power-36 packet built from Hill's 112-cap in F₃⁶ reaches **2.679755** at size **6,597,069,766,656** (96 · 8¹²) and **2.679931** at **27,113,235,502,176** (96 · 9¹²), now the best below 10⁶⁴. Pairing the latter with an optimal integer grading (d = 203) of the width-6 Aronov–Landsberg puzzle lowers the strict sub-2.65 crossing by **13,447×** to **≈ 5.85 × 10⁶⁴** (natural **≈ 6.18 × 10⁶⁴**, exponent **2.649013**). See [Strassen-tensor packets](#strassen-tensor-packets-sizes-8388608-to-27113235502176).
 
 ![Effective exponents of our saved schemes: detail and wider size range](figures/exponents.svg)
 
-The panels show small sizes (through 16,384), medium sizes (through 30 billion),
+The panels show small sizes (through 16,384), medium sizes (through 10¹⁴),
 and large sizes (the full catalogue).
 All use logarithmic size axes. The main figure contains only rational schemes
 valid over R and C; characteristic-two results remain separate.
@@ -33,7 +33,7 @@ import cwschemes
 
 s = cwschemes.load(16384)
 assert s.n == 16384
-assert s.rank == 317774199680
+assert s.rank == 317773192464
 u = s.coefficient("U", term=0, row=0, col=0)  # fractions.Fraction
 print(u)
 ```
@@ -49,86 +49,75 @@ First use of a construction can take minutes to build exact intermediate tables.
 | [14](schemes/14.json) | 1,593 | 2.793942453 |
 | [16](schemes/16.json) | 2,236 | 2.781676118 |
 | [32](schemes/32.json) | 14,196 | 2.758639372 |
-| [686](schemes/686.json) | 70,153,048 | 2.766272903 |
-| [1,024](schemes/1024.json) | 198,679,192 | 2.756586554 |
-| [2,025](schemes/2025.json) | 1,303,338,368 | 2.756771167 |
+| [488](schemes/488.json) | 28,101,649 | 2.770672586 |
+| [686](schemes/686.json) | 70,079,906 | 2.766113301 |
+| [844](schemes/844.json) | 122,067,978 | 2.763382231 |
+| [1,024](schemes/1024.json) | 198,674,072 | 2.756582836 |
 | [2,048](schemes/2048.json) | 1,303,338,368 | 2.752687685 |
-| [8,192](schemes/8192.json) | 45,396,314,240 | 2.723219701 |
-| [9,826](schemes/9826.json) | 74,352,484,826 | 2.723013418 |
-| [16,384](schemes/16384.json) | 317,774,199,680 | 2.729229360 |
-| [65,536](schemes/65536.json) | 14,360,405,808,994 | 2.731697610 |
-| [8,388,608](schemes/8388608.json) | 6,003,785,411,879,964,840 | 2.712199049 |
-| [528,108,169](schemes/528108169.json) | 355,919,505,257,948,041,899,273 | < 2.7, exactly checked |
-| [536,870,912](schemes/536870912.json) | 355,919,505,257,948,041,899,273 | 2.697789558 |
-| [12,310,160,190](schemes/12310160190.json) | 1,463,616,394,485,527,559,895,695,360 | 2.692241557 |
-| [13,468,840,704](schemes/13468840704.json) | 2,000,000,000,000,000,000,000,000,000 | 2.695245333 |
-| [13,947,137,604](schemes/13947137604.json) | 2,000,000,000,000,000,000,000,000,000 | 2.691218900 |
-| [≈ 8.32 × 10⁶⁸](docs/graded_cw.md) | 4 · 31,681 · 7²¹⁰ | 2.649062317 |
-| [≈ 7.86 × 10⁶⁸ (cropped)](docs/graded_cw.md) | 4 · 31,681 · 7²¹⁰ | < 2.65, exactly checked |
+| [8,192](schemes/8192.json) | 45,396,170,352 | 2.723219350 |
+| [9,826](schemes/9826.json) | 74,352,302,450 | 2.723013151 |
+| [16,384](schemes/16384.json) | 317,773,192,464 | 2.729229033 |
+| [65,536](schemes/65536.json) | 14,329,410,937,002 | 2.731502784 |
+| [8,388,608](schemes/8388608.json) | 5,840,735,512,742,068,224 | 2.710471990 |
+| [240,619,650](schemes/240619650.json) | 42,618,086,121,773,987,519,250 | < 2.7, exactly checked |
+| [240,945,152](schemes/240945152.json) | 42,618,086,121,773,987,519,250 | 2.699810881 |
+| [536,870,912](schemes/536870912.json) | 355,833,665,201,619,305,486,442 | 2.697777558 |
+| [10,847,773,692](schemes/10847773692.json) | 999,890,642,088,501,413,992,105,581 | 2.690486904 |
+| [12,310,160,190](schemes/12310160190.json) | 1,459,677,509,200,058,173,953,355,584 | 2.692125569 |
+| [13,947,137,604](schemes/13947137604.json) | 1,999,777,625,038,419,124,331,158,713 | 2.691214140 |
+| [6,597,069,766,656](schemes/6597069766656.json) | 22,527,768,312,183,649,740,712,054,999,744,512 | 2.679754846 |
+| [27,113,235,502,176](schemes/27113235502176.json) | 999,989,287,389,515,119,218,241,063,598,638,155 | 2.679930719 |
+| [≈ 6.18 × 10⁶⁴](docs/graded_cw.md) | 3 · 6,700 · 7¹⁹⁸ | 2.649012577 |
+| [≈ 5.85 × 10⁶⁴ (cropped)](docs/graded_cw.md) | 3 · 6,700 · 7¹⁹⁸ | < 2.65, exactly checked |
 
-See [catalogue.json](catalogue.json) for all sizes, or run `cwschemes list`.
+See [catalogue.json](catalogue.json) for all 305 sizes, or run `cwschemes list`.
 
-Rectangular compositions at sizes **106** and **146** use **424,690**
-and **1,040,656** products, saving **1.47%** and **2.17%** against the strengthened
-rational composition reference. Size **432** now uses **19,665,128**, through
-a routine refresh to the current published LITA primitives. All three have
-exact rational coefficients in the installed package; see the
-[rectangular construction and check scope](docs/rectangular.md).
-
-The first search applying unequal Strassen splits inside intermediate rectangles,
-then feeding the improved costs back into composition, added **12 square schemes
-at sizes 125–242**. At that stage the largest relative gain was at **194**, from **2,322,311** to
-**2,309,010** products (about **0.57%**). These comparisons use the full previous
-strengthened rational envelope. The size-1,024 count remains **198,679,192**.
-All new schemes are bilinear and can be substituted recursively on matrix blocks.
-
-Extending the intermediate rectangular table to dimension 256 improves **48
-square counts at sizes 137–370**, including ten previous catalogue entries.
-Size **291** falls from **7,273,834** to **7,144,555** products (**1.78%**).
-Some other gains are only one product; the full counts, comparison baselines,
-and exact verification scope are in [the extended search record](docs/extended_rectangular.md).
-The coefficient engine is unchanged, and size 1,024 remains at **198,679,192**.
+Below size 1,024, extending the canonical rectangular closure from dimension 256
+to **1,024** — together with generalized uneven block substitution into sparse
+exact schemes (`⟨3⟩:23`, `⟨4⟩:48`, `⟨5⟩:93`, `⟨6⟩:153`, `⟨14⟩:1593`, `⟨16⟩:2236`),
+dynamic serendipitous block products, unbounded odd LITA (`N ≥ 9`), and 19
+CRT-certified rational rectangular primitives — improves **217 square counts at
+sizes 81–1,010** (166 by more than one product), including 17 previous catalogue
+entries. Size **488** falls from **29,249,283** to **28,101,649** (**3.92%**),
+size **844** falls from **125,566,678** to **122,067,978** (**2.79%**), and
+re-closing the four rectangular remainder blocks of **686** lowers it from
+**70,153,048** to **70,079,906**. See [rectangular.md](docs/rectangular.md) and
+[extended_rectangular.md](docs/extended_rectangular.md).
 
 ![Verified improvements over R and C through size 1,024](figures/small1024.svg)
 
-The first sub-2.7 size **in this catalogue** is now **528,108,169**, padded from a natural size-536,870,912 construction. Its rank R = 355,919,505,257,948,041,899,273 satisfies
+The first sub-2.7 size **in this catalogue** is now **240,619,650**, padded from a natural size-240,945,152 (32 · 14⁶) construction. Its rank R = 42,618,086,121,773,987,519,250 satisfies
 
 ```text
-528,108,168^27 <= R^10 < 528,108,169^27.
+240,619,649^27 <= R^10 < 240,619,650^27.
 ```
 
-This is the strict threshold for this particular scheme. It is **91.01% smaller** than the previous catalogue threshold of 5,873,299,070. The natural construction uses an outer size-32 scheme with 14,196 calls, 9 power-18 packets of 1,569 independent products each, and 75 explicitly specified recursive remainders. The best exponent and the threshold are different catalogue points. A sub-2.7 construction at size 1,024 remains open.
+This is the strict threshold for this particular scheme, **54.44% smaller** (2.195×) than the preceding threshold of 528,108,169. The natural construction uses the explicit size-32 outer scheme (14,196 calls), 9 power-18 CW packets at q = 14 (1,569 rows each), and 75 recursive size-7,529,536 leaves built from Pair-Schur (m = 4, 5) packets and coordinate-8 refined Z4(14) units. A sub-2.7 construction at size 1,024 remains open.
 
-## Strassen-tensor packets (sizes 8,388,608 to 13,947,137,604)
+## Strassen-tensor packets (sizes 8,388,608 to 27,113,235,502,176)
 
 These entries (`cw-mixed-square-v1` packets with `"local_tensor": "strassen-completion-v1"`) replace the CW local tensor by Strassen's tensor Str_q = Σₜ (x₀yₜzₜ + xₜy₀zₜ), t = 1, …, q.
 
 - **Local completion.** S(a,b,c) = Σₜ (a₀+aₜ)(b₀+bₜ)cₜ − a₀b₀ Σₜ cₜ has rank q+1 and integer coefficients. It equals Str_q + Σₜ aₜbₜcₜ, so its only error lies on the all-positive block.
-- **Packet.** Coordinate i of a power-N packet (N = 3m) carries S(x,y,z), S(y,z,x) or S(z,x,y) for i // m = 0, 1, 2. Each row is a zero-mask partition (A,B,C) with m coordinates per letter and only the two letters its kind allows. Every local block has at most one zero index, so a surviving block triple must partition the coordinates; the stored rows admit no such cross triple. The packet is exactly a direct sum of ⟨q^m⟩ products, with **no corrections**, in **(q+1)^N** multiplications.
-- **Supports.** The support condition is a tripartite Ruzsa–Szemerédi (RS) condition in each weight class, so the row count is Σₜ RS(C(m,t)). The power-18 support has 358 rows (classes 1, 18, 90, 140, 90, 18, 1); the power-27 support has 9,842.
-- **Sizes.** The explicit size-32 scheme (14,196 calls) fills 40 power-18 S₈ packets (124 spare rows get zero input): R(8,388,608) ≤ 40 · 9¹⁸. Current LITA at size 36 (19,666 calls) fills 2 power-27 S₉ packets (18 spare rows): R(36 · 9⁹) ≤ 2 · 10²⁷, also used at 13,468,840,704 by padding.
+- **Packet and zero trimming.** Coordinate i of a power-N packet (N = 3m) carries S(x,y,z), S(y,z,x) or S(z,x,y) for i // m = 0, 1, 2. Each row is a zero-mask partition (A,B,C) with m coordinates per letter and only the two letters its kind allows. The packet is a direct sum of ⟨q^m⟩ products with **no corrections**. With `"compression": "zero-trimmed-v1"`, local digit q terms whose special-choice masks fail the 2D row-mask downset conditions have an identically zero factor over Q and are omitted; when an outer scheme uses fewer than M rows, keeping middle-weight classes `t ≈ m/2` prunes extreme corners and removes up to 118× more zero terms.
+- **Supports.** The support condition is a tripartite Ruzsa–Szemerédi (RS) condition in each weight class, so the row count is Σₜ RS(C(m,t)). Rebuilt supports give **364** rows at power 18 (classes 1, 18, 90, 146, 90, 18, 1), **10,172** rows at power 27, and **329,690** rows at power 36 (using Hill's 112-cap in F₃⁶).
+- **Sizes.** Explicit size 32 (14,196 = 39 · 364 calls) fills 39 zero-trimmed power-18 S₈ packets with no spare slots (`8,388,608`). Current LITA size 28 (9,846 calls) fits in 1 pruned power-27 S₉ packet (`10,847,773,692`); size 36 (19,666 calls) fits in 2 zero-trimmed power-27 S₉ packets (`13,947,137,604` and padded `13,468,840,704`); size 96 (323,156 calls) fits in 1 pruned power-36 S₈ or S₉ packet (`6,597,069,766,656` and `27,113,235,502,176`).
 
-The construction is the finite, exact form of the tensor that Strassen analysed asymptotically with the laser method and Salem–Spencer sets (*J. reine angew. Math.* 375/376, 1987). The packet form and these RS supports come from this project's study of 29 October 2026. `cwschemes verify <n>` audits the support, replays the exact local identity and checks sampled exact packet entries; see [the construction](docs/construction.md#strassen-tensor-s_q-packets) and [verification scope](docs/verification.md#strassen-tensor-s_q-packets).
+The asymptotic ancestor is Strassen's laser-method analysis with Salem–Spencer sets (*J. reine angew. Math.* 375/376, 1987). `cwschemes verify <n>` audits the support, replays the exact local identity and zero-trimming count, and checks sampled exact packet entries; see [the construction](docs/construction.md#strassen-tensor-s_q-packets) and [verification scope](docs/verification.md#strassen-tensor-s_q-packets).
 
 ## Z4-quotient schemes (sizes 1,024 to 65,536)
 
-These entries (formats `cw-z4-quotient-square-v1`, `cw-z4-real-character-square-v1` and `cw-z4-gauged-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one CW support. The larger entries retain the original relation certificate; size 1,024 uses a new certificate bound to q=8.
+These entries (`cw-z4-gauged-square-v1`, or `z4-quotient-v1` units inside a mixed outer scheme) share one 28-row power-9 CW support invariant under Z4, with separate exact finite-q relation witnesses for every q in `{3, 8, 9, …, 20}`.
 
-- **Packet.** A power-9 CW support with 28 rows is invariant under a cyclic group Z4 permuting the 9 coordinates. Its rows form 7 free Z4-orbits. The packet tensor is the local completion G_q^{⊗9} restricted to the support, plus Möbius corrections on the 36 sunflower kernels; it equals 28 independent ⟨q³⟩ products.
-- **Compression.** In the joint triangular representation, patterns whose factor vanishes on the support are removed. A Z4-invariant pair Gram elimination then deletes 300 more patterns, and its relations are absorbed into the output factor. Both steps delete whole Z4-orbits and leave the two input factors equivariant.
-- **Quotient.** On Z4-invariant inputs, all columns of one orbit give the same product. One multiplication per column orbit, whose output factor sums over the orbit, computes the 7 row-orbit products independently. The unit rank is
+- **Packet and coordinate-8 refinement.** The 28 rows form 7 free Z4-orbits, with Möbius corrections on 36 sunflower kernels. Coordinate 8 is fixed by Z4; splitting its ordinary labels into `{1}` and centered `{2, …, q}` preserves Z4 equivariance while exposing additional pair-(0, 2) output-mode relations (`1,883` kept refined patterns from `2,311` nonzero initial patterns).
+- **Odd input character and gauged cancellations.** Using χ(g) = −1 on both inputs and the even output character leaves input factors equivariant and removes generator-fixed columns, giving closed-form unit rank
 
   ```text
-  R7(q) = (q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 131q^4 + 2q^3 + 2q^2) / 4.
+  R7_odd,split8(q) = (q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 123q^4 - 10q^3 - 2q^2) / 4.
   ```
 
-- **Sizes.** Strassen's 7 products give ⟨2q³⟩ with R7(q) multiplications for q = 8, …, 20; sizes 4,096, 5,324 and 13,500 are padded from these. Sizes 10,976 and 16,384 place 7 units inside Strassen squared. Size 32,768 places 48 units inside ⟨8;336⟩. Size 65,536 is padded from 24·14³ = 65,856 and uses 929 units inside the original rank-6,503 size-24 scheme, with no remainder products.
-
-The original relation data does not depend on q. It was replayed exactly over Q for every q from 2 to 25 before inclusion; `cwschemes verify <n> --exact` replays it again at the q in use. The new size-1,024 certificate has separate exact q=2 and q=8 witnesses and rejects other q values.
-
-The size-1,024 entry uses the character χ(g) = −1 for a generator of Z4 on both inputs and the even output character. Columns fixed by g have zero input factors over Q, removing q³ + q² products. The new compression deletes **304** patterns rather than 300, changing the q⁴ coefficient in the displayed numerator from **131 to 127**. At q=8 the odd unit has rank **198,679,264**. A permuted and signed Strassen embedding makes another **72** input factors vanish, lowering the square count to **198,679,192**. See [the new compression and its finite-q proof scope](docs/c4_recompression.md) and [the real-character argument](docs/real_character.md). These arguments give rational schemes; characteristic-2 results are reported separately.
-
-The October 2026 update rebuilds the older large recipes with the current certified leaves and adds two independently audited power-21 supports. Recursive recipes retain the exact primitive versions used by their coefficient generators. The update and its validation scope are recorded in [checks/oct10.json](checks/oct10.json) and [verification.md](docs/verification.md).
+  In the permuted and signed Strassen square embedding (`⟨2q³⟩` for q = 8, …, 20, plus padded 4,096, 5,324 and 13,500), an additional **q² + q** input factors vanish over Q (`72` at q = 8, `306` at q = 17), lowering `1,024` to **198,674,072** and `9,826` to **74,352,302,450**.
+- **Composite outers.** Sizes `10,976` and `16,384` place 7 refined odd units inside Strassen squared; `32,768` places 48 units inside `⟨8;336⟩`; `65,536` (padded from `24·14³ = 65,856`) places 927 refined odd units inside current LITA size 24 (rank 6,488, with 1 remainder call swapped into unit batches). See [c4_recompression.md](docs/c4_recompression.md) and [real_character.md](docs/real_character.md).
 
 ## Explicit schemes at sizes 14, 16 and 32
 
@@ -144,14 +133,14 @@ cwschemes verify 16384
 cwschemes verify --all
 
 # Reconstruct and check the rational compression relations as well:
-cwschemes verify 432 --exact --threads 1
+cwschemes verify 1024 --exact
 cwschemes verify 9826 --exact
 
-# S_q packet entries: support audit, local identity, sampled exact packet entries:
-cwschemes verify 13947137604
+# S_q packet entries: support audit, zero trimming, local identity, sampled packet entries:
+cwschemes verify 6597069766656
 
-# Verify the new threshold and its compressed recursive leaf:
-cwschemes verify 528108169 --exact
+# Verify the strict sub-2.7 threshold and its compressed recursive leaf:
+cwschemes verify 240619650 --exact
 ```
 
 The default checks are not advertised as a full reduction proof. `--exact` additionally rebuilds the relevant Gram matrices and checks the supplied rational relations, or checks exact zero-factor norms. It can take substantially longer and use more memory, especially for refined orbit proofs. Verification must run without Python's `-O` flag.
@@ -160,16 +149,16 @@ The mathematical basis consists of the documented CW identities, group projectio
 
 ## Literature comparison
 
-The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, the rectangular compositions as triangles and the Strassen-tensor packet schemes as hexagons. All 100 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
+The main figure displays our saved R/C schemes; the three explicit small schemes are drawn as diamonds, the Z4-quotient schemes as squares, the rectangular compositions as triangles, the Strassen-tensor packet schemes as hexagons and the graded schemes as stars. All 305 saved points beat their stated pinned comparison in [counts.csv](comparisons/counts.csv). The catalogue does not claim globally optimal ranks or independently established records.
 
 - Up to 16,384, the comparison data uses the same product, padding and scalar-peeling closure for published constructions alone and for published constructions augmented with our saved schemes.
 - At larger sizes, each comparison is one explicit published construction, not an exhaustive literature optimum.
 
-The comparison pins [LITA](https://github.com/khoruzhii/lita/tree/c1dd9225df98676e385b53ae7517ff2ea0ec5779) at rank **14,197** for size 32 and includes its even and applicable odd families; the explicit size-14, 16 and 32 entries are one below these pinned counts. Other sources are the [Lille catalogue](https://fmm.univ-lille.fr/) and the documented [Schwartz–Zwecher recompression](https://arxiv.org/abs/2508.01748). Existing scheme certificates retain the older primitive versions with which they were constructed.
+The comparison pins [LITA](https://github.com/khoruzhii/lita/tree/c1dd9225df98676e385b53ae7517ff2ea0ec5779) at rank **14,197** for size 32 and includes its even and applicable odd families; the explicit size-14, 16 and 32 entries are one below these pinned counts. Other sources are the [Lille catalogue](https://fmm.univ-lille.fr/) and the documented [Schwartz–Zwecher recompression](https://arxiv.org/abs/2508.01748). Existing scheme certificates retain the exact primitive versions with which they were constructed.
 
 The saved points have [exact comparison recipes](comparisons/recipes.json). [Source revisions](comparisons/sources.json), [all point counts](comparisons/counts.csv), and the [dense finite closure](comparisons/closure.csv) are included.
 
-To rebuild the figure from these pinned inputs:
+To rebuild the figures from these pinned inputs:
 
 ```bash
 python -m pip install '.[plot]'

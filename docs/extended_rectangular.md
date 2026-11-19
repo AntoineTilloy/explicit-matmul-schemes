@@ -135,3 +135,34 @@ earliest stated reference when successive searches improve the same size.
 | 345 | 11,495,276 | 11,485,824 | 9,452 |
 | 369 | 13,538,593 | 13,538,592 | 1 |
 | 370 | 13,846,063 | 13,757,428 | 88,635 |
+
+## L = 1,024 closure with generalized uneven and serendipitous blocks
+
+Extending the canonical rectangular dynamic program from dimension 256 to
+**1,024** (`179,481,600` canonical triples, converging at pass 5 across
+`641,243,628` DAG nodes) adds three exact rational operations to
+`exact-rectangular-recipe-v1`:
+
+- **`general_uneven`**: partitions each axis of any exact sparse scheme
+  `⟨A, B, C⟩` (`⟨3⟩:23`, `⟨4⟩:48`, `⟨5⟩:93`, `⟨6⟩:153`, `⟨14⟩:1593`, `⟨16⟩:2236`,
+  and narrow rectangular bases) into nonuniform block sizes `B_0, B_1, B_2`;
+  zero-padding each sub-block to top-left restricts term `t` to the minimum of
+  maximum active block sizes across its incident factor supports.
+- **`serendipitous`**: decomposes small exact schemes into collinear 1D bud
+  blocks (verified over Q against the exact Brent equations at load time) and
+  evaluates enlarged rectangular subproblems `(N_b p_0, M_b p_1, P_b p_2)` from
+  the live `L = 1,024` table.
+- **`lita_odd_current`**: indexed access to `sources/lita_odd_current.py` for
+  all odd `N >= 9` without materializing `O(N^3)` CSR arrays.
+
+Combined with 19 multi-prime CRT-certified rational rectangular primitives and
+re-closing the four remainder blocks of `685`/`686` (`70,153,048 -> 70,079,906`),
+this improves **217 square sizes in `81 .. 1,010`** (166 by more than one
+product), including 17 previously saved entries (`125, 146, 154, 162, 242, 258,
+266, 290, 291, 306, 314, 329, 330, 345, 370, 685, 686`). Top relative gains
+include **488** (`29,249,283 -> 28,101,649`, **3.92%**), **844**
+(`125,566,678 -> 122,067,978`, **2.79%**) and **732**
+(`85,303,764 -> 83,038,886`, **2.66%**). All 217 packaged certificates pass
+end-to-end dense random matrix multiplication modulo `2^31 - 1` with exact
+runtime multiplication count checks; full counts and receipts are in
+[checks/nov16_below1024.json](../checks/nov16_below1024.json).

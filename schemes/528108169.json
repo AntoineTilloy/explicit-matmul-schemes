@@ -1,13 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "528108169",
-  "rank": "355919505257948041899273",
+  "rank": "355833665201619305486442",
   "field": "Q",
-  "root_object": "40127df42d2cd59113dc426d825e6f5521f440c757382e37278bfe74fe914946",
-  "effective_exponent": 2.6999999998279245,
+  "root_object": "426ce8ab500252dbf09ab1e6a2ec9b0601cdb7304240edee137703291a9f407b",
+  "effective_exponent": 2.6999879903862527,
   "provenance": {
-    "construction": "Exact finite CW composition update (October 2026): packed rebuild; certified Z4-quotient leaves",
-    "strict_sub27_threshold": true
+    "construction": "Exact finite CW composition: explicit size-32 outer (rank 14,196) with 9 power-18 packets (q=16, 1,569 rows) and 75 improved size-16,777,216 leaves"
   },
   "verification": "Exact finite witnesses and rational coefficient access included; independent support/composition checks recorded in checks/oct10.json. See docs/verification.md for check scope."
 }

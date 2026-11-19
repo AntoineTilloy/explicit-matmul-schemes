@@ -1,0 +1,13 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "10847773692",
+  "rank": "999890642088501413992105581",
+  "field": "Q",
+  "root_object": "f2e150c4a833e5178d35c12b26b793cea91b981c31724ae424f67fe4af004275",
+  "effective_exponent": 2.6904869038546475,
+  "provenance": {
+    "construction": "Strassen-tensor S_q packets: current LITA size-28 outer scheme (rank 9,846) in 1 boundary-pruned zero-trimmed power-27 S_9 packet (from 10,172-product RS support)",
+    "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class (RS(36)=372, RS(84)=1653, RS(126)=3024) with zero-trimmed-v1"
+  },
+  "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
+}

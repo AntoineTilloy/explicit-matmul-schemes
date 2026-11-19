@@ -1,13 +1,13 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "242",
-  "rank": "4255382",
+  "rank": "4246597",
   "field": "Q",
-  "root_object": "e153c31abfb05b604fc0ef99b561df1624c40b371ad581bddc4082f7c18ce419",
-  "effective_exponent": 2.7808103961457586,
+  "root_object": "e9d32c544889fe80c216189198122e95e3b82d780c2d6aa9eb9717e9086ff705",
+  "effective_exponent": 2.780433897355973,
   "provenance": {
-    "construction": "Asymmetric rectangular Strassen composition with recursive feedback",
-    "primitive_revision": "LITA 472a79fbc8248423a97bebb3aacbc89e769b9b3e"
+    "construction": "L=1024 rational rectangular, generalized uneven, and serendipitous block closure (root: rect_sq)",
+    "primitive_revision": "LITA even 472a79fbc8248423a97bebb3aacbc89e769b9b3e + unbounded LITA odd + CRT-certified exact Q corpus"
   },
-  "verification": "Exact composition DAG, hash-checked rational primitive coefficients, exhaustive asymmetric wiring checks, and documented primitive identity basis. See docs/rectangular.md."
+  "verification": "100% C++ multi-prime CRT leaf proof, complete 641M-node DAG audit, and end-to-end mod-(2^31-1) matmul evaluation. See checks/nov16_below1024.json."
 }

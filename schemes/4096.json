@@ -1,12 +1,12 @@
 {
   "format": "cwschemes-catalogue-entry-v1",
   "n": "4096",
-  "rank": "8551535876",
+  "rank": "8551471812",
   "field": "Q",
-  "root_object": "37ebcde30a38ec4fc0e3aa7fdfe1c20c0a79e5b0499e04cab66231dbcea46326",
-  "effective_exponent": 2.749461367390499,
+  "root_object": "0071a292cd5a36f5e5deca46b5b88da5ac1c1edc2f6e8ae5ddd6d0fcaf546faf",
+  "effective_exponent": 2.749460466722258,
   "provenance": {
-    "construction": "Padding of the size-4,394 Z4-quotient scheme (q = 13)"
+    "construction": "Padding of the size-4,394 Z4-quotient CW packet, power 9 at q=13, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 182 exact square-only cancellations after a permuted signed Strassen embedding"
   },
-  "verification": "Exact witnesses included; Z4 relation certificates replayed exactly over Q by cwschemes verify --exact; see docs/verification.md."
+  "verification": "Exact finite-q coordinate-8 refined rational relations, lazy coefficient access, outer MM2 identity and all 182 physical zero-factor polynomials replayed by cwschemes verify."
 }

@@ -1,0 +1,13 @@
+{
+  "format": "cwschemes-catalogue-entry-v1",
+  "n": "27113235502176",
+  "rank": "999989287389515119218241063598638155",
+  "field": "Q",
+  "root_object": "8211c7525362bdd818af644786a58e5f9c1de1d33ef6e9831e4ed90ca546ca9f",
+  "effective_exponent": 2.6799307192731727,
+  "provenance": {
+    "construction": "Strassen-tensor S_q packets: current LITA size-96 outer scheme (rank 323,156) in 1 boundary-pruned zero-trimmed power-36 S_9 packet (from 329,690-product Hill-112-cap RS support)",
+    "packet_support": "Tripartite Ruzsa-Szemeredi sets per weight class using Hill's 112-cap in F_3^6 (RS(729)=81,648) and zero-trimmed-v1"
+  },
+  "verification": "Exact finite S_q packet supports and rational coefficient access included; cwschemes verify replays the support audit, exact local identity, packet counts and sampled exact packet entries. Independent checks recorded in checks/sq/. See docs/verification.md for check scope."
+}

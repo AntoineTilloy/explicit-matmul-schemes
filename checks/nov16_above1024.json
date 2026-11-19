@@ -1,0 +1,1446 @@
+{
+  "campaign": "nov16_above1024",
+  "coefficient_field": "Q",
+  "counts": {
+    "baseline_catalogue_entries": 100,
+    "staged_catalogue_entries": 105,
+    "entries_below_1024_untouched": 58,
+    "entries_ge_1024_total": 47,
+    "existing_entries_strictly_improved": 36,
+    "existing_graded_entries_replaced": 2,
+    "new_milestone_entries_added": 5,
+    "unchanged_entries_ge_1024": [
+      1370,
+      1372,
+      2025,
+      2048
+    ]
+  },
+  "headline_records": {
+    "n_1024": {
+      "n": "1024",
+      "old_rank": "198679192",
+      "new_rank": "198674072",
+      "delta_rank": "-5120",
+      "relative_change_pct": -0.002577,
+      "old_exponent": 2.756586554,
+      "new_exponent": 2.756582836,
+      "delta_exponent": -3.718e-06,
+      "old_root_object": "6283c2eb285ee6322bf142bfe0ed06cfb86956f37a10de4e821b5cb5a7022a0f",
+      "new_root_object": "979cf3b005640311502cc0ba82a64190a1c442cc42d7e9bc3c3955acff6fef98",
+      "construction": "Z4-quotient CW packet, power 9 at q=8, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 72 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    "best_exponent_le_16384": {
+      "n": "9826",
+      "old_rank": "74352484826",
+      "new_rank": "74352302450",
+      "delta_rank": "-182376",
+      "relative_change_pct": -0.000245,
+      "old_exponent": 2.723013418,
+      "new_exponent": 2.723013151,
+      "delta_exponent": -2.67e-07,
+      "old_root_object": "4ae6feb1833ec17332eee456bb05feeb9ad10c1c53049fa244bd6b682625ba03",
+      "new_root_object": "ea1b1a830e806dbf119fa3a60ee7bacb7a492256fc1596b8dcf41a8acb0264c2",
+      "construction": "Z4-quotient CW packet, power 9 at q=17, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 306 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    "n_65536": {
+      "n": "65536",
+      "old_rank": "14360405808994",
+      "new_rank": "14329410937002",
+      "delta_rank": "-30994871992",
+      "relative_change_pct": -0.215836,
+      "old_exponent": 2.73169761,
+      "new_exponent": 2.731502784,
+      "delta_exponent": -0.000194826,
+      "old_root_object": "1c2c12626b0330734b8eb9ca7ddcc7b8417f635a22399ffbf8ddb7e1d19daac1",
+      "new_root_object": "514558bbdf438f253e3d07d8d97ff9c457b2ea98f0e5cba578880d026e1b939e",
+      "construction": "Z4-quotient CW composition: current LITA size-24 outer (rank 6,488) with 927 coordinate-8 refined odd-character Z4 units (q=14)"
+    },
+    "n_8388608": {
+      "n": "8388608",
+      "old_rank": "6003785411879964840",
+      "new_rank": "5840735512742068224",
+      "delta_rank": "-163049899137896616",
+      "relative_change_pct": -2.715785,
+      "old_exponent": 2.712199049,
+      "new_exponent": 2.71047199,
+      "delta_exponent": -0.001727059,
+      "old_root_object": "f0177d4022a78010f9f40368804cc4be28154bf1f97e679c3ebb94036ddc4a3c",
+      "new_root_object": "fba1f62dac1b36e9cc8dcd24d3ca2bf20afb9223dba24f304ca15e5c283e4c85",
+      "construction": "Strassen-tensor S_q packets: explicit size-32 outer scheme (14,196 products) covered with zero waste by 39 zero-trimmed power-18 S_8 packets of 364 independent products (RS(20)=146)"
+    },
+    "smallest_strict_sub_2_7": {
+      "previous_n": "528108169",
+      "previous_rank": "355919505257948041899273",
+      "new_cropped_n": "240619650",
+      "new_natural_n": "240945152",
+      "new_rank": "42618086121773987519250",
+      "new_natural_exponent": 2.699810881,
+      "size_reduction_factor": 2.194784
+    },
+    "best_exponent_le_1_4e10": {
+      "previous_best_n": "13947137604",
+      "previous_best_exponent": 2.6912189,
+      "improved_13947137604_rank": "1999777625038419124331158713",
+      "improved_13947137604_exponent": 2.69121414,
+      "new_smaller_n": "10847773692",
+      "new_smaller_rank": "999890642088501413992105581",
+      "new_smaller_exponent": 2.690486904
+    },
+    "best_exponent_below_10_pow_64": {
+      "n_6597069766656": {
+        "rank": "22527768312183649740712054999744512",
+        "effective_exponent": 2.679754846
+      },
+      "n_27113235502176": {
+        "rank": "999989287389515119218241063598638155",
+        "effective_exponent": 2.679930719
+      }
+    },
+    "smallest_strict_sub_2_65": {
+      "old_cropped": {
+        "n": "786394525415777912562924959695960473110997637822818876406180025577629",
+        "digits": 69,
+        "rank": "374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276",
+        "effective_exponent": 2.65,
+        "root_object": "5761c626c715fea4f12e21c1dc77a19a24e5fa38ae21afbcd68cece21122cbe6"
+      },
+      "old_natural": {
+        "n": "831816093760036377620756829334713144261054120811078790732663809376256",
+        "digits": 69,
+        "rank": "374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276",
+        "effective_exponent": 2.649062317,
+        "root_object": "1954e76c17354f15e1ed84ddbf0b98d76c15c1c23c17aed454bd497fcc74415d"
+      },
+      "new_cropped": {
+        "n": "58481954604699954390651197457640736657662025144749186797412271422",
+        "digits": 65,
+        "rank": "4291488768477930188119997595867713358415626323641259113571383993655225059698523903278879399177106477773277785507677161528544284181796738426159799199459802292779854449224900",
+        "effective_exponent": 2.65,
+        "root_object": "f4f2d6d1bfff5bdeea2e9dce1e438b8846eef6bd3fce85c3da7d86dbb003cd4b",
+        "size_reduction_factor": 13446.79
+      },
+      "new_natural": {
+        "n": "61824963926467154607577478621859448520988554355302234359653728256",
+        "digits": 65,
+        "rank": "4291488768477930188119997595867713358415626323641259113571383993655225059698523903278879399177106477773277785507677161528544284181796738426159799199459802292779854449224900",
+        "effective_exponent": 2.649012577,
+        "root_object": "bb748b3a87e2ddf68687e1b86722a48b7bcead8d5d0011490ea9081ff44cd27c",
+        "size_reduction_factor": 13454.37
+      },
+      "alternative_with_existing_catalogue_outers_only": {
+        "outer_n": "13947137604",
+        "puzzle": "AL23_7_keep22 (22-row subset of (23,7), optimal degree 411, t=10, q=6, 1 packet)",
+        "cropped_n": "326444462535208156151756217121690814483585258009898283424236260303923",
+        "natural_n": "345303505788799015002530541161802057342240415022676174276440028053504",
+        "natural_exponent": 2.649062297,
+        "size_reduction_factor": 2.41
+      }
+    }
+  },
+  "z4_coordinate8_refinement": {
+    "coordinates": [
+      8
+    ],
+    "closed_form_even_4R": [
+      1,
+      17,
+      122,
+      392,
+      493,
+      123,
+      -6,
+      2,
+      0,
+      0
+    ],
+    "closed_form_odd_4R": [
+      1,
+      17,
+      122,
+      392,
+      493,
+      123,
+      -10,
+      -2,
+      0,
+      0
+    ],
+    "unit_saving_formula": "2 * (q + 1) * q^3 = 2*q^4 + 2*q^3 over unsplit odd Z4 unit (and -5,120 at q=8 over baseline q=8-specific Z4 unit)",
+    "gauged_square_extra_saving_formula": "q^2 + q square-only zero-factor columns",
+    "certified_q_values": [
+      3,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "deletion_proof_logical_path": "z4q/deletions-split8-17aa2a1bf25f76d9.json",
+    "relation_logical_paths": {
+      "3": "z4q/relations-split8-q3-3285ce725baaa5a6.json",
+      "8": "z4q/relations-split8-q8-7e64d8fd9be9fa64.json",
+      "9": "z4q/relations-split8-q9-b910a10b2656125c.json",
+      "10": "z4q/relations-split8-q10-fc9b03fe52c49b28.json",
+      "11": "z4q/relations-split8-q11-372acc59975788ca.json",
+      "12": "z4q/relations-split8-q12-844b786e2240dae9.json",
+      "13": "z4q/relations-split8-q13-1e121292c67fc928.json",
+      "14": "z4q/relations-split8-q14-0076352a912400e1.json",
+      "15": "z4q/relations-split8-q15-c1608bae79b79cc0.json",
+      "16": "z4q/relations-split8-q16-f7dff89b11afb5d9.json",
+      "17": "z4q/relations-split8-q17-2b33530e5f428cc1.json",
+      "18": "z4q/relations-split8-q18-a8aaa92d9dd4f84f.json",
+      "19": "z4q/relations-split8-q19-20127ad2aadd65b8.json",
+      "20": "z4q/relations-split8-q20-b9a072a3af41bbc4.json"
+    }
+  },
+  "refined_24row_m3": [
+    {
+      "n": 2916,
+      "q": 9,
+      "old_rank": 3236239494,
+      "new_rank": 3235458492,
+      "saved": 781002,
+      "new_pkt_rank": 1617729246,
+      "sha256": "7104b3dd91a82381d977bc11bdc41954aab494fd85951f32a34b33246d4f17bb",
+      "file": "/mnt/raid0/matmul_nov16/above1024/work/refined_m3_24/refined_q9_7104b3dd91a82381.json"
+    },
+    {
+      "n": 4000,
+      "q": 10,
+      "old_rank": 7375060000,
+      "new_rank": 7373878600,
+      "saved": 1181400,
+      "new_pkt_rank": 3686939300,
+      "sha256": "bf9a8fa5cd1c97680c7b50db2aec17f5e334b1a6b57e7da6baadfd8d80c2aca5",
+      "file": "/mnt/raid0/matmul_nov16/above1024/work/refined_m3_24/refined_q10_bf9a8fa5cd1c9768.json"
+    },
+    {
+      "n": 6912,
+      "q": 12,
+      "old_rank": 31356937728,
+      "new_rank": 31354515936,
+      "saved": 2421792,
+      "new_pkt_rank": 15677257968,
+      "sha256": "9fbf714a86b36500e26839e3fb47c56cfa4fb8035320949057def1af4250521d",
+      "file": "/mnt/raid0/matmul_nov16/above1024/work/refined_m3_24/refined_q12_9fbf714a86b36500.json"
+    }
+  ],
+  "rebuilt_sq_supports": {
+    "12": {
+      "N": 12,
+      "m": 4,
+      "M": 38,
+      "weight_classes": [
+        1,
+        9,
+        18,
+        9,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "4": "4:base(gen_4.txt)",
+        "6": "6:base(gen_6.txt)"
+      },
+      "audit_seconds": 0.0001224999996338738,
+      "zero_trimmed_counts": [
+        1,
+        12,
+        66,
+        219,
+        395,
+        273,
+        26,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 0.0006155919982120395,
+      "ranks_trimmed": {
+        "6": "13469213952",
+        "7": "67554996992",
+        "8": "279265673216",
+        "9": "992298132144",
+        "10": "3121256000000",
+        "11": "8880466808312",
+        "12": "23228441321472"
+      },
+      "ranks_naive": {
+        "6": "13841287201",
+        "7": "68719476736",
+        "8": "282429536481",
+        "9": "1000000000000",
+        "10": "3138428376721",
+        "11": "8916100448256",
+        "12": "23298085122481"
+      }
+    },
+    "15": {
+      "N": 15,
+      "m": 5,
+      "M": 114,
+      "weight_classes": [
+        1,
+        12,
+        44,
+        44,
+        12,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "5": "5:base(cor_5.txt)",
+        "10": "10:base(genfull_10.txt)"
+      },
+      "audit_seconds": 0.0001602280008228263,
+      "zero_trimmed_counts": [
+        1,
+        15,
+        105,
+        455,
+        1356,
+        2544,
+        2335,
+        567,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 0.0008538000001863111,
+      "ranks_trimmed": {
+        "6": "4677718802688",
+        "7": "34889405783344",
+        "8": "204849253711872",
+        "9": "996796500671034",
+        "10": "4168431700000000",
+        "11": "15384860142562548",
+        "12": "51134239823560704"
+      },
+      "ranks_naive": {
+        "6": "4747561509943",
+        "7": "35184372088832",
+        "8": "205891132094649",
+        "9": "1000000000000000",
+        "10": "4177248169415651",
+        "11": "15407021574586368",
+        "12": "51185893014090757"
+      }
+    },
+    "18": {
+      "N": 18,
+      "m": 6,
+      "M": 364,
+      "weight_classes": [
+        1,
+        18,
+        90,
+        146,
+        90,
+        18,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "6": "6:base(gen_6.txt)",
+        "15": "15:base(lib_15.txt)",
+        "20": "20:base(rs_m20_146_lns_r0.txt)"
+      },
+      "audit_seconds": 0.0005638419988827081,
+      "zero_trimmed_counts": [
+        1,
+        18,
+        153,
+        816,
+        3060,
+        8508,
+        16524,
+        18658,
+        7771,
+        405,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 0.0015347930002462817,
+      "ranks_trimmed": {
+        "6": "1615667499661824",
+        "7": "17941923572854344",
+        "8": "149762449044668416",
+        "9": "998711964132041394",
+        "10": "5555547915000000000",
+        "11": "26610045977877100684",
+        "12": "112418519054436532224"
+      },
+      "ranks_naive": {
+        "6": "1628413597910449",
+        "7": "18014398509481984",
+        "8": "150094635296999121",
+        "9": "1000000000000000000",
+        "10": "5559917313492231481",
+        "11": "26623333280885243904",
+        "12": "112455406951957393129"
+      }
+    },
+    "21": {
+      "N": 21,
+      "m": 7,
+      "M": 1124,
+      "weight_classes": [
+        1,
+        22,
+        168,
+        371,
+        371,
+        168,
+        22,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "7": "7:base(cor_7.txt)",
+        "21": "21:base(rs_m21_168_z3_part3.txt)",
+        "35": "35:base(rs_m35_371_z7_part3.txt)"
+      },
+      "audit_seconds": 0.0019263690010120627,
+      "zero_trimmed_counts": [
+        1,
+        21,
+        210,
+        1330,
+        5985,
+        20349,
+        53884,
+        106696,
+        138446,
+        84154,
+        10995,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 0.0035728040002140915,
+      "ranks_trimmed": {
+        "6": "556161353235818496",
+        "7": "9205073790564563149",
+        "8": "109309936967899676672",
+        "9": "999465853499490406959",
+        "10": "7398013313500000000000",
+        "11": "45996881785829448047321",
+        "12": "247037262331496066187264"
+      },
+      "ranks_naive": {
+        "6": "558545864083284007",
+        "7": "9223372036854775808",
+        "8": "109418989131512359209",
+        "9": "1000000000000000000000",
+        "10": "7400249944258160101211",
+        "11": "46005119909369701466112",
+        "12": "247064529073450392704413"
+      }
+    },
+    "24": {
+      "N": 24,
+      "m": 8,
+      "M": 3115,
+      "weight_classes": [
+        1,
+        32,
+        259,
+        728,
+        1075,
+        728,
+        259,
+        32,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "8": "8:base(genfull_8.txt)",
+        "28": "28:base(rs_m28_259_z7_part3.txt)",
+        "56": "56:base(rs_m56_728_dset_Z2^3xZ7.txt)",
+        "70": "70:base(chain_70_3_r4.txt)"
+      },
+      "audit_seconds": 0.006561603999216459,
+      "zero_trimmed_counts": [
+        1,
+        24,
+        276,
+        2024,
+        10626,
+        42504,
+        134596,
+        343052,
+        681790,
+        954616,
+        738980,
+        172549,
+        3325,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 0.019497204000799684,
+      "ranks_trimmed": {
+        "6": "191079160355808718848",
+        "7": "4717100123524133887857",
+        "8": "79725182210479591784448",
+        "9": "999742256229257292533715",
+        "10": "9848389342815000000000000",
+        "11": "79490810232288865963149333",
+        "12": "542776793472691691115773952"
+      },
+      "ranks_naive": {
+        "6": "191581231380566414401",
+        "7": "4722366482869645213696",
+        "8": "79766443076872509863361",
+        "9": "1000000000000000000000000",
+        "10": "9849732675807611094711841",
+        "11": "79496847203390844133441536",
+        "12": "542800770374370512771595361"
+      }
+    },
+    "27": {
+      "N": 27,
+      "m": 9,
+      "M": 10172,
+      "weight_classes": [
+        1,
+        36,
+        372,
+        1653,
+        3024,
+        3024,
+        1653,
+        372,
+        36,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "9": "9:base(ap_9.txt)",
+        "36": "36:base(rs_m36_372_z12_part3.txt)",
+        "84": "84:base(rs_m84_1653_ext_uf4.txt)",
+        "126": "(6:base(gen_6.txt) x 21:base(rs_m21_168_z3_part3.txt))"
+      },
+      "audit_seconds": 0.03505358500115108,
+      "zero_trimmed_counts": [
+        1,
+        27,
+        351,
+        2925,
+        17550,
+        80730,
+        296010,
+        888009,
+        2203872,
+        4426602,
+        6690673,
+        6434793,
+        2606992,
+        180693,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 0.16756655700010015,
+      "ranks_trimmed": {
+        "6": "65618997774264990056448",
+        "7": "2416530145622988813169458",
+        "8": "58136280874754460899868672",
+        "9": "999893897694878591379743460",
+        "10": "13109312262291300000000000000",
+        "11": "137366844309314512575749049918",
+        "12": "1192515758321571502928122871808"
+      },
+      "ranks_naive": {
+        "6": "65712362363534280139543",
+        "7": "2417851639229258349412352",
+        "8": "58149737003040059690390169",
+        "9": "1000000000000000000000000000",
+        "10": "13109994191499930367061460371",
+        "11": "137370551967459378662586974208",
+        "12": "1192533292512492016559195008117"
+      }
+    },
+    "30": {
+      "N": 30,
+      "m": 10,
+      "M": 32685,
+      "weight_classes": [
+        1,
+        44,
+        540,
+        2880,
+        7392,
+        10971,
+        7392,
+        2880,
+        540,
+        44,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "10": "10:base(genfull_10.txt)",
+        "45": "(3:base(cor_3.txt) x 15:base(lib_15.txt))",
+        "120": "(8:base(genfull_8.txt) x 15:base(lib_15.txt))",
+        "210": "(10:base(genfull_10.txt) x 21:base(rs_m21_168_z3_part3.txt))",
+        "252": "252:base(lib_252.txt)"
+      },
+      "audit_seconds": 0.18919596700106922,
+      "zero_trimmed_counts": [
+        1,
+        30,
+        435,
+        4060,
+        27405,
+        142506,
+        593775,
+        2035800,
+        5852731,
+        14232917,
+        28857156,
+        46295691,
+        52500570,
+        32961316,
+        5815582,
+        82169,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "trim_seconds": 3.217742280001403,
+      "ranks_trimmed": {
+        "6": "22522864948440773895880704",
+        "7": "1237627031916976962324786534",
+        "8": "42387035789640198372823400448",
+        "9": "999959146151247170832830459256",
+        "10": "17449079754449589000000000000000",
+        "11": "237374199988529645356735694308914",
+        "12": "2619983779733110907003075542646784"
+      },
+      "ranks_naive": {
+        "6": "22539340290692258087863249",
+        "7": "1237940039285380274899124224",
+        "8": "42391158275216203514294433201",
+        "9": "1000000000000000000000000000000",
+        "10": "17449402268886407318558803753801",
+        "11": "237376313799769806328950291431424",
+        "12": "2619995643649944960380551432833049"
+      }
+    },
+    "36": {
+      "N": 36,
+      "m": 12,
+      "M": 329690,
+      "weight_classes": [
+        1,
+        60,
+        1026,
+        7785,
+        29290,
+        82656,
+        88054,
+        82656,
+        29290,
+        7785,
+        1026,
+        60,
+        1
+      ],
+      "recipes": {
+        "1": "1:base(exact)",
+        "12": "12:base(s12_0.json)",
+        "66": "(1:base(exact) + (1:base(exact) + (8:base(genfull_8.txt) x 8:base(genfull_8.txt))))",
+        "220": "(4:base(gen_4.txt) + (8:base(genfull_8.txt) x 27:base(cap_3.txt)))",
+        "495": "(15:base(lib_15.txt) + (20:base(rs_m20_146_lns_r0.txt) x 24:base(y24_1.json)))",
+        "792": "((3:base(cor_3.txt) x 21:base(rs_m21_168_z3_part3.txt)) + 729:base(cap_6_112.txt))",
+        "924": "(3:base(cor_3.txt) + ((8:base(genfull_8.txt) x 24:base(y24_1.json)) + 729:base(cap_6_112.txt)))"
+      },
+      "audit_seconds": 25.577959559999726
+    }
+  },
+  "optimal_puzzle_gradings": {
+    "5_4": {
+      "status": "OPTIMAL",
+      "degree": 18,
+      "bound": 18.0,
+      "edges": 46,
+      "bad_edges": 41,
+      "seconds": 0.020928087000356754
+    },
+    "8_5": {
+      "status": "OPTIMAL",
+      "degree": 47,
+      "bound": 47.0,
+      "edges": 147,
+      "bad_edges": 139,
+      "seconds": 0.007694065999203303
+    },
+    "14_6": {
+      "status": "OPTIMAL",
+      "degree": 203,
+      "bound": 203.0,
+      "edges": 535,
+      "bad_edges": 521,
+      "seconds": 0.031228862000716617
+    },
+    "23_7": {
+      "status": "OPTIMAL",
+      "degree": 1056,
+      "bound": 1056.0,
+      "edges": 1775,
+      "bad_edges": 1752,
+      "seconds": 0.13550224599930516
+    },
+    "35_8": {
+      "status": "OPTIMAL",
+      "degree": 3413,
+      "bound": 3413.0,
+      "edges": 4597,
+      "bad_edges": 4562,
+      "seconds": 0.33186965599998075
+    },
+    "23_7_keep22": {
+      "status": "OPTIMAL",
+      "keep_k": 22,
+      "degree": 411,
+      "bound": 411.0,
+      "seconds": 1.3816475359999458
+    },
+    "23_7_keep21": {
+      "status": "OPTIMAL",
+      "keep_k": 21,
+      "degree": 210,
+      "bound": 210.0,
+      "seconds": 2.848834872000225
+    },
+    "23_7_keep20": {
+      "status": "OPTIMAL",
+      "keep_k": 20,
+      "degree": 137,
+      "bound": 137.0,
+      "seconds": 7.661653115000263
+    },
+    "35_8_keep34": {
+      "status": "OPTIMAL",
+      "keep_k": 34,
+      "degree": 1479,
+      "bound": 1479.0,
+      "seconds": 13.088373089000015
+    },
+    "35_8_keep33": {
+      "status": "OPTIMAL",
+      "keep_k": 33,
+      "degree": 949,
+      "bound": 949.0,
+      "seconds": 7.382094516000507
+    },
+    "35_8_keep32": {
+      "status": "FEASIBLE",
+      "keep_k": 32,
+      "degree": 789,
+      "bound": 10.0,
+      "seconds": 15.007489311999962
+    },
+    "14_6_keep13": {
+      "status": "FEASIBLE",
+      "keep_k": 13,
+      "degree": 75,
+      "bound": 0.0,
+      "seconds": 10.003506566999931
+    },
+    "14_6_keep12": {
+      "status": "FEASIBLE",
+      "keep_k": 12,
+      "degree": 32,
+      "bound": 0.0,
+      "seconds": 10.003419831999054
+    },
+    "14_6_keep11": {
+      "status": "FEASIBLE",
+      "keep_k": 11,
+      "degree": 18,
+      "bound": 0.0,
+      "seconds": 10.005873415999304
+    }
+  },
+  "improved_existing_entries": [
+    {
+      "n": "1024",
+      "old_rank": "198679192",
+      "new_rank": "198674072",
+      "delta_rank": "-5120",
+      "relative_change_pct": -0.002577,
+      "old_exponent": 2.756586554,
+      "new_exponent": 2.756582836,
+      "delta_exponent": -3.718e-06,
+      "old_root_object": "6283c2eb285ee6322bf142bfe0ed06cfb86956f37a10de4e821b5cb5a7022a0f",
+      "new_root_object": "979cf3b005640311502cc0ba82a64190a1c442cc42d7e9bc3c3955acff6fef98",
+      "construction": "Z4-quotient CW packet, power 9 at q=8, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 72 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "1458",
+      "old_rank": "485258526",
+      "new_rank": "485243046",
+      "delta_rank": "-15480",
+      "relative_change_pct": -0.00319,
+      "old_exponent": 2.745461088,
+      "new_exponent": 2.745456709,
+      "delta_exponent": -4.379e-06,
+      "old_root_object": "11bd667f9927b3c836cd21f815bdfd1251110d43558d9810e17daa682be9c89c",
+      "new_root_object": "253eff161b777f24193700e1fe9ba9378ccca58036851a8695f119518019a1e2",
+      "construction": "Z4-quotient CW packet, power 9 at q=9, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 90 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "2000",
+      "old_rank": "1090653050",
+      "new_rank": "1090629840",
+      "delta_rank": "-23210",
+      "relative_change_pct": -0.002128,
+      "old_exponent": 2.737838381,
+      "new_exponent": 2.737835581,
+      "delta_exponent": -2.8e-06,
+      "old_root_object": "4da5fc5683c98e6ca8ec45002312ec5205cf59a7a852aeca110665bcca091f9d",
+      "new_root_object": "bd77155dc6383c26c6c2a847894bf8b2d30e15dc0447c126b977163370cb7539",
+      "construction": "Z4-quotient CW packet, power 9 at q=10, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 110 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "2662",
+      "old_rank": "2288813615",
+      "new_rank": "2288780087",
+      "delta_rank": "-33528",
+      "relative_change_pct": -0.001465,
+      "old_exponent": 2.732566982,
+      "new_exponent": 2.732565125,
+      "delta_exponent": -1.857e-06,
+      "old_root_object": "c2466c7f6e69fc559d7cbbdbd097c6dc4b74a987f3d3c7b52ad9d71e7ba012a1",
+      "new_root_object": "1de14a07e8c1f5fba1bd255cd59145a850bee2b0dbd488e71480c815fb128ab3",
+      "construction": "Z4-quotient CW packet, power 9 at q=11, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 132 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "2916",
+      "old_rank": "3236239494",
+      "new_rank": "3235458492",
+      "delta_rank": "-781002",
+      "relative_change_pct": -0.024133,
+      "old_exponent": 2.744768792,
+      "new_exponent": 2.744738538,
+      "delta_exponent": -3.0253e-05,
+      "old_root_object": "83411ecc1552ff4971e99145a54646b4df123927509ff5bf61f4ab5e44aba911",
+      "new_root_object": "24bba083e66ed0f3d3ff4caf0624d2721fbaf74f86ad646b6fa8c3e4dc487d73",
+      "construction": "CW finite exact restriction and coordinate-refined rational composition (power 9, 24 rows, coordinates [6, 7, 8] at q=9)"
+    },
+    {
+      "n": "3456",
+      "old_rank": "4534212456",
+      "new_rank": "4534165500",
+      "delta_rank": "-46956",
+      "relative_change_pct": -0.001036,
+      "old_exponent": 2.72892487,
+      "new_exponent": 2.728923599,
+      "delta_exponent": -1.271e-06,
+      "old_root_object": "25eb0853554f827598470ef958ee3e6ca75503f17534b3353032cca829c0b4f3",
+      "new_root_object": "f5edef53195f60a7d4993deaa056ede37533da80cc6f1dbae40360c33f1b4ca9",
+      "construction": "Z4-quotient CW packet, power 9 at q=12, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 156 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "4000",
+      "old_rank": "7375060000",
+      "new_rank": "7373878600",
+      "delta_rank": "-1181400",
+      "relative_change_pct": -0.016019,
+      "old_exponent": 2.739478404,
+      "new_exponent": 2.739459089,
+      "delta_exponent": -1.9315e-05,
+      "old_root_object": "b181c1a3e0cb4544a22963c7b034c4ebe181c3974d89ff73a76d3fecc6108ec9",
+      "new_root_object": "d69dcb3ffd672ec58754c724e45b5f776a4e397785a24a4ade9cc2f421ef43be",
+      "construction": "CW finite exact restriction and coordinate-refined rational composition (power 9, 24 rows, coordinates [6, 7, 8] at q=10)"
+    },
+    {
+      "n": "4096",
+      "old_rank": "8551535876",
+      "new_rank": "8551471812",
+      "delta_rank": "-64064",
+      "relative_change_pct": -0.000749,
+      "old_exponent": 2.749461367,
+      "new_exponent": 2.749460467,
+      "delta_exponent": -9.01e-07,
+      "old_root_object": "37ebcde30a38ec4fc0e3aa7fdfe1c20c0a79e5b0499e04cab66231dbcea46326",
+      "new_root_object": "0071a292cd5a36f5e5deca46b5b88da5ac1c1edc2f6e8ae5ddd6d0fcaf546faf",
+      "construction": "Padding of the size-4,394 Z4-quotient CW packet, power 9 at q=13, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 182 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "4394",
+      "old_rank": "8551535876",
+      "new_rank": "8551471812",
+      "delta_rank": "-64064",
+      "relative_change_pct": -0.000749,
+      "old_exponent": 2.726441307,
+      "new_exponent": 2.726440414,
+      "delta_exponent": -8.93e-07,
+      "old_root_object": "4ee6254cc26ca45cf048ed76b474e537d50ab316aa5aa677a52f18b7f2812751",
+      "new_root_object": "5a46fa3fa285607c2b57abee7473f6ea156eceec9c032f62d60a817a6a0220fe",
+      "construction": "Z4-quotient CW packet, power 9 at q=13, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 182 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "5324",
+      "old_rank": "15457917986",
+      "new_rank": "15457832516",
+      "delta_rank": "-85470",
+      "relative_change_pct": -0.000553,
+      "old_exponent": 2.734433729,
+      "new_exponent": 2.734433085,
+      "delta_exponent": -6.44e-07,
+      "old_root_object": "cd8603016abd7d01c529c26a8d49b33d8b5285348d1c9269ecc0cbfd8f5daf6e",
+      "new_root_object": "933184fdf83b40f8ee78249db7738b24815a8db935617a22c8945a3dd2738e26",
+      "construction": "Padding of the size-5,488 Z4-quotient CW packet, power 9 at q=14, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 210 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "5488",
+      "old_rank": "15457917986",
+      "new_rank": "15457832516",
+      "delta_rank": "-85470",
+      "relative_change_pct": -0.000553,
+      "old_exponent": 2.724798784,
+      "new_exponent": 2.724798142,
+      "delta_exponent": -6.42e-07,
+      "old_root_object": "e24252e6ca782c6e79cb9fc336797d752629c5d20e28ce35ddc9a87f435427cc",
+      "new_root_object": "437be49b241df9abd2a6870cae1b37daf7ab0cc66c06b8ee160f2022a87ac266",
+      "construction": "Z4-quotient CW packet, power 9 at q=14, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 210 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "6750",
+      "old_rank": "26925869925",
+      "new_rank": "26925758085",
+      "delta_rank": "-111840",
+      "relative_change_pct": -0.000415,
+      "old_exponent": 2.723777052,
+      "new_exponent": 2.723776581,
+      "delta_exponent": -4.71e-07,
+      "old_root_object": "358129441d0c733daa1d79b7e20565e3aa7ed0e6443b1968e0ff03957d00ed10",
+      "new_root_object": "bc7085a239e77ec2e5171eac0b08ef83b4f790dcd1251dd855f27efcd79c4026",
+      "construction": "Z4-quotient CW packet, power 9 at q=15, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 240 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "6912",
+      "old_rank": "31356937728",
+      "new_rank": "31354515936",
+      "delta_rank": "-2421792",
+      "relative_change_pct": -0.007723,
+      "old_exponent": 2.733702325,
+      "new_exponent": 2.733693589,
+      "delta_exponent": -8.736e-06,
+      "old_root_object": "046292b51e5f1782141b10643295ad0e3ed4b8c13fd796f4b368bda4c2f65e90",
+      "new_root_object": "032b61086ff30a763480a1b026eba6f328cbaf91f7e06f3b40d5bd6537488683",
+      "construction": "CW finite exact restriction and coordinate-refined rational composition (power 9, 24 rows, coordinates [6, 7, 8] at q=12)"
+    },
+    {
+      "n": "8192",
+      "old_rank": "45396314240",
+      "new_rank": "45396170352",
+      "delta_rank": "-143888",
+      "relative_change_pct": -0.000317,
+      "old_exponent": 2.723219701,
+      "new_exponent": 2.72321935,
+      "delta_exponent": -3.52e-07,
+      "old_root_object": "05abc4795d7cb73c5a8e16a5aefd9c629ccaa2717da8ad3359cd9b33c0c31a77",
+      "new_root_object": "77777ada1b0126007edc2f7be5fcf5f5b794e7eaa3af58f2af40f73a40f09528",
+      "construction": "Z4-quotient CW packet, power 9 at q=16, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 272 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "9826",
+      "old_rank": "74352484826",
+      "new_rank": "74352302450",
+      "delta_rank": "-182376",
+      "relative_change_pct": -0.000245,
+      "old_exponent": 2.723013418,
+      "new_exponent": 2.723013151,
+      "delta_exponent": -2.67e-07,
+      "old_root_object": "4ae6feb1833ec17332eee456bb05feeb9ad10c1c53049fa244bd6b682625ba03",
+      "new_root_object": "ea1b1a830e806dbf119fa3a60ee7bacb7a492256fc1596b8dcf41a8acb0264c2",
+      "construction": "Z4-quotient CW packet, power 9 at q=17, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 306 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "10976",
+      "old_rank": "108205425902",
+      "new_rank": "108204827612",
+      "delta_rank": "-598290",
+      "relative_change_pct": -0.000553,
+      "old_exponent": 2.730949562,
+      "new_exponent": 2.730948967,
+      "delta_exponent": -5.94e-07,
+      "old_root_object": "2716381042cdb0572052e983f0d5a3016520504211722ce1e167127a77fd3635",
+      "new_root_object": "3ca54aafa7007f73eb77d5f72d2bb3e104651ed0e6ee65a31b39fb59067abdb1",
+      "construction": "Z4-quotient product composition: Strassen <2;7> tensored with the coordinate-8 refined, odd-character, Strassen-gauged size-5,488 Z4 scheme (q=14)"
+    },
+    {
+      "n": "11664",
+      "old_rank": "118666894266",
+      "new_rank": "118666666152",
+      "delta_rank": "-228114",
+      "relative_change_pct": -0.000192,
+      "old_exponent": 2.723074703,
+      "new_exponent": 2.723074497,
+      "delta_exponent": -2.05e-07,
+      "old_root_object": "f84220a51821589c88b4633f3826c14e81829cffd46415fd0507d1280554cb0a",
+      "new_root_object": "98ff666b71c5aa4054cf271f4b7c25afd51353933024e05ffe6ab7b3178be782",
+      "construction": "Z4-quotient CW packet, power 9 at q=18, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 342 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "13500",
+      "old_rank": "185035102571",
+      "new_rank": "185034820611",
+      "delta_rank": "-281960",
+      "relative_change_pct": -0.000152,
+      "old_exponent": 2.727928239,
+      "new_exponent": 2.727928079,
+      "delta_exponent": -1.6e-07,
+      "old_root_object": "fa048d65d18a3a74f7968ce65c30ebac097aac911648e3f4996af3c25f2894c6",
+      "new_root_object": "d5bc6b4c4d78ca33859a7178ac877aa9d1d24aba245364f02288111c6a7c8684",
+      "construction": "Padding of the size-13,718 Z4-quotient CW packet, power 9 at q=19, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 380 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "13718",
+      "old_rank": "185035102571",
+      "new_rank": "185034820611",
+      "delta_rank": "-281960",
+      "relative_change_pct": -0.000152,
+      "old_exponent": 2.723341112,
+      "new_exponent": 2.723340952,
+      "delta_exponent": -1.6e-07,
+      "old_root_object": "d0ee2ddbfd066ab20289169048c386d24ce763e3985ed634ad3a5ddac8644363",
+      "new_root_object": "759451c1cf194508694407b7714b3d4429725b37e08da7600f2382e7ff0821a1",
+      "construction": "Z4-quotient CW packet, power 9 at q=19, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 380 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "16000",
+      "old_rank": "282511644200",
+      "new_rank": "282511299380",
+      "delta_rank": "-344820",
+      "relative_change_pct": -0.000122,
+      "old_exponent": 2.723765354,
+      "new_exponent": 2.723765228,
+      "delta_exponent": -1.26e-07,
+      "old_root_object": "3541676b4414676999154e6fc848989883b4ad9e64ef1cd5b715f10356c7adf5",
+      "new_root_object": "904b552a68de7f047a081ef7c375e76a88739fda6500e73ef9e2d852600e52d3",
+      "construction": "Z4-quotient CW packet, power 9 at q=20, with coordinate-8 label refinement, Z4-invariant pair-(0,2) rational elimination, odd real input characters, and 420 exact square-only cancellations after a permuted signed Strassen embedding"
+    },
+    {
+      "n": "16384",
+      "old_rank": "317774199680",
+      "new_rank": "317773192464",
+      "delta_rank": "-1007216",
+      "relative_change_pct": -0.000317,
+      "old_exponent": 2.72922936,
+      "new_exponent": 2.729229033,
+      "delta_exponent": -3.27e-07,
+      "old_root_object": "ec4b8d24ea67555e49a4ce78f0e691f2ef60ef14a130f1d6f1b3e991f3006c22",
+      "new_root_object": "28d8192bedf082046a8793024a71af643f6592eb1fbd6c17e4dea37cbf4464ce",
+      "construction": "Z4-quotient product composition: Strassen <2;7> tensored with the coordinate-8 refined, odd-character, Strassen-gauged size-8,192 Z4 scheme (q=16)"
+    },
+    {
+      "n": "32768",
+      "old_rank": "2179023083520",
+      "new_rank": "2179016176896",
+      "delta_rank": "-6906624",
+      "relative_change_pct": -0.000317,
+      "old_exponent": 2.732454575,
+      "new_exponent": 2.73245427,
+      "delta_exponent": -3.05e-07,
+      "old_root_object": "1466e78fe4cbc821367e9e1b5903df58d788b63590a9c561d582ebe86029b085",
+      "new_root_object": "637f6c1224ce61f2cecec0a00c0b62fdf9e6b58425c666c2b7140e73c104cf59",
+      "construction": "Z4-quotient product composition: <4;48> tensored with the coordinate-8 refined, odd-character, Strassen-gauged size-8,192 Z4 scheme (q=16)"
+    },
+    {
+      "n": "65536",
+      "old_rank": "14360405808994",
+      "new_rank": "14329410937002",
+      "delta_rank": "-30994871992",
+      "relative_change_pct": -0.215836,
+      "old_exponent": 2.73169761,
+      "new_exponent": 2.731502784,
+      "delta_exponent": -0.000194826,
+      "old_root_object": "1c2c12626b0330734b8eb9ca7ddcc7b8417f635a22399ffbf8ddb7e1d19daac1",
+      "new_root_object": "514558bbdf438f253e3d07d8d97ff9c457b2ea98f0e5cba578880d026e1b939e",
+      "construction": "Z4-quotient CW composition: current LITA size-24 outer (rank 6,488) with 927 coordinate-8 refined odd-character Z4 units (q=14)"
+    },
+    {
+      "n": "524288",
+      "old_rank": "3556691386069563",
+      "new_rank": "3553475611226568",
+      "delta_rank": "-3215774842995",
+      "relative_change_pct": -0.090415,
+      "old_exponent": 2.718918801,
+      "new_exponent": 2.718850117,
+      "delta_exponent": -6.8684e-05,
+      "old_root_object": "7590c19b4e5b76fca3a656eb875ecf6ea0392f3a2ce94c2a139f1028e21d5ab7",
+      "new_root_object": "a078eb0e4783034e0e803755db898da9cd50cd304d7e9b2c1ea54addcb307dd0",
+      "construction": "Exact finite CW composition: <8;336> outer with 3 Pair-Schur power-12 packets (q=16, 109 rows) and 9 size-65,536 leaves"
+    },
+    {
+      "n": "1048576",
+      "old_rank": "23653834283894444",
+      "new_rank": "23632519764429112",
+      "delta_rank": "-21314519465332",
+      "relative_change_pct": -0.09011,
+      "old_exponent": 2.719646179,
+      "new_exponent": 2.719581149,
+      "delta_exponent": -6.503e-05,
+      "old_root_object": "37774375a2deb9f3c06d8e2720c88b544ef339568361acbea41dd141f1d68e68",
+      "new_root_object": "7ed9973e587c1ce46810ebde90233b4414cab5e93c969222188e2732107f2edd",
+      "construction": "Exact finite CW composition: explicit size-16 outer (rank 2,236) with 20 Pair-Schur power-12 packets (q=16, 109 rows) and 56 size-65,536 leaves"
+    },
+    {
+      "n": "8388608",
+      "old_rank": "6003785411879964840",
+      "new_rank": "5840735512742068224",
+      "delta_rank": "-163049899137896616",
+      "relative_change_pct": -2.715785,
+      "old_exponent": 2.712199049,
+      "new_exponent": 2.71047199,
+      "delta_exponent": -0.001727059,
+      "old_root_object": "f0177d4022a78010f9f40368804cc4be28154bf1f97e679c3ebb94036ddc4a3c",
+      "new_root_object": "fba1f62dac1b36e9cc8dcd24d3ca2bf20afb9223dba24f304ca15e5c283e4c85",
+      "construction": "Strassen-tensor S_q packets: explicit size-32 outer scheme (14,196 products) covered with zero waste by 39 zero-trimmed power-18 S_8 packets of 364 independent products (RS(20)=146)"
+    },
+    {
+      "n": "16777216",
+      "old_rank": "38520042228975289144",
+      "new_rank": "38504147814171982542",
+      "delta_rank": "-15894414803306602",
+      "relative_change_pct": -0.041263,
+      "old_exponent": 2.710926795,
+      "new_exponent": 2.710901986,
+      "delta_exponent": -2.4809e-05,
+      "old_root_object": "cbb79430e2925246f9fa8c95da2a9280bcd527f333f50710cea1a11c9830fc81",
+      "new_root_object": "d1f5f0969c35e5e6279b28705fe84554ef4a36559008d054a36c5c47a0333bb3",
+      "construction": "Exact finite CW composition: explicit size-16 outer (rank 2,236) with 5 Pair-Schur power-15 packets (q=16, 405 rows) and 211 size-1,048,576 leaves"
+    },
+    {
+      "n": "528108169",
+      "old_rank": "355919505257948041899273",
+      "new_rank": "355833665201619305486442",
+      "delta_rank": "-85840056328736412831",
+      "relative_change_pct": -0.024118,
+      "old_exponent": 2.7,
+      "new_exponent": 2.69998799,
+      "delta_exponent": -1.2009e-05,
+      "old_root_object": "40127df42d2cd59113dc426d825e6f5521f440c757382e37278bfe74fe914946",
+      "new_root_object": "426ce8ab500252dbf09ab1e6a2ec9b0601cdb7304240edee137703291a9f407b",
+      "construction": "Exact finite CW composition: explicit size-32 outer (rank 14,196) with 9 power-18 packets (q=16, 1,569 rows) and 75 improved size-16,777,216 leaves"
+    },
+    {
+      "n": "536870912",
+      "old_rank": "355919505257948041899273",
+      "new_rank": "355833665201619305486442",
+      "delta_rank": "-85840056328736412831",
+      "relative_change_pct": -0.024118,
+      "old_exponent": 2.697789558,
+      "new_exponent": 2.697777558,
+      "delta_exponent": -1.2e-05,
+      "old_root_object": "4699a85bea4bb68b8b2572173b381a311df662e1b14f4b161f22ae027899a02f",
+      "new_root_object": "943a351a37a31746b709e2feefd4a85be6ef83eb335a53f4d70eb3d7dd355ce7",
+      "construction": "Exact finite CW composition: explicit size-32 outer (rank 14,196) with 9 power-18 packets (q=16, 1,569 rows) and 75 improved size-16,777,216 leaves"
+    },
+    {
+      "n": "5125781250",
+      "old_rank": "141973264838711379220429440",
+      "new_rank": "141527608453420992406066758",
+      "delta_rank": "-445656385290386814362682",
+      "relative_change_pct": -0.313902,
+      "old_exponent": 2.693393697,
+      "new_exponent": 2.693253076,
+      "delta_exponent": -0.000140622,
+      "old_root_object": "1f2885a21e3594c2f2e30958f90f60811b00884362bcd6e5fea724aaf920482b",
+      "new_root_object": "29ce44a27e218397e9ae04932d7ba8be56d2fc87f0885312d53b35fb5c64cbcb",
+      "construction": "Exact finite CW composition: current LITA size-30 outer (rank 11,889) with 2 power-21 packets (q=15, 5,865 rows) and 159 improved size-170,859,375 leaves"
+    },
+    {
+      "n": "5873299070",
+      "old_rank": "219405870380472051962264353",
+      "new_rank": "218462923665918232159736019",
+      "delta_rank": "-942946714553819802528334",
+      "relative_change_pct": -0.429773,
+      "old_exponent": 2.696444479,
+      "new_exponent": 2.696253003,
+      "delta_exponent": -0.000191476,
+      "old_root_object": "156c6f1787fe0fa9b5a2aec5c77ab31da2b4052f3447c44efcf53e213a52361f",
+      "new_root_object": "cd48a07970452cfe25dc86bdedd734bb6829ef9de63aec88aa33a3fb68224254",
+      "construction": "Exact finite CW composition: current LITA size-22 outer (rank 5,141) with 1 power-21 packet (q=16, 5,110 rows) and 31 improved size-268,435,456 leaves"
+    },
+    {
+      "n": "5905580032",
+      "old_rank": "219405870380472051962264353",
+      "new_rank": "218462923665918232159736019",
+      "delta_rank": "-942946714553819802528334",
+      "relative_change_pct": -0.429773,
+      "old_exponent": 2.695787579,
+      "new_exponent": 2.695596151,
+      "delta_exponent": -0.000191429,
+      "old_root_object": "478a8100c63a2896ed4ba53a0981c8a327bc80f1dbec057bc61db7b0fdb0b0bd",
+      "new_root_object": "293c063d71481b7f522b6dad6b0a96a7ba1dc54946b7eb7abbb7c329b9b03ec5",
+      "construction": "Exact finite CW composition: current LITA size-22 outer (rank 5,141) with 1 power-21 packet (q=16, 5,110 rows) and 31 improved size-268,435,456 leaves"
+    },
+    {
+      "n": "8053063680",
+      "old_rank": "469778272032184675771793801",
+      "new_rank": "468523431475285365452988598",
+      "delta_rank": "-1254840556899310318805203",
+      "relative_change_pct": -0.267113,
+      "old_exponent": 2.692509345,
+      "new_exponent": 2.692392082,
+      "delta_exponent": -0.000117264,
+      "old_root_object": "540fa29c2c63f63fa6ae9d0f3f9720d074d6eab32c0099703795b8a944db5463",
+      "new_root_object": "eba2bd669ea6047155984ffc4e92904838828b9672fa5c9fd4c555f76abf715d",
+      "construction": "Exact finite CW composition: current LITA size-30 outer (rank 11,889) with 2 power-21 packets (q=16, 5,865 rows) and 159 improved size-268,435,456 leaves"
+    },
+    {
+      "n": "12310160190",
+      "old_rank": "1463616394485527559895695360",
+      "new_rank": "1459677509200058173953355584",
+      "delta_rank": "-3938885285469385942339776",
+      "relative_change_pct": -0.26912,
+      "old_exponent": 2.692241557,
+      "new_exponent": 2.692125569,
+      "delta_exponent": -0.000115988,
+      "old_root_object": "f21e6922b24860603e77cccc387c07b1764b96c3b12b44d267675169b52acfaf",
+      "new_root_object": "b28ed2b19af502cbe6fe42bffb92ead056df27eb89253b9c9065c3ce9a6dcb88",
+      "construction": "Exact finite CW composition: current LITA size-30 outer (rank 11,889) with 2 power-21 packets (q=17, 5,865 rows) and 159 improved size-410,338,673 leaves"
+    },
+    {
+      "n": "13468840704",
+      "old_rank": "2000000000000000000000000000",
+      "new_rank": "1999777625038419124331158713",
+      "delta_rank": "-222374961580875668841287",
+      "relative_change_pct": -0.011119,
+      "old_exponent": 2.695245333,
+      "new_exponent": 2.695240566,
+      "delta_exponent": -4.767e-06,
+      "old_root_object": "f960737e268dddd70854c3cf82e1248abdbb9393b869200c717af2583933c9b8",
+      "new_root_object": "a6a22436b4cd1f5dee435911dad8ab67b83d49092bc447b51ade7b5c23bc7579",
+      "construction": "Padding of the size-13,947,137,604 Strassen-tensor S_q packets: current LITA size-36 outer scheme (rank 19,666) with 1 full (10,172-product) and 1 boundary-pruned (9,494-product) zero-trimmed power-27 S_9 packets"
+    },
+    {
+      "n": "13947137604",
+      "old_rank": "2000000000000000000000000000",
+      "new_rank": "1999777625038419124331158713",
+      "delta_rank": "-222374961580875668841287",
+      "relative_change_pct": -0.011119,
+      "old_exponent": 2.6912189,
+      "new_exponent": 2.69121414,
+      "delta_exponent": -4.76e-06,
+      "old_root_object": "012b50756f9de7e62b0509b579a7d950fabaf17c72bb872ad09046da0264704c",
+      "new_root_object": "0adda463095411022b9c4c313c1d2e7fa455a3b7ab4670ddef6419673c237187",
+      "construction": "Strassen-tensor S_q packets: current LITA size-36 outer scheme (rank 19,666) with 1 full (10,172-product) and 1 boundary-pruned (9,494-product) zero-trimmed power-27 S_9 packets"
+    }
+  ],
+  "new_milestone_entries": [
+    {
+      "n": "240619650",
+      "rank": "42618086121773987519250",
+      "effective_exponent": 2.7,
+      "strict_sub_2_7": true,
+      "root_object": "102423c389e292cff17bfe0f572ce6835bc18832d5ba255b082f6b505f90eb6f",
+      "construction": "Padding of the size-240,945,152 strict sub-2.7 CW composition (exact threshold (n-1)^27 <= R^10 < n^27): explicit size-32 outer (rank 14,196) with 9 power-18 CW packets (q=14, 1,569 rows) and 75 recursive size-7,529,536 leaves built over Pair-Schur m=4,5 packets and coordinate-8 refined Z4(14) units"
+    },
+    {
+      "n": "240945152",
+      "rank": "42618086121773987519250",
+      "effective_exponent": 2.699810881,
+      "strict_sub_2_7": true,
+      "root_object": "0306e2b84b39cb171b45795df50f1732c8bc35e1e7782a2aff9f08f284a048a8",
+      "construction": "Natural strict sub-2.7 CW composition: explicit size-32 outer (rank 14,196) with 9 power-18 CW packets (q=14, 1,569 rows) and 75 recursive size-7,529,536 leaves built over Pair-Schur m=4,5 packets and coordinate-8 refined Z4(14) units"
+    },
+    {
+      "n": "10847773692",
+      "rank": "999890642088501413992105581",
+      "effective_exponent": 2.690486904,
+      "strict_sub_2_7": true,
+      "root_object": "f2e150c4a833e5178d35c12b26b793cea91b981c31724ae424f67fe4af004275",
+      "construction": "Strassen-tensor S_q packets: current LITA size-28 outer scheme (rank 9,846) in 1 boundary-pruned zero-trimmed power-27 S_9 packet (from 10,172-product RS support)"
+    },
+    {
+      "n": "6597069766656",
+      "rank": "22527768312183649740712054999744512",
+      "effective_exponent": 2.679754846,
+      "strict_sub_2_7": true,
+      "root_object": "176636ee8d103d59563aae84282969969d22c6f9192f605483fca1293b8e4727",
+      "construction": "Strassen-tensor S_q packets: current LITA size-96 outer scheme (rank 323,156) in 1 boundary-pruned zero-trimmed power-36 S_8 packet (from 329,690-product Hill-112-cap RS support)"
+    },
+    {
+      "n": "27113235502176",
+      "rank": "999989287389515119218241063598638155",
+      "effective_exponent": 2.679930719,
+      "strict_sub_2_7": true,
+      "root_object": "8211c7525362bdd818af644786a58e5f9c1de1d33ef6e9831e4ed90ca546ca9f",
+      "construction": "Strassen-tensor S_q packets: current LITA size-96 outer scheme (rank 323,156) in 1 boundary-pruned zero-trimmed power-36 S_9 packet (from 329,690-product Hill-112-cap RS support)"
+    }
+  ],
+  "graded_sub265_entries": {
+    "old_cropped": {
+      "n": "786394525415777912562924959695960473110997637822818876406180025577629",
+      "digits": 69,
+      "rank": "374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276",
+      "effective_exponent": 2.65,
+      "root_object": "5761c626c715fea4f12e21c1dc77a19a24e5fa38ae21afbcd68cece21122cbe6"
+    },
+    "old_natural": {
+      "n": "831816093760036377620756829334713144261054120811078790732663809376256",
+      "digits": 69,
+      "rank": "374496079730899267604467232971027745832350824411015598810536640960684224590286282422004906102722691694928592112023219828049965428149098211629588413588495182771842987880775972762574276",
+      "effective_exponent": 2.649062317,
+      "root_object": "1954e76c17354f15e1ed84ddbf0b98d76c15c1c23c17aed454bd497fcc74415d"
+    },
+    "new_cropped": {
+      "n": "58481954604699954390651197457640736657662025144749186797412271422",
+      "digits": 65,
+      "rank": "4291488768477930188119997595867713358415626323641259113571383993655225059698523903278879399177106477773277785507677161528544284181796738426159799199459802292779854449224900",
+      "effective_exponent": 2.65,
+      "root_object": "f4f2d6d1bfff5bdeea2e9dce1e438b8846eef6bd3fce85c3da7d86dbb003cd4b",
+      "size_reduction_factor": 13446.79
+    },
+    "new_natural": {
+      "n": "61824963926467154607577478621859448520988554355302234359653728256",
+      "digits": 65,
+      "rank": "4291488768477930188119997595867713358415626323641259113571383993655225059698523903278879399177106477773277785507677161528544284181796738426159799199459802292779854449224900",
+      "effective_exponent": 2.649012577,
+      "root_object": "bb748b3a87e2ddf68687e1b86722a48b7bcead8d5d0011490ea9081ff44cd27c",
+      "size_reduction_factor": 13454.37
+    },
+    "alternative_with_existing_catalogue_outers_only": {
+      "outer_n": "13947137604",
+      "puzzle": "AL23_7_keep22 (22-row subset of (23,7), optimal degree 411, t=10, q=6, 1 packet)",
+      "cropped_n": "326444462535208156151756217121690814483585258009898283424236260303923",
+      "natural_n": "345303505788799015002530541161802057342240415022676174276440028053504",
+      "natural_exponent": 2.649062297,
+      "size_reduction_factor": 2.41
+    }
+  },
+  "independent_audit": {
+    "structural_integrity": {
+      "catalogue_entries": 105,
+      "verified_gzip_objects": 287,
+      "preserved_below_1024": 58,
+      "preserved_ge_1024": [
+        1370,
+        1372,
+        2025,
+        2048
+      ],
+      "strictly_improved_existing_entries": 36
+    },
+    "exact_integer_thresholds": {
+      "sub27_cropped_n": "240619650",
+      "sub27_natural_n": "240945152",
+      "sub27_rank": "42618086121773987519250",
+      "sub27_minimality_verified": true,
+      "sub265_cropped_n": "58481954604699954390651197457640736657662025144749186797412271422",
+      "sub265_natural_n": "61824963926467154607577478621859448520988554355302234359653728256",
+      "sub265_rank": "4291488768477930188119997595867713358415626323641259113571383993655225059698523903278879399177106477773277785507677161528544284181796738426159799199459802292779854449224900",
+      "sub265_minimality_verified": true
+    },
+    "sq_audits": {
+      "rebuilt_supports": {
+        "N=18": 364,
+        "N=27": 10172,
+        "N=36": 329690
+      },
+      "exact_Q_trimmed_mm_verified": true,
+      "trimmed_test_rank": 352
+    },
+    "z4_split8_gauged_audit": {
+      "certified_q_values": [
+        3,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "q3_n": 54,
+      "q3_retained_rank": 203307,
+      "q3_deleted_columns": 12,
+      "prime_modulus": 1048573,
+      "full_54_pow_6_tensor_entries_checked": 24794911296,
+      "full_54_pow_6_mismatches": 0
+    },
+    "comparisons": {
+      "points": 105,
+      "losing_sizes": [],
+      "lita32_rank": 14197
+    },
+    "total_seconds": 22544.71
+  }
+}

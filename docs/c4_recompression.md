@@ -77,3 +77,30 @@ exactly. Integrity, counts, complete relation replay, small full-tensor scope
 and installed-wheel access are recorded separately in
 [checks/small1024_recompression.json](../checks/small1024_recompression.json)
 and its companion check files. No characteristic-two inference is used.
+
+## Coordinate-8 refinement across all Z4 entries
+
+In the 28-row power-9 support, coordinates 4 and 8 are fixed by the Z4 action.
+Splitting ordinary labels on coordinate 8 into distinguished label `1` and
+centered labels `{2, ..., q}` (`"coordinates": [8]`) preserves Z4 equivariance
+while exposing additional Z4-invariant linear relations on pair `(0, 2)` (free
+mode 1, mapped to physical output C). From 2,311 nonzero refined patterns,
+1,883 are retained, yielding closed-form rank polynomials
+
+```text
+4 R_even,split8(q) = q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 123q^4 - 6q^3 + 2q^2
+4 R_odd,split8(q)  = q^9 + 17q^8 + 122q^7 + 392q^6 + 493q^5 + 123q^4 - 10q^3 - 2q^2
+```
+
+Splitting both fixed coordinates `[4, 8]` increases `4 R_odd(q)` by
+`36q^3 - 36q^2 + 8q > 0` for all `q >= 2`, making `[8]` optimal among
+Z4-invariant coordinate subsets. Expanding refined factors into the centered
+physical basis retains all `q^2 + q` square-only zero-factor columns under the
+gauged Strassen embedding (`assignment = [1, 0, 5, 2, 3, 4, 6]`), certified by
+separate finite-q rational witnesses for `q in {3, 8, 9, ..., 20}`. At `q = 8`
+(`n = 1,024`) the odd unit rank is **198,674,144** and the gauged square rank
+is **198,674,072** (saving **5,120** further products); at `q = 17` (`n = 9,826`)
+the gauged square rank is **74,352,302,450** (saving **182,376**). At `q = 3`
+(`n = 54`, rank 203,307 with 12 gauged deletions), all `54^6` tensor entries
+were verified modulo `1,048,573` alongside 3-prime CRT matrix checks; see
+[checks/nov16_above1024.json](../checks/nov16_above1024.json).
